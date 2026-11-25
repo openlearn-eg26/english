@@ -312,6 +312,78 @@
         app.appendChild(wrap);
     }
 
+    /* ---------- fill in the blank ---------- */
+    const FILL_ITEMS = [
+        { s: 'I ___ a student.', ar: 'أنا طالب.', c: ['am', 'is', 'are'], a: 0, why: 'مع I بنستخدم am: I am.' },
+        { s: 'He ___ a doctor.', ar: 'هو دكتور.', c: ['am', 'is', 'are'], a: 1, why: 'مع he وshe وit بنستخدم is.' },
+        { s: 'There ___ two chairs in the room.', ar: 'في كرسيين في الأوضة.', c: ['is', 'are', 'am'], a: 1, why: 'كرسيين يعني جمع، فنقول there are.' },
+        { s: 'She ___ coffee every morning.', ar: 'هي بتشرب قهوة كل صباح.', c: ['drink', 'drinks', 'drinking'], a: 1, why: 'في المضارع البسيط مع he وshe وit بنزود s في الفعل: she drinks.' },
+        { s: 'I ___ English every day.', ar: 'أنا بذاكر إنجليزي كل يوم.', c: ['study', 'studies', 'studying'], a: 0, why: 'مع I بنستخدم الفعل زي ما هو من غير s: I study.' },
+        { s: 'I ___ to the market yesterday.', ar: 'أنا روحت السوق امبارح.', c: ['go', 'went', 'going'], a: 1, why: 'امبارح يعني ماضي، وماضي go هو went.' },
+        { s: 'We are ___ the bus stop.', ar: 'إحنا عند موقف الأتوبيس.', c: ['at', 'on', 'in'], a: 0, why: 'للمكان المحدد زي موقف الأتوبيس بنقول at.' },
+        { s: 'The shop opens ___ nine o\'clock.', ar: 'المحل بيفتح الساعة تسعة.', c: ['at', 'in', 'on'], a: 0, why: 'قبل الساعة بالظبط بنستخدم at: at nine o\'clock.' },
+        { s: 'She is ___ home now.', ar: 'هي في البيت دلوقتي.', c: ['at', 'in', 'to'], a: 0, why: 'التعبير الثابت هو at home.' },
+        { s: 'I need ___ umbrella.', ar: 'أنا محتاج شمسية.', c: ['a', 'an', 'two'], a: 1, why: 'umbrella بتبدأ بصوت حرف متحرك، فنستخدم an. وtwo محتاجة اسم جمع (two umbrellas).' },
+        { s: 'Can you help ___?', ar: 'ينفع تساعدني؟', c: ['I', 'me', 'my'], a: 1, why: 'بعد الفعل بنستخدم me مش I.' },
+        { s: 'How ___ is this?', ar: 'ده بكام؟', c: ['much', 'many', 'any'], a: 0, why: 'للسؤال عن السعر بنقول How much.' }
+    ];
+    function fillView() {
+        app.innerHTML = '';
+        app.appendChild(pageHead('كمّل الجملة', 'اختار الكلمة الناقصة في الجملة الإنجليزي. معنى الجملة مكتوب بالعربي تحتها.'));
+        const wrap = el('div', 'narrow');
+        const box = el('section', 'group card-box');
+        wrap.appendChild(box); app.appendChild(wrap);
+        function start() {
+            const set = shuffle(FILL_ITEMS).slice(0, 8);
+            let index = 0, score = 0;
+            function render() {
+                const it = set[index];
+                let firstTry = true, solved = false;
+                box.innerHTML = '';
+                add(box, el('p', 'counter', 'جملة ' + (index + 1) + ' من ' + set.length));
+                const sc = el('p', 'scene'); sc.appendChild(enSpan(it.s)); add(box, sc);
+                add(box, el('p', 'caption', it.ar));
+                const choicesBox = el('div', 'choices');
+                const feedback = el('div', 'feedback'); feedback.setAttribute('aria-live', 'polite'); feedback.style.marginTop = '14px';
+                const actions = el('div', 'actions');
+                shuffle(it.c.map((_, i) => i)).forEach((oi) => {
+                    const b = el('button', 'choice'); b.type = 'button'; b.appendChild(enSpan(it.c[oi]));
+                    b.addEventListener('click', () => {
+                        if (solved) return;
+                        feedback.innerHTML = '';
+                        if (oi === it.a) {
+                            solved = true; if (firstTry) score++;
+                            Array.from(choicesBox.children).forEach((c) => { c.disabled = true; });
+                            b.classList.add('is-correct');
+                            sc.innerHTML = ''; sc.appendChild(enSpan(it.s.replace('___', it.c[it.a])));
+                            const note = el('div', 'callout note'); add(note, el('p', 'callout-title', 'صح'), el('p', null, it.why)); feedback.appendChild(note);
+                            const last = index === set.length - 1;
+                            const nb = btn(last ? 'شوف النتيجة' : 'الجملة اللي بعدها', 'primary', () => { if (last) finish(); else { index++; render(); } });
+                            actions.innerHTML = ''; actions.appendChild(nb); setTimeout(() => nb.focus({ preventScroll: true }), 0);
+                        } else {
+                            firstTry = false; b.classList.add('is-wrong'); b.disabled = true;
+                            const note = el('div', 'callout warning'); add(note, el('p', 'callout-title', 'مش دي'), el('p', null, 'جرب اختيار تاني.')); feedback.appendChild(note);
+                        }
+                    });
+                    choicesBox.appendChild(b);
+                });
+                add(box, choicesBox, feedback, actions);
+            }
+            function finish() {
+                markDay(); save();
+                box.innerHTML = '';
+                const pct = Math.round((score / set.length) * 100);
+                add(box, el('p', 'group-label', 'النتيجة'), el('h2', null, 'كمّل الجملة: ' + score + ' من ' + set.length));
+                const row = el('div', 'result-row');
+                add(row, ring(pct, 'النتيجة ' + pct + ' بالمية'), el('p', null, 'ده عدد الجمل اللي جاوبتها صح من أول محاولة. التمرين ده للتدريب ومبيتسجلش في نتايج الاختبارات.'));
+                box.appendChild(row);
+                const a = el('div', 'actions'); add(a, btn('تمرين جديد', 'primary', start), link('رجوع للتدريب', '#/practice', 'btn secondary')); box.appendChild(a);
+            }
+            render();
+        }
+        start();
+    }
+
     /* ---------- word-tile sentence building ---------- */
     function buildPhrases() {
         const seen = {}, out = [];
@@ -581,7 +653,8 @@
         });
         const mst = btn('أخطاء شائعة', 'secondary', () => { location.hash = '#/mistakes'; });
         const bld = btn('رتّب الجملة', 'secondary', () => { location.hash = '#/build'; });
-        add(actions, mix, mis, bld, mst);
+        const fil = btn('كمّل الجملة', 'secondary', () => { location.hash = '#/fill'; });
+        add(actions, mix, mis, bld, fil, mst);
         picker.appendChild(actions);
         picker.appendChild(el('p', 'caption', 'الأسئلة اللي بتغلط فيها من أول مرة بتتسجل هنا، وبتتشال من القائمة لما تجاوبها صح مرتين ورا بعض.'));
         main.insertBefore(picker, holder);
@@ -608,6 +681,7 @@
         grid.appendChild(tcard('المراجعة العامة', quiz.length + ' أسئلة من كل المواقف', '#/review', P.quiz ? 'الأفضل ' + P.quiz.best + '/' + quiz.length : ''));
         grid.appendChild(tcard('أخطاء شائعة', '١٠ أغلاط بتتكرر مع الناطقين بالعربي', '#/mistakes', ''));
         grid.appendChild(tcard('رتّب الجملة', 'رتّب كلمات الجملة الإنجليزي من المعنى', '#/build', ''));
+        grid.appendChild(tcard('كمّل الجملة', 'اختار الكلمة الناقصة في الجملة', '#/fill', ''));
         grid.appendChild(tcard('الاختبار الشامل', MIXED_N + ' سؤال عشوائي من كل الدروس', '#/test-mixed', P.tests.mixed ? 'الأفضل ' + P.tests.mixed.best + '/' + MIXED_N : ''));
         lessons.forEach((l) => { const t = P.tests['lesson-' + l.number]; grid.appendChild(tcard('اختبار الدرس ' + l.number + ': ' + l.title, l.steps.length + ' أسئلة بترتيب عشوائي', '#/test-lesson-' + l.number, t ? 'الأفضل ' + t.best + '/' + l.steps.length : '')); });
         return grid;
@@ -804,6 +878,7 @@
         else if (hash === 'tests') { section = 'practice'; practiceView(); const t = document.getElementById('tests-sec'); if (t) t.scrollIntoView(); return finishRoute(section, true); }
         else if (hash === 'mistakes') { section = 'practice'; mistakesView(); }
         else if (hash === 'build') { section = 'practice'; buildView(); }
+        else if (hash === 'fill') { section = 'practice'; fillView(); }
         else if (hash === 'review') { section = 'practice'; reviewView(); }
         else if (hash === 'test-mixed') { section = 'practice'; testView('الاختبار الشامل', 'رجوع للاختبارات', () => shuffle(ITEMS).slice(0, MIXED_N), MIXED_N, (s) => { const p = P.tests.mixed; P.tests.mixed = { last: s, best: Math.max(s, p ? p.best : 0) }; }); }
         else if (hash.startsWith('test-lesson-')) {
