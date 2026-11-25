@@ -584,6 +584,58 @@ const lessons = [
             { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'بكام؟' },
         ],
     },
+    {
+        id: 'pharmacy',
+        number: 12,
+        title: 'في الصيدلية',
+        subtitle: 'اطلب دوا واسأل عن طريقة الاستعمال',
+        intro: 'عندك صداع وداخل صيدلية. الصيدلي هيسألك كام سؤال بسيط، وإنت هتطلب الدوا وتفهم طريقة الاستعمال. (الحوار ده تدريب على اللغة بس. مش نصيحة طبية ومفيهوش اسم دوا ولا جرعة تنفع لحد، واتبع دايمًا تعليمات الصيدلي والدكتور.)',
+        steps: [
+            {
+                scene: 'دخلت الصيدلية والصيدلي رحّب بيك وقال:',
+                them: 'Hi! How can I help you?',
+                themAr: 'أهلاً! أقدر أساعدك إزاي؟',
+                choices: ["I'd like something for a headache, please.", 'I want headache medicine me.', 'I have a pharmacy, please.'],
+                correct: 0,
+                explain: '"I\'d like something for..." صيغة مهذبة لطلب حاجة، و"for a headache" معناها "للصداع". الاختيار التاني ترتيبه غلط، والتالت معناه "عندي صيدلية".',
+                phrase: { en: "I'd like something for a headache, please.", pr: 'آيد لايك سامثينج فور أ هيديك، بليز', ar: 'عايز حاجة للصداع من فضلك' },
+            },
+            {
+                scene: 'الصيدلي سأل:',
+                them: 'Are you taking any other medicine?',
+                themAr: 'بتاخد أي دوا تاني؟',
+                choices: ["No, I'm not taking anything else.", "No, I don't taking anything.", 'No, I am not take medicine.'],
+                correct: 0,
+                explain: '"I\'m not taking anything else" معناها "مش باخد أي حاجة تانية". بعد "don\'t" بنستعمل الفعل بدون ing، وبعد "am not" بنقول taking مش take، عشان كده الاختيارين التانيين غلط.',
+                phrase: { en: "I'm not taking anything else.", pr: 'آم نوت تيكنج إنيثينج إلس', ar: 'مش باخد أي حاجة تانية' },
+            },
+            {
+                scene: 'الصيدلي سلّمك العلبة وشرح:',
+                them: 'Take one tablet twice a day, after meals.',
+                themAr: 'خد قرص واحد مرتين في اليوم، بعد الأكل.',
+                choices: ['Twice a day, after meals. Got it.', 'Twice a day, after meals, I am got.', 'Meals after, twice day.'],
+                correct: 0,
+                explain: 'ترد تأكد اللي فهمته: "Twice a day, after meals" ثم "Got it" يعني فهمت. "after meals" معناها بعد الأكل، وترتيبها ثابت. الجملة دي للتدريب على اللغة بس، مش جرعة تنفع لأي حد. اتبع تعليمات الصيدلي والعلبة.',
+                phrase: { en: 'Twice a day, after meals.', pr: 'تواس أ داي، آفتر ميلز', ar: 'مرتين في اليوم بعد الأكل' },
+            },
+            {
+                scene: 'جه وقت الدفع والصيدلي قال:',
+                them: "That's forty-five pounds.",
+                themAr: 'الحساب خمسة وأربعين جنيه.',
+                choices: ['Can I pay by card?', 'I pay card can?', 'Card is paying?'],
+                correct: 0,
+                explain: '"Can I pay by card?" سؤال مهذب لو عايز تدفع بالكارت. بعد Can بييجي الفاعل I وبعده الفعل pay، وكلمة by بتوضح طريقة الدفع.',
+                phrase: { en: 'Can I pay by card?', pr: 'كان آي باي باي كارد؟', ar: 'ينفع أدفع بالكارت؟' },
+            },
+        ],
+        phrases: [
+            { en: "I'd like something for a headache, please.", pr: 'آيد لايك سامثينج فور أ هيديك، بليز', ar: 'عايز حاجة للصداع من فضلك' },
+            { en: "I'm not taking anything else.", pr: 'آم نوت تيكنج إنيثينج إلس', ar: 'مش باخد أي حاجة تانية' },
+            { en: 'Twice a day, after meals.', pr: 'تواس أ داي، آفتر ميلز', ar: 'مرتين في اليوم بعد الأكل' },
+            { en: 'Can I pay by card?', pr: 'كان آي باي باي كارد؟', ar: 'ينفع أدفع بالكارت؟' },
+            { en: 'Do you have anything for a cold?', pr: 'دو يو هاف إنيثينج فور أ كولد؟', ar: 'عندك حاجة للبرد؟' },
+        ],
+    },
 ];
 
 const quiz = [
