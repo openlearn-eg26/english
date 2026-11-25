@@ -49,17 +49,28 @@
         if (!pass) throw { code: 'need-password' };
         return s.A.reauthenticateWithCredential(u, s.A.EmailAuthProvider.credential(u.email, pass));
     }
+    var firstEntry = null;
     function docRef(s) { return s.F.doc(s.db, 'users', s.auth.currentUser.uid); }
+    function parseCloud(snap) {
+        var cloud = null, raw = snap.exists() ? snap.data().progress : null;
+        if (typeof raw === 'string' && raw.length < 60000) { try { cloud = JSON.parse(raw); } catch (e) { cloud = null; } }
+        if (cloud && (typeof cloud !== 'object' || Array.isArray(cloud))) cloud = null;
+        return cloud;
+    }
+    /* One atomic transaction: read the server document, merge, write. A missing document means first-ever entry; the transaction creates it, so only one of two simultaneous first sign-ins can win it, and an existing document is never overwritten blindly. */
     function pull(app) {
         return load().then(function (s) {
-            return s.F.getDoc(docRef(s)).then(function (snap) {
-                var cloud = null;
-                var raw = snap.exists() ? snap.data().progress : null;
-                if (typeof raw === 'string' && raw.length < 60000) { try { cloud = JSON.parse(raw); } catch (e) { cloud = null; } }
-                if (cloud && (typeof cloud !== 'object' || Array.isArray(cloud))) cloud = null;
-                var merged = cloud ? merge(app.get(), cloud, app.normalize) : app.get();
+            var uid0 = s.auth.currentUser.uid, ref = docRef(s), merged = null;
+            return s.F.runTransaction(s.db, function (tx) {
+                return tx.get(ref).then(function (snap) {
+                    var cloud = parseCloud(snap);
+                    merged = cloud ? merge(app.get(), cloud, app.normalize) : app.get();
+                    tx.set(ref, { progress: JSON.stringify(merged), updatedAt: Date.now() });
+                    return !snap.exists();
+                });
+            }).then(function (fresh) {
                 app.set(merged);
-                return s.F.setDoc(docRef(s), { progress: JSON.stringify(merged), updatedAt: Date.now() });
+                if (fresh) { firstEntry = uid0; if (app.tour) setTimeout(app.tour, 300); }
             });
         });
     }
@@ -69,14 +80,11 @@
         timer = setTimeout(function () {
             load().then(function (s) {
                 if (!s.auth.currentUser || !s.auth.currentUser.emailVerified) return;
-                return s.auth.currentUser.getIdToken(true).catch(function () {}).then(function () { return s.F.getDoc(docRef(s)).then(function (snap) {
-                    var cur = window.__lang.get(), cl = null;
-                    var rw = snap.exists() ? snap.data().progress : null;
-                    if (typeof rw === 'string' && rw.length < 60000) { try { cl = JSON.parse(rw); } catch (e) { cl = null; } }
-                    if (cl && (typeof cl !== 'object' || Array.isArray(cl))) cl = null;
+                return s.auth.currentUser.getIdToken(true).catch(function () {}).then(function () { return s.F.runTransaction(s.db, function (tx) { var ref = docRef(s); return tx.get(ref).then(function (snap) {
+                    var cur = window.__lang.get(), cl = parseCloud(snap);
                     var out = cl ? merge(cur, cl, window.__lang.normalize) : cur;
-                    return s.F.setDoc(docRef(s), { progress: JSON.stringify(out), updatedAt: Date.now() });
-                }); });
+                    tx.set(ref, { progress: JSON.stringify(out), updatedAt: Date.now() });
+                }); }); });
             }).then(function () { status = 'اتحفظ في حسابك.'; emit(); }, function () { status = 'ماقدرناش نحفظ في الحساب دلوقتي. تقدمك لسه محفوظ على المتصفح.'; emit(); });
         }, 1500);
     }
@@ -125,6 +133,8 @@
         onAuth: function (f) { authListeners.push(f); },
         state: function () { return state; },
         uid: function () { return user ? user.uid : null; },
+        /* true once, only when this sign-in created the account's server document (first-ever entry of a brand-new account). The Firestore document itself is the durable claim (users/<uid> is created by that same write). */
+        isNewSignup: function () { return !!firstEntry && !!user && firstEntry === user.uid; },
         retry: function () { retry(cloud._app); },
         push: push,
         merge: merge,

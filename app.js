@@ -959,7 +959,7 @@
         { img: 'tour/6.jpg', t: 'حسابي وتقدمي', d: 'هنا بتشوف نتيجتك وأيام مذاكرتك، وتقدر تغيّر اسمك أو تحذف حسابك وبياناتك. تقدر تفتح الجولة دي تاني من نفس الصفحة.' },
     ];
     function tourKey() { const u = window.LangCloud && window.LangCloud.uid && window.LangCloud.uid(); return u ? 'lang-tour-v1-' + u : null; }
-    function tourSeen() { const k = tourKey(); if (!k) return true; try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } }
+    function tourSeen() { const k = tourKey(); if (!k) return true; if (!(window.LangCloud.isNewSignup && window.LangCloud.isNewSignup())) return true; try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } }
     function tourMark() { const k = tourKey(); if (k) { try { localStorage.setItem(k, '1'); } catch (e) { /* ignore */ } } }
     function showTour() {
         if (document.getElementById('tour')) return;
@@ -1064,7 +1064,7 @@
         if (t) t.focus({ preventScroll: true });
     }
     window.addEventListener('hashchange', route);
-    window.__lang = { get: () => P, set: (p) => { P = normalize(p); Store.write(P); }, normalize: normalize, refresh: () => { if (/^#\/(progress|profile)/.test(location.hash)) route(); } };
+    window.__lang = { tour: () => { if (!tourSeen()) showTour(); }, get: () => P, set: (p) => { P = normalize(p); Store.write(P); }, normalize: normalize, refresh: () => { if (/^#\/(progress|profile)/.test(location.hash)) route(); } };
     if (window.LangCloud) { window.LangCloud.onAuth(() => route()); window.LangCloud.init(window.__lang); }
     route();
 })();
