@@ -44,7 +44,7 @@
         return out;
     }
     let P = Store.read();
-    function save() { Store.write(P); }
+    function save() { Store.write(P); if (window.LangCloud) window.LangCloud.push(); }
     function today() { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
     function markDay() { const t = today(); if (P.days.indexOf(t) < 0) P.days.push(t); }
 
@@ -90,6 +90,13 @@
     function link(text, href, cls) { const a = el('a', cls, text); a.href = href; return a; }
     function btn(text, cls, fn) { const b = el('button', 'btn ' + (cls || 'secondary'), text); b.type = 'button'; if (fn) b.addEventListener('click', fn); return b; }
     function enSpan(text, cls) { const s = el('span', 'en' + (cls ? ' ' + cls : ''), text); s.dir = 'ltr'; s.lang = 'en'; return s; }
+    function mixedEl(tag, cls, text) {
+        const n = el(tag, cls); const re = /"[A-Za-z][^"]*"|[A-Za-z][A-Za-z0-9'\u2019,.!?_\-]*(?: [A-Za-z0-9'\u2019,.!?_\-]+)*/g;
+        text = String(text); let last = 0, m;
+        while ((m = re.exec(text))) { if (m.index > last) n.appendChild(document.createTextNode(text.slice(last, m.index))); n.appendChild(enSpan(m[0])); last = m.index + m[0].length; }
+        if (last < text.length) n.appendChild(document.createTextNode(text.slice(last)));
+        return n;
+    }
     function phraseLine(p) {
         const row = el('div', 'phrase-line');
         row.appendChild(enSpan(p.en));
@@ -134,7 +141,7 @@
             if (opts.onStep) opts.onStep(index, steps.length);
             flow.appendChild(el('p', 'counter', 'خطوة ' + (index + 1) + ' من ' + steps.length));
             if (step.tag && opts.showTag) flow.appendChild(el('p', 'tag', step.tag));
-            flow.appendChild(el('p', 'scene', step.scene));
+            flow.appendChild(mixedEl('p', 'scene', step.scene));
             if (step.them) {
                 const bubble = el('div', 'them');
                 bubble.appendChild(enSpan(step.them));
@@ -175,7 +182,7 @@
                     feedback.innerHTML = '';
                     const ok = picked === step.correct;
                     const note = el('div', 'callout ' + (ok ? 'note' : 'warning'));
-                    add(note, el('p', 'callout-title', ok ? labels.correct : labels.wrong), el('p', null, step.explain));
+                    add(note, el('p', 'callout-title', ok ? labels.correct : labels.wrong), mixedEl('p', null, step.explain));
                     feedback.appendChild(note);
                     if (ok && step.phrase && step.phrase.en) {
                         const keep = el('div', 'keep');
@@ -224,7 +231,7 @@
             const ul = el('ul', 'wrong-list');
             wrong.forEach((x) => {
                 const li = el('li');
-                if (x.s.them) li.appendChild(enSpan(x.s.them, 'block')); else li.appendChild(el('span', null, x.s.scene));
+                if (x.s.them) li.appendChild(enSpan(x.s.them, 'block')); else li.appendChild(mixedEl('span', null, x.s.scene));
                 const ans = el('span', 'meaning'); ans.appendChild(document.createTextNode('الإجابة الصح: ')); ans.appendChild(enSpan(x.s.choices[x.s.correct]));
                 li.appendChild(ans);
                 ul.appendChild(li);
@@ -508,7 +515,7 @@
         add(dp, days, el('p', 'caption', 'ده سجل أيام ذاكرت فيها (' + st.days + ' يوم). مفيش عدّاد بيتصفّر، وتقدر ترجع في أي وقت.'));
         side.appendChild(dp);
         app.appendChild(cols(main, side));
-        const ph = section('حفظ محلي على هذا المتصفح فقط (بدون حساب سحابي أو تسجيل دخول)', 'الملف الشخصي والنسخة الاحتياطية');
+        const ph = section('حفظ على هذا المتصفح، وحساب اختياري للمزامنة', 'الملف الشخصي والنسخة الاحتياطية');
         ph.id = 'profile-sec';
         ph.style.marginTop = '32px';
         ph.appendChild(profileBlock());
@@ -526,6 +533,7 @@
         add(g, av, nameLab, name, saveB, msg);
         main.appendChild(g);
 
+        if (window.LangCloud) main.appendChild(window.LangCloud.panel(el, add, btn, window.__lang));
         const ex = el('section', 'group card-box');
         add(ex, el('h2', null, 'انقل تقدمك لجهاز تاني'));
         ex.appendChild(el('p', null, 'تقدّمك محفوظ داخل ذاكرة هذا المتصفح فقط، وقد يُحذف لو مسحت بيانات التصفح. نزّل نسخة احتياطية كملف، واستوردها لاستعادتها على نفس الجهاز أو على جهاز تاني.'));
@@ -562,7 +570,7 @@
 
         const side = el('div', 'side-col');
         const rs = panel('مسح التقدم');
-        rs.appendChild(el('p', null, 'بيمسح اسمك وتقدمك وأخطاءك من المتصفح ده. مش بيتراجع عنه.'));
+        rs.appendChild(el('p', null, 'بيمسح اسمك وتقدمك وأخطاءك من المتصفح ده بس. لو داخل بحساب، البيانات على السيرفر بتفضل ولسه ممكن تنزل تاني بالمزامنة. للحذف النهائي من السيرفر استعمل زرار حذف الحساب.'));
         let armed = false;
         const rb = btn('امسح كل حاجة', 'secondary', () => {
             if (!armed) { armed = true; rb.textContent = 'اضغط تاني للتأكيد'; rb.classList.add('danger'); return; }
@@ -572,7 +580,7 @@
         rs.appendChild(rb);
         side.appendChild(rs);
         const about = panel('عن بياناتك');
-        about.appendChild(el('p', null, 'الموقع مجاني ومفيش تسجيل. اللي بيتحفظ: اسمك لو كتبته، ونتايجك، وأيام مذاكرتك. كله في متصفحك، ومبنبعتوش لأي مكان. لو مسحت بيانات الموقع من المتصفح هيتمسح.'));
+        about.appendChild(el('p', null, 'الموقع مجاني والتسجيل اختياري. من غير حساب: اسمك ونتايجك وأيام مذاكرتك بتتحفظ في متصفحك بس ومبتتبعتش لأي مكان. مع الحساب: نفس البيانات دي بس بتتخزن كمان على سيرفرات جوجل (Firebase) مع إيميلك. التفاصيل في صفحة الخصوصية. مسح التقدم من هنا بيمسح اللي على المتصفح بس، وحذف الحساب بيمسح اللي على السيرفر.'));
         side.appendChild(about);
         return cols(main, side);
     }
@@ -606,5 +614,7 @@
         if (t) t.focus({ preventScroll: true });
     }
     window.addEventListener('hashchange', route);
+    window.__lang = { get: () => P, set: (p) => { P = normalize(p); Store.write(P); }, normalize: normalize, refresh: () => { if (/^#\/(progress|profile)/.test(location.hash)) route(); } };
+    if (window.LangCloud) window.LangCloud.init(window.__lang);
     route();
 })();
