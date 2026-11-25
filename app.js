@@ -99,6 +99,7 @@
     }
     /* ---------- listening: recorded clips first, browser voice as fallback ---------- */
     const AUDIO_MAP = {"Here you are.": "f51fb7f4ea", "I'm flying to Dubai.": "fba9985f9f", "Just this one.": "718ebe2a11", "Boarding pass": "c16dd8a6f9", "Where is the gate?": "d246e3416f", "Good morning! Can I see your passport, please?": "efa4542edb", "Where are you flying to today?": "42c7a293e0", "Do you have any bags to check?": "0a029eba3c", "Here is your boarding pass. Have a nice flight!": "42010ee318", "Have a nice flight!": "e22cf20cba", "I have a reservation.": "791e012b07", "It's under Ahmed.": "64ac694d24", "A wake-up call": "5434ec2f38", "Enjoy your stay!": "ccbbcb66dc", "What time is breakfast?": "d0f534c5da", "Good evening. How can I help you?": "73744ce093", "What's the name, please?": "9240b3b5da", "It's under Ahmed Ali.": "e212f99cc3", "Would you like a wake-up call?": "108b9d8b60", "Breakfast is from 7 to 10. Enjoy your stay!": "45ae85c234", "I'd like": "d2acfb6cf2", "Just water, please.": "4cc32c556c", "That's all.": "c2c9dd9038", "Can I have the bill, please?": "f04323cc8a", "Delicious": "f3351eb697", "Are you ready to order?": "3f3a6b3e04", "I'd like the grilled chicken, please.": "2884c7c38c", "Anything to drink?": "6301001776", "Would you like anything else?": "47315e2bd6", "That's all, thank you.": "0a2d6aa6ca", "Was everything okay?": "0fe6afa89a", "Tell me about yourself.": "27fde5f9e6", "Experience": "5b5aafe6b9", "Strengths": "739a7c874a", "Working hours": "85fd412e40", "I work well with people.": "a06ee9cad1", "I'm an engineer with three years of experience.": "e703849b1e", "Why do you want this job?": "4b99b0cdf5", "I want to grow and learn.": "4762eeecf7", "What are your strengths?": "e966f1207c", "Do you have any questions for us?": "13fb390e5c", "What are the working hours?": "aa5cd2023f", "I have a headache.": "1043137d27", "Fever": "51a83e36ed", "For two days.": "9e41447f19", "I'm allergic to": "e4f972a3ef", "Twice a day": "2eae34aa15", "What seems to be the problem?": "86a71485c8", "I have a headache and a fever.": "a3d92f94fb", "How long have you felt like this?": "d77b1936e5", "Are you allergic to any medicine?": "ba6e10a2c3", "I'm not allergic to anything.": "44402c6209", "Take this medicine twice a day and rest.": "07bee5d908", "I'm looking for": "d3d15e23aa", "What size?": "2f13b9feeb", "How much is it?": "c098beb15f", "Discount": "b524936d7a", "A bag, please.": "9eb9067191", "Can I help you find something?": "3d791b1584", "I'm looking for a shirt.": "c9f4818524", "What size are you?": "353f496063", "Medium, please.": "9ce49160ac", "It's 200 pounds.": "dbcb2b0966", "Can you give me a discount?": "c77de4e50c", "Would you like a bag?": "9d9cfae3a8", "Yes, please.": "202482320f"};
+    Object.assign(AUDIO_MAP, {"I'm ready for the trip.": "4845d65797", "Where are you going?": "4a587acda0", "What does this mean?": "5fb6514196", "I agree with you.": "34c7ad2197", "Where can I leave my luggage?": "6c1746d994", "Can you give me some information?": "a003e58e36", "I missed the train.": "9d7378e39e", "It depends on the traffic.": "6b9466b8a6", "I'm allergic to nuts.": "fb091b0c51"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -285,6 +286,28 @@
         render();
     }
 
+
+
+    /* ---------- common mistakes (Arabic speakers) ---------- */
+    const MISTAKES = [{"t": "الفعل to be ناقص", "why": "بالعربي بنقول «أنا جاهز» من غير فعل. في الإنجليزي لازم am / is / are.", "bad": "I ready for the trip.", "good": "I'm ready for the trip."}, {"t": "نسيان a قبل الاسم المفرد", "why": "مفيش في العربي أداة نكرة. في الإنجليزي الاسم المفرد المعدود زي headache بياخد a أو an قبله.", "bad": "I have headache.", "good": "I have a headache."}, {"t": "ترتيب السؤال", "why": "مينفعش نسيب ترتيب الجملة الخبرية ونرفع الصوت بس. لازم فعل مساعد زي are أو does قبل الفاعل.", "bad": "Where you go?", "good": "Where are you going?"}, {"t": "does في السؤال", "why": "لما نسأل عن المعنى بنستخدم does مع this، والفعل mean بيرجع للأصل من غير s.", "bad": "What means this?", "good": "What does this mean?"}, {"t": "agree فعل مش صفة", "why": "«أنا موافق» بالعربي فيها صفة، لكن agree في الإنجليزي فعل لوحده. من غير am.", "bad": "I am agree with you.", "good": "I agree with you."}, {"t": "luggage مفيهاش جمع", "why": "luggage اسم مش معدود. مبنزودش عليه s ومنقولش two luggages. لو عايز العدد قول two bags.", "bad": "Where can I leave my luggages?", "good": "Where can I leave my luggage?"}, {"t": "information مفيهاش جمع", "why": "information كمان اسم مش معدود. مفيش an information ولا informations. نقول some information.", "bad": "Can you give me an information?", "good": "Can you give me some information?"}, {"t": "miss القطر مش lose", "why": "لما توصل متأخر ومتلحقش القطر أو الأتوبيس بتقول miss. منقولش lose the train بالمعنى ده.", "bad": "I lost the train.", "good": "I missed the train."}, {"t": "depend بتتبعها on", "why": "الفعل depend بيتّبع بحرف الجر on. منقولش depend of ولا depend from.", "bad": "It depends from the traffic.", "good": "It depends on the traffic."}, {"t": "allergic صفة بتتبعها to", "why": "بنقول I'm allergic to وبعدها الحاجة. مبنقولش I have allergic.", "bad": "I have allergic to nuts.", "good": "I'm allergic to nuts."}];
+    function mistakesView() {
+        app.innerHTML = '';
+        app.appendChild(pageHead('أخطاء شائعة', 'أغلاط بتحصل كتير لما نترجم من العربي حرفيًا. شوف الغلط والصح والسبب، واسمع الجملة الصح.'));
+        const wrap = el('div', 'narrow');
+        MISTAKES.forEach((m) => {
+            const card = el('section', 'card-box mistake');
+            card.appendChild(el('h2', null, m.t));
+            const bad = el('p', 'm-bad'); bad.appendChild(el('span', 'm-tag', 'غلط')); bad.appendChild(enSpan(m.bad)); card.appendChild(bad);
+            const good = el('p', 'm-good'); good.appendChild(el('span', 'm-tag ok', 'صح')); good.appendChild(enSpan(m.good));
+            const a = speakBtn(m.good), b = speakBtn(m.good, true);
+            if (a) { good.appendChild(a); good.appendChild(b); }
+            card.appendChild(good);
+            card.appendChild(mixedEl('p', null, m.why));
+            wrap.appendChild(card);
+        });
+        const acts = el('div', 'actions'); add(acts, link('تمرين رتّب الجملة', '#/build', 'btn primary'), link('رجوع للتدريب', '#/practice', 'btn secondary')); wrap.appendChild(acts);
+        app.appendChild(wrap);
+    }
 
     /* ---------- word-tile sentence building ---------- */
     function buildPhrases() {
@@ -553,8 +576,9 @@
             if (!cur.length) { holder.appendChild(el('div', 'callout note', 'مفيش أخطاء متسجلة دلوقتي. جرب تدريب متنوع.')); return; }
             holder.appendChild(runSet('مراجعة الأخطاء', () => shuffle(cur.map((k) => byKey[k])), 'mistakes', '#/practice', 'رجوع للتدريب'));
         });
+        const mst = btn('أخطاء شائعة', 'secondary', () => { location.hash = '#/mistakes'; });
         const bld = btn('رتّب الجملة', 'secondary', () => { location.hash = '#/build'; });
-        add(actions, mix, mis, bld);
+        add(actions, mix, mis, bld, mst);
         picker.appendChild(actions);
         picker.appendChild(el('p', 'caption', 'الأسئلة اللي بتغلط فيها من أول مرة بتتسجل هنا، وبتتشال من القائمة لما تجاوبها صح مرتين ورا بعض.'));
         main.insertBefore(picker, holder);
@@ -579,6 +603,7 @@
             return a;
         }
         grid.appendChild(tcard('المراجعة العامة', quiz.length + ' أسئلة من كل المواقف', '#/review', P.quiz ? 'الأفضل ' + P.quiz.best + '/' + quiz.length : ''));
+        grid.appendChild(tcard('أخطاء شائعة', '١٠ أغلاط بتتكرر مع الناطقين بالعربي', '#/mistakes', ''));
         grid.appendChild(tcard('رتّب الجملة', 'رتّب كلمات الجملة الإنجليزي من المعنى', '#/build', ''));
         grid.appendChild(tcard('الاختبار الشامل', MIXED_N + ' سؤال عشوائي من كل الدروس', '#/test-mixed', P.tests.mixed ? 'الأفضل ' + P.tests.mixed.best + '/' + MIXED_N : ''));
         lessons.forEach((l) => { const t = P.tests['lesson-' + l.number]; grid.appendChild(tcard('اختبار الدرس ' + l.number + ': ' + l.title, l.steps.length + ' أسئلة بترتيب عشوائي', '#/test-lesson-' + l.number, t ? 'الأفضل ' + t.best + '/' + l.steps.length : '')); });
@@ -760,6 +785,7 @@
         else if (hash === 'lessons') { section = 'lessons'; lessonsView(); }
         else if (hash === 'practice') { section = 'practice'; practiceView(); }
         else if (hash === 'tests') { section = 'practice'; practiceView(); const t = document.getElementById('tests-sec'); if (t) t.scrollIntoView(); return finishRoute(section, true); }
+        else if (hash === 'mistakes') { section = 'practice'; mistakesView(); }
         else if (hash === 'build') { section = 'practice'; buildView(); }
         else if (hash === 'review') { section = 'practice'; reviewView(); }
         else if (hash === 'test-mixed') { section = 'practice'; testView('الاختبار الشامل', 'رجوع للاختبارات', () => shuffle(ITEMS).slice(0, MIXED_N), MIXED_N, (s) => { const p = P.tests.mixed; P.tests.mixed = { last: s, best: Math.max(s, p ? p.best : 0) }; }); }
