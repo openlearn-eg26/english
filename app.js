@@ -566,6 +566,7 @@
         let armed = false;
         const rb = btn('امسح كل حاجة', 'secondary', () => {
             if (!armed) { armed = true; rb.textContent = 'اضغط تاني للتأكيد'; rb.classList.add('danger'); return; }
+            try { localStorage.removeItem(OLD_KEY); localStorage.removeItem(KEY); } catch (e) { /* ignore */ }
             P = normalize({}); save(); route();
         });
         rs.appendChild(rb);
