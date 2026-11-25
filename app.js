@@ -873,7 +873,7 @@
         app.innerHTML = '';
         const st = window.LangCloud.state();
         app.appendChild(pageHead('أهلاً بيك في اتعلم إنجليزي بالمواقف', st === 'out' ? 'سجّل دخولك أو اعمل حساب جديد عشان تبدأ.' : ''));
-        const wrap = el('div', 'narrow');
+        const wrap = el('div', 'narrow gate-card');
         if (st === 'out') {
             wrap.appendChild(window.LangCloud.panel(el, add, btn, window.__lang, { title: 'تسجيل الدخول', brief: true }));
         } else if (st === 'error') {
@@ -884,6 +884,11 @@
             const box = el('section', 'group card-box'); box.setAttribute('role', 'status');
             add(box, el('p', null, 'ثانية واحدة، بنتأكد من حسابك...'));
             wrap.appendChild(box);
+        }
+        if (st === 'out') {
+            const pts = el('ul', 'gate-points');
+            ['مواقف حقيقية من الحياة اليومية', 'تصحيح فوري بالعربي مع السبب', 'مجاني ومن غير إعلانات'].forEach(t => pts.appendChild(el('li', null, t)));
+            wrap.appendChild(pts);
         }
         app.appendChild(wrap);
         const t = document.getElementById('page-title'); if (t) t.focus({ preventScroll: true });
