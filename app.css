@@ -113,3 +113,11 @@ h1,h2,h3,p,.brand{overflow-wrap:anywhere}
 .speak-bar{display:flex;flex-wrap:wrap;gap:8px}
 .phrase-line .speak{min-width:40px;min-height:40px;padding:0 10px}
 .audio-msg{position:fixed;inset-inline:16px;bottom:16px;max-width:420px;margin:0 auto;background:#222;color:#fff;border-radius:12px;padding:12px 16px;font-size:14px;z-index:50}
+
+.tile-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tile-ans{min-height:56px;padding:10px;border:1px dashed var(--teal);border-radius:12px;background:#fafcfb;align-items:center}
+.tile-ans.is-empty::before{content:"\2026";color:var(--ink-2)}
+.tile{appearance:none;border:1px solid var(--hairline);border-radius:10px;background:#fff;color:var(--ink);padding:10px 14px;font:inherit;font-size:16px;cursor:pointer;direction:ltr;min-height:44px}
+.tile:not(:disabled):hover{border-color:var(--teal)}
+.tile-ans .tile{background:#f2f8f6;border-color:var(--teal);color:#245a4c}
+.tile:disabled{cursor:default;opacity:.9}

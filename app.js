@@ -285,6 +285,98 @@
         render();
     }
 
+
+    /* ---------- word-tile sentence building ---------- */
+    function buildPhrases() {
+        const seen = {}, out = [];
+        lessons.forEach((l) => l.steps.forEach((st) => {
+            const p = st.phrase;
+            if (!p || !p.en || !p.ar) return;
+            const w = p.en.trim().split(/\s+/);
+            if (w.length < 3 || w.length > 9 || seen[p.en]) return;
+            seen[p.en] = 1; out.push(p);
+        }));
+        return out;
+    }
+    function buildView() {
+        app.innerHTML = '';
+        app.appendChild(pageHead('رتّب الجملة', 'شوف المعنى بالعربي ورتّب الكلمات الإنجليزي بالترتيب الصح. الكلمات اللي بتضغط عليها بتنتقل فوق، واضغط عليها تاني لو عايز ترجعها.'));
+        const wrap = el('div', 'narrow');
+        const box = el('section', 'group card-box');
+        wrap.appendChild(box); app.appendChild(wrap);
+        const pool = buildPhrases();
+        function start() {
+            const set = shuffle(pool).slice(0, 8);
+            let index = 0, score = 0;
+            function scramble(words) {
+                let t, n = 0;
+                do { t = shuffle(words.map((_, i) => i)); n++; } while (n < 20 && t.every((v, i) => v === i));
+                return t;
+            }
+            function render() {
+                const p = set[index];
+                const words = p.en.trim().split(/\s+/);
+                const order = scramble(words);
+                const chosen = [];
+                let firstTry = true, solved = false;
+                box.innerHTML = '';
+                add(box, el('p', 'counter', 'جملة ' + (index + 1) + ' من ' + set.length));
+                add(box, el('p', 'scene', 'رتّب الجملة اللي معناها: ' + p.ar));
+                const ans = el('div', 'tile-row tile-ans'); ans.dir = 'ltr'; ans.setAttribute('aria-label', 'جملتك');
+                const bank = el('div', 'tile-row tile-bank'); bank.dir = 'ltr'; bank.setAttribute('aria-label', 'الكلمات المتاحة');
+                const feedback = el('div', 'feedback'); feedback.setAttribute('aria-live', 'polite');
+                const actions = el('div', 'actions');
+                const check = btn('تحقق', 'primary', verify);
+                function draw() {
+                    ans.innerHTML = ''; bank.innerHTML = '';
+                    chosen.forEach((wi) => { const t = el('button', 'tile', words[wi]); t.type = 'button'; t.lang = 'en'; t.disabled = solved; t.addEventListener('click', () => { chosen.splice(chosen.indexOf(wi), 1); feedback.innerHTML = ''; draw(); }); ans.appendChild(t); });
+                    order.forEach((wi) => { if (chosen.indexOf(wi) >= 0) return; const t = el('button', 'tile', words[wi]); t.type = 'button'; t.lang = 'en'; t.addEventListener('click', () => { chosen.push(wi); feedback.innerHTML = ''; draw(); }); bank.appendChild(t); });
+                    ans.classList.toggle('is-empty', !chosen.length);
+                    check.disabled = chosen.length !== words.length || solved;
+                }
+                function verify() {
+                    const got = chosen.map((i) => words[i]).join(' ');
+                    feedback.innerHTML = '';
+                    if (got === words.join(' ')) {
+                        solved = true; if (firstTry) score++;
+                        draw();
+                        const note = el('div', 'callout note');
+                        add(note, el('p', 'callout-title', 'صح، الترتيب سليم'));
+                        feedback.appendChild(note);
+                        const keep = el('div', 'keep'); add(keep, el('p', 'keep-label', 'افتكر الجملة دي'), phraseLine(p)); feedback.appendChild(keep);
+                        const last = index === set.length - 1;
+                        actions.innerHTML = '';
+                        const nb = btn(last ? 'شوف النتيجة' : 'الجملة اللي بعدها', 'primary', () => { if (last) finish(); else { index++; render(); } });
+                        actions.appendChild(nb); setTimeout(() => nb.focus({ preventScroll: true }), 0);
+                    } else {
+                        firstTry = false;
+                        const note = el('div', 'callout warning');
+                        add(note, el('p', 'callout-title', 'الترتيب مش مظبوط'), el('p', null, 'جرب تغيّر ترتيب الكلمات. ولو محتار اضغط وريني الإجابة.'));
+                        feedback.appendChild(note);
+                        const show = btn('وريني الإجابة', 'ghost', () => { chosen.length = 0; words.forEach((_, i) => chosen.push(i)); draw(); verify(); });
+                        const clear = btn('امسح وابدأ تاني', 'secondary', () => { chosen.length = 0; feedback.innerHTML = ''; draw(); });
+                        const row = el('div', 'actions'); add(row, clear, show); feedback.appendChild(row);
+                    }
+                }
+                add(actions, check);
+                add(box, ans, bank, feedback, actions);
+                draw();
+            }
+            function finish() {
+                markDay(); save();
+                box.innerHTML = '';
+                const pct = Math.round((score / set.length) * 100);
+                add(box, el('p', 'group-label', 'النتيجة'), el('h2', null, 'ترتيب الجمل: ' + score + ' من ' + set.length));
+                const row = el('div', 'result-row');
+                add(row, ring(pct, 'النتيجة ' + pct + ' بالمية'), el('p', null, 'ده عدد الجمل اللي رتبتها صح من أول محاولة. التمرين ده للتدريب ومبيتسجلش في نتايج الاختبارات.'));
+                box.appendChild(row);
+                const a = el('div', 'actions'); add(a, btn('تمرين جديد', 'primary', start), link('رجوع للتدريب', '#/practice', 'btn secondary')); box.appendChild(a);
+            }
+            render();
+        }
+        start();
+    }
+
     /* ---------- result screen shared by tests ---------- */
     function resultView(container, title, steps, score, results, again, backHref, backText) {
         container.innerHTML = '';
@@ -461,7 +553,8 @@
             if (!cur.length) { holder.appendChild(el('div', 'callout note', 'مفيش أخطاء متسجلة دلوقتي. جرب تدريب متنوع.')); return; }
             holder.appendChild(runSet('مراجعة الأخطاء', () => shuffle(cur.map((k) => byKey[k])), 'mistakes', '#/practice', 'رجوع للتدريب'));
         });
-        add(actions, mix, mis);
+        const bld = btn('رتّب الجملة', 'secondary', () => { location.hash = '#/build'; });
+        add(actions, mix, mis, bld);
         picker.appendChild(actions);
         picker.appendChild(el('p', 'caption', 'الأسئلة اللي بتغلط فيها من أول مرة بتتسجل هنا، وبتتشال من القائمة لما تجاوبها صح مرتين ورا بعض.'));
         main.insertBefore(picker, holder);
@@ -486,6 +579,7 @@
             return a;
         }
         grid.appendChild(tcard('المراجعة العامة', quiz.length + ' أسئلة من كل المواقف', '#/review', P.quiz ? 'الأفضل ' + P.quiz.best + '/' + quiz.length : ''));
+        grid.appendChild(tcard('رتّب الجملة', 'رتّب كلمات الجملة الإنجليزي من المعنى', '#/build', ''));
         grid.appendChild(tcard('الاختبار الشامل', MIXED_N + ' سؤال عشوائي من كل الدروس', '#/test-mixed', P.tests.mixed ? 'الأفضل ' + P.tests.mixed.best + '/' + MIXED_N : ''));
         lessons.forEach((l) => { const t = P.tests['lesson-' + l.number]; grid.appendChild(tcard('اختبار الدرس ' + l.number + ': ' + l.title, l.steps.length + ' أسئلة بترتيب عشوائي', '#/test-lesson-' + l.number, t ? 'الأفضل ' + t.best + '/' + l.steps.length : '')); });
         return grid;
@@ -666,6 +760,7 @@
         else if (hash === 'lessons') { section = 'lessons'; lessonsView(); }
         else if (hash === 'practice') { section = 'practice'; practiceView(); }
         else if (hash === 'tests') { section = 'practice'; practiceView(); const t = document.getElementById('tests-sec'); if (t) t.scrollIntoView(); return finishRoute(section, true); }
+        else if (hash === 'build') { section = 'practice'; buildView(); }
         else if (hash === 'review') { section = 'practice'; reviewView(); }
         else if (hash === 'test-mixed') { section = 'practice'; testView('الاختبار الشامل', 'رجوع للاختبارات', () => shuffle(ITEMS).slice(0, MIXED_N), MIXED_N, (s) => { const p = P.tests.mixed; P.tests.mixed = { last: s, best: Math.max(s, p ? p.best : 0) }; }); }
         else if (hash.startsWith('test-lesson-')) {
