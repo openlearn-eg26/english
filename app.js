@@ -922,6 +922,10 @@
         });
         rs.appendChild(rb);
         side.appendChild(rs);
+        const tp = panel('جولة تعريفية');
+        tp.appendChild(el('p', null, 'عايز تشوف الشرح السريع للموقع تاني؟'));
+        tp.appendChild(btn('افتح الجولة', 'secondary', () => showTour()));
+        side.appendChild(tp);
         const about = panel('عن بياناتك');
         about.appendChild(el('p', null, 'الموقع مجاني والدخول بحساب. اسمك ونتايجك وأيام مذاكرتك بتتحفظ في متصفحك، وبتتخزن كمان على سيرفرات جوجل (Firebase) مع إيميلك لو الإيميل متأكد. التفاصيل في صفحة الخصوصية. مسح التقدم من هنا بيمسح اللي على المتصفح بس، وحذف الحساب بيمسح اللي على السيرفر.'));
         about.appendChild(el('p', 'caption', 'زراير الاستماع بتشغّل تسجيلات إنجليزي بصوت رجل (صوت مُولَّد بالحاسوب، مش ناطق أصلي، فاعتبره مرجع تقريبي). التسجيلات جزء من الموقع وبتتحمل منه. لو جملة مالهاش تسجيل، المتصفح ممكن يستخدم صوت جهازك، وده ممكن يعتمد على جهازك أو مزود الصوت بتاعه.'));
@@ -945,6 +949,61 @@
         apply();
         if (mq) { if (mq.addEventListener) mq.addEventListener('change', apply); else if (mq.addListener) mq.addListener(apply); }
     })();
+    /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
+    const TOUR = [
+        { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ١٠ مواقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
+        { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
+        { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
+        { img: 'tour/6.jpg', t: 'حسابي وتقدمي', d: 'هنا بتشوف نتيجتك وأيام مذاكرتك، وتقدر تغيّر اسمك أو تحذف حسابك وبياناتك. تقدر تفتح الجولة دي تاني من نفس الصفحة.' },
+    ];
+    function tourKey() { const u = window.LangCloud && window.LangCloud.uid && window.LangCloud.uid(); return u ? 'lang-tour-v1-' + u : null; }
+    function tourSeen() { const k = tourKey(); if (!k) return true; try { return localStorage.getItem(k) === '1'; } catch (e) { return false; } }
+    function tourMark() { const k = tourKey(); if (k) { try { localStorage.setItem(k, '1'); } catch (e) { /* ignore */ } } }
+    function showTour() {
+        if (document.getElementById('tour')) return;
+        const prevFocus = document.activeElement;
+        let i = 0;
+        const ov = el('div', 'tour'); ov.id = 'tour'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', 'جولة سريعة في الموقع');
+        const card = el('div', 'tour-card');
+        ov.appendChild(card);
+        function close() { tourMark(); ov.remove(); document.body.classList.remove('tour-open'); if (prevFocus && prevFocus.focus) { try { prevFocus.focus({ preventScroll: true }); } catch (e) { /* ignore */ } } }
+        function draw() {
+            const s = TOUR[i], last = i === TOUR.length - 1;
+            card.innerHTML = '';
+            const top = el('div', 'tour-top');
+            add(top, el('span', 'tour-count', (i + 1) + ' من ' + TOUR.length));
+            if (!last) add(top, btn('تخطي', 'ghost', close));
+            const fig = el('div', 'tour-fig');
+            const im = el('img'); im.src = s.img; im.alt = 'صورة من الموقع: ' + s.t; im.width = 390; im.height = 700; im.decoding = 'async';
+            fig.appendChild(im);
+            const h = el('h2', 'tour-title', s.t); h.tabIndex = -1;
+            const dots = el('div', 'tour-dots'); dots.setAttribute('aria-hidden', 'true');
+            TOUR.forEach((_, k) => dots.appendChild(el('span', k === i ? 'on' : '')));
+            const row = el('div', 'actions tour-actions');
+            if (i > 0) add(row, btn('السابق', 'secondary', () => { i--; draw(); }));
+            const nx = btn(last ? 'ابدأ الدروس' : 'التالي', 'primary', () => { if (last) { close(); } else { i++; draw(); } });
+            add(row, nx);
+            add(card, top, fig, h, el('p', 'tour-text', s.d), dots, row);
+            setTimeout(() => nx.focus({ preventScroll: true }), 0);
+        }
+        ov.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') { close(); return; }
+            if (e.key === 'Tab') {
+                const f = Array.from(ov.querySelectorAll('button')).filter((b) => !b.disabled);
+                if (!f.length) return;
+                const a = f.indexOf(document.activeElement);
+                if (e.shiftKey && a <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+                else if (!e.shiftKey && a === f.length - 1) { e.preventDefault(); f[0].focus(); }
+            }
+        });
+        document.body.classList.add('tour-open');
+        document.body.appendChild(ov);
+        draw();
+    }
+    window.__showTour = showTour;
+
     function gateView() {
         document.body.classList.add('is-gated');
         app.innerHTML = '';
@@ -974,6 +1033,7 @@
         Speech.stop();
         if (window.LangCloud && window.LangCloud.state() !== 'in') { gateView(); return; }
         document.body.classList.remove('is-gated');
+        if (!tourSeen()) setTimeout(showTour, 0);
         const hash = location.hash.replace(/^#\/?/, '');
         let section = 'home';
         if (hash.startsWith('lesson-')) { section = 'lessons'; lessonView(parseInt(hash.slice(7), 10)); }

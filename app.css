@@ -185,3 +185,20 @@ body{font-size:17px;line-height:1.85}
 .gate-points li:before{content:"\2713";color:var(--teal-d);font-weight:700;margin-inline-end:8px}
 .gate-card .google-btn{display:flex;align-items:center;justify-content:center;gap:10px}
 @media(max-width:480px){.is-gated .page-head h1{font-size:23px}.is-gated .shell{padding-top:22px}}
+
+/* first-entry tour */
+body.tour-open{overflow:hidden}
+.tour{position:fixed;inset:0;z-index:100;background:rgba(37,31,33,.72);display:flex;align-items:center;justify-content:center;padding:12px;overflow:auto}
+.tour-card{background:#fff;border-radius:18px;width:100%;max-width:440px;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:14px 16px 16px;box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.tour-top{display:flex;align-items:center;justify-content:space-between;min-height:44px}
+.tour-count{color:var(--ink-2);font-size:14px;font-weight:600}
+.tour-fig{background:var(--sand);border:1px solid var(--hairline);border-radius:14px;overflow:hidden;text-align:center;line-height:0}
+.tour-fig img{width:auto;max-width:100%;height:auto;max-height:46vh;max-height:46dvh;object-fit:contain}
+.tour-title{margin:12px 0 4px;font-size:20px}
+.tour-text{margin:0 0 8px;color:var(--ink-2);font-size:15.5px}
+.tour-dots{display:flex;gap:6px;justify-content:center;margin:6px 0 10px}
+.tour-dots span{width:8px;height:8px;border-radius:50%;background:var(--hairline)}
+.tour-dots span.on{background:var(--teal-d);width:22px;border-radius:4px}
+.tour-actions{justify-content:center}
+.tour-actions .btn{min-width:120px}
+@media (min-width:900px){.tour-card{max-width:520px}.tour-fig img{max-height:52vh}}

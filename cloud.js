@@ -124,6 +124,7 @@
         onChange: function (f) { listeners.push(f); },
         onAuth: function (f) { authListeners.push(f); },
         state: function () { return state; },
+        uid: function () { return user ? user.uid : null; },
         retry: function () { retry(cloud._app); },
         push: push,
         merge: merge,
