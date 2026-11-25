@@ -43,6 +43,12 @@
         o.days = a.days.concat(b.days.filter(function (d) { return a.days.indexOf(d) < 0; })).sort().slice(-120);
         return norm(o);
     }
+    function isGoogle(u) { var pd = (u && u.providerData) || []; return pd.some(function (x) { return x.providerId === 'google.com'; }) && !pd.some(function (x) { return x.providerId === 'password'; }); }
+    function reauth(s, u, pass) {
+        if (isGoogle(u)) return s.A.reauthenticateWithPopup(u, new s.A.GoogleAuthProvider());
+        if (!pass) throw { code: 'need-password' };
+        return s.A.reauthenticateWithCredential(u, s.A.EmailAuthProvider.credential(u.email, pass));
+    }
     function docRef(s) { return s.F.doc(s.db, 'users', s.auth.currentUser.uid); }
     function pull(app) {
         return load().then(function (s) {
@@ -82,6 +88,10 @@
         if (/invalid-credential|wrong-password|user-not-found|invalid-login/.test(c)) return 'الإيميل أو كلمة السر مش صح.';
         if (/too-many-requests/.test(c)) return 'محاولات كتير. استنى شوية وجرب تاني.';
         if (/network/.test(c)) return 'مفيش اتصال بالإنترنت.';
+        if (/popup-closed|cancelled-popup/.test(c)) return 'اتقفلت نافذة جوجل قبل ما تكمل. جرب تاني.';
+        if (/popup-blocked/.test(c)) return 'المتصفح منع نافذة جوجل. اسمح بالنوافذ المنبثقة وجرب تاني.';
+        if (/user-mismatch/.test(c)) return 'ده مش نفس حساب جوجل اللي داخل بيه. اختار نفس الحساب.';
+        if (/requires-recent-login/.test(c)) return 'لازم تأكد هويتك تاني. جرب تاني.';
         if (/permission-denied/.test(c)) return 'ماحصلش حفظ: الصلاحيات.';
         return 'حصلت مشكلة. جرب تاني بعد شوية.';
     }
@@ -152,8 +162,8 @@
                     var db0 = btn('احذف الحساب ده', 'secondary', function () {
                         if (!arm0) { arm0 = true; db0.textContent = 'اضغط تاني للتأكيد'; db0.classList.add('danger'); return; }
                         load().then(function (s) {
-                            var u = s.auth.currentUser; if (!pw0[1].value) throw { code: 'need-password' };
-                            return s.A.reauthenticateWithCredential(u, s.A.EmailAuthProvider.credential(u.email, pw0[1].value)).then(function () { return s.A.deleteUser(u); });
+                            var u = s.auth.currentUser;
+                            return reauth(s, u, pw0[1].value).then(function () { return s.A.deleteUser(u); });
                         }).then(function () { setState(null); flagSet(false); say('اتحذف الحساب.'); draw(); }, function (e) { arm0 = false; db0.textContent = 'احذف الحساب ده'; db0.classList.remove('danger'); say(e && e.code === 'need-password' ? 'اكتب كلمة السر الأول.' : errText(e)); });
                     });
                     add(d0, db0);
@@ -171,12 +181,12 @@
                         say('بنحذف...');
                         load().then(function (s) {
                             var u = s.auth.currentUser; var p = pw[1].value;
-                            if (!p) throw { code: 'need-password' };
-                            return s.A.reauthenticateWithCredential(u, s.A.EmailAuthProvider.credential(u.email, p)).then(function () { return s.F.deleteDoc(docRef(s)); }).then(function () { return s.A.deleteUser(u); });
+                            return reauth(s, u, p).then(function () { return s.F.deleteDoc(docRef(s)); }).then(function () { return s.A.deleteUser(u); });
                         }).then(function () { setState(null); flagSet(false); say('اتحذف حسابك وبياناتك من السيرفر.'); draw(); }, function (e) { armed = false; db.textContent = 'احذف حسابي وبياناتي من السيرفر'; db.classList.remove('danger'); say(e && e.code === 'need-password' ? 'اكتب كلمة السر الأول.' : errText(e)); });
                     });
                     add(del, db);
-                    add(body, who, a, pw[0], pw[1], del);
+                    if (isGoogle(user)) { add(body, who, a, el('p', 'caption', 'داخل بحساب جوجل. وقت الحذف هتفتح نافذة جوجل عشان تأكد إنك صاحب الحساب، ومفيش كلمة سر هنا.'), del); }
+                    else { add(body, who, a, pw[0], pw[1], del); }
                     if (status) say(status);
                 } else {
                     var e1 = field('الإيميل', 'cemail', 'email', 'email'), p1 = field('كلمة السر (٦ حروف على الأقل)', 'cpass', 'password', 'current-password');
