@@ -62,14 +62,14 @@
         timer = setTimeout(function () {
             load().then(function (s) {
                 if (!s.auth.currentUser || !s.auth.currentUser.emailVerified) return;
-                return s.F.getDoc(docRef(s)).then(function (snap) {
+                return s.auth.currentUser.getIdToken(true).catch(function () {}).then(function () { return s.F.getDoc(docRef(s)).then(function (snap) {
                     var cur = window.__lang.get(), cl = null;
                     var rw = snap.exists() ? snap.data().progress : null;
                     if (typeof rw === 'string' && rw.length < 60000) { try { cl = JSON.parse(rw); } catch (e) { cl = null; } }
                     if (cl && (typeof cl !== 'object' || Array.isArray(cl))) cl = null;
                     var out = cl ? merge(cur, cl, window.__lang.normalize) : cur;
                     return s.F.setDoc(docRef(s), { progress: JSON.stringify(out), updatedAt: Date.now() });
-                });
+                }); });
             }).then(function () { status = 'اتحفظ في حسابك.'; emit(); }, function () { status = 'ماقدرناش نحفظ في الحساب دلوقتي. تقدمك لسه محفوظ على المتصفح.'; emit(); });
         }, 1500);
     }
@@ -102,7 +102,7 @@
                 done = true; clearTimeout(t);
                 setState(u);
                 if (u && !u.emailVerified) { emit(); }
-                else if (u) { pull(app).then(function () { status = 'متزامن مع حسابك.'; emit(); if (app.refresh) app.refresh(); }, function () { status = ''; emit(); }); }
+                else if (u) { u.getIdToken(true).catch(function () {}).then(function () { return pull(app); }).then(function () { status = 'متزامن مع حسابك.'; emit(); if (app.refresh) app.refresh(); }, function () { status = ''; emit(); }); }
                 else { emit(); }
             });
         }, function () { done = true; clearTimeout(t); state = 'error'; authListeners.forEach(function (f) { try { f(state); } catch (e) { /* ignore */ } }); });
