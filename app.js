@@ -384,6 +384,81 @@
         start();
     }
 
+    /* ---------- listening practice: hear a recorded clip, choose its Arabic meaning ---------- */
+    function listenPool() {
+        const seen = {}, out = [];
+        lessons.forEach((l) => l.steps.forEach((st) => {
+            [st.phrase].concat(st.them ? [{ en: st.them, ar: st.themAr }] : []).forEach((p) => {
+                if (!p || !p.en || !p.ar || seen[p.en] || !AUDIO_MAP[p.en.replace(/\s+/g, ' ').trim()]) return;
+                seen[p.en] = 1; out.push(p);
+            });
+        }));
+        return out;
+    }
+    function listenView() {
+        app.innerHTML = '';
+        app.appendChild(pageHead('تمرين السمع', 'اسمع الجملة بالإنجليزي من غير ما تشوفها، واختار معناها بالعربي. اضغط على السماعة تسمعها عادي، أو بالبطيء لو عايز.'));
+        const wrap = el('div', 'narrow');
+        const box = el('section', 'group card-box');
+        wrap.appendChild(box); app.appendChild(wrap);
+        const pool = listenPool();
+        function start() {
+            const set = shuffle(pool).slice(0, 8);
+            let index = 0, score = 0;
+            function render() {
+                const p = set[index];
+                const others = shuffle(pool.filter((q) => q.ar !== p.ar)).slice(0, 2);
+                const opts = shuffle([p].concat(others));
+                let firstTry = true, solved = false;
+                box.innerHTML = '';
+                add(box, el('p', 'counter', 'جملة ' + (index + 1) + ' من ' + set.length));
+                add(box, el('p', 'scene', 'اسمع الجملة واختار معناها:'));
+                const sbar = el('div', 'speak-bar');
+                const s1 = speakBtn(p.en), s2 = speakBtn(p.en, true);
+                if (s1) sbar.appendChild(s1); if (s2) sbar.appendChild(s2);
+                box.appendChild(sbar);
+                const list = el('div', 'choices');
+                const feedback = el('div', 'feedback'); feedback.setAttribute('aria-live', 'polite');
+                const actions = el('div', 'actions');
+                opts.forEach((o) => {
+                    const b = el('button', 'choice', o.ar); b.type = 'button'; b.addEventListener('click', () => {
+                        if (solved) return;
+                        if (o === p) {
+                            solved = true; if (firstTry) score++;
+                            b.classList.add('is-correct');
+                            feedback.innerHTML = '';
+                            const note = el('div', 'callout note'); add(note, el('p', 'callout-title', 'صح'));
+                            feedback.appendChild(note);
+                            const keep = el('div', 'keep'); add(keep, el('p', 'keep-label', 'افتكر الجملة دي'), phraseLine(p)); feedback.appendChild(keep);
+                            const last = index === set.length - 1;
+                            const nb = btn(last ? 'شوف النتيجة' : 'الجملة اللي بعدها', 'primary', () => { if (last) finish(); else { index++; render(); } });
+                            actions.appendChild(nb); setTimeout(() => nb.focus({ preventScroll: true }), 0);
+                        } else {
+                            firstTry = false; b.classList.add('is-wrong');
+                            feedback.innerHTML = '';
+                            const note = el('div', 'callout warning'); add(note, el('p', 'callout-title', 'مش ده'), el('p', null, 'اسمع تاني وجرب اختيار تاني.'));
+                            feedback.appendChild(note);
+                        }
+                    });
+                    list.appendChild(b);
+                });
+                add(box, list, feedback, actions);
+            }
+            function finish() {
+                markDay(); save();
+                box.innerHTML = '';
+                const pct = Math.round((score / set.length) * 100);
+                add(box, el('p', 'group-label', 'النتيجة'), el('h2', null, 'تمرين السمع: ' + score + ' من ' + set.length));
+                const row = el('div', 'result-row');
+                add(row, ring(pct, 'النتيجة ' + pct + ' بالمية'), el('p', null, 'ده عدد الجمل اللي فهمتها من أول محاولة. التمرين ده للتدريب ومبيتسجلش في نتايج الاختبارات.'));
+                box.appendChild(row);
+                const a = el('div', 'actions'); add(a, btn('تمرين جديد', 'primary', start), link('رجوع للتدريب', '#/practice', 'btn secondary')); box.appendChild(a);
+            }
+            render();
+        }
+        start();
+    }
+
     /* ---------- word-tile sentence building ---------- */
     function buildPhrases() {
         const seen = {}, out = [];
@@ -654,7 +729,8 @@
         const mst = btn('أخطاء شائعة', 'secondary', () => { location.hash = '#/mistakes'; });
         const bld = btn('رتّب الجملة', 'secondary', () => { location.hash = '#/build'; });
         const fil = btn('كمّل الجملة', 'secondary', () => { location.hash = '#/fill'; });
-        add(actions, mix, mis, bld, fil, mst);
+        const lis = btn('تمرين السمع', 'secondary', () => { location.hash = '#/listen'; });
+        add(actions, mix, mis, lis, bld, fil, mst);
         picker.appendChild(actions);
         picker.appendChild(el('p', 'caption', 'الأسئلة اللي بتغلط فيها من أول مرة بتتسجل هنا، وبتتشال من القائمة لما تجاوبها صح مرتين ورا بعض.'));
         main.insertBefore(picker, holder);
@@ -680,6 +756,7 @@
         }
         grid.appendChild(tcard('المراجعة العامة', quiz.length + ' أسئلة من كل المواقف', '#/review', P.quiz ? 'الأفضل ' + P.quiz.best + '/' + quiz.length : ''));
         grid.appendChild(tcard('أخطاء شائعة', '١٠ أغلاط بتتكرر مع الناطقين بالعربي', '#/mistakes', ''));
+        grid.appendChild(tcard('تمرين السمع', 'اسمع الجملة واختار معناها بالعربي', '#/listen', ''));
         grid.appendChild(tcard('رتّب الجملة', 'رتّب كلمات الجملة الإنجليزي من المعنى', '#/build', ''));
         grid.appendChild(tcard('كمّل الجملة', 'اختار الكلمة الناقصة في الجملة', '#/fill', ''));
         grid.appendChild(tcard('الاختبار الشامل', MIXED_N + ' سؤال عشوائي من كل الدروس', '#/test-mixed', P.tests.mixed ? 'الأفضل ' + P.tests.mixed.best + '/' + MIXED_N : ''));
@@ -905,6 +982,7 @@
         else if (hash === 'tests') { section = 'practice'; practiceView(); const t = document.getElementById('tests-sec'); if (t) t.scrollIntoView(); return finishRoute(section, true); }
         else if (hash === 'mistakes') { section = 'practice'; mistakesView(); }
         else if (hash === 'build') { section = 'practice'; buildView(); }
+        else if (hash === 'listen') { section = 'practice'; listenView(); }
         else if (hash === 'fill') { section = 'practice'; fillView(); }
         else if (hash === 'review') { section = 'practice'; reviewView(); }
         else if (hash === 'test-mixed') { section = 'practice'; testView('الاختبار الشامل', 'رجوع للاختبارات', () => shuffle(ITEMS).slice(0, MIXED_N), MIXED_N, (s) => { const p = P.tests.mixed; P.tests.mixed = { last: s, best: Math.max(s, p ? p.best : 0) }; }); }
