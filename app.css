@@ -158,3 +158,5 @@ body{font-size:17px;line-height:1.85}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 .them .translate,.them .speak{color:#2f6556}
+
+.is-gated .nav{display:none}
