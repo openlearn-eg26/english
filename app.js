@@ -421,7 +421,7 @@
                 const feedback = el('div', 'feedback'); feedback.setAttribute('aria-live', 'polite');
                 const actions = el('div', 'actions');
                 opts.forEach((o) => {
-                    const b = el('button', 'choice', o.ar); b.type = 'button'; b.addEventListener('click', () => {
+                    const b = el('button', 'choice', o.ar); b.type = 'button'; b.dir = 'rtl'; b.lang = 'ar'; b.style.textAlign = 'right'; b.addEventListener('click', () => {
                         if (solved) return;
                         if (o === p) {
                             solved = true; if (firstTry) score++;
