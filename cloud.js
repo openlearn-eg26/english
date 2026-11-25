@@ -1,11 +1,10 @@
-/* Optional cloud account. Nothing here loads or contacts Google until the learner presses a sign-in button
-   (or was already signed in on this browser). Stores one document per user: progress JSON + timestamp. */
+/* Cloud account. Sign-in is required to enter the site: the Firebase SDK loads at page start to check who is signed in. Stores one document per user: progress JSON + timestamp. */
 (function () {
     'use strict';
     var CFG = { apiKey: 'AIzaSyB8eoL2yaHeoeIqOQMjvIBSsVm4dHlGmeo', authDomain: 'english-learn-eg26.firebaseapp.com', projectId: 'english-learn-eg26', appId: '1:642884386219:web:5232b1b1eb11dbf4ff66ee', messagingSenderId: '642884386219' };
     var V = '10.14.1', BASE = 'https://www.gstatic.com/firebasejs/' + V + '/';
     var FLAG = 'lang-cloud.v1';
-    var sdk = null, user = null, listeners = [], timer = null, status = '';
+    var sdk = null, user = null, listeners = [], authListeners = [], timer = null, status = '', state = 'pending', lastKey = '';
     function flagGet() { try { return localStorage.getItem(FLAG) === '1'; } catch (e) { return false; } }
     function flagSet(v) { try { if (v) localStorage.setItem(FLAG, '1'); else localStorage.removeItem(FLAG); } catch (e) { /* ignore */ } }
     function emit() { listeners.forEach(function (f) { try { f(); } catch (e) { /* ignore */ } }); }
@@ -85,30 +84,48 @@
         if (/permission-denied/.test(c)) return 'ماحصلش حفظ: الصلاحيات.';
         return 'حصلت مشكلة. جرب تاني بعد شوية.';
     }
+    function cooldown(b, secs) {
+        var label = b.textContent, n = secs; b.disabled = true;
+        var iv = setInterval(function () { n--; if (n <= 0) { clearInterval(iv); b.disabled = false; b.textContent = label; } else { b.textContent = label + ' (' + n + ')'; } }, 1000);
+    }
+    function setState(u) {
+        user = u || null;
+        state = user ? 'in' : 'out';
+        var key = state + ':' + (user ? user.uid : '');
+        if (key !== lastKey) { lastKey = key; authListeners.forEach(function (f) { try { f(state); } catch (e) { /* ignore */ } }); }
+    }
     function restore(app) {
-        if (!flagGet()) return;
+        var done = false;
+        var t = setTimeout(function () { if (!done && state === 'pending') { state = 'error'; authListeners.forEach(function (f) { try { f(state); } catch (e) { /* ignore */ } }); } }, 12000);
         load().then(function (s) {
             s.A.onAuthStateChanged(s.auth, function (u) {
-                user = u || null;
+                done = true; clearTimeout(t);
+                setState(u);
                 if (u && !u.emailVerified) { emit(); }
                 else if (u) { pull(app).then(function () { status = 'متزامن مع حسابك.'; emit(); if (app.refresh) app.refresh(); }, function () { status = ''; emit(); }); }
                 else { emit(); }
             });
-        }, function () { /* offline: stay local */ });
+        }, function () { done = true; clearTimeout(t); state = 'error'; authListeners.forEach(function (f) { try { f(state); } catch (e) { /* ignore */ } }); });
     }
+    function retry(app) { state = 'pending'; lastKey = ''; sdk = null; authListeners.forEach(function (f) { try { f(state); } catch (e) { /* ignore */ } }); restore(app); }
     var cloud = {
         init: function (app) { cloud._app = app; restore(app); },
         onChange: function (f) { listeners.push(f); },
+        onAuth: function (f) { authListeners.push(f); },
+        state: function () { return state; },
+        retry: function () { retry(cloud._app); },
         push: push,
         merge: merge,
-        panel: function (el, add, btn, app) {
+        panel: function (el, add, btn, app, opts) {
+            opts = opts || {};
             var box = el('section', 'group card-box'); box.id = 'cloud-box';
-            var h = el('h2', null, 'حساب على الإنترنت (اختياري)');
-            var note = el('p', null, 'الحساب اختياري. من غيره الموقع شغال كله وتقدمك على المتصفح ده. لو عملت حساب: بنخزن إيميلك وتقدمك (نتايجك وإجاباتك وأيام المذاكرة واسمك) على سيرفرات جوجل (Firebase)، عشان تكمل من أي جهاز. مفيش إعلانات ولا تتبع ولا بيع بيانات، وإنت اللي بتمسح حسابك وبياناتك بزرار واحد من هنا. الإيميل لازم يتأكد قبل ما نحفظ تقدمك على السيرفر.');
+            var h = el('h2', null, opts.title || 'حسابك');
+            var note = el('p', null, 'التسجيل مطلوب عشان تدخل الموقع. بنخزن إيميلك وتقدمك (نتايجك وإجاباتك وأيام المذاكرة واسمك) على سيرفرات جوجل (Firebase)، عشان تكمل من أي جهاز. مفيش إعلانات ولا تتبع ولا بيع بيانات، وإنت اللي بتمسح حسابك وبياناتك بزرار واحد من صفحة حسابي. تأكيد الإيميل مش شرط للدخول، لكن من غيره مش بنحفظ تقدمك على السيرفر.');
             var pl = el('a', null, 'سياسة الخصوصية وطريقة حذف بياناتك'); pl.href = 'privacy.html';
             var body = el('div');
             var msg = el('p', 'caption', ''); msg.setAttribute('aria-live', 'polite');
-            add(box, h, note, pl, body, msg);
+            if (opts.brief) { note.textContent = 'مجاني ومن غير إعلانات. بنحفظ إيميلك وتقدمك عشان تكمل من أي جهاز، وتقدر تمسحهم بزرار واحد من صفحة حسابي. تأكيد الإيميل مش شرط للدخول.'; add(box, h, body, msg, note, pl); } else add(box, h, note, pl, body, msg);
+            if (opts.hideNoteTitle) h.hidden = true;
             function say(t) { msg.textContent = t || ''; }
             function field(label, id, type, ac) {
                 var l = el('label', 'field-label', label); l.htmlFor = id;
@@ -126,8 +143,8 @@
                         load().then(function (s) { return s.auth.currentUser.reload().then(function () { return s.auth.currentUser.getIdToken(true); }).then(function () { user = s.auth.currentUser; if (!user.emailVerified) throw { code: 'not-verified' }; return pull(app); }); })
                             .then(function () { say('اتأكد الإيميل واتزامن تقدمك.'); draw(); app.refresh && app.refresh(); }, function (e) { say(e && e.code === 'not-verified' ? 'لسه مش متأكد. افتح الرابط اللي وصلك على الإيميل (شوف الرسائل غير المرغوبة كمان).' : errText(e)); });
                     });
-                    var rs = btn('ابعت الرابط تاني', 'secondary', function () { load().then(function (s) { return s.A.sendEmailVerification(s.auth.currentUser); }).then(function () { say('بعتنا الرابط تاني.'); }, function (e) { say(errText(e)); }); });
-                    var so0 = btn('تسجيل خروج', 'secondary', function () { load().then(function (s) { return s.A.signOut(s.auth); }).then(function () { user = null; flagSet(false); say('خرجت.'); draw(); }, function (e) { say(errText(e)); }); });
+                    var rs = btn('ابعت الرابط تاني', 'secondary', function () { cooldown(rs, 60); load().then(function (s) { return s.A.sendEmailVerification(s.auth.currentUser); }).then(function () { say('بعتنا الرابط تاني.'); }, function (e) { say(errText(e)); }); });
+                    var so0 = btn('تسجيل خروج', 'secondary', function () { load().then(function (s) { return s.A.signOut(s.auth); }).then(function () { setState(null); flagSet(false); say('خرجت.'); draw(); }, function (e) { say(errText(e)); }); });
                     add(a0, chk, rs, so0);
                     var pw0 = field('كلمة السر (للتأكيد قبل حذف الحساب)', 'cdelpw0', 'password', 'current-password');
                     var d0 = el('div', 'actions'); var arm0 = false;
@@ -136,7 +153,7 @@
                         load().then(function (s) {
                             var u = s.auth.currentUser; if (!pw0[1].value) throw { code: 'need-password' };
                             return s.A.reauthenticateWithCredential(u, s.A.EmailAuthProvider.credential(u.email, pw0[1].value)).then(function () { return s.A.deleteUser(u); });
-                        }).then(function () { user = null; flagSet(false); say('اتحذف الحساب.'); draw(); }, function (e) { arm0 = false; db0.textContent = 'احذف الحساب ده'; db0.classList.remove('danger'); say(e && e.code === 'need-password' ? 'اكتب كلمة السر الأول.' : errText(e)); });
+                        }).then(function () { setState(null); flagSet(false); say('اتحذف الحساب.'); draw(); }, function (e) { arm0 = false; db0.textContent = 'احذف الحساب ده'; db0.classList.remove('danger'); say(e && e.code === 'need-password' ? 'اكتب كلمة السر الأول.' : errText(e)); });
                     });
                     add(d0, db0);
                     add(body, w0, w1, a0, pw0[0], pw0[1], d0);
@@ -144,7 +161,7 @@
                     var who = el('p', null, 'داخل بحساب: '); var em = el('span', null, user.email || ''); em.dir = 'ltr'; who.appendChild(em);
                     var a = el('div', 'actions');
                     var sync = btn('زامن الآن', 'primary', function () { say('بنزامن...'); pull(app).then(function () { say('اتزامن.'); app.refresh && app.refresh(); }, function (e) { say(errText(e)); }); });
-                    var out = btn('تسجيل خروج', 'secondary', function () { load().then(function (s) { return s.A.signOut(s.auth); }).then(function () { user = null; flagSet(false); say('خرجت. تقدمك لسه على المتصفح ده.'); draw(); }, function (e) { say(errText(e)); }); });
+                    var out = btn('تسجيل خروج', 'secondary', function () { load().then(function (s) { return s.A.signOut(s.auth); }).then(function () { setState(null); flagSet(false); say('خرجت. تقدمك لسه على المتصفح ده.'); draw(); }, function (e) { say(errText(e)); }); });
                     add(a, sync, out);
                     var del = el('div', 'actions'); var armed = false;
                     var pw = field('كلمة السر (للتأكيد قبل الحذف)', 'cdelpw', 'password', 'current-password');
@@ -155,7 +172,7 @@
                             var u = s.auth.currentUser; var p = pw[1].value;
                             if (!p) throw { code: 'need-password' };
                             return s.A.reauthenticateWithCredential(u, s.A.EmailAuthProvider.credential(u.email, p)).then(function () { return s.F.deleteDoc(docRef(s)); }).then(function () { return s.A.deleteUser(u); });
-                        }).then(function () { user = null; flagSet(false); say('اتحذف حسابك وبياناتك من السيرفر.'); draw(); }, function (e) { armed = false; db.textContent = 'احذف حسابي وبياناتي من السيرفر'; db.classList.remove('danger'); say(e && e.code === 'need-password' ? 'اكتب كلمة السر الأول.' : errText(e)); });
+                        }).then(function () { setState(null); flagSet(false); say('اتحذف حسابك وبياناتك من السيرفر.'); draw(); }, function (e) { armed = false; db.textContent = 'احذف حسابي وبياناتي من السيرفر'; db.classList.remove('danger'); say(e && e.code === 'need-password' ? 'اكتب كلمة السر الأول.' : errText(e)); });
                     });
                     add(del, db);
                     add(body, who, a, pw[0], pw[1], del);
@@ -170,7 +187,7 @@
                         load().then(function (s) {
                             return (create ? s.A.createUserWithEmailAndPassword(s.auth, email, pass) : s.A.signInWithEmailAndPassword(s.auth, email, pass)).then(function (r) {
                                 user = r.user; flagSet(true);
-                                s.A.onAuthStateChanged(s.auth, function (u) { user = u || null; emit(); });
+                                setState(r.user);
                                 if (create) return s.A.sendEmailVerification(r.user).then(function () { return 'unverified'; });
                                 return user.emailVerified ? pull(app) : 'unverified';
                             });
@@ -181,6 +198,7 @@
                     var b2 = btn('عمل حساب جديد', 'secondary', function () { go(true); });
                     var b3 = btn('نسيت كلمة السر', 'ghost', function () {
                         var email = e1[1].value.trim(); if (!email) { say('اكتب الإيميل الأول.'); return; }
+                        cooldown(b3, 60);
                         load().then(function (s) { return s.A.sendPasswordResetEmail(s.auth, email); }).then(function () { say('لو الإيميل مسجل هيوصله رابط لتغيير كلمة السر.'); }, function (e) { say(errText(e)); });
                     });
                     add(ac, b1, b2, b3);
