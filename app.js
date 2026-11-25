@@ -778,6 +778,20 @@
 
     /* ---------- router ---------- */
     const navLinks = Array.from(document.querySelectorAll('[data-nav]'));
+    (function shortNav() {
+        const short = { practice: 'تدريب', progress: 'حسابي' };
+        const mq = window.matchMedia ? window.matchMedia('(max-width: 620px)') : null;
+        function apply() {
+            navLinks.forEach((a) => {
+                if (!a.dataset.full) a.dataset.full = a.textContent;
+                const s = mq && mq.matches && short[a.dataset.nav];
+                a.textContent = s || a.dataset.full;
+                if (s) a.setAttribute('aria-label', a.dataset.full); else a.removeAttribute('aria-label');
+            });
+        }
+        apply();
+        if (mq) { if (mq.addEventListener) mq.addEventListener('change', apply); else if (mq.addListener) mq.addListener(apply); }
+    })();
     function route() {
         Speech.stop();
         const hash = location.hash.replace(/^#\/?/, '');
