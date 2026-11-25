@@ -149,9 +149,10 @@ body{font-size:17px;line-height:1.85}
  .brandmark{width:30px;height:30px}
  .nav{flex-wrap:nowrap;width:100%;gap:0;margin:0;overflow-x:auto;scrollbar-width:none;justify-content:space-between}
  .nav::-webkit-scrollbar{display:none}
- .nav a{font-size:12px;padding:6px 3px;white-space:nowrap;flex:1 1 auto;text-align:center}
+ .nav a{font-size:12px;padding:10px 3px;min-height:44px;display:flex;align-items:center;justify-content:center;white-space:nowrap;flex:1 1 auto;text-align:center}
  .shell{padding:20px 14px 32px}
  h1{font-size:26px}
  .page-sub,.lead{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.them .translate,.them .speak{color:#2f6556}
