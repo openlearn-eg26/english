@@ -4,6 +4,7 @@
     var CFG = { apiKey: 'AIzaSyB8eoL2yaHeoeIqOQMjvIBSsVm4dHlGmeo', authDomain: 'english-learn-eg26.firebaseapp.com', projectId: 'english-learn-eg26', appId: '1:642884386219:web:5232b1b1eb11dbf4ff66ee', messagingSenderId: '642884386219' };
     var V = '10.14.1', BASE = 'https://www.gstatic.com/firebasejs/' + V + '/';
     var FLAG = 'lang-cloud.v1';
+    var GOOGLE_ON = true; // Google provider enabled in Firebase and the origin authorized
     var sdk = null, user = null, listeners = [], authListeners = [], timer = null, status = '', state = 'pending', lastKey = '';
     function flagGet() { try { return localStorage.getItem(FLAG) === '1'; } catch (e) { return false; } }
     function flagSet(v) { try { if (v) localStorage.setItem(FLAG, '1'); else localStorage.removeItem(FLAG); } catch (e) { /* ignore */ } }
@@ -203,6 +204,25 @@
                     });
                     add(ac, b1, b2, b3);
                     add(body, e1[0], e1[1], p1[0], p1[1], ac);
+                    if (GOOGLE_ON) {
+                        var or = el('div', 'or-sep', 'أو'); or.setAttribute('aria-hidden', 'true');
+                        var gb = btn('الدخول بحساب جوجل', 'secondary', function () {
+                            say('بنفتح جوجل...');
+                            load().then(function (s) {
+                                var pr = new s.A.GoogleAuthProvider();
+                                return s.A.signInWithPopup(s.auth, pr).then(function (r) { user = r.user; flagSet(true); setState(r.user); return pull(app); });
+                            }).then(function () { say('دخلت وتقدمك اتزامن.'); draw(); app.refresh && app.refresh(); }, function (e) {
+                                var c = e && e.code || '';
+                                say(/popup-closed|cancelled-popup/.test(c) ? 'اتقفلت نافذة جوجل قبل ما تكمل.' : /popup-blocked/.test(c) ? 'المتصفح منع نافذة جوجل. اسمح بالنوافذ المنبثقة وجرب تاني.' : errText(e));
+                            });
+                        });
+                        gb.className += ' google-btn';
+                        var NS = 'http://www.w3.org/2000/svg', sv = document.createElementNS(NS, 'svg');
+                        sv.setAttribute('viewBox', '0 0 48 48'); sv.setAttribute('width', '20'); sv.setAttribute('height', '20'); sv.setAttribute('aria-hidden', 'true');
+                        [['#EA4335', 'M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z'], ['#4285F4', 'M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z'], ['#FBBC05', 'M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z'], ['#34A853', 'M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z']].forEach(function (x) { var pa = document.createElementNS(NS, 'path'); pa.setAttribute('fill', x[0]); pa.setAttribute('d', x[1]); sv.appendChild(pa); });
+                        gb.insertBefore(sv, gb.firstChild);
+                        add(body, or, gb);
+                    }
                 }
             }
             listeners.push(function () { if (document.body.contains(box)) draw(); });
