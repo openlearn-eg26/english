@@ -160,3 +160,28 @@ body{font-size:17px;line-height:1.85}
 .them .translate,.them .speak{color:#2f6556}
 
 .is-gated .nav{display:none}
+
+/* login gate: calmer, centered, comfortable */
+.is-gated{background:linear-gradient(180deg,#e9f2ee 0,var(--sand) 340px)}
+.is-gated .shell{padding-top:36px}
+.is-gated .page-head{text-align:center;margin-inline:auto;max-width:520px}
+.is-gated .page-head h1{font-size:28px}
+.is-gated .page-sub{font-size:16px}
+.is-gated .gate-card{max-width:440px;margin-inline:auto}
+.is-gated .gate-card .card-box{padding:26px 24px;border-radius:22px;box-shadow:0 2px 4px rgba(37,31,33,.05),0 18px 40px rgba(37,60,52,.10)}
+.is-gated .gate-card h2{font-size:20px;text-align:center;margin-bottom:14px}
+.is-gated .gate-card .search{max-width:none;height:50px;font-size:16px;border-radius:14px;padding:0 16px;margin-bottom:14px;border-color:#d4d9d7}
+.is-gated .gate-card .search:focus{border-color:var(--teal-d);box-shadow:0 0 0 3px rgba(115,168,154,.28);outline:none}
+.is-gated .gate-card .field-label{font-size:15px;margin-bottom:6px}
+.is-gated .gate-card .actions{flex-direction:column;gap:10px;margin-top:6px}
+.is-gated .gate-card .actions .btn{width:100%;min-height:50px;font-size:16px;border-radius:14px;text-align:center}
+.is-gated .gate-card .actions .btn.primary{background:var(--teal-d);color:#fff}
+.is-gated .gate-card .actions .btn.ghost{min-height:44px;font-size:14px;text-decoration:underline}
+.is-gated .gate-card .caption{margin-top:12px;font-size:14px}
+.gate-card .or-sep{display:flex;align-items:center;gap:12px;color:var(--ink-2);font-size:14px;margin:14px 0}
+.gate-card .or-sep:before,.gate-card .or-sep:after{content:"";flex:1;height:1px;background:var(--hairline)}
+.gate-card .google-btn{width:100%;min-height:50px;font-size:16px;border-radius:14px}
+.gate-points{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;align-items:center;color:var(--ink-2);font-size:14px}
+.gate-points li:before{content:"\2713";color:var(--teal-d);font-weight:700;margin-inline-end:8px}
+.gate-card .google-btn{display:flex;align-items:center;justify-content:center;gap:10px}
+@media(max-width:480px){.is-gated .page-head h1{font-size:23px}.is-gated .shell{padding-top:22px}}
