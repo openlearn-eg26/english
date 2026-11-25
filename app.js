@@ -458,7 +458,7 @@
             el('h2', null, next ? 'الدرس ' + next.number + ': ' + next.title : 'ممتاز، راجع نفسك في الاختبارات'),
             el('p', null, next ? next.subtitle : 'جرب الاختبار الشامل أو راجع أخطاءك في التدريب.'));
         const ca = el('div', 'actions');
-        ca.appendChild(next ? link('كمّل الدرس', '#/lesson-' + next.number, 'btn primary') : link('الاختبار الشامل', '#/test-mixed', 'btn primary'));
+        ca.appendChild(next ? link(st.answered ? 'كمّل الدرس' : 'ابدأ الدرس', '#/lesson-' + next.number, 'btn primary') : link('الاختبار الشامل', '#/test-mixed', 'btn primary'));
         ca.appendChild(link('تدريب سريع', '#/practice', 'btn secondary'));
         cont.appendChild(ca);
         main.appendChild(cont);
