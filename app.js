@@ -208,6 +208,7 @@
             flow.innerHTML = '';
             if (opts.onStep) opts.onStep(index, steps.length);
             flow.appendChild(el('p', 'counter', 'خطوة ' + (index + 1) + ' من ' + steps.length));
+            if (steps.length > 1) flow.appendChild(bar(((index + 1) / steps.length) * 100));
             if (step.tag && opts.showTag) flow.appendChild(el('p', 'tag', step.tag));
             flow.appendChild(mixedEl('p', 'scene', step.scene));
             if (step.them) {
@@ -451,10 +452,6 @@
         app.appendChild(pageHead(name ? 'أهلاً يا ' + name : site.title, site.intro));
 
         const main = el('div', 'main-col');
-        const statsRow = el('div', 'stats');
-        add(statsRow, stat(st.done + '/' + lessons.length, 'دروس خلصتها'), stat(st.acc === null ? '-' : st.acc + '%', 'دقة الإجابات من أول مرة'), stat(st.fixed, 'أخطاء اتصححت'), stat(st.miss.length, 'أسئلة للمراجعة'));
-        main.appendChild(statsRow);
-
         const next = nextLesson();
         const cont = el('div', 'continue');
         add(cont, el('p', 'group-label', next ? (st.answered ? 'كمّل من حيث وقفت' : 'ابدأ من هنا') : 'خلصت كل الدروس'),
@@ -465,6 +462,10 @@
         ca.appendChild(link('تدريب سريع', '#/practice', 'btn secondary'));
         cont.appendChild(ca);
         main.appendChild(cont);
+        const statsRow = el('div', 'stats');
+        add(statsRow, stat(st.done + '/' + lessons.length, 'دروس خلصتها'), stat(st.acc === null ? '-' : st.acc + '%', 'دقة الإجابات من أول مرة'), stat(st.fixed, 'أخطاء اتصححت'), stat(st.miss.length, 'أسئلة للمراجعة'));
+        if (st.answered) main.appendChild(statsRow);
+
 
         const list = section('٦ مواقف من الحياة اليومية', 'الدروس');
         const cards = el('div', 'cards');
