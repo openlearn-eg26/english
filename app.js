@@ -781,7 +781,7 @@
         add(dp, days, el('p', 'caption', 'ده سجل أيام ذاكرت فيها (' + st.days + ' يوم). مفيش عدّاد بيتصفّر، وتقدر ترجع في أي وقت.'));
         side.appendChild(dp);
         app.appendChild(cols(main, side));
-        const ph = section('حفظ على هذا المتصفح، وحساب اختياري للمزامنة', 'الملف الشخصي والنسخة الاحتياطية');
+        const ph = section('حفظ على هذا المتصفح، ومزامنة مع حسابك', 'الملف الشخصي والنسخة الاحتياطية');
         ph.id = 'profile-sec';
         ph.style.marginTop = '32px';
         ph.appendChild(profileBlock());
@@ -846,7 +846,7 @@
         rs.appendChild(rb);
         side.appendChild(rs);
         const about = panel('عن بياناتك');
-        about.appendChild(el('p', null, 'الموقع مجاني والتسجيل اختياري. من غير حساب: اسمك ونتايجك وأيام مذاكرتك بتتحفظ في متصفحك بس ومبتتبعتش لأي مكان. مع الحساب: نفس البيانات دي بس بتتخزن كمان على سيرفرات جوجل (Firebase) مع إيميلك. التفاصيل في صفحة الخصوصية. مسح التقدم من هنا بيمسح اللي على المتصفح بس، وحذف الحساب بيمسح اللي على السيرفر.'));
+        about.appendChild(el('p', null, 'الموقع مجاني والدخول بحساب. اسمك ونتايجك وأيام مذاكرتك بتتحفظ في متصفحك، وبتتخزن كمان على سيرفرات جوجل (Firebase) مع إيميلك لو الإيميل متأكد. التفاصيل في صفحة الخصوصية. مسح التقدم من هنا بيمسح اللي على المتصفح بس، وحذف الحساب بيمسح اللي على السيرفر.'));
         about.appendChild(el('p', 'caption', 'زراير الاستماع بتشغّل تسجيلات إنجليزي بصوت رجل (صوت مُولَّد بالحاسوب، مش ناطق أصلي، فاعتبره مرجع تقريبي). التسجيلات جزء من الموقع وبتتحمل منه. لو جملة مالهاش تسجيل، المتصفح ممكن يستخدم صوت جهازك، وده ممكن يعتمد على جهازك أو مزود الصوت بتاعه.'));
         side.appendChild(about);
         return cols(main, side);
@@ -868,8 +868,30 @@
         apply();
         if (mq) { if (mq.addEventListener) mq.addEventListener('change', apply); else if (mq.addListener) mq.addListener(apply); }
     })();
+    function gateView() {
+        document.body.classList.add('is-gated');
+        app.innerHTML = '';
+        const st = window.LangCloud.state();
+        app.appendChild(pageHead('أهلاً بيك في اتعلم إنجليزي بالمواقف', st === 'out' ? 'سجّل دخولك أو اعمل حساب جديد عشان تبدأ.' : ''));
+        const wrap = el('div', 'narrow');
+        if (st === 'out') {
+            wrap.appendChild(window.LangCloud.panel(el, add, btn, window.__lang, { title: 'تسجيل الدخول', brief: true }));
+        } else if (st === 'error') {
+            const box = el('section', 'group card-box');
+            add(box, el('p', null, 'مقدرناش نتأكد من حسابك. اتأكد إن النت شغال وجرب تاني.'), btn('جرب تاني', 'primary', () => window.LangCloud.retry()));
+            wrap.appendChild(box);
+        } else {
+            const box = el('section', 'group card-box'); box.setAttribute('role', 'status');
+            add(box, el('p', null, 'ثانية واحدة، بنتأكد من حسابك...'));
+            wrap.appendChild(box);
+        }
+        app.appendChild(wrap);
+        const t = document.getElementById('page-title'); if (t) t.focus({ preventScroll: true });
+    }
     function route() {
         Speech.stop();
+        if (window.LangCloud && window.LangCloud.state() !== 'in') { gateView(); return; }
+        document.body.classList.remove('is-gated');
         const hash = location.hash.replace(/^#\/?/, '');
         let section = 'home';
         if (hash.startsWith('lesson-')) { section = 'lessons'; lessonView(parseInt(hash.slice(7), 10)); }
@@ -900,6 +922,6 @@
     }
     window.addEventListener('hashchange', route);
     window.__lang = { get: () => P, set: (p) => { P = normalize(p); Store.write(P); }, normalize: normalize, refresh: () => { if (/^#\/(progress|profile)/.test(location.hash)) route(); } };
-    if (window.LangCloud) window.LangCloud.init(window.__lang);
+    if (window.LangCloud) { window.LangCloud.onAuth(() => route()); window.LangCloud.init(window.__lang); }
     route();
 })();
