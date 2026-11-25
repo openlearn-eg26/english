@@ -532,6 +532,58 @@ const lessons = [
             { en: 'See you! Take care.', pr: 'سي يو! تيك كير', ar: 'نتقابل! خد بالك من نفسك' },
         ],
     },
+    {
+        id: 'taxi',
+        number: 11,
+        title: 'في التاكسي',
+        subtitle: 'قول وجهتك وادفع الأجرة',
+        intro: 'ركبت تاكسي وإنت رايح المطار. السواق هيسألك كام سؤال بسيط، وإنت هترد عليه بالإنجليزي.',
+        steps: [
+            {
+                scene: 'ركبت التاكسي والسواق التفت وقال:',
+                them: 'Hello! Where to?',
+                themAr: 'أهلاً! رايح فين؟',
+                choices: ['To the airport, please.', 'I am go airport.', 'Yes, hello airport.'],
+                correct: 0,
+                explain: '"Where to?" سؤال عن الوجهة. الرد الطبيعي "To the" + المكان + "please". الاختيار التاني فيه "am go" وده غلط، والتالت مش رد على السؤال.',
+                phrase: { en: 'To the airport, please.', pr: 'تو ذي إيربورت، بليز', ar: 'للمطار من فضلك' },
+            },
+            {
+                scene: 'السواق بص في الساعة وسأل:',
+                them: 'Are you in a hurry?',
+                themAr: 'إنت مستعجل؟',
+                choices: ["Yes, I'm in a hurry.", 'Yes, I am hurry.', 'Yes, I hurry now.'],
+                correct: 0,
+                explain: '"in a hurry" تعبير ثابت معناه مستعجل. بنقول "I\'m in a hurry". كلمة hurry هنا اسم، فمينفعش نقول "I am hurry".',
+                phrase: { en: "I'm in a hurry.", pr: 'آم إن أ هري', ar: 'أنا مستعجل' },
+            },
+            {
+                scene: 'قربتوا من المطار والسواق قال:',
+                them: 'We are almost there. Where should I stop?',
+                themAr: 'قربنا نوصل. أوقف فين؟',
+                choices: ['Here is fine, thank you.', 'You stop here me.', 'I stop at there.'],
+                correct: 0,
+                explain: '"Here is fine" معناها كده تمام. تقدر تضيف "thank you". الاختيارين التانيين ترتيب الكلمات فيهم غلط.',
+                phrase: { en: 'Here is fine, thank you.', pr: 'هير إز فاين، ثانك يو', ar: 'هنا تمام، شكراً' },
+            },
+            {
+                scene: 'وقف السواق وقال:',
+                them: "That's two hundred pounds.",
+                themAr: 'الحساب مية جنيه.',
+                choices: ['Here you are. Keep the change.', 'Here you are. Change keep.', 'Take the change for you.'],
+                correct: 0,
+                explain: '"Keep the change" معناها خلي الباقي معاك، يعني متردش الفكة. ممكن برضه تدفع بالظبط وتقول "Here you are" بس.',
+                phrase: { en: 'Keep the change.', pr: 'كيب ذا تشينج', ar: 'خلي الباقي معاك' },
+            },
+        ],
+        phrases: [
+            { en: 'To the airport, please.', pr: 'تو ذي إيربورت، بليز', ar: 'للمطار من فضلك' },
+            { en: "I'm in a hurry.", pr: 'آم إن أ هري', ar: 'أنا مستعجل' },
+            { en: 'Here is fine, thank you.', pr: 'هير إز فاين، ثانك يو', ar: 'هنا تمام، شكراً' },
+            { en: 'Keep the change.', pr: 'كيب ذا تشينج', ar: 'خلي الباقي معاك' },
+            { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'بكام؟' },
+        ],
+    },
 ];
 
 const quiz = [
