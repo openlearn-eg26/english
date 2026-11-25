@@ -97,9 +97,76 @@
         if (last < text.length) n.appendChild(document.createTextNode(text.slice(last)));
         return n;
     }
+    /* ---------- listening: recorded clips first, browser voice as fallback ---------- */
+    const AUDIO_MAP = {"Here you are.": "f51fb7f4ea", "I'm flying to Dubai.": "fba9985f9f", "Just this one.": "718ebe2a11", "Boarding pass": "c16dd8a6f9", "Where is the gate?": "d246e3416f", "Good morning! Can I see your passport, please?": "efa4542edb", "Where are you flying to today?": "42c7a293e0", "Do you have any bags to check?": "0a029eba3c", "Here is your boarding pass. Have a nice flight!": "42010ee318", "Have a nice flight!": "e22cf20cba", "I have a reservation.": "791e012b07", "It's under Ahmed.": "64ac694d24", "A wake-up call": "5434ec2f38", "Enjoy your stay!": "ccbbcb66dc", "What time is breakfast?": "d0f534c5da", "Good evening. How can I help you?": "73744ce093", "What's the name, please?": "9240b3b5da", "It's under Ahmed Ali.": "e212f99cc3", "Would you like a wake-up call?": "108b9d8b60", "Breakfast is from 7 to 10. Enjoy your stay!": "45ae85c234", "I'd like": "d2acfb6cf2", "Just water, please.": "4cc32c556c", "That's all.": "c2c9dd9038", "Can I have the bill, please?": "f04323cc8a", "Delicious": "f3351eb697", "Are you ready to order?": "3f3a6b3e04", "I'd like the grilled chicken, please.": "2884c7c38c", "Anything to drink?": "6301001776", "Would you like anything else?": "47315e2bd6", "That's all, thank you.": "0a2d6aa6ca", "Was everything okay?": "0fe6afa89a", "Tell me about yourself.": "27fde5f9e6", "Experience": "5b5aafe6b9", "Strengths": "739a7c874a", "Working hours": "85fd412e40", "I work well with people.": "a06ee9cad1", "I'm an engineer with three years of experience.": "e703849b1e", "Why do you want this job?": "4b99b0cdf5", "I want to grow and learn.": "4762eeecf7", "What are your strengths?": "e966f1207c", "Do you have any questions for us?": "13fb390e5c", "What are the working hours?": "aa5cd2023f", "I have a headache.": "1043137d27", "Fever": "51a83e36ed", "For two days.": "9e41447f19", "I'm allergic to": "e4f972a3ef", "Twice a day": "2eae34aa15", "What seems to be the problem?": "86a71485c8", "I have a headache and a fever.": "a3d92f94fb", "How long have you felt like this?": "d77b1936e5", "Are you allergic to any medicine?": "ba6e10a2c3", "I'm not allergic to anything.": "44402c6209", "Take this medicine twice a day and rest.": "07bee5d908", "I'm looking for": "d3d15e23aa", "What size?": "2f13b9feeb", "How much is it?": "c098beb15f", "Discount": "b524936d7a", "A bag, please.": "9eb9067191", "Can I help you find something?": "3d791b1584", "I'm looking for a shirt.": "c9f4818524", "What size are you?": "353f496063", "Medium, please.": "9ce49160ac", "It's 200 pounds.": "dbcb2b0966", "Can you give me a discount?": "c77de4e50c", "Would you like a bag?": "9d9cfae3a8", "Yes, please.": "202482320f"};
+    const Speech = (function () {
+        const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
+        const ok = true;
+        let voice = null, current = null, clip = null;
+        function pick() {
+            try {
+                const vs = speechSynthesis.getVoices();
+                voice = vs.find((v) => /^en[-_]US/i.test(v.lang)) || vs.find((v) => /^en/i.test(v.lang)) || null;
+            } catch (e) { voice = null; }
+        }
+        if (synth) { pick(); try { speechSynthesis.addEventListener('voiceschanged', pick); } catch (e) { /* older engines */ } }
+        const msg = el('p', 'audio-msg'); msg.setAttribute('aria-live', 'polite'); msg.hidden = true;
+        document.body.appendChild(msg);
+        let mt = 0;
+        function say(t) { msg.textContent = t; msg.hidden = false; clearTimeout(mt); mt = setTimeout(() => { msg.hidden = true; }, 4500); }
+        function noVoice() { try { return speechSynthesis.getVoices().length > 0 && !voice; } catch (e) { return true; } }
+        function clean(t) { return String(t).replace(/\.\.\.|\u2026/g, '').replace(/\s+/g, ' ').trim(); }
+        function done(button) { if (button) button.classList.remove('playing'); if (current === button) current = null; }
+        function stop() {
+            if (clip) { try { clip.pause(); } catch (e) { /* ignore */ } clip = null; }
+            if (synth) { try { speechSynthesis.cancel(); } catch (e) { /* ignore */ } }
+            if (current) { current.classList.remove('playing'); current = null; }
+        }
+        function synthSpeak(text, slow, button) {
+            if (!synth) { say('ماقدرناش نشغّل الصوت على الجهاز ده.'); return; }
+            if (noVoice()) { say('جهازك مفيهوش صوت إنجليزي. جرب متصفح تاني أو نزّل صوت إنجليزي من إعدادات الجهاز.'); return; }
+            try {
+                const u = new SpeechSynthesisUtterance(clean(text));
+                u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = slow ? 0.55 : 0.9;
+                u.onstart = () => { if (button) { button.classList.add('playing'); current = button; } };
+                u.onend = () => done(button);
+                u.onerror = (e) => { done(button); if (e && e.error && e.error !== 'canceled' && e.error !== 'interrupted') say('ماقدرناش نشغّل الصوت على الجهاز ده.'); };
+                speechSynthesis.speak(u);
+            } catch (e) { say('ماقدرناش نشغّل الصوت على الجهاز ده.'); }
+        }
+        function speak(text, slow, button) {
+            const was = current === button && button.dataset.rate === (slow ? 's' : 'n');
+            stop(); if (was) return;
+            if (button) button.dataset.rate = slow ? 's' : 'n';
+            const id = AUDIO_MAP[clean(text)];
+            if (!id) { synthSpeak(text, slow, button); return; }
+            try {
+                const a = new Audio('audio/' + id + (slow ? '-s' : '-n') + '.mp3');
+                clip = a; current = button; if (button) button.classList.add('playing');
+                a.addEventListener('ended', () => { if (clip === a) clip = null; done(button); });
+                a.addEventListener('error', () => { if (clip === a) clip = null; done(button); synthSpeak(text, slow, button); });
+                const pr = a.play();
+                if (pr && pr.catch) pr.catch(() => { if (clip === a) { clip = null; done(button); synthSpeak(text, slow, button); } });
+            } catch (e) { done(button); synthSpeak(text, slow, button); }
+        }
+        return { ok: ok, speak: speak, stop: stop };
+    })();
+    function speakBtn(text, slow) {
+        if (!Speech.ok) return null;
+        const b = el('button', 'speak' + (slow ? ' slow' : ''));
+        b.type = 'button';
+        b.setAttribute('aria-label', slow ? 'اسمع الجملة ببطء' : 'اسمع الجملة بالإنجليزي');
+        b.title = slow ? 'ببطء' : 'اسمع';
+        b.innerHTML = slow
+            ? '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 14h3l4 3V7L7 10H4z" fill="currentColor"/><path d="M15 9l5 6M20 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg><span>ببطء</span>'
+            : '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>';
+        b.addEventListener('click', () => Speech.speak(text, !!slow, b));
+        return b;
+    }
     function phraseLine(p) {
         const row = el('div', 'phrase-line');
         row.appendChild(enSpan(p.en));
+        const sb = speakBtn(p.en); if (sb) row.appendChild(sb);
         if (p.pr) row.appendChild(el('span', 'pron', p.pr));
         if (p.ar) row.appendChild(el('span', 'meaning', p.ar));
         return row;
@@ -145,6 +212,9 @@
             if (step.them) {
                 const bubble = el('div', 'them');
                 bubble.appendChild(enSpan(step.them));
+                const sbar = el('div', 'speak-bar');
+                const s1 = speakBtn(step.them), s2 = speakBtn(step.them, true);
+                if (s1) { sbar.appendChild(s1); sbar.appendChild(s2); bubble.appendChild(sbar); }
                 if (step.themAr) {
                     const toggle = btn('الترجمة بالعربي', 'translate');
                     toggle.className = 'translate';
@@ -581,6 +651,7 @@
         side.appendChild(rs);
         const about = panel('عن بياناتك');
         about.appendChild(el('p', null, 'الموقع مجاني والتسجيل اختياري. من غير حساب: اسمك ونتايجك وأيام مذاكرتك بتتحفظ في متصفحك بس ومبتتبعتش لأي مكان. مع الحساب: نفس البيانات دي بس بتتخزن كمان على سيرفرات جوجل (Firebase) مع إيميلك. التفاصيل في صفحة الخصوصية. مسح التقدم من هنا بيمسح اللي على المتصفح بس، وحذف الحساب بيمسح اللي على السيرفر.'));
+        about.appendChild(el('p', 'caption', 'زراير الاستماع بتشغّل تسجيلات إنجليزي بصوت رجل (صوت مُولَّد بالحاسوب، مش ناطق أصلي، فاعتبره مرجع تقريبي). التسجيلات جزء من الموقع وبتتحمل منه. لو جملة مالهاش تسجيل، المتصفح ممكن يستخدم صوت جهازك، وده ممكن يعتمد على جهازك أو مزود الصوت بتاعه.'));
         side.appendChild(about);
         return cols(main, side);
     }
@@ -588,6 +659,7 @@
     /* ---------- router ---------- */
     const navLinks = Array.from(document.querySelectorAll('[data-nav]'));
     function route() {
+        Speech.stop();
         const hash = location.hash.replace(/^#\/?/, '');
         let section = 'home';
         if (hash.startsWith('lesson-')) { section = 'lessons'; lessonView(parseInt(hash.slice(7), 10)); }
