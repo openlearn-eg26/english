@@ -1416,6 +1416,58 @@ const lessons = [
             { en: 'Do you have a different color?', pr: 'دو يو هاف أ ديفرنت كالر', ar: 'عندكم لون تاني؟' },
         ],
     },
+    {
+        id: 'hotel-problem',
+        number: 28,
+        title: 'مشكلة في أوضة الفندق',
+        subtitle: 'بلّغ الاستقبال عن عطل',
+        intro: 'التكييف في أوضتك في الفندق مش شغال. هتكلم الاستقبال، وتشرح المشكلة، وتقول رقم أوضتك، وتسأل الفني هيوصل إمتى. الجمل دي بتنفع في أي فندق.',
+        steps: [
+            {
+                scene: 'الاستقبال رد عليك وقال:',
+                them: 'Front desk. How can I help you?',
+                themAr: 'الاستقبال. أقدر أساعدك إزاي؟',
+                choices: ['The air conditioner in my room is not working.', 'The air conditioner my room in is not working.', 'In my room the conditioner air working is not.'],
+                correct: 0,
+                explain: '"is not working" يعني "مش شغال". بنقول اسم الحاجة والمكان وبعدها is not working، وده الترتيب الصح.',
+                phrase: { en: 'The air conditioner is not working.', pr: 'ذي إير كونديشنر إز نوت ووركينج', ar: 'التكييف مش شغال' },
+            },
+            {
+                scene: 'الموظف اعتذر وسألك:',
+                them: 'I am sorry about that. What is your room number?',
+                themAr: 'آسف على كده. رقم أوضتك كام؟',
+                choices: ['It is room two hundred and five.', 'It is two room hundred and five.', 'Room it is two five hundred and.'],
+                correct: 0,
+                explain: 'لما نقول رقم الأوضة بنبدأ بـ "It is room" وبعدها الرقم، وده الترتيب الصح. رقم الأوضة هنا مثال متخيل للتمرين.',
+                phrase: { en: 'It is room two hundred and five.', pr: 'إت إز روم تو هاندرد أند فايف', ar: 'أوضة رقم ميتين وخمسة' },
+            },
+            {
+                scene: 'عايز تسأل الفني هيوصل بعد قد إيه:',
+                them: 'We will send a technician.',
+                themAr: 'هنبعت فني.',
+                choices: ['How soon can he come?', 'How can soon he come?', 'Soon how he can come?'],
+                correct: 0,
+                explain: '"How soon" يعني "بعد قد إيه". بنقول How soon وبعدها can he come بالترتيب ده.',
+                phrase: { en: 'How soon can he come?', pr: 'هاو سون كان هي كام', ar: 'هيوصل بعد قد إيه؟' },
+            },
+            {
+                scene: 'الموظف رد وقال:',
+                them: 'He will be there in ten minutes.',
+                themAr: 'هيكون عندك في عشر دقايق.',
+                choices: ['Thank you. I will wait in the room.', 'Thank you. I will in the room wait.', 'Thank you. Wait I will the room in.'],
+                correct: 0,
+                explain: '"I will wait" يعني "هستنى". بنقول I will wait وبعدها المكان، وده الترتيب الصح. المدة هنا مثال متخيل للتمرين.',
+                phrase: { en: 'I will wait in the room.', pr: 'آي ويل ويت إن ذا روم', ar: 'هستنى في الأوضة' },
+            },
+        ],
+        phrases: [
+            { en: 'The air conditioner is not working.', pr: 'ذي إير كونديشنر إز نوت ووركينج', ar: 'التكييف مش شغال' },
+            { en: 'It is room two hundred and five.', pr: 'إت إز روم تو هاندرد أند فايف', ar: 'أوضة رقم ميتين وخمسة' },
+            { en: 'How soon can he come?', pr: 'هاو سون كان هي كام', ar: 'هيوصل بعد قد إيه؟' },
+            { en: 'I will wait in the room.', pr: 'آي ويل ويت إن ذا روم', ar: 'هستنى في الأوضة' },
+            { en: 'Can I have extra towels?', pr: 'كان آي هاف إكسترا تاولز', ar: 'ممكن فوط زيادة؟' },
+        ],
+    },
 ];
 
 const quiz = [
