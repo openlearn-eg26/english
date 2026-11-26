@@ -1104,6 +1104,58 @@ const lessons = [
             { en: 'Let me know if you need anything.', pr: 'ليت مي نو إف يو نيد إنيثينج', ar: 'قولّي لو احتجت أي حاجة' },
         ],
     },
+    {
+        id: 'bank',
+        number: 22,
+        title: 'في البنك',
+        subtitle: 'افتح حساب واسأل عن البطاقة',
+        intro: 'رحت البنك عشان تفتح حساب جديد. هتقول طلبك بأدب، وتقدم بطاقتك، وتسأل عن بطاقة البنك، وتقفل الطلب وتشكر الموظف. الجمل دي بتنفع في أي بنك.',
+        steps: [
+            {
+                scene: 'موظف البنك رحب بيك وقال:',
+                them: 'Good morning. How can I help you?',
+                themAr: 'صباح الخير. أقدر أساعدك إزاي؟',
+                choices: ['I would like to open an account, please.', 'I would like open to an account, please.', 'I like account open to, please.'],
+                correct: 0,
+                explain: '"I would like to" طريقة مهذبة تطلب بيها حاجة، و"open an account" يعني "أفتح حساب". الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: 'I would like to open an account.', pr: 'آي وود لايك تو أوبن أن أكاونت', ar: 'عايز أفتح حساب' },
+            },
+            {
+                scene: 'الموظف سألك عن إثبات الشخصية:',
+                them: 'Sure. Do you have your ID with you?',
+                themAr: 'أكيد. معاك بطاقتك؟',
+                choices: ['Yes, here is my ID.', 'Yes, my here ID is.', 'Yes, ID here is my.'],
+                correct: 0,
+                explain: 'لما تدي حاجة لحد بتقول "Here is" وبعدها الحاجة، يعني "اتفضل". الترتيب ده هو الصح.',
+                phrase: { en: 'Here is my ID.', pr: 'هير إز ماي آي دي', ar: 'اتفضل بطاقتي' },
+            },
+            {
+                scene: 'عايز تعرف هتاخد بطاقة بنك ولا لأ:',
+                them: 'Your account will be ready today.',
+                themAr: 'حسابك هيكون جاهز النهارده.',
+                choices: ['Will I get a bank card?', 'I will get a card bank?', 'Get will I a bank card?'],
+                correct: 0,
+                explain: '"Will I get a bank card?" معناها "هاخد بطاقة بنك؟". بنبدأ السؤال بكلمة Will وبعدها الفاعل والفعل بالترتيب.',
+                phrase: { en: 'Will I get a bank card?', pr: 'ويل آي جيت أ بانك كارد', ar: 'هاخد بطاقة بنك؟' },
+            },
+            {
+                scene: 'الموظف خلص الإجراءات وقال:',
+                them: 'Everything is done. Is there anything else?',
+                themAr: 'كل حاجة خلصت. في حاجة تانية؟',
+                choices: ['No, that is all. Thank you for your help.', 'No, all that is. Help your for thank you.', 'No, thank you your help is all.'],
+                correct: 0,
+                explain: '"That is all" يعني "ده كل حاجة"، وبنقفل بيها الطلب بأدب. بعدها بنشكره بجملة "Thank you for your help" على طول.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرًا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to open an account.', pr: 'آي وود لايك تو أوبن أن أكاونت', ar: 'عايز أفتح حساب' },
+            { en: 'Here is my ID.', pr: 'هير إز ماي آي دي', ar: 'اتفضل بطاقتي' },
+            { en: 'Will I get a bank card?', pr: 'ويل آي جيت أ بانك كارد', ar: 'هاخد بطاقة بنك؟' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرًا على مساعدتك' },
+            { en: 'I would like to exchange money.', pr: 'آي وود لايك تو إكستشينج ماني', ar: 'عايز أصرف عملة' },
+        ],
+    },
 ];
 
 const quiz = [
