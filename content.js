@@ -1156,6 +1156,58 @@ const lessons = [
             { en: 'I would like to exchange money.', pr: 'آي وود لايك تو إكستشينج ماني', ar: 'عايز أصرف عملة' },
         ],
     },
+    {
+        id: 'delivery',
+        number: 23,
+        title: 'طلب أكل بالتليفون',
+        subtitle: 'اطلب دليفري وقول عنوانك',
+        intro: 'اتصلت بمطعم عشان تطلب أكل لحد البيت. هتطلب الأكل، وتقول عنوانك، وتسأل الأكل هيوصل بعد قد إيه، وتقول إنك هتدفع كاش. الجمل دي بتنفع مع أي مطعم بيوصّل.',
+        steps: [
+            {
+                scene: 'المطعم رد عليك وقال:',
+                them: 'Hello, Fast Bites. Can I take your order?',
+                themAr: 'ألو، فاست بايتس. أقدر آخد طلبك؟',
+                choices: ['Yes, I would like two chicken sandwiches, please.', 'Yes, I would like chicken two sandwiches, please.', 'Yes, two I would like sandwiches chicken, please.'],
+                correct: 0,
+                explain: '"I would like" معناها "عايز" بأدب، وبعدها العدد والحاجة، يعني "two chicken sandwiches" ساندوتشين فراخ. الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: 'I would like two chicken sandwiches.', pr: 'آي وود لايك تو تشيكن ساندويتشز', ar: 'عايز ساندوتشين فراخ' },
+            },
+            {
+                scene: 'الموظف سألك عن مكان التوصيل:',
+                them: 'Sure. What is your address?',
+                themAr: 'أكيد. عنوانك إيه؟',
+                choices: ['It is twelve Nile Street, apartment five.', 'It is Nile Street twelve apartment, five.', 'Twelve is it street Nile, five apartment.'],
+                correct: 0,
+                explain: 'بنبدأ العنوان بـ "It is"، وبعدها رقم المبنى واسم الشارع، وبعدين رقم الشقة. العنوان هنا مثال متخيل للتمرين.',
+                phrase: { en: 'It is twelve Nile Street.', pr: 'إت إز تويلف نايل ستريت', ar: 'العنوان اتناشر شارع النيل' },
+            },
+            {
+                scene: 'عايز تعرف الأكل هيوصل بعد قد إيه:',
+                them: 'Your order is confirmed.',
+                themAr: 'طلبك اتأكد.',
+                choices: ['How long will it take?', 'How will long it take?', 'It will take how long?'],
+                correct: 0,
+                explain: '"How long will it take?" معناها "هياخد وقت قد إيه؟". بنبدأ بـ How long وبعدها will it take بالترتيب ده.',
+                phrase: { en: 'How long will it take?', pr: 'هاو لونج ويل إت تيك', ar: 'هياخد وقت قد إيه؟' },
+            },
+            {
+                scene: 'الموظف رد على سؤالك وقال:',
+                them: 'It will arrive in about thirty minutes.',
+                themAr: 'هيوصل في حوالي تلاتين دقيقة.',
+                choices: ['Thank you. I will pay in cash when it arrives.', 'Thank you. I will cash pay when arrives it.', 'Thank you. Pay I will in when cash it arrives.'],
+                correct: 0,
+                explain: '"I will pay in cash" يعني "هدفع كاش"، وبنقولها لما نحب ندفع وقت الاستلام. المدة هنا مثال متخيل للتمرين.',
+                phrase: { en: 'I will pay in cash.', pr: 'آي ويل باي إن كاش', ar: 'هدفع كاش' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like two chicken sandwiches.', pr: 'آي وود لايك تو تشيكن ساندويتشز', ar: 'عايز ساندوتشين فراخ' },
+            { en: 'It is twelve Nile Street.', pr: 'إت إز تويلف نايل ستريت', ar: 'العنوان اتناشر شارع النيل' },
+            { en: 'How long will it take?', pr: 'هاو لونج ويل إت تيك', ar: 'هياخد وقت قد إيه؟' },
+            { en: 'I will pay in cash.', pr: 'آي ويل باي إن كاش', ar: 'هدفع كاش' },
+            { en: 'Can I order delivery?', pr: 'كان آي أوردر ديليفري', ar: 'ممكن أطلب توصيل؟' },
+        ],
+    },
 ];
 
 const quiz = [
