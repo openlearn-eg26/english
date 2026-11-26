@@ -688,6 +688,58 @@ const lessons = [
             { en: 'What time does it leave?', pr: 'وات تايم داز إت ليف؟', ar: 'بيتحرك الساعة كام؟' },
         ],
     },
+    {
+        id: 'post',
+        number: 14,
+        title: 'في مكتب البريد',
+        subtitle: 'ابعت طرد واسأل عن المدة',
+        intro: 'عايز تبعت طرد لصاحبك في القاهرة. هتقول للموظف إنك عايز تبعته، وتختار سرعة الشحن، وتسأل هيوصل إمتى وتطلب إيصال. السعر والمدة في الحوار أمثلة خيالية للتدريب على اللغة بس، مش أسعار أو مواعيد حقيقية للبريد.',
+        steps: [
+            {
+                scene: 'وصلت الشباك والموظف قال:',
+                them: 'Hello. How can I help you?',
+                themAr: 'أهلاً. أقدر أساعدك إزاي؟',
+                choices: ["I'd like to send this package to Cairo.", 'I want send package Cairo to.', 'This package is sending Cairo.'],
+                correct: 0,
+                explain: '"I\'d like to send" معناها "عايز أبعت" بشكل مهذب. بعدها this package وبعدين to + المدينة. الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: "I'd like to send this package to Cairo.", pr: 'آيد لايك تو سيند ذيس باكدج تو كايرو', ar: 'عايز أبعت الطرد ده للقاهرة' },
+            },
+            {
+                scene: 'الموظف سألك عن سرعة الشحن:',
+                them: 'Would you like regular or express delivery?',
+                themAr: 'تحب شحن عادي ولا سريع؟',
+                choices: ['Express, please.', 'Yes, regular or express.', 'I am express.'],
+                correct: 0,
+                explain: 'السؤال فيه "or" يعني بيخيّرك بين اتنين، فاختار واحد منهم: "Express, please." مينفعش ترد بـ Yes.',
+                phrase: { en: 'Express, please.', pr: 'إكسبريس، بليز', ar: 'سريع من فضلك' },
+            },
+            {
+                scene: 'الموظف وزن الطرد وقال:',
+                them: 'That will be sixty pounds.',
+                themAr: 'الحساب ستين جنيه.',
+                choices: ['How long will it take?', 'How long it takes will?', 'What time is long?'],
+                correct: 0,
+                explain: '"How long will it take?" معناها "هياخد وقت قد إيه؟". بنقول How long وبعدها will وبعدها it take وده الترتيب الصح، والاختيارين التانيين ترتيبهم غلط. (الستين جنيه في الحوار رقم خيالي للتدريب، مش سعر حقيقي.)',
+                phrase: { en: 'How long will it take?', pr: 'هاو لونج ويل إت تيك؟', ar: 'هياخد وقت قد إيه؟' },
+            },
+            {
+                scene: 'الموظف رد وقال:',
+                them: 'It will arrive in two days. Anything else?',
+                themAr: 'هيوصل في يومين. أي حاجة تانية؟',
+                choices: ['Can I get a receipt, please?', 'Can I receipt get?', 'Receipt is me, please.'],
+                correct: 0,
+                explain: '"Can I get a receipt, please?" طلب مهذب للإيصال. بنبدأ بـ Can I get وبعدها الحاجة اللي عايزها.',
+                phrase: { en: 'Can I get a receipt, please?', pr: 'كان آي جيت أ ريسيت، بليز؟', ar: 'ممكن إيصال من فضلك؟' },
+            },
+        ],
+        phrases: [
+            { en: "I'd like to send this package to Cairo.", pr: 'آيد لايك تو سيند ذيس باكدج تو كايرو', ar: 'عايز أبعت الطرد ده للقاهرة' },
+            { en: 'Express, please.', pr: 'إكسبريس، بليز', ar: 'سريع من فضلك' },
+            { en: 'How long will it take?', pr: 'هاو لونج ويل إت تيك؟', ar: 'هياخد وقت قد إيه؟' },
+            { en: 'Can I get a receipt, please?', pr: 'كان آي جيت أ ريسيت، بليز؟', ar: 'ممكن إيصال من فضلك؟' },
+            { en: 'Where can I buy stamps?', pr: 'وير كان آي باي ستامبس؟', ar: 'أشتري طوابع منين؟' },
+        ],
+    },
 ];
 
 const quiz = [
