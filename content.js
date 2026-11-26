@@ -1260,6 +1260,58 @@ const lessons = [
             { en: 'Is there a student discount?', pr: 'إز ذير أ ستيودنت ديسكاونت', ar: 'في خصم للطلبة؟' },
         ],
     },
+    {
+        id: 'repair',
+        number: 25,
+        title: 'تصليح في البيت',
+        subtitle: 'كلّم الصيانة عن تسريب',
+        intro: 'في تسريب مية في مطبخك وعايز فني يصلحه. هتكلم شركة الصيانة، وتشرح المشكلة، وتسأل الفني يجي إمتى، وتطلب منه يكلمك لما يوصل. الجمل دي بتنفع مع أي صيانة في البيت.',
+        steps: [
+            {
+                scene: 'شركة الصيانة ردت عليك وقالت:',
+                them: 'Hello, Home Repair. How can I help?',
+                themAr: 'ألو، الصيانة المنزلية. أقدر أساعدك إزاي؟',
+                choices: ['There is a leak in my kitchen.', 'There is leak a in kitchen my.', 'My kitchen is in a leak.'],
+                correct: 0,
+                explain: '"There is a leak" يعني "في تسريب". بنبدأ بـ There is وبعدها الحاجة والمكان، وده الترتيب الصح.',
+                phrase: { en: 'There is a leak in my kitchen.', pr: 'ذير إز أ ليك إن ماي كيتشن', ar: 'في تسريب في مطبخي' },
+            },
+            {
+                scene: 'الموظف سألك عن المشكلة:',
+                them: 'I see. When did it start?',
+                themAr: 'فهمت. بدأ إمتى؟',
+                choices: ['It started this morning.', 'It this morning started.', 'Started it morning this.'],
+                correct: 0,
+                explain: '"It started this morning" يعني "بدأ الصبح". بنقول It وبعدها الفعل started وبعدين الوقت، وده الترتيب الصح.',
+                phrase: { en: 'It started this morning.', pr: 'إت ستارتيد ذيس مورنينج', ar: 'بدأ الصبح' },
+            },
+            {
+                scene: 'عايز تعرف الفني ممكن يجي إمتى:',
+                them: 'We can send someone today.',
+                themAr: 'نقدر نبعت حد النهارده.',
+                choices: ['Can he come this afternoon?', 'Can come he this afternoon?', 'Come can he afternoon this?'],
+                correct: 0,
+                explain: '"Can he come this afternoon?" معناها "ينفع يجي بعد الضهر؟". بنبدأ السؤال بكلمة Can وبعدها الفاعل والفعل بالترتيب.',
+                phrase: { en: 'Can he come this afternoon?', pr: 'كان هي كام ذيس أفترنون', ar: 'ينفع يجي بعد الضهر؟' },
+            },
+            {
+                scene: 'الموظف أكد الموعد وقال:',
+                them: 'Yes, he will be there at four.',
+                themAr: 'أيوه، هيكون عندك الساعة أربعة.',
+                choices: ['Great, thank you. Please call me when he arrives.', 'Great, thank you. Please me call when arrives he.', 'Great, thank you. Call please when he me arrives.'],
+                correct: 0,
+                explain: '"Please call me" يعني "من فضلك كلمني"، وبنقولها قبل "when he arrives" يعني لما يوصل. الميعاد هنا مثال متخيل للتمرين.',
+                phrase: { en: 'Please call me when he arrives.', pr: 'بليز كول مي ون هي أرايفز', ar: 'كلمني لما يوصل' },
+            },
+        ],
+        phrases: [
+            { en: 'There is a leak in my kitchen.', pr: 'ذير إز أ ليك إن ماي كيتشن', ar: 'في تسريب في مطبخي' },
+            { en: 'It started this morning.', pr: 'إت ستارتيد ذيس مورنينج', ar: 'بدأ الصبح' },
+            { en: 'Can he come this afternoon?', pr: 'كان هي كام ذيس أفترنون', ar: 'ينفع يجي بعد الضهر؟' },
+            { en: 'Please call me when he arrives.', pr: 'بليز كول مي ون هي أرايفز', ar: 'كلمني لما يوصل' },
+            { en: 'How much will it cost?', pr: 'هاو ماتش ويل إت كوست', ar: 'هتكلف كام؟' },
+        ],
+    },
 ];
 
 const quiz = [
