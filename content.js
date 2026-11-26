@@ -792,6 +792,58 @@ const lessons = [
             { en: 'Do you have a phone case?', pr: 'دو يو هاف أ فون كيس؟', ar: 'عندك جراب موبايل؟' },
         ],
     },
+    {
+        id: 'library',
+        number: 16,
+        title: 'في المكتبة',
+        subtitle: 'استعير كتاب واسأل عن ميعاد الرجوع',
+        intro: 'عايز تستعير كتاب إنجليزي من المكتبة. هتسأل عن كارت العضوية، وتطلب الكتاب، وتسأل لازم ترجعه إمتى. المواعيد في الحوار أمثلة خيالية للتدريب على اللغة بس، مش مواعيد مكتبة حقيقية.',
+        steps: [
+            {
+                scene: 'وصلت مكتب الاستعارة والموظف قال:',
+                them: 'Hello. Can I help you?',
+                themAr: 'أهلاً. أقدر أساعدك؟',
+                choices: ["I'd like to borrow this book, please.", 'I borrow want this book.', 'This book is borrow me.'],
+                correct: 0,
+                explain: '"borrow" معناها تستعير حاجة وترجعها. "I\'d like to borrow" صيغة مهذبة، وبعدها الكتاب. الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: "I'd like to borrow this book, please.", pr: 'آيد لايك تو بورو ذيس بوك، بليز', ar: 'عايز أستعير الكتاب ده من فضلك' },
+            },
+            {
+                scene: 'الموظف طلب منك:',
+                them: 'Do you have a library card?',
+                themAr: 'معاك كارت المكتبة؟',
+                choices: ["No, I don't. Can I get one?", 'No, I am not have.', 'Yes, I card library.'],
+                correct: 0,
+                explain: 'السؤال بيبدأ بـ Do، فالرد بيكون "No, I don\'t" مش "I am not". وبعدين تطلب كارت: Can I get one?',
+                phrase: { en: 'Can I get a library card?', pr: 'كان آي جيت أ لايبريري كارد؟', ar: 'ينفع أطلع كارت مكتبة؟' },
+            },
+            {
+                scene: 'الموظف سجّل الكتاب وقال:',
+                them: 'All done. Here is your book.',
+                themAr: 'خلصنا. اتفضل الكتاب.',
+                choices: ['When do I have to return it?', 'When I return have it?', 'What time return is it?'],
+                correct: 0,
+                explain: '"When do I have to return it?" معناها "لازم أرجعه إمتى؟". بنبدأ بـ When وبعدها do I have to، وده الترتيب الصح. (المواعيد في الحوار خيالية للتدريب، مش مواعيد حقيقية.)',
+                phrase: { en: 'When do I have to return it?', pr: 'ون دو آي هاف تو ريتيرن إت؟', ar: 'لازم أرجعه إمتى؟' },
+            },
+            {
+                scene: 'الموظف رد:',
+                them: 'Please bring it back in two weeks.',
+                themAr: 'من فضلك رجّعه بعد أسبوعين.',
+                choices: ['Can I renew it if I need more time?', 'I renew can more time?', 'Renew is me more time?'],
+                correct: 0,
+                explain: '"renew" معناها تجدد الاستعارة. "Can I renew it" سؤال مهذب، وبعده if I need more time يعني "لو احتجت وقت أكتر". (أسبوعين هنا مدة خيالية للتدريب.)',
+                phrase: { en: 'Can I renew it?', pr: 'كان آي رينيو إت؟', ar: 'ينفع أجدده؟' },
+            },
+        ],
+        phrases: [
+            { en: "I'd like to borrow this book, please.", pr: 'آيد لايك تو بورو ذيس بوك، بليز', ar: 'عايز أستعير الكتاب ده من فضلك' },
+            { en: 'Can I get a library card?', pr: 'كان آي جيت أ لايبريري كارد؟', ar: 'ينفع أطلع كارت مكتبة؟' },
+            { en: 'When do I have to return it?', pr: 'ون دو آي هاف تو ريتيرن إت؟', ar: 'لازم أرجعه إمتى؟' },
+            { en: 'Can I renew it?', pr: 'كان آي رينيو إت؟', ar: 'ينفع أجدده؟' },
+            { en: 'Where are the English books?', pr: 'وير آر ذي إنجليش بوكس؟', ar: 'كتب الإنجليزي فين؟' },
+        ],
+    },
 ];
 
 const quiz = [
