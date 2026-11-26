@@ -1468,6 +1468,58 @@ const lessons = [
             { en: 'Can I have extra towels?', pr: 'كان آي هاف إكسترا تاولز', ar: 'ممكن فوط زيادة؟' },
         ],
     },
+    {
+        id: 'lost-bag',
+        number: 29,
+        title: 'شنطة ضايعة في المطار',
+        subtitle: 'بلّغ عن شنطة ما وصلتش',
+        intro: 'وصلت المطار بس شنطتك ما طلعتش مع باقي الشنط. هتروح مكتب الشنط المفقودة، وتقول المشكلة، وتوصف الشنطة، وتطلب منهم يكلموك لما يلاقوها. الجمل دي بتنفع في أي مطار.',
+        steps: [
+            {
+                scene: 'موظف مكتب الشنط رحب بيك وقال:',
+                them: 'Good evening. How can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك إزاي؟',
+                choices: ['My suitcase did not arrive.', 'My suitcase not did arrive.', 'Arrive did not my suitcase.'],
+                correct: 0,
+                explain: '"did not arrive" يعني "ما وصلتش". بنقول did not وبعدها الفعل arrive، وده الترتيب الصح.',
+                phrase: { en: 'My suitcase did not arrive.', pr: 'ماي سوتكيس ديد نوت أرايف', ar: 'شنطتي ما وصلتش' },
+            },
+            {
+                scene: 'الموظف اعتذر وسألك عن الشنطة:',
+                them: 'I am sorry. What does it look like?',
+                themAr: 'آسف. شكلها عامل إزاي؟',
+                choices: ['It is a large black suitcase.', 'It is a suitcase large black.', 'Large it is black a suitcase.'],
+                correct: 0,
+                explain: 'بنوصف الشنطة بالترتيب ده: الحجم وبعده اللون وبعدين الحاجة، يعني "large black suitcase". وده الترتيب الصح.',
+                phrase: { en: 'It is a large black suitcase.', pr: 'إت إز أ لارج بلاك سوتكيس', ar: 'شنطة سودا كبيرة' },
+            },
+            {
+                scene: 'عايز تطلب منهم يكلموك لما يلاقوها:',
+                them: 'We will search for it.',
+                themAr: 'هندور عليها.',
+                choices: ['Can you call me when you find it?', 'Can you me call when you it find?', 'You can call me when find you it?'],
+                correct: 0,
+                explain: '"call me when you find it" يعني "كلمني لما تلاقيها". بنقولها بعد Can you عشان الطلب يبقى مؤدب.',
+                phrase: { en: 'Can you call me when you find it?', pr: 'كان يو كول مي ون يو فايند إت', ar: 'ممكن تكلمني لما تلاقيها؟' },
+            },
+            {
+                scene: 'الموظف سجل بياناتك وقال:',
+                them: 'We will deliver it to your hotel.',
+                themAr: 'هنوصلها لفندقك.',
+                choices: ['That is great. Thank you very much.', 'That great is. Very thank you much.', 'Great that is. You thank very much.'],
+                correct: 0,
+                explain: '"That is great" يعني "ده ممتاز"، وبعدها بنشكر الموظف. بنقولها بالترتيب ده.',
+                phrase: { en: 'Thank you very much.', pr: 'ثانك يو فيري ماتش', ar: 'شكرًا جزيلًا' },
+            },
+        ],
+        phrases: [
+            { en: 'My suitcase did not arrive.', pr: 'ماي سوتكيس ديد نوت أرايف', ar: 'شنطتي ما وصلتش' },
+            { en: 'It is a large black suitcase.', pr: 'إت إز أ لارج بلاك سوتكيس', ar: 'شنطة سودا كبيرة' },
+            { en: 'Can you call me when you find it?', pr: 'كان يو كول مي ون يو فايند إت', ar: 'ممكن تكلمني لما تلاقيها؟' },
+            { en: 'Thank you very much.', pr: 'ثانك يو فيري ماتش', ar: 'شكرًا جزيلًا' },
+            { en: 'Where is the baggage claim?', pr: 'وير إز ذا باجيج كليم', ar: 'فين استلام الشنط؟' },
+        ],
+    },
 ];
 
 const quiz = [
