@@ -844,6 +844,58 @@ const lessons = [
             { en: 'Where are the English books?', pr: 'وير آر ذي إنجليش بوكس؟', ar: 'كتب الإنجليزي فين؟' },
         ],
     },
+    {
+        id: 'barber',
+        number: 17,
+        title: 'عند الحلاق',
+        subtitle: 'قول عايز قصة إزاي',
+        intro: 'رحت الحلاق عشان تقص شعرك. هتقوله عايز إيه بالظبط، وتطلب يقصر الجنب، وتسأل عن الحساب. الأسعار في الحوار أمثلة خيالية للتدريب على اللغة بس، مش أسعار حقيقية.',
+        steps: [
+            {
+                scene: 'قعدت على الكرسي والحلاق قال:',
+                them: 'Welcome. What would you like today?',
+                themAr: 'أهلاً. تحب نعمل إيه النهارده؟',
+                choices: ["I'd like a haircut, please.", 'I want cut hair me.', 'A haircut is me, please.'],
+                correct: 0,
+                explain: '"haircut" معناها قصة شعر. "I\'d like a haircut, please" طلب مهذب ومباشر. الاختيارين التانيين ترتيب الكلمات فيهم غلط.',
+                phrase: { en: "I'd like a haircut, please.", pr: 'آيد لايك أ هيركات، بليز', ar: 'عايز قصة شعر من فضلك' },
+            },
+            {
+                scene: 'الحلاق سألك:',
+                them: 'How short would you like it?',
+                themAr: 'تحبه قصير قد إيه؟',
+                choices: ['Short on the sides, please.', 'Short is the sides me.', 'Yes, very short it.'],
+                correct: 0,
+                explain: '"on the sides" معناها على الجنب. السؤال بيبدأ بـ How short، فالرد بيوصف القصر: "Short on the sides". مينفعش ترد بـ Yes.',
+                phrase: { en: 'Short on the sides, please.', pr: 'شورت أون ذا سايدز، بليز', ar: 'قصير من الجنب من فضلك' },
+            },
+            {
+                scene: 'الحلاق خلّص وقال:',
+                them: 'All done. How does it look?',
+                themAr: 'خلصنا. شكله عامل إزاي؟',
+                choices: ['It looks great, thank you.', 'It look is great me.', 'Great is looking it.'],
+                correct: 0,
+                explain: 'بنقول "It looks great" لما حاجة شكلها حلو. الفعل looks بيحتاج s مع it، وبعدها شكر بسيط.',
+                phrase: { en: 'It looks great, thank you.', pr: 'إت لوكس جريت، ثانك يو', ar: 'شكله حلو، شكرًا' },
+            },
+            {
+                scene: 'قمت من الكرسي وسألت:',
+                them: 'Anything else?',
+                themAr: 'أي حاجة تانية؟',
+                choices: ['How much is it?', 'How much it is?', 'What is much it?'],
+                correct: 0,
+                explain: '"How much is it?" معناها "الحساب كام؟". الفعل is بييجي قبل it في السؤال. (الأسعار في الحوار خيالية للتدريب، مش أسعار حقيقية.)',
+                phrase: { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'الحساب كام؟' },
+            },
+        ],
+        phrases: [
+            { en: "I'd like a haircut, please.", pr: 'آيد لايك أ هيركات، بليز', ar: 'عايز قصة شعر من فضلك' },
+            { en: 'Short on the sides, please.', pr: 'شورت أون ذا سايدز، بليز', ar: 'قصير من الجنب من فضلك' },
+            { en: 'It looks great, thank you.', pr: 'إت لوكس جريت، ثانك يو', ar: 'شكله حلو، شكرًا' },
+            { en: 'Not too short, please.', pr: 'نوت تو شورت، بليز', ar: 'مش قصير أوي من فضلك' },
+            { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'الحساب كام؟' },
+        ],
+    },
 ];
 
 const quiz = [
