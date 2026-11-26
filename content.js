@@ -1364,6 +1364,58 @@ const lessons = [
             { en: 'Do you accept cards?', pr: 'دو يو أكسبت كاردز', ar: 'بتقبلوا بطاقات الدفع؟' },
         ],
     },
+    {
+        id: 'return',
+        number: 27,
+        title: 'إرجاع حاجة للمحل',
+        subtitle: 'بدّل قميص بمقاس أكبر',
+        intro: 'اشتريت قميص وطلع صغير عليك. هتروح المحل وتقول إنك عايز ترجّعه، وتشرح المشكلة، وتطلب مقاس أكبر، وتسأل لو ينفع تجرّبه. الجمل دي بتنفع في أي محل هدوم.',
+        steps: [
+            {
+                scene: 'موظف المحل رحب بيك وقال:',
+                them: 'Hello. How can I help you?',
+                themAr: 'أهلًا. أقدر أساعدك إزاي؟',
+                choices: ['I want to return this shirt, please.', 'I want return to this shirt, please.', 'I want to this shirt return, please.'],
+                correct: 0,
+                explain: '"return" يعني "أرجّع". بنقول I want to وبعدها الفعل return وبعدين الحاجة اللي عايز ترجّعها.',
+                phrase: { en: 'I want to return this shirt.', pr: 'آي وانت تو ريتيرن ذيس شيرت', ar: 'عايز أرجّع القميص ده' },
+            },
+            {
+                scene: 'الموظف سألك عن السبب:',
+                them: 'Is there a problem with it?',
+                themAr: 'في مشكلة فيه؟',
+                choices: ['Yes, it is too small for me.', 'Yes, it too is small for me.', 'Yes, small too it is for me.'],
+                correct: 0,
+                explain: '"too small" يعني "صغير أوي". بنقول it is وبعدها too وبعدين الصفة، وده الترتيب الصح.',
+                phrase: { en: 'It is too small for me.', pr: 'إت إز تو سمول فور مي', ar: 'صغير عليا أوي' },
+            },
+            {
+                scene: 'عايز تطلب مقاس أكبر:',
+                them: 'I see. We can exchange it.',
+                themAr: 'فاهم. نقدر نبدله.',
+                choices: ['Can I have a larger size, please?', 'Can I a larger size have, please?', 'I can have larger a size, please?'],
+                correct: 0,
+                explain: '"a larger size" يعني "مقاس أكبر". بنبدأ بـ Can I have وبعدها الحاجة المطلوبة، وده الترتيب الصح.',
+                phrase: { en: 'Can I have a larger size?', pr: 'كان آي هاف أ لارجر سايز', ar: 'ينفع مقاس أكبر؟' },
+            },
+            {
+                scene: 'الموظف جاب المقاس وقال:',
+                them: 'This one should fit you.',
+                themAr: 'ده المفروض يناسبك.',
+                choices: ['Perfect. Can I try it on?', 'Perfect. Can I it try on?', 'Perfect. I can on try it?'],
+                correct: 0,
+                explain: '"try it on" يعني "أجرّبه". بنقول try وبعدها it وبعدين on، وده الترتيب الصح.',
+                phrase: { en: 'Can I try it on?', pr: 'كان آي تراي إت أون', ar: 'ينفع أجرّبه؟' },
+            },
+        ],
+        phrases: [
+            { en: 'I want to return this shirt.', pr: 'آي وانت تو ريتيرن ذيس شيرت', ar: 'عايز أرجّع القميص ده' },
+            { en: 'It is too small for me.', pr: 'إت إز تو سمول فور مي', ar: 'صغير عليا أوي' },
+            { en: 'Can I have a larger size?', pr: 'كان آي هاف أ لارجر سايز', ar: 'ينفع مقاس أكبر؟' },
+            { en: 'Can I try it on?', pr: 'كان آي تراي إت أون', ar: 'ينفع أجرّبه؟' },
+            { en: 'Do you have a different color?', pr: 'دو يو هاف أ ديفرنت كالر', ar: 'عندكم لون تاني؟' },
+        ],
+    },
 ];
 
 const quiz = [
