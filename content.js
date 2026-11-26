@@ -636,6 +636,58 @@ const lessons = [
             { en: 'Do you have anything for a cold?', pr: 'دو يو هاف إنيثينج فور أ كولد؟', ar: 'عندك حاجة للبرد؟' },
         ],
     },
+    {
+        id: 'train',
+        number: 13,
+        title: 'في محطة القطار',
+        subtitle: 'احجز تذكرة واسأل عن الرصيف',
+        intro: 'عايز تسافر إسكندرية بالقطر. هتشتري تذكرة من الشباك، وبعدين تسأل عن الرصيف وتتأكد إنك راكب القطر الصح.',
+        steps: [
+            {
+                scene: 'وصلت شباك التذاكر والموظف قال:',
+                them: 'Good morning. Where would you like to go?',
+                themAr: 'صباح الخير. حابب تروح فين؟',
+                choices: ['A ticket to Alexandria, please.', 'I go Alexandria ticket.', 'Alexandria is a ticket.'],
+                correct: 0,
+                explain: 'تقدر ترد على السؤال بطلب التذكرة مباشرة: "A ticket to" + المدينة + "please". الاختيار التاني ترتيبه غلط، والتالت معناه مش مفهوم.',
+                phrase: { en: 'A ticket to Alexandria, please.', pr: 'أ تيكت تو أليكساندريا، بليز', ar: 'تذكرة لإسكندرية من فضلك' },
+            },
+            {
+                scene: 'الموظف سأل:',
+                them: 'One way or return?',
+                themAr: 'ذهاب بس ولا ذهاب وعودة؟',
+                choices: ['A return ticket, please.', 'Yes, one way or return.', 'I am return.'],
+                correct: 0,
+                explain: '"One way" معناها ذهاب بس، و"return" معناها ذهاب وعودة (بالإنجليزي الأمريكي بيقولوا "round trip"). السؤال بيخيّرك، فاختار واحد منهم، مش "Yes".',
+                phrase: { en: 'A return ticket, please.', pr: 'أ ريتيرن تيكت، بليز', ar: 'تذكرة ذهاب وعودة من فضلك' },
+            },
+            {
+                scene: 'الموظف سلّمك التذكرة وقال:',
+                them: 'Your train leaves at nine thirty.',
+                themAr: 'قطرك بيتحرك الساعة تسعة ونص.',
+                choices: ['Which platform is it?', 'What platform I go?', 'Where is platform it?'],
+                correct: 0,
+                explain: '"Which platform is it?" معناها "أنهي رصيف؟". بنبدأ بـ Which وبعدها الاسم، وبعدين is it. الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: 'Which platform is it?', pr: 'ويتش بلاتفورم إز إت؟', ar: 'أنهي رصيف؟' },
+            },
+            {
+                scene: 'وصلت الرصيف وموظف هناك قال:',
+                them: 'Can I help you?',
+                themAr: 'أقدر أساعدك؟',
+                choices: ['Is this the train to Alexandria?', 'This train goes Alexandria is?', 'Where is Alexandria train this?'],
+                correct: 0,
+                explain: 'سؤال نعم أو لأ بيبدأ بـ "Is this...". وبعدها "the train to" + المدينة. بنحط الفعل is في الأول مش في الآخر.',
+                phrase: { en: 'Is this the train to Alexandria?', pr: 'إز ذيس ذا ترين تو أليكساندريا؟', ar: 'هل ده القطر المتجه لإسكندرية؟' },
+            },
+        ],
+        phrases: [
+            { en: 'A ticket to Alexandria, please.', pr: 'أ تيكت تو أليكساندريا، بليز', ar: 'تذكرة لإسكندرية من فضلك' },
+            { en: 'A return ticket, please.', pr: 'أ ريتيرن تيكت، بليز', ar: 'تذكرة ذهاب وعودة من فضلك' },
+            { en: 'Which platform is it?', pr: 'ويتش بلاتفورم إز إت؟', ar: 'أنهي رصيف؟' },
+            { en: 'Is this the train to Alexandria?', pr: 'إز ذيس ذا ترين تو أليكساندريا؟', ar: 'هل ده القطر المتجه لإسكندرية؟' },
+            { en: 'What time does it leave?', pr: 'وات تايم داز إت ليف؟', ar: 'بيتحرك الساعة كام؟' },
+        ],
+    },
 ];
 
 const quiz = [
