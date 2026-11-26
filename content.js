@@ -1312,6 +1312,58 @@ const lessons = [
             { en: 'How much will it cost?', pr: 'هاو ماتش ويل إت كوست', ar: 'هتكلف كام؟' },
         ],
     },
+    {
+        id: 'rental',
+        number: 26,
+        title: 'تأجير عربية',
+        subtitle: 'اطلب عربية لمدة أيام',
+        intro: 'عايز تأجّر عربية لمدة كام يوم. هتطلب العربية، وتقول المدة، وتسأل لو التأمين مشمول، وتوعد الموظف بميعاد الرجوع. الجمل دي بتنفع في أي مكتب تأجير عربيات.',
+        steps: [
+            {
+                scene: 'موظف مكتب التأجير رحب بيك وقال:',
+                them: 'Hello. Can I help you?',
+                themAr: 'أهلًا. أقدر أساعدك؟',
+                choices: ['I would like to rent a car, please.', 'I would like rent to a car, please.', 'I rent would like a car, please.'],
+                correct: 0,
+                explain: '"rent a car" يعني "أأجّر عربية". بنقول I would like to وبعدها الفعل، وده الترتيب الصح.',
+                phrase: { en: 'I would like to rent a car.', pr: 'آي وود لايك تو رنت أ كار', ar: 'عايز أأجّر عربية' },
+            },
+            {
+                scene: 'الموظف سألك عن المدة:',
+                them: 'Sure. For how many days?',
+                themAr: 'أكيد. لكام يوم؟',
+                choices: ['For three days, please.', 'Three for days, please.', 'Days three for, please.'],
+                correct: 0,
+                explain: '"For three days" يعني "لمدة تلات أيام". بنبدأ بـ For وبعدها العدد والكلمة، وده الترتيب الصح.',
+                phrase: { en: 'For three days, please.', pr: 'فور ثري ديز بليز', ar: 'لمدة تلات أيام' },
+            },
+            {
+                scene: 'عايز تعرف لو التأمين داخل في السعر:',
+                them: 'We have small and large cars.',
+                themAr: 'عندنا عربيات صغيرة وكبيرة.',
+                choices: ['Is insurance included?', 'Included is insurance?', 'Is included insurance?'],
+                correct: 0,
+                explain: '"Is insurance included?" معناها "التأمين مشمول؟". بنبدأ السؤال بكلمة Is وبعدها الحاجة اللي بنسأل عنها، وده الترتيب الصح.',
+                phrase: { en: 'Is insurance included?', pr: 'إز إنشورانس إنكلودد', ar: 'التأمين مشمول؟' },
+            },
+            {
+                scene: 'الموظف إداك المفاتيح وقال:',
+                them: 'Here are the keys. Please return the car by Friday.',
+                themAr: 'اتفضل المفاتيح. من فضلك رجّع العربية يوم الجمعة.',
+                choices: ['Thank you. I will return it on Friday.', 'Thank you. I will it return on Friday.', 'Thank you. Return I will Friday on it.'],
+                correct: 0,
+                explain: '"I will return it" يعني "هرجّعها"، وبنقول on قبل اليوم. الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: 'I will return it on Friday.', pr: 'آي ويل ريتيرن إت أون فرايداي', ar: 'هرجّعها يوم الجمعة' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to rent a car.', pr: 'آي وود لايك تو رنت أ كار', ar: 'عايز أأجّر عربية' },
+            { en: 'For three days, please.', pr: 'فور ثري ديز بليز', ar: 'لمدة تلات أيام' },
+            { en: 'Is insurance included?', pr: 'إز إنشورانس إنكلودد', ar: 'التأمين مشمول؟' },
+            { en: 'I will return it on Friday.', pr: 'آي ويل ريتيرن إت أون فرايداي', ar: 'هرجّعها يوم الجمعة' },
+            { en: 'Do you accept cards?', pr: 'دو يو أكسبت كاردز', ar: 'بتقبلوا بطاقات الدفع؟' },
+        ],
+    },
 ];
 
 const quiz = [
