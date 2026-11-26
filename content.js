@@ -948,6 +948,58 @@ const lessons = [
             { en: 'What is the password?', pr: 'وات إز ذا باسوورد؟', ar: 'إيه الباسورد؟' },
         ],
     },
+    {
+        id: 'campus',
+        number: 19,
+        title: 'في الجامعة',
+        subtitle: 'اسأل عن القاعة وميعاد المحاضرة',
+        intro: 'أول يوم ليك في الجامعة وتايه. هتسأل زميل عن القاعة، وتسأل عن ميعاد المحاضرة، وتطلب منه يعيد كلامه لو مفهمتش. الأرقام والمواعيد في الحوار أمثلة خيالية للتدريب على اللغة بس.',
+        steps: [
+            {
+                scene: 'شفت زميل قدام المبنى، فقربت منه وقلت:',
+                them: 'Hi. Are you lost?',
+                themAr: 'أهلاً. إنت تايه؟',
+                choices: ['Yes. Where is room two oh four?', 'Yes. Room two oh four where is?', 'Yes. Where room is two oh four?'],
+                correct: 0,
+                explain: 'سؤال المكان بيبدأ بـ Where وبعده is وبعده المكان: Where is room two oh four. بنقول الرقم حرف حرف: two oh four. الاختيارين التانيين ترتيبهم غلط. (رقم القاعة هنا خيالي للتدريب.)',
+                phrase: { en: 'Where is room two oh four?', pr: 'وير إز روم تو أو فور؟', ar: 'قاعة ٢٠٤ فين؟' },
+            },
+            {
+                scene: 'الزميل شرح لك الطريق بسرعة:',
+                them: 'Go up the stairs and turn left.',
+                themAr: 'اطلع السلم ولف شمال.',
+                choices: ['Can you say that again, please?', 'You can say again that me?', 'Say again is please you?'],
+                correct: 0,
+                explain: '"Can you say that again, please?" معناها "ممكن تعيد كلامك من فضلك؟". بنبدأ بـ Can you وبعدها say that again. وبنقولها لما مفهمتش.',
+                phrase: { en: 'Can you say that again, please?', pr: 'كان يو سي ذات أجين، بليز؟', ar: 'ممكن تعيد كلامك من فضلك؟' },
+            },
+            {
+                scene: 'وصلتوا قدام القاعة، وسألت:',
+                them: 'It is on the second floor.',
+                themAr: 'هي في الدور التاني.',
+                choices: ['What time does the lecture start?', 'What time start does the lecture?', 'When is time the lecture start?'],
+                correct: 0,
+                explain: '"What time does the lecture start?" معناها "المحاضرة بتبدأ الساعة كام؟". بنقول What time وبعدها does وبعدها the lecture start، وده الترتيب الصح. (الأدوار والمواعيد هنا خيالية للتدريب.)',
+                phrase: { en: 'What time does the lecture start?', pr: 'وات تايم داز ذا ليكتشر ستارت؟', ar: 'المحاضرة بتبدأ الساعة كام؟' },
+            },
+            {
+                scene: 'الزميل رد:',
+                them: 'It starts at ten. Good luck!',
+                themAr: 'بتبدأ عشرة. بالتوفيق!',
+                choices: ['Thank you for your help.', 'Thank you help for you.', 'Your help is thank.'],
+                correct: 0,
+                explain: '"Thank you for your help" طريقة لطيفة تشكر بيها حد ساعدك. بنقول Thank you وبعدها for وبعدها your help، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرًا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Where is room two oh four?', pr: 'وير إز روم تو أو فور؟', ar: 'قاعة ٢٠٤ فين؟' },
+            { en: 'Can you say that again, please?', pr: 'كان يو سي ذات أجين، بليز؟', ar: 'ممكن تعيد كلامك من فضلك؟' },
+            { en: 'What time does the lecture start?', pr: 'وات تايم داز ذا ليكتشر ستارت؟', ar: 'المحاضرة بتبدأ الساعة كام؟' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرًا على مساعدتك' },
+            { en: "I don't understand.", pr: 'آي دونت أندرستاند', ar: 'مش فاهم' },
+        ],
+    },
 ];
 
 const quiz = [
