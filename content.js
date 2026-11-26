@@ -1000,6 +1000,58 @@ const lessons = [
             { en: "I don't understand.", pr: 'آي دونت أندرستاند', ar: 'مش فاهم' },
         ],
     },
+    {
+        id: 'weather',
+        number: 20,
+        title: 'كلام عن الجو',
+        subtitle: 'ابدأ حوار خفيف مع جارك',
+        intro: 'قابلت جارك في السلم وعايز تفتح معاه كلام بسيط عن الجو. هتعلق على الطقس، وتسأل سؤال، وتختم الحوار بأدب. الكلام ده بيفتح الحوار مع أي حد بالإنجليزي.',
+        steps: [
+            {
+                scene: 'قابلت جارك على السلم وقال:',
+                them: 'Good morning!',
+                themAr: 'صباح الخير!',
+                choices: ["Good morning! It's a beautiful day.", 'Good morning! Day is beautiful it.', 'Morning good! Beautiful is day.'],
+                correct: 0,
+                explain: 'بنرد على التحية بنفس التحية، وبعدين نعلق على الجو: "It\'s a beautiful day" يعني "النهارده يوم جميل". الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: "It's a beautiful day.", pr: 'إتس أ بيوتيفول داي', ar: 'النهارده يوم جميل' },
+            },
+            {
+                scene: 'جارك رد:',
+                them: 'Yes, it is a little hot though.',
+                themAr: 'أيوه، بس الجو حر شوية.',
+                choices: ['Yes, it is very hot today.', 'Yes, hot is very today it.', 'Yes, I am very hot today.'],
+                correct: 0,
+                explain: 'لما نتكلم عن الجو بنبدأ بـ it: "It is hot". لو قلت "I am hot" فمعناها إنت حاسس بالحر شخصيًا، مش الجو.',
+                phrase: { en: 'It is very hot today.', pr: 'إت إز فيري هوت تودي', ar: 'الجو حر جدًا النهارده' },
+            },
+            {
+                scene: 'عايز تسأل جارك عن توقعه للجو بكرة:',
+                them: 'I hope it cools down soon.',
+                themAr: 'أتمنى الجو يبرد قريب.',
+                choices: ['Do you think it will rain tomorrow?', 'You think will rain it tomorrow?', 'It will rain you think tomorrow?'],
+                correct: 0,
+                explain: '"Do you think it will rain tomorrow?" معناها "تفتكر هتمطر بكرة؟". بنبدأ بـ Do you think وبعدها الجملة بترتيبها العادي، يعني it will rain tomorrow وده الترتيب الصح.',
+                phrase: { en: 'Do you think it will rain tomorrow?', pr: 'دو يو ثينك إت ويل رين تومورو؟', ar: 'تفتكر هتمطر بكرة؟' },
+            },
+            {
+                scene: 'جارك قال إنه مستعجل:',
+                them: 'Well, I have to go. See you later!',
+                themAr: 'لازم أمشي. أشوفك بعدين!',
+                choices: ['Nice talking to you. Have a good day!', 'Talking nice you to. Day good have!', 'I am nice. Good day to you have!'],
+                correct: 0,
+                explain: '"Nice talking to you" طريقة لطيفة تنهي بيها الحوار. وبعدها "Have a good day" يعني "يومك سعيد". بنقولهم بالترتيب ده.',
+                phrase: { en: 'Nice talking to you.', pr: 'نايس توكينج تو يو', ar: 'سعيد بالكلام معاك' },
+            },
+        ],
+        phrases: [
+            { en: "It's a beautiful day.", pr: 'إتس أ بيوتيفول داي', ar: 'النهارده يوم جميل' },
+            { en: 'It is very hot today.', pr: 'إت إز فيري هوت تودي', ar: 'الجو حر جدًا النهارده' },
+            { en: 'Do you think it will rain tomorrow?', pr: 'دو يو ثينك إت ويل رين تومورو؟', ar: 'تفتكر هتمطر بكرة؟' },
+            { en: 'Nice talking to you.', pr: 'نايس توكينج تو يو', ar: 'سعيد بالكلام معاك' },
+            { en: 'Have a good day!', pr: 'هاف أ جود داي', ar: 'يومك سعيد' },
+        ],
+    },
 ];
 
 const quiz = [
