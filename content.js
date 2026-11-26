@@ -1052,6 +1052,58 @@ const lessons = [
             { en: 'Have a good day!', pr: 'هاف أ جود داي', ar: 'يومك سعيد' },
         ],
     },
+    {
+        id: 'office',
+        number: 21,
+        title: 'في المكتب',
+        subtitle: 'اطلب مساعدة من زميلك',
+        intro: 'إنت في الشغل وطابعة المكتب بايظة. هتطلب مساعدة من زميلك بأدب، وتشرح المشكلة، وتسأل عن الاجتماع، وتشكره. الجمل دي بتنفع في أي مكتب.',
+        steps: [
+            {
+                scene: 'زميلك دخل المكتب وقال:',
+                them: 'Hi! Do you need anything?',
+                themAr: 'أهلًا! محتاج حاجة؟',
+                choices: ['Yes, could you help me with this, please?', 'Yes, help me could you this, please?', 'Yes, you could this help with me?'],
+                correct: 0,
+                explain: 'لما نطلب مساعدة بأدب بنبدأ بـ "Could you"، يعني "ممكن تساعدني". الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: 'Could you help me with this?', pr: 'كود يو هيلب مي ويذ ذيس', ar: 'ممكن تساعدني في ده؟' },
+            },
+            {
+                scene: 'زميلك وافق وسألك:',
+                them: 'Sure. What is the problem?',
+                themAr: 'أكيد. إيه المشكلة؟',
+                choices: ['The printer is not working.', 'The printer not is working.', 'Printer working is not the.'],
+                correct: 0,
+                explain: '"The printer is not working" يعني "الطابعة مش شغالة". بنحط is not قبل working، وده الترتيب الصح.',
+                phrase: { en: 'The printer is not working.', pr: 'ذا برينتر إز نوت ووركينج', ar: 'الطابعة مش شغالة' },
+            },
+            {
+                scene: 'افتكرت الاجتماع وعايز تسأل عن ميعاده:',
+                them: 'Oh, the meeting is today.',
+                themAr: 'آه، الاجتماع النهارده.',
+                choices: ['What time does the meeting start?', 'What time start does the meeting?', 'The meeting what time does start?'],
+                correct: 0,
+                explain: '"What time does the meeting start?" معناها "الاجتماع بيبدأ الساعة كام؟". بنبدأ بـ What time وبعدها does، وبعد كده الفاعل والفعل بترتيبهم.',
+                phrase: { en: 'What time does the meeting start?', pr: 'وات تايم داز ذا ميتينج ستارت؟', ar: 'الاجتماع بيبدأ الساعة كام؟' },
+            },
+            {
+                scene: 'زميلك صلّح الطابعة وقال:',
+                them: 'It should work now.',
+                themAr: 'المفروض تشتغل دلوقتي.',
+                choices: ['Thank you so much. I really appreciate it.', 'Thank you so much. Appreciate I really it.', 'You are so much. I thank really it.'],
+                correct: 0,
+                explain: '"I really appreciate it" يعني "بقدّر ده جدًا"، وهي طريقة محترمة تشكر بيها زميلك. بنقولها بعد جملة "Thank you so much" على طول.',
+                phrase: { en: 'I really appreciate it.', pr: 'آي ريلي أبريشيت إت', ar: 'بقدّر ده جدًا' },
+            },
+        ],
+        phrases: [
+            { en: 'Could you help me with this?', pr: 'كود يو هيلب مي ويذ ذيس', ar: 'ممكن تساعدني في ده؟' },
+            { en: 'The printer is not working.', pr: 'ذا برينتر إز نوت ووركينج', ar: 'الطابعة مش شغالة' },
+            { en: 'What time does the meeting start?', pr: 'وات تايم داز ذا ميتينج ستارت؟', ar: 'الاجتماع بيبدأ الساعة كام؟' },
+            { en: 'I really appreciate it.', pr: 'آي ريلي أبريشيت إت', ar: 'بقدّر ده جدًا' },
+            { en: 'Let me know if you need anything.', pr: 'ليت مي نو إف يو نيد إنيثينج', ar: 'قولّي لو احتجت أي حاجة' },
+        ],
+    },
 ];
 
 const quiz = [
