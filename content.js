@@ -896,6 +896,58 @@ const lessons = [
             { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'الحساب كام؟' },
         ],
     },
+    {
+        id: 'cafe',
+        number: 18,
+        title: 'في الكافيه',
+        subtitle: 'اطلب مشروب واسأل عن الواي فاي',
+        intro: 'دخلت كافيه هادي عشان تذاكر. هتطلب مشروب، وتختار الحجم، وتسأل عن الواي فاي. الأسعار في الحوار أمثلة خيالية للتدريب على اللغة بس، مش أسعار حقيقية.',
+        steps: [
+            {
+                scene: 'وصلت الكاشير والموظف قال:',
+                them: 'Hi there. What can I get you?',
+                themAr: 'أهلاً. أجيبلك إيه؟',
+                choices: ["Can I have a tea, please?", 'I have tea want please.', 'A tea is me, please.'],
+                correct: 0,
+                explain: '"Can I have" طريقة مهذبة وشائعة للطلب. بعدها المشروب وبعدين please. الاختيارين التانيين ترتيب الكلمات فيهم غلط.',
+                phrase: { en: 'Can I have a tea, please?', pr: 'كان آي هاف أ تي، بليز؟', ar: 'ممكن شاي من فضلك؟' },
+            },
+            {
+                scene: 'الموظف سألك:',
+                them: 'Small, medium or large?',
+                themAr: 'صغير ولا وسط ولا كبير؟',
+                choices: ['Medium, please.', 'Yes, small or large.', 'I am medium.'],
+                correct: 0,
+                explain: 'السؤال فيه "or" يعني بيخيّرك بين حاجات، فاختار واحدة: "Medium, please." مينفعش ترد بـ Yes.',
+                phrase: { en: 'Medium, please.', pr: 'ميديوم، بليز', ar: 'وسط من فضلك' },
+            },
+            {
+                scene: 'الموظف قال:',
+                them: 'That is thirty pounds. For here or to go?',
+                themAr: 'الحساب تلاتين جنيه. هنا ولا تاخده معاك؟',
+                choices: ['For here, please.', 'Here for is, please.', 'I am here to.'],
+                correct: 0,
+                explain: '"For here" معناها هتقعد وتشربه في المكان، و"to go" معناها تاخده معاك. اخترنا واحدة منهم. (الحساب في الحوار رقم خيالي للتدريب، مش سعر حقيقي.)',
+                phrase: { en: 'For here, please.', pr: 'فور هير، بليز', ar: 'هنا من فضلك' },
+            },
+            {
+                scene: 'وإنت بتاخد الكوباية سألت:',
+                them: 'Here you go. Enjoy!',
+                themAr: 'اتفضل. بالهنا!',
+                choices: ["Do you have Wi-Fi?", 'You have Wi-Fi do?', 'Wi-Fi is you have?'],
+                correct: 0,
+                explain: '"Do you have Wi-Fi?" معناها "عندكم واي فاي؟". السؤال بيبدأ بـ Do وبعدها you have، وتقدر تسأل بعدها عن الباسورد. السؤال موجود في جمل الدرس تحت',
+                phrase: { en: 'Do you have Wi-Fi?', pr: 'دو يو هاف واي فاي؟', ar: 'عندكم واي فاي؟' },
+            },
+        ],
+        phrases: [
+            { en: 'Can I have a tea, please?', pr: 'كان آي هاف أ تي، بليز؟', ar: 'ممكن شاي من فضلك؟' },
+            { en: 'Medium, please.', pr: 'ميديوم، بليز', ar: 'وسط من فضلك' },
+            { en: 'For here, please.', pr: 'فور هير، بليز', ar: 'هنا من فضلك' },
+            { en: 'Do you have Wi-Fi?', pr: 'دو يو هاف واي فاي؟', ar: 'عندكم واي فاي؟' },
+            { en: 'What is the password?', pr: 'وات إز ذا باسوورد؟', ar: 'إيه الباسورد؟' },
+        ],
+    },
 ];
 
 const quiz = [
