@@ -1208,6 +1208,58 @@ const lessons = [
             { en: 'Can I order delivery?', pr: 'كان آي أوردر ديليفري', ar: 'ممكن أطلب توصيل؟' },
         ],
     },
+    {
+        id: 'museum',
+        number: 24,
+        title: 'في المتحف',
+        subtitle: 'اشتري تذكرة واسأل عن القاعة',
+        intro: 'رحت المتحف مع صحابك. هتشتري تذاكر، وتسأل فين القاعة الرئيسية، وتسأل لو التصوير مسموح، وتعرف ميعاد القفل. الجمل دي بتنفع في أي متحف أو معرض.',
+        steps: [
+            {
+                scene: 'موظف الشباك رحب بيك وقال:',
+                them: 'Welcome to the museum. How many tickets?',
+                themAr: 'أهلًا بيك في المتحف. كام تذكرة؟',
+                choices: ['Two tickets, please.', 'Tickets two, please.', 'Two please tickets.'],
+                correct: 0,
+                explain: 'بنقول العدد الأول وبعده الحاجة، يعني "Two tickets" تذكرتين. وبنضيف please عشان الأدب في الآخر.',
+                phrase: { en: 'Two tickets, please.', pr: 'تو تيكتس بليز', ar: 'تذكرتين لو سمحت' },
+            },
+            {
+                scene: 'الموظف إداك التذاكر وسألك:',
+                them: 'Here you are. Do you need an audio guide?',
+                themAr: 'اتفضل. محتاج دليل صوتي؟',
+                choices: ['No, thank you. Where is the main hall?', 'No, thank you. Where the main hall is?', 'No, thank you. Is where the main hall?'],
+                correct: 0,
+                explain: '"Where is the main hall?" معناها "فين القاعة الرئيسية؟". في السؤال بنبدأ بكلمة Where وبعدها الفعل is، وده الترتيب الصح.',
+                phrase: { en: 'Where is the main hall?', pr: 'وير إز ذا مين هول', ar: 'فين القاعة الرئيسية؟' },
+            },
+            {
+                scene: 'عايز تسأل لو التصوير مسموح جوه:',
+                them: 'The hall is on your left.',
+                themAr: 'القاعة على شمالك.',
+                choices: ['Excuse me, can I take photos here?', 'Excuse me, I can take here photos?', 'Excuse me, take can I photos here?'],
+                correct: 0,
+                explain: '"Can I take photos here?" معناها "ينفع أصور هنا؟". بنبدأ السؤال بكلمة Can وبعدها الفاعل والفعل بالترتيب.',
+                phrase: { en: 'Can I take photos here?', pr: 'كان آي تيك فوتوز هير', ar: 'ينفع أصور هنا؟' },
+            },
+            {
+                scene: 'موظف المتحف رد وقال:',
+                them: 'Yes, but please do not use a flash.',
+                themAr: 'أيوه، بس من فضلك من غير فلاش.',
+                choices: ['Sure, thank you. What time does the museum close?', 'Sure, thank you. What time close does the museum?', 'Sure, thank you. The museum what time does close?'],
+                correct: 0,
+                explain: '"What time does the museum close?" معناها "المتحف بيقفل الساعة كام؟". بنبدأ بـ What time وبعدها does والفاعل والفعل بالترتيب.',
+                phrase: { en: 'What time does the museum close?', pr: 'وات تايم داز ذا ميوزيام كلوز', ar: 'المتحف بيقفل الساعة كام؟' },
+            },
+        ],
+        phrases: [
+            { en: 'Two tickets, please.', pr: 'تو تيكتس بليز', ar: 'تذكرتين لو سمحت' },
+            { en: 'Where is the main hall?', pr: 'وير إز ذا مين هول', ar: 'فين القاعة الرئيسية؟' },
+            { en: 'Can I take photos here?', pr: 'كان آي تيك فوتوز هير', ar: 'ينفع أصور هنا؟' },
+            { en: 'What time does the museum close?', pr: 'وات تايم داز ذا ميوزيام كلوز', ar: 'المتحف بيقفل الساعة كام؟' },
+            { en: 'Is there a student discount?', pr: 'إز ذير أ ستيودنت ديسكاونت', ar: 'في خصم للطلبة؟' },
+        ],
+    },
 ];
 
 const quiz = [
