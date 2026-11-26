@@ -740,6 +740,58 @@ const lessons = [
             { en: 'Where can I buy stamps?', pr: 'وير كان آي باي ستامبس؟', ar: 'أشتري طوابع منين؟' },
         ],
     },
+    {
+        id: 'phone',
+        number: 15,
+        title: 'في محل الموبايلات',
+        subtitle: 'اشتري شاحن واسأل عن الضمان',
+        intro: 'الشاحن بتاعك باظ وعايز تشتري واحد جديد. هتشرح للبياع إنت عايز إيه، وتسأل عن السعر والضمان. الأسعار في الحوار أمثلة خيالية للتدريب على اللغة بس، مش أسعار حقيقية.',
+        steps: [
+            {
+                scene: 'دخلت المحل والبياع قال:',
+                them: 'Hi. What are you looking for?',
+                themAr: 'أهلاً. بتدور على إيه؟',
+                choices: ["I'm looking for a phone charger.", 'I look phone charger for.', 'A phone charger is me.'],
+                correct: 0,
+                explain: '"I\'m looking for" معناها "بدور على". بعدها الحاجة اللي عايزها، زي a phone charger. الاختيارين التانيين ترتيبهم غلط.',
+                phrase: { en: "I'm looking for a phone charger.", pr: 'آم لوكينج فور أ فون شارجر', ar: 'بدور على شاحن موبايل' },
+            },
+            {
+                scene: 'البياع جاب لك شاحن وقال:',
+                them: 'This one is very good.',
+                themAr: 'ده كويس جدًا.',
+                choices: ['How much is it?', 'How much it is?', 'What is much it?'],
+                correct: 0,
+                explain: '"How much is it?" معناها "بكام ده؟". الفعل is بييجي قبل it في السؤال، يعني How much is it وده الترتيب الصح.',
+                phrase: { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'بكام ده؟' },
+            },
+            {
+                scene: 'البياع رد:',
+                them: 'It is two hundred pounds.',
+                themAr: 'بمية ومتين جنيه. (رقم خيالي للتدريب)',
+                choices: ['Does it come with a warranty?', 'It has warranty come does?', 'Warranty is it me?'],
+                correct: 0,
+                explain: '"Does it come with a warranty?" معناها "جاي بضمان؟". السؤال بيبدأ بـ Does وبعدها it come with، وده الترتيب الصح. (المية والمتين جنيه في الحوار رقم خيالي للتدريب، مش سعر حقيقي.)',
+                phrase: { en: 'Does it come with a warranty?', pr: 'داز إت كام ويذ أ وورانتي؟', ar: 'جاي بضمان؟' },
+            },
+            {
+                scene: 'البياع قال:',
+                them: 'Yes, it has a one year warranty. Would you like it?',
+                themAr: 'أيوه، عليه ضمان سنة. تحب تاخده؟',
+                choices: ["Yes, I'll take it.", 'Yes, I take it will.', 'I am it, thank you.'],
+                correct: 0,
+                explain: '"I\'ll take it" هي الجملة المعتادة لما تقرر تشتري حاجة. I\'ll معناها I will، وبعدها take it بالترتيب ده.',
+                phrase: { en: "Yes, I'll take it.", pr: 'ييس، آيل تيك إت', ar: 'أيوه، هاخده' },
+            },
+        ],
+        phrases: [
+            { en: "I'm looking for a phone charger.", pr: 'آم لوكينج فور أ فون شارجر', ar: 'بدور على شاحن موبايل' },
+            { en: 'How much is it?', pr: 'هاو ماتش إز إت؟', ar: 'بكام ده؟' },
+            { en: 'Does it come with a warranty?', pr: 'داز إت كام ويذ أ وورانتي؟', ar: 'جاي بضمان؟' },
+            { en: "Yes, I'll take it.", pr: 'ييس، آيل تيك إت', ar: 'أيوه، هاخده' },
+            { en: 'Do you have a phone case?', pr: 'دو يو هاف أ فون كيس؟', ar: 'عندك جراب موبايل؟' },
+        ],
+    },
 ];
 
 const quiz = [
