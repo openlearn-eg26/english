@@ -1775,6 +1775,57 @@ const lessons = [
             { en: 'When will he come?', pr: 'ون ويل هي كام', ar: 'هيجي إمتى؟' },
         ],
     },
+    {
+        id: 'bookstore',
+        number: 35,
+        title: 'في المكتبة التجارية',
+        subtitle: 'اشتري كتاب لتعلم الإنجليزي',
+        intro: 'عايز تشتري كتاب إنجليزي بسيط. هتقول للبائع إنك بتدور على كتاب، وتطلب قصة سهلة، وتسأل لو فيها صور، وتقول إنك هتاخده. الجمل دي بتنفع في أي مكتبة.',
+        steps: [
+            {
+                scene: 'دخلت المكتبة والبائع سألك:',
+                them: 'Hello. Are you looking for something?',
+                themAr: 'أهلاً. بتدور على حاجة؟',
+                choices: ["Yes, I am looking for an English book.", "Yes, I looking am for an English book.", "Yes, looking I am for English an book."],
+                correct: 0,
+                explain: '"I am looking for" يعني "أنا بدور على". بنقول I am وبعدها looking for وبعدها اللي بندور عليه، وده الترتيب الصح.',
+                phrase: { en: 'I am looking for an English book.', pr: 'آي أم لوكينج فور أن إنجليش بوك', ar: 'أنا بدور على كتاب إنجليزي' },
+            },
+            {
+                scene: 'البائع سألك عن نوع الكتاب:',
+                them: 'Do you want a story or a textbook?',
+                themAr: 'عايز قصة ولا كتاب دراسة؟',
+                choices: ["I would like a simple story, please.", "I would like story a simple, please.", "Like I would a story simple, please."],
+                correct: 0,
+                explain: '"a simple story" يعني "قصة بسيطة". بنقول الصفة simple قبل story، وبنختم بـ please عشان الطلب يبقى مؤدب.',
+                phrase: { en: 'I would like a simple story, please.', pr: 'آي ود لايك أ سيمبل ستوري بليز', ar: 'عايز قصة بسيطة لو سمحت' },
+            },
+            {
+                scene: 'البائع جاب لك كتاب وقالك:',
+                them: 'Here is a good one.',
+                themAr: 'اتفضل، ده كتاب كويس.',
+                choices: ["Does it have pictures?", "Does have it pictures?", "It does have pictures?"],
+                correct: 0,
+                explain: '"Does it have" يعني "هل فيه". بنبدأ بـ Does وبعدها it وبعدها have وبعدها pictures يعني "صور"، وده الترتيب الصح.',
+                phrase: { en: 'Does it have pictures?', pr: 'داز إت هاف بيكتشرز', ar: 'فيه صور؟' },
+            },
+            {
+                scene: 'البائع جاوبك وسألك:',
+                them: 'Yes, it does. Would you like to buy it?',
+                themAr: 'أيوه فيه. تحب تشتريه؟',
+                choices: ["Yes, I will take it.", "Yes, I take will it.", "Yes, will I it take."],
+                correct: 0,
+                explain: '"I will take it" يعني "هاخده". بنقول I will وبعدها take وبعدها it، وده الترتيب الصح.',
+                phrase: { en: 'I will take it.', pr: 'آي ويل تيك إت', ar: 'هاخده' },
+            },
+        ],
+        phrases: [
+            { en: 'I am looking for an English book.', pr: 'آي أم لوكينج فور أن إنجليش بوك', ar: 'أنا بدور على كتاب إنجليزي' },
+            { en: 'I would like a simple story, please.', pr: 'آي ود لايك أ سيمبل ستوري بليز', ar: 'عايز قصة بسيطة لو سمحت' },
+            { en: 'Does it have pictures?', pr: 'داز إت هاف بيكتشرز', ar: 'فيه صور؟' },
+            { en: 'I will take it.', pr: 'آي ويل تيك إت', ar: 'هاخده' },
+        ],
+    },
 ];
 
 const quiz = [
