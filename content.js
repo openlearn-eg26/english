@@ -4070,6 +4070,57 @@ const lessons = [
             { en: 'You are welcome. I will not be late again.', pr: 'يو آر ويلكم. آي ويل نوت بي ليت أجين', ar: 'العفو. مش هتأخر تاني' },
         ],
     },
+    {
+        id: 'moneyexchange',
+        number: 80,
+        title: 'مكتب الصرافة',
+        subtitle: 'حوّل دولارات لجنيه واسأل عن السعر',
+        intro: 'انت في مكتب صرافة وعايز تحوّل دولارات لجنيه. هتقول المبلغ، وتديله الجواز، وتسأل عن سعر الصرف والعمولة، وتتأكد من الفلوس. الأسعار في الدرس أمثلة للتدريب وليست الأسعار الحقيقية.',
+        steps: [
+            {
+                scene: 'انت في مكتب صرافة وعايز تحوّل فلوس:',
+                them: 'Good afternoon. How can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك إزاي؟',
+                choices: ["I would like to change a hundred dollars.", "I would like to change dollars a hundred.", "Like I would change a hundred to dollars."],
+                correct: 0,
+                explain: '"Change a hundred dollars" يعني "أصرف مية دولار". بنقول I would like to وبعدها change a hundred dollars، وده الترتيب الصح.',
+                phrase: { en: 'I would like to change a hundred dollars.', pr: 'آي وود لايك تو تشينج ا هندرد دولارز', ar: 'عايز أصرف مية دولار' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'Into Egyptian pounds? Do you have your passport?',
+                themAr: 'لجنيه مصري؟ معاك جواز السفر؟',
+                choices: ["Yes, here it is. What is the exchange rate today?", "Yes, here it is. What the exchange rate is today?", "Yes, it here is. Today rate exchange what is?"],
+                correct: 0,
+                explain: '"The exchange rate" يعني "سعر الصرف". بنقول Yes, here it is وبعدها what is the exchange rate today، وده الترتيب الصح.',
+                phrase: { en: 'Yes, here it is. What is the exchange rate today?', pr: 'يس هير إت إز. وات إز ذا إكسشينج ريت توداي', ar: 'أيوه اتفضل. سعر الصرف النهارده كام؟' },
+            },
+            {
+                scene: 'الموظف بيرد:',
+                them: 'The rate is fifty. You will get five thousand pounds.',
+                themAr: 'السعر خمسين. هتاخد خمس تلاف جنيه.',
+                choices: ["OK. Is there any commission?", "OK. Is any there commission?", "OK. Commission any is there?"],
+                correct: 0,
+                explain: '"Is there any commission" يعني "في عمولة". بنقول OK وبعدها is there any commission، وده الترتيب الصح.',
+                phrase: { en: 'OK. Is there any commission?', pr: 'أوكي. إز ذير إني كوميشن', ar: 'تمام. في عمولة؟' },
+            },
+            {
+                scene: 'الموظف بيعد الفلوس:',
+                them: 'No commission. Please count the money.',
+                themAr: 'مفيش عمولة. عد الفلوس من فضلك.',
+                choices: ["It is correct. Thank you very much.", "It correct is. Thank you much very.", "Correct it is. Very thank you much."],
+                correct: 0,
+                explain: '"It is correct" يعني "مظبوط". بنقول It is correct وبعدها thank you very much، وده الترتيب الصح.',
+                phrase: { en: 'It is correct. Thank you very much.', pr: 'إت إز كوريكت. ثانك يو فيري ماتش', ar: 'مظبوط. شكرا جزيلا' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to change a hundred dollars.', pr: 'آي وود لايك تو تشينج ا هندرد دولارز', ar: 'عايز أصرف مية دولار' },
+            { en: 'Yes, here it is. What is the exchange rate today?', pr: 'يس هير إت إز. وات إز ذا إكسشينج ريت توداي', ar: 'أيوه اتفضل. سعر الصرف النهارده كام؟' },
+            { en: 'OK. Is there any commission?', pr: 'أوكي. إز ذير إني كوميشن', ar: 'تمام. في عمولة؟' },
+            { en: 'It is correct. Thank you very much.', pr: 'إت إز كوريكت. ثانك يو فيري ماتش', ar: 'مظبوط. شكرا جزيلا' },
+        ],
+    },
 ];
 
 const quiz = [
