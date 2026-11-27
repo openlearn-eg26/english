@@ -3458,6 +3458,57 @@ const lessons = [
             { en: 'You are welcome. Enjoy your visit.', pr: 'يو آر ويلكم. إنجوي يور ڤيزيت', ar: 'العفو. استمتع بزيارتك' },
         ],
     },
+    {
+        id: 'barbershop',
+        number: 68,
+        title: 'عند الحلاق',
+        subtitle: 'قول للحلاق عايز الشعر والدقن إزاي',
+        intro: 'انت عند الحلاق. هتقوله عايز الشعر إزاي، وتقوله على الدقن، وتسأل عن السعر، وتدفع. الأسعار في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت قعدت على كرسي الحلاق:',
+                them: 'Welcome. How do you want it today?',
+                themAr: 'أهلا بيك. تحب أعملهالك إزاي النهارده؟',
+                choices: ["Just a little shorter on the sides, please.", "Just a shorter little on sides the, please.", "A little just on the sides shorter, please."],
+                correct: 0,
+                explain: '"A little shorter on the sides" يعني "أقصر شوية من الجنب". بنقول Just a little shorter on the sides، وده الترتيب الصح.',
+                phrase: { en: 'Just a little shorter on the sides, please.', pr: 'جست ا ليتل شورتر أون ذا سايدز بليز', ar: 'بس أقصر شوية من الجنب لو سمحت' },
+            },
+            {
+                scene: 'الحلاق بيسأل عن الدقن:',
+                them: 'And the beard?',
+                themAr: 'والدقن؟',
+                choices: ["Please trim it a little. Not too short.", "Please it trim a little. Too short not.", "Trim please it little a. Not short too."],
+                correct: 0,
+                explain: '"Not too short" يعني "مش قصيرة أوي". بنقول Please trim it a little وبعدها not too short، وده الترتيب الصح.',
+                phrase: { en: 'Please trim it a little. Not too short.', pr: 'بليز ترم إت ا ليتل. نوت تو شورت', ar: 'لو سمحت قصها شوية. مش قصيرة أوي' },
+            },
+            {
+                scene: 'الحلاق خلص وبيورّيك المراية:',
+                them: 'Is this OK for you?',
+                themAr: 'كده تمام؟',
+                choices: ["Yes, it looks good. How much is it?", "Yes, it good looks. Is how much it?", "Yes, good it looks. It is how much?"],
+                correct: 0,
+                explain: '"It looks good" يعني "شكلها حلو". بنقول Yes وبعدها it looks good وبعدها how much is it، وده الترتيب الصح.',
+                phrase: { en: 'Yes, it looks good. How much is it?', pr: 'يس إت لوكس جود. هاو ماتش إز إت', ar: 'أيوه شكلها حلو. بكام؟' },
+            },
+            {
+                scene: 'الحلاق بيقولك السعر:',
+                them: 'It is eighty pounds in total.',
+                themAr: 'تمانين جنيه الإجمالي.',
+                choices: ["Here you are. Keep the change.", "Here are you. The change keep.", "You here are. Keep change the."],
+                correct: 0,
+                explain: '"Keep the change" يعني "خلي الباقي". بنقول Here you are وبعدها keep the change، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذا تشينج', ar: 'اتفضل. خلي الباقي' },
+            },
+        ],
+        phrases: [
+            { en: 'Just a little shorter on the sides, please.', pr: 'جست ا ليتل شورتر أون ذا سايدز بليز', ar: 'بس أقصر شوية من الجنب لو سمحت' },
+            { en: 'Please trim it a little. Not too short.', pr: 'بليز ترم إت ا ليتل. نوت تو شورت', ar: 'لو سمحت قصها شوية. مش قصيرة أوي' },
+            { en: 'Yes, it looks good. How much is it?', pr: 'يس إت لوكس جود. هاو ماتش إز إت', ar: 'أيوه شكلها حلو. بكام؟' },
+            { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذا تشينج', ar: 'اتفضل. خلي الباقي' },
+        ],
+    },
 ];
 
 const quiz = [
