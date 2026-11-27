@@ -160,6 +160,7 @@
     Object.assign(AUDIO_MAP, {"Hi. Are you looking for something?": "22ea034131", "Sure. Have you played football before?": "2e894ed810", "Great. Which team do you want to be on?": "406fcd9090", "Good game. Do you want to play again next week?": "fad0eb406b", "Hi. Can I join your game?": "e6970f3358", "Yes, I play every weekend.": "610a545959", "I do not mind. Any team is fine.": "e44798d77e", "Yes, I would love to. See you then.": "3942e9af00"});
     Object.assign(AUDIO_MAP, {"Excuse me. Do you speak English?": "eadda3583b", "I am looking for the museum. Is it far?": "474ac7ee09", "And then? Which way do I go?": "1b66b882b5", "Thank you so much. You are very kind.": "ef4a9a5283", "Yes, a little. How can I help?": "1edc7b4ca2", "No, it is close. Walk two streets.": "89c9a5c1f5", "Then turn right. You will see it.": "644dd00a45"});
     Object.assign(AUDIO_MAP, {"Welcome. How do you want it today?": "16275a40cc", "And the beard?": "5530569c27", "Is this OK for you?": "3f2ad5be4c", "It is eighty pounds in total.": "524bd89edb", "Just a little shorter on the sides, please.": "a660447118", "Please trim it a little. Not too short.": "9204c6307a", "Yes, it looks good. How much is it?": "8e1dbba08b"});
+    Object.assign(AUDIO_MAP, {"Good morning. What do you have there?": "40409d5085", "I can clean it. Do you want it ironed too?": "1a8907a7c5", "It will be ready on Thursday afternoon.": "5adb59dcbf", "Of course. Here is your ticket.": "8e785a53ce", "Good morning. I have a shirt with a stain.": "92e12efa96", "Yes, please. When will it be ready?": "c70581f756", "Perfect. Can I pay when I pick it up?": "47cf545dfd", "Thank you. I will bring this ticket on Thursday.": "2c1379dbe9"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -1010,7 +1011,7 @@
     /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
     const TOUR = [
         { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
-        { img: 'tour/2.jpg', t: 'الدروس: ٦٨ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ٦٩ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
         { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
         { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
         { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
