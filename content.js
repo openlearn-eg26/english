@@ -4172,6 +4172,57 @@ const lessons = [
             { en: 'I wish I could, but I have an early start tomorrow.', pr: 'آي ويش آي كود بات آي هاف أن إيرلي ستارت تومورو', ar: 'يا ريت أقدر بس بكرة هبدأ بدري' },
         ],
     },
+    {
+        id: 'buyplant',
+        number: 82,
+        title: 'شراء نبتة',
+        subtitle: 'اسأل عن العناية بنبتة واشتريها',
+        intro: 'دخلت محل نباتات عشان تشتري نبتة صغيرة للبيت. هتسأل عن الشمس والسقي، وتختار نبتة، وتسأل عن الحساب. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'دخلت محل نباتات عشان تشتري نبتة للبيت:',
+                them: 'Hello. Can I help you find something?',
+                themAr: 'أهلا. أقدر أساعدك تلاقي حاجة؟',
+                choices: ["Yes, I am looking for a small plant.", "Yes, I looking am for a plant small.", "Yes, a small plant for looking I am."],
+                correct: 0,
+                explain: '"I am looking for a small plant" يعني "أنا بدور على نبتة صغيرة". بنقول Yes وبعدها I am looking for a small plant، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I am looking for a small plant.', pr: 'يس آي أم لوكينج فور أ سمول بلانت', ar: 'أيوه، بدور على نبتة صغيرة' },
+            },
+            {
+                scene: 'البايع بيوريك نبتة:',
+                them: 'This one is popular. It grows well indoors.',
+                themAr: 'النبتة دي مشهورة. بتنمو كويس جوه البيت.',
+                choices: ["Does it need a lot of sunlight?", "Does it a lot of sunlight need?", "It does need sunlight of a lot?"],
+                correct: 0,
+                explain: '"Does it need a lot of sunlight?" يعني "محتاجة شمس كتير؟". بنقول Does it need وبعدها a lot of sunlight، وده الترتيب الصح.',
+                phrase: { en: 'Does it need a lot of sunlight?', pr: 'داز إت نيد أ لوت أوف سانلايت', ar: 'محتاجة شمس كتير؟' },
+            },
+            {
+                scene: 'البايع بيشرح العناية بالنبتة:',
+                them: 'No, only a little light. Water it once a week.',
+                themAr: 'لأ، شوية ضوء بس. اسقيها مرة في الأسبوع.',
+                choices: ["That is easy. I will take this one, please.", "That easy is. I this one will take, please.", "That is easy. Take I will this one please."],
+                correct: 0,
+                explain: '"I will take this one" يعني "هاخد دي". بنقول That is easy وبعدها I will take this one، وده الترتيب الصح.',
+                phrase: { en: 'That is easy. I will take this one, please.', pr: 'ذات إز إيزي. آي ويل تيك ذيس وان بليز', ar: 'ده سهل. هاخد دي لو سمحت' },
+            },
+            {
+                scene: 'البايع بيجهز النبتة:',
+                them: 'Would you like a bag or a pot with it?',
+                themAr: 'تحب كيس ولا إناء معاها؟',
+                choices: ["A pot, please. How much is the total?", "A pot, please. The total how much is?", "Pot a please. Is how much total the?"],
+                correct: 0,
+                explain: '"How much is the total?" يعني "الحساب كام؟". بنقول A pot, please وبعدها how much is the total، وده الترتيب الصح.',
+                phrase: { en: 'A pot, please. How much is the total?', pr: 'أ بوت بليز. هاو ماتش إز ذا توتال', ar: 'إناء لو سمحت. الحساب كام؟' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I am looking for a small plant.', pr: 'يس آي أم لوكينج فور أ سمول بلانت', ar: 'أيوه، بدور على نبتة صغيرة' },
+            { en: 'Does it need a lot of sunlight?', pr: 'داز إت نيد أ لوت أوف سانلايت', ar: 'محتاجة شمس كتير؟' },
+            { en: 'That is easy. I will take this one, please.', pr: 'ذات إز إيزي. آي ويل تيك ذيس وان بليز', ar: 'ده سهل. هاخد دي لو سمحت' },
+            { en: 'A pot, please. How much is the total?', pr: 'أ بوت بليز. هاو ماتش إز ذا توتال', ar: 'إناء لو سمحت. الحساب كام؟' },
+        ],
+    },
 ];
 
 const quiz = [
