@@ -2897,6 +2897,57 @@ const lessons = [
             { en: 'Yes, it is in the trunk.', pr: 'يس إت إز إن ذي ترانك', ar: 'أيوه، في شنطة العربية' },
         ],
     },
+    {
+        id: 'lostwallet',
+        number: 57,
+        title: 'ضاعت محفظتي',
+        subtitle: 'بلّغ عن حاجة ضاعت منك في المول',
+        intro: 'محفظتك ضاعت منك في المول وانت رايح لمكتب المفقودات. هتقول إيه اللي ضاع، وشكله، وفين تقريبا، وتسيب رقمك. الأماكن في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت في مول وضاعت منك محفظتك. رحت لمكتب المفقودات:',
+                them: 'Hello. Can I help you?',
+                themAr: 'أهلا. أقدر أساعدك؟',
+                choices: ["I think I lost my wallet.", "I think I my wallet lost.", "I lost think my wallet I."],
+                correct: 0,
+                explain: '"I think I lost my wallet" يعني "أظن إني ضيعت محفظتي". بنقول I think I lost وبعدها my wallet، وده الترتيب الصح.',
+                phrase: { en: 'I think I lost my wallet.', pr: 'آي ثينك آي لوست ماي واليت', ar: 'أظن إني ضيعت محفظتي' },
+            },
+            {
+                scene: 'الموظف عايز يعرف شكلها:',
+                them: 'What does it look like?',
+                themAr: 'شكلها عامل إزاي؟',
+                choices: ["It is small and brown.", "It small is and brown.", "Small it is brown and."],
+                correct: 0,
+                explain: '"It is small and brown" يعني "صغيرة وبنية". بنقول It is وبعدها small and brown، وده الترتيب الصح.',
+                phrase: { en: 'It is small and brown.', pr: 'إت إز سمول آند براون', ar: 'صغيرة وبنية' },
+            },
+            {
+                scene: 'الموظف سألك عن مكان ضياعها:',
+                them: 'Where did you lose it?',
+                themAr: 'ضيعتها فين؟',
+                choices: ["I think I lost it near the food court.", "I think lost I it the near food court.", "Near I think the food court lost it."],
+                correct: 0,
+                explain: '"near the food court" يعني "قريب من مطاعم المول". بنقول I think I lost it وبعدها near the food court، وده الترتيب الصح.',
+                phrase: { en: 'I think I lost it near the food court.', pr: 'آي ثينك آي لوست إت نير ذي فود كورت', ar: 'أظن إني ضيعتها قريب من مطاعم المول' },
+            },
+            {
+                scene: 'الموظف طلب منك بياناتك:',
+                them: 'Please leave your phone number.',
+                themAr: 'من فضلك سيب رقم موبايلك.',
+                choices: ["Sure. Please call me if you find it.", "Sure. Please me call if you it find.", "Please sure. Call if you find me it."],
+                correct: 0,
+                explain: '"Please call me if you find it" يعني "من فضلك كلمني لو لقيتها". بنقول Sure وبعدها Please call me if you find it، وده الترتيب الصح.',
+                phrase: { en: 'Sure. Please call me if you find it.', pr: 'شور. بليز كول مي إف يو فايند إت', ar: 'أكيد. كلمني لو لقيتها' },
+            },
+        ],
+        phrases: [
+            { en: 'I think I lost my wallet.', pr: 'آي ثينك آي لوست ماي واليت', ar: 'أظن إني ضيعت محفظتي' },
+            { en: 'It is small and brown.', pr: 'إت إز سمول آند براون', ar: 'صغيرة وبنية' },
+            { en: 'I think I lost it near the food court.', pr: 'آي ثينك آي لوست إت نير ذي فود كورت', ar: 'أظن إني ضيعتها قريب من مطاعم المول' },
+            { en: 'Sure. Please call me if you find it.', pr: 'شور. بليز كول مي إف يو فايند إت', ar: 'أكيد. كلمني لو لقيتها' },
+        ],
+    },
 ];
 
 const quiz = [
