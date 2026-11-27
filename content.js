@@ -4274,6 +4274,57 @@ const lessons = [
             { en: 'Thank you. I will come back on Thursday.', pr: 'ثانك يو. آي ويل كام باك أون ثيرسداي', ar: 'شكرا. هرجع يوم الخميس' },
         ],
     },
+    {
+        id: 'helpmove',
+        number: 84,
+        title: 'نقل الشقة',
+        subtitle: 'ساعد صاحبك في نقل شقته الجديدة',
+        intro: 'صاحبك هينقل شقة جديدة وطلب مساعدتك. هتقول إنك فاضي، وتحدد الميعاد، وتسأل تبدأ منين، وتعرض مساعدة تانية. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'صاحبك هينقل شقة جديدة وبيكلمك:',
+                them: 'I am moving to a new apartment on Saturday. Are you free?',
+                themAr: 'هنقل شقة جديدة يوم السبت. فاضي؟',
+                choices: ["Yes, I can help you move.", "Yes, I can you help move.", "Yes, help I can you move."],
+                correct: 0,
+                explain: '"I can help you move" يعني "أقدر أساعدك في النقل". بنقول Yes وبعدها I can help you move، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I can help you move.', pr: 'يس آي كان هيلب يو موف', ar: 'أيوه، أقدر أساعدك في النقل' },
+            },
+            {
+                scene: 'صاحبك بيشكرك:',
+                them: 'That would be great. What time can you come?',
+                themAr: 'ده هيبقى رائع. تقدر تيجي الساعة كام؟',
+                choices: ["I can be there at nine in the morning.", "I can there be at nine in the morning.", "I be can there at morning the nine."],
+                correct: 0,
+                explain: '"I can be there at nine" يعني "أقدر أكون هناك الساعة تسعة". بنقول I can be there وبعدها at nine in the morning، وده الترتيب الصح.',
+                phrase: { en: 'I can be there at nine in the morning.', pr: 'آي كان بي ذير أت ناين إن ذا مورنينج', ar: 'أقدر أكون هناك الساعة تسعة الصبح' },
+            },
+            {
+                scene: 'وصلت وصاحبك بيستقبلك:',
+                them: 'Thank you for coming. The boxes are in the living room.',
+                themAr: 'شكرا إنك جيت. الكراتين في الصالة.',
+                choices: ["Where should I start? Which box is heavy?", "Where I should start? Which box heavy is?", "Start where should I? Is heavy which box?"],
+                correct: 0,
+                explain: '"Which box is heavy?" يعني "أنهي كرتونة تقيلة؟". بنقول Where should I start وبعدها which box is heavy، وده الترتيب الصح.',
+                phrase: { en: 'Where should I start? Which box is heavy?', pr: 'وير شد آي ستارت؟ ويتش بوكس إز هيفي', ar: 'أبدأ منين؟ أنهي كرتونة تقيلة؟' },
+            },
+            {
+                scene: 'الشغل خلص:',
+                them: 'We are done. Thank you so much for your help.',
+                themAr: 'خلصنا. شكرا جدا على مساعدتك.',
+                choices: ["You are welcome. Call me if you need anything.", "You are welcome. Me call if you anything need.", "Welcome you are. If anything need you call me."],
+                correct: 0,
+                explain: '"Call me if you need anything" يعني "كلمني لو احتجت أي حاجة". بنقول You are welcome وبعدها call me if you need anything، وده الترتيب الصح.',
+                phrase: { en: 'You are welcome. Call me if you need anything.', pr: 'يو آر ويلكم. كول مي إف يو نيد إنيثينج', ar: 'العفو. كلمني لو احتجت أي حاجة' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I can help you move.', pr: 'يس آي كان هيلب يو موف', ar: 'أيوه، أقدر أساعدك في النقل' },
+            { en: 'I can be there at nine in the morning.', pr: 'آي كان بي ذير أت ناين إن ذا مورنينج', ar: 'أقدر أكون هناك الساعة تسعة الصبح' },
+            { en: 'Where should I start? Which box is heavy?', pr: 'وير شد آي ستارت؟ ويتش بوكس إز هيفي', ar: 'أبدأ منين؟ أنهي كرتونة تقيلة؟' },
+            { en: 'You are welcome. Call me if you need anything.', pr: 'يو آر ويلكم. كول مي إف يو نيد إنيثينج', ar: 'العفو. كلمني لو احتجت أي حاجة' },
+        ],
+    },
 ];
 
 const quiz = [
