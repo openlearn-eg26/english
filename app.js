@@ -179,6 +179,7 @@
     Object.assign(AUDIO_MAP, {"It is raining hard today. Can I help you?": "282e62d22f", "Yes, I need an umbrella, please.": "86213bf845", "I have a big one and a small one.": "5f6139c62d", "The small one is better. Can I see it?": "86a647883f", "It is light and strong. It is very good for the rain.": "100dc80a61", "It looks good. How much is it?": "7ec522bb38", "It is ten pounds. The rain will stop soon.": "c1a985aff3", "I will take it. Thank you for your help.": "6b7ce3e3c7"});
     Object.assign(AUDIO_MAP, {"Welcome to our bakery. What can I get for you?": "396d6de97f", "I would like a cake for ten people.": "e35e5b5d1b", "We have chocolate and vanilla. Which one do you prefer?": "4cd88a8418", "Vanilla, please. Is it fresh today?": "571e1ebb31", "Yes, we baked it this morning. Would you like a message on it?": "0c4f8252fb", "No, thank you. Can you put it in a box?": "55397fa7d2", "Of course. Here you are. Please carry it carefully.": "c2081f82ec", "I will. Thank you very much.": "217edbed1a"});
     Object.assign(AUDIO_MAP, {"Here is your lunch. Enjoy your meal.": "34f6d652c5", "Excuse me, this is not what I ordered.": "331caa947c", "I am sorry. What did you order?": "157167db63", "I ordered the grilled chicken with rice.": "58b89e1db1", "You are right. It was our mistake. We will fix it now.": "bf1f01635b", "Thank you. I do not mind waiting a little.": "9593c5c8de", "Here is the right dish. Sorry again for the wait.": "48811510b5", "It looks great. Thank you for fixing it.": "ecf7dc7019"});
+    Object.assign(AUDIO_MAP, {"Hello. I am your new neighbor. I live on the third floor.": "7232e4e47b", "Nice to meet you. Welcome to the building.": "c9b47dcd0a", "Thank you. Have you lived here for a long time?": "a6cabf03f7", "Yes, for about five years. It is a quiet building.": "c7558351bd", "That is good to hear. Is there a market nearby?": "ea53f5d706", "Yes, there is a small market on the corner.": "540cb5fd6a", "Great, thank you. It was nice talking to you.": "4ff0c19082", "You too. Let me know if you need any help.": "04948b9f2c"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -1029,7 +1030,7 @@
     /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
     const TOUR = [
         { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
-        { img: 'tour/2.jpg', t: 'الدروس: ٨٧ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ٨٨ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
         { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
         { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
         { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
