@@ -3764,6 +3764,57 @@ const lessons = [
             { en: 'Thank you. Have a nice day.', pr: 'ثانك يو. هاف ا نايس دي', ar: 'شكرا. يومك سعيد' },
         ],
     },
+    {
+        id: 'heavybags',
+        number: 74,
+        title: 'شنط تقيلة',
+        subtitle: 'اقبل مساعدة في الشنط في محطة القطر',
+        intro: 'انت في محطة القطر ومعاك شنط تقيلة وواحد عرض يساعدك. هتقبل المساعدة، وتقوله رايح أي رصيف، وتقوله إيه في الشنطة، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'انت في محطة القطر ومعاك شنط تقيلة:',
+                them: 'Hello. You look like you need a hand.',
+                themAr: 'أهلا. باين إنك محتاج مساعدة.',
+                choices: ["Yes, please. My bags are very heavy.", "Yes, please. My bags very are heavy.", "Please yes. Heavy are very bags my."],
+                correct: 0,
+                explain: '"My bags are very heavy" يعني "شنطي تقيلة أوي". بنقول Yes, please وبعدها my bags are very heavy، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. My bags are very heavy.', pr: 'يس بليز. ماي باجز آر فيري هيڤي', ar: 'أيوه لو سمحت. شنطي تقيلة أوي' },
+            },
+            {
+                scene: 'الراجل بيسأل:',
+                them: 'Where are you going with them?',
+                themAr: 'رايح بيهم فين؟',
+                choices: ["I am going to platform number four.", "I am going to number platform four.", "Going I am to four number platform."],
+                correct: 0,
+                explain: '"Platform number four" يعني "رصيف رقم أربعة". بنقول I am going to وبعدها platform number four، وده الترتيب الصح.',
+                phrase: { en: 'I am going to platform number four.', pr: 'آي أم جوينج تو بلاتفورم نمبر فور', ar: 'رايح رصيف رقم أربعة' },
+            },
+            {
+                scene: 'الراجل شال شنطتين:',
+                them: 'This one is heavy. What is inside?',
+                themAr: 'دي تقيلة. فيها إيه؟',
+                choices: ["It is full of books. Thank you for helping.", "It full is of books. Thank you for help.", "Full of books it is. For helping thank you."],
+                correct: 0,
+                explain: '"Full of books" يعني "مليانة كتب". بنقول It is full of books وبعدها thank you for helping، وده الترتيب الصح.',
+                phrase: { en: 'It is full of books. Thank you for helping.', pr: 'إت إز فول أوف بوكس. ثانك يو فور هيلبينج', ar: 'مليانة كتب. شكرا إنك بتساعدني' },
+            },
+            {
+                scene: 'وصلتوا الرصيف:',
+                them: 'Here is your platform. Have a safe trip.',
+                themAr: 'ده الرصيف بتاعك. رحلة سعيدة.',
+                choices: ["Thank you very much. You are very kind.", "Thank you very much. You very are kind.", "Very much thank you. Kind you are very."],
+                correct: 0,
+                explain: '"You are very kind" يعني "انت لطيف جدا". بنقول Thank you very much وبعدها you are very kind، وده الترتيب الصح.',
+                phrase: { en: 'Thank you very much. You are very kind.', pr: 'ثانك يو فيري ماتش. يو آر فيري كايند', ar: 'شكرا جزيلا. انت لطيف جدا' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, please. My bags are very heavy.', pr: 'يس بليز. ماي باجز آر فيري هيڤي', ar: 'أيوه لو سمحت. شنطي تقيلة أوي' },
+            { en: 'I am going to platform number four.', pr: 'آي أم جوينج تو بلاتفورم نمبر فور', ar: 'رايح رصيف رقم أربعة' },
+            { en: 'It is full of books. Thank you for helping.', pr: 'إت إز فول أوف بوكس. ثانك يو فور هيلبينج', ar: 'مليانة كتب. شكرا إنك بتساعدني' },
+            { en: 'Thank you very much. You are very kind.', pr: 'ثانك يو فيري ماتش. يو آر فيري كايند', ar: 'شكرا جزيلا. انت لطيف جدا' },
+        ],
+    },
 ];
 
 const quiz = [
