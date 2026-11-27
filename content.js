@@ -4223,6 +4223,57 @@ const lessons = [
             { en: 'A pot, please. How much is the total?', pr: 'أ بوت بليز. هاو ماتش إز ذا توتال', ar: 'إناء لو سمحت. الحساب كام؟' },
         ],
     },
+    {
+        id: 'shoerepair',
+        number: 83,
+        title: 'إصلاح الجزمة',
+        subtitle: 'اشرح المشكلة واسأل عن الوقت والسعر',
+        intro: 'جزمتك نعلها بيتفك وراحت لمحل إصلاح. هتشرح المشكلة، وتسأل عن الوقت والسعر، وتحدد هترجع إمتى. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'دخلت محل إصلاح أحذية ومعاك جزمة فيها مشكلة:',
+                them: 'Good afternoon. What seems to be the problem?',
+                themAr: 'مساء الخير. إيه المشكلة؟',
+                choices: ["The sole of this shoe is coming off.", "The sole of this shoe coming is off.", "This shoe of the sole is off coming."],
+                correct: 0,
+                explain: '"The sole is coming off" يعني "النعل بيتفك". بنقول The sole of this shoe وبعدها is coming off، وده الترتيب الصح.',
+                phrase: { en: 'The sole of this shoe is coming off.', pr: 'ذا سول أوف ذيس شو إز كامينج أوف', ar: 'نعل الجزمة دي بيتفك' },
+            },
+            {
+                scene: 'الصنايعي بيفحص الجزمة:',
+                them: 'I can glue it and sew it. It will be strong.',
+                themAr: 'أقدر ألزقه وأخيطه. هيبقى قوي.',
+                choices: ["Great. How long will it take?", "Great. How long it will take?", "Great. Long how will it take?"],
+                correct: 0,
+                explain: '"How long will it take?" يعني "هياخد وقت قد إيه؟". بنقول Great وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'Great. How long will it take?', pr: 'جريت. هاو لونج ويل إت تيك', ar: 'تمام. هياخد وقت قد إيه؟' },
+            },
+            {
+                scene: 'الصنايعي بيرد:',
+                them: 'It will be ready in two days.',
+                themAr: 'هيكون جاهز بعد يومين.',
+                choices: ["That is fine. How much will it cost?", "That is fine. How much it will cost?", "That fine is. Cost it will how much?"],
+                correct: 0,
+                explain: '"How much will it cost?" يعني "هيكلف كام؟". بنقول That is fine وبعدها how much will it cost، وده الترتيب الصح.',
+                phrase: { en: 'That is fine. How much will it cost?', pr: 'ذات إز فاين. هاو ماتش ويل إت كوست', ar: 'ماشي. هيكلف كام؟' },
+            },
+            {
+                scene: 'الصنايعي بيحدد السعر:',
+                them: 'It is a small job. I will give you a fair price.',
+                themAr: 'الشغلانة صغيرة. هديك سعر كويس.',
+                choices: ["Thank you. I will come back on Thursday.", "Thank you. I come will back on Thursday.", "Thank you. On Thursday back will I come."],
+                correct: 0,
+                explain: '"I will come back on Thursday" يعني "هرجع يوم الخميس". بنقول Thank you وبعدها I will come back on Thursday، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I will come back on Thursday.', pr: 'ثانك يو. آي ويل كام باك أون ثيرسداي', ar: 'شكرا. هرجع يوم الخميس' },
+            },
+        ],
+        phrases: [
+            { en: 'The sole of this shoe is coming off.', pr: 'ذا سول أوف ذيس شو إز كامينج أوف', ar: 'نعل الجزمة دي بيتفك' },
+            { en: 'Great. How long will it take?', pr: 'جريت. هاو لونج ويل إت تيك', ar: 'تمام. هياخد وقت قد إيه؟' },
+            { en: 'That is fine. How much will it cost?', pr: 'ذات إز فاين. هاو ماتش ويل إت كوست', ar: 'ماشي. هيكلف كام؟' },
+            { en: 'Thank you. I will come back on Thursday.', pr: 'ثانك يو. آي ويل كام باك أون ثيرسداي', ar: 'شكرا. هرجع يوم الخميس' },
+        ],
+    },
 ];
 
 const quiz = [
