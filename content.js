@@ -2591,6 +2591,57 @@ const lessons = [
             { en: 'Is there a place to charge my phone?', pr: 'إز ذير ا بليس تو تشارج ماي فون', ar: 'في مكان أشحن فيه موبايلي' },
         ],
     },
+    {
+        id: 'weekendplans',
+        number: 51,
+        title: 'خطط الويك إند',
+        subtitle: 'احكي هتعمل إيه في الأجازة',
+        intro: 'زميلك في الشغل بيسألك هتعمل إيه في الويك إند. هتقوله رايح فين، وهتمشي امتى، وهتروح إزاي، وهترجع امتى. الأيام والمواعيد في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'زميلك في الشغل سألك عن الأجازة:',
+                them: 'What are your plans for the weekend?',
+                themAr: 'عندك إيه في الويك إند؟',
+                choices: ["I am going to visit my family.", "I am going visit to my family.", "I going am to family my visit."],
+                correct: 0,
+                explain: '"I am going to visit my family" يعني "هزور أهلي". بنقول I am going to وبعدها visit my family، وده الترتيب الصح.',
+                phrase: { en: 'I am going to visit my family.', pr: 'آي آم جوينج تو فيزيت ماي فاميلي', ar: 'هزور أهلي' },
+            },
+            {
+                scene: 'زميلك سألك عن الساعة:',
+                them: 'What time are you leaving?',
+                themAr: 'هتمشي الساعة كام؟',
+                choices: ["I am leaving on Friday after work.", "I leaving am on Friday work after.", "Am I leaving Friday on after work."],
+                correct: 0,
+                explain: '"I am leaving on Friday after work" يعني "همشي الجمعة بعد الشغل". بنقول I am leaving وبعدها on Friday وبعدها after work، وده الترتيب الصح.',
+                phrase: { en: 'I am leaving on Friday after work.', pr: 'آي آم ليفينج أون فرايداي آفتر ورك', ar: 'همشي الجمعة بعد الشغل' },
+            },
+            {
+                scene: 'زميلك عايز يعرف هتروح إزاي:',
+                them: 'How are you getting there?',
+                themAr: 'هتروح إزاي؟',
+                choices: ["I am taking the train in the morning.", "I taking am the train the morning in.", "The train I am taking morning in the."],
+                correct: 0,
+                explain: '"I am taking the train" يعني "هركب القطر". بنقول I am taking the train وبعدها in the morning، وده الترتيب الصح.',
+                phrase: { en: 'I am taking the train in the morning.', pr: 'آي آم تيكينج ذي ترين إن ذي مورنينج', ar: 'هركب القطر الصبح' },
+            },
+            {
+                scene: 'زميلك سألك عن رجوعك:',
+                them: 'When will you be back?',
+                themAr: 'هترجع امتى؟',
+                choices: ["I will be back on Sunday night.", "I will back be on Sunday night.", "Will I be back Sunday on night."],
+                correct: 0,
+                explain: '"I will be back on Sunday night" يعني "هرجع الأحد بالليل". بنقول I will be back وبعدها on Sunday night، وده الترتيب الصح.',
+                phrase: { en: 'I will be back on Sunday night.', pr: 'آي ويل بي باك أون صانداي نايت', ar: 'هرجع الأحد بالليل' },
+            },
+        ],
+        phrases: [
+            { en: 'I am going to visit my family.', pr: 'آي آم جوينج تو فيزيت ماي فاميلي', ar: 'هزور أهلي' },
+            { en: 'I am leaving on Friday after work.', pr: 'آي آم ليفينج أون فرايداي آفتر ورك', ar: 'همشي الجمعة بعد الشغل' },
+            { en: 'I am taking the train in the morning.', pr: 'آي آم تيكينج ذي ترين إن ذي مورنينج', ar: 'هركب القطر الصبح' },
+            { en: 'I will be back on Sunday night.', pr: 'آي ويل بي باك أون صانداي نايت', ar: 'هرجع الأحد بالليل' },
+        ],
+    },
 ];
 
 const quiz = [
