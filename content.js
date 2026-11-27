@@ -3356,6 +3356,57 @@ const lessons = [
             { en: 'Of course. Thank you for your time.', pr: 'أوف كورس. ثانك يو فور يور تايم', ar: 'طبعا. شكرا على وقتك' },
         ],
     },
+    {
+        id: 'joingame',
+        number: 66,
+        title: 'تلعب معانا؟',
+        subtitle: 'اطلب تشارك في لعبة كورة في الجنينة',
+        intro: 'انت في الجنينة وشايف شباب بيلعبوا كورة وعايز تلعب معاهم. هتطلب تشارك، وتقولهم بتلعب كام مرة، وتقول أنهي فريق، وتتفق تلعبوا تاني. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'انت في الجنينة وشايف ناس بتلعب كورة:',
+                them: 'Hi. Are you looking for something?',
+                themAr: 'أهلا. بتدور على حاجة؟',
+                choices: ["Hi. Can I join your game?", "Hi. Can I your game join?", "Hi. I can join game your?"],
+                correct: 0,
+                explain: '"Can I join your game" يعني "ممكن أشارك في لعبتكم". بنقول Hi وبعدها can I join your game، وده الترتيب الصح.',
+                phrase: { en: 'Hi. Can I join your game?', pr: 'هاي. كان آي جوين يور جيم', ar: 'أهلا. ممكن ألعب معاكم؟' },
+            },
+            {
+                scene: 'واحد منهم بيسألك:',
+                them: 'Sure. Have you played football before?',
+                themAr: 'أكيد. لعبت كورة قبل كده؟',
+                choices: ["Yes, I play every weekend.", "Yes, I every weekend play.", "Yes, play I every weekend."],
+                correct: 0,
+                explain: '"I play every weekend" يعني "بلعب كل أسبوع". بنقول Yes وبعدها I play every weekend، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I play every weekend.', pr: 'يس آي بلاي إيفري ويكيند', ar: 'أيوه بلعب كل أسبوع' },
+            },
+            {
+                scene: 'هو بيقسم الفريقين:',
+                them: 'Great. Which team do you want to be on?',
+                themAr: 'حلو. عايز تبقى في أنهي فريق؟',
+                choices: ["I do not mind. Any team is fine.", "I mind not do. Any is team fine.", "I not do mind. Fine team any is."],
+                correct: 0,
+                explain: '"I do not mind" يعني "مش فارق معايا". بنقول I do not mind وبعدها any team is fine، وده الترتيب الصح.',
+                phrase: { en: 'I do not mind. Any team is fine.', pr: 'آي دو نوت مايند. إني تيم إز فاين', ar: 'مش فارق معايا. أي فريق كويس' },
+            },
+            {
+                scene: 'اللعب خلص:',
+                them: 'Good game. Do you want to play again next week?',
+                themAr: 'لعبة حلوة. عايز تلعب تاني الأسبوع الجاي؟',
+                choices: ["Yes, I would love to. See you then.", "Yes, I would to love. You see then.", "Yes, love I would to. Then see you."],
+                correct: 0,
+                explain: '"I would love to" يعني "يسعدني". بنقول Yes وبعدها I would love to وبعدها See you then، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I would love to. See you then.', pr: 'يس آي وود لاڤ تو. سي يو ذن', ar: 'أيوه يسعدني. أشوفكم وقتها' },
+            },
+        ],
+        phrases: [
+            { en: 'Hi. Can I join your game?', pr: 'هاي. كان آي جوين يور جيم', ar: 'أهلا. ممكن ألعب معاكم؟' },
+            { en: 'Yes, I play every weekend.', pr: 'يس آي بلاي إيفري ويكيند', ar: 'أيوه بلعب كل أسبوع' },
+            { en: 'I do not mind. Any team is fine.', pr: 'آي دو نوت مايند. إني تيم إز فاين', ar: 'مش فارق معايا. أي فريق كويس' },
+            { en: 'Yes, I would love to. See you then.', pr: 'يس آي وود لاڤ تو. سي يو ذن', ar: 'أيوه يسعدني. أشوفكم وقتها' },
+        ],
+    },
 ];
 
 const quiz = [
