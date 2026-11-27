@@ -2999,6 +2999,57 @@ const lessons = [
             { en: 'Good idea. I would love to.', pr: 'جود آيديا. آي ود لاف تو', ar: 'فكرة حلوة. يسعدني' },
         ],
     },
+    {
+        id: 'bakery',
+        number: 59,
+        title: 'في المخبز',
+        subtitle: 'اشتري عيش وحاجات طازة',
+        intro: 'انت داخل المخبز الصبح عايز عيش. هتطلب عدد العيش الفينو، وتقول عايزه طازة، وتطلب رغيف بلدي، وتدفع. الأسعار والكميات في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت داخل مخبز الصبح:',
+                them: 'Good morning. What would you like?',
+                themAr: 'صباح الخير. تحب تاخد إيه؟',
+                choices: ["I would like six rolls, please.", "I would like rolls six, please.", "Like I would six please rolls."],
+                correct: 0,
+                explain: '"I would like six rolls" يعني "عايز ست عيش فينو". بنقول I would like وبعدها six rolls وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'I would like six rolls, please.', pr: 'آي ود لايك سيكس رولز بليز', ar: 'عايز ست عيش فينو لو سمحت' },
+            },
+            {
+                scene: 'الخباز سألك:',
+                them: 'Do you want them fresh or from yesterday?',
+                themAr: 'عايزهم طازة ولا من إمبارح؟',
+                choices: ["I want them fresh, please.", "I want fresh them, please.", "Them want I fresh, please."],
+                correct: 0,
+                explain: '"I want them fresh" يعني "عايزهم طازة". بنقول I want them fresh وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'I want them fresh, please.', pr: 'آي وانت ذيم فريش بليز', ar: 'عايزهم طازة لو سمحت' },
+            },
+            {
+                scene: 'الخباز سألك لو عايز حاجة تانية:',
+                them: 'Anything else?',
+                themAr: 'أي حاجة تانية؟',
+                choices: ["Yes, one loaf of brown bread.", "Yes, loaf one of bread brown.", "One yes, brown of loaf bread."],
+                correct: 0,
+                explain: '"one loaf of brown bread" يعني "رغيف عيش بلدي". بنقول Yes وبعدها one loaf of brown bread، وده الترتيب الصح.',
+                phrase: { en: 'Yes, one loaf of brown bread.', pr: 'يس وان لوف أوف براون بريد', ar: 'أيوه، رغيف عيش بلدي' },
+            },
+            {
+                scene: 'الخباز قالك السعر:',
+                them: 'That is fifteen pounds.',
+                themAr: 'الحساب خمستاشر جنيه.',
+                choices: ["Here you are. Keep the change.", "Here you are. The change keep.", "You are here. Keep change the."],
+                correct: 0,
+                explain: '"Keep the change" يعني "خلي الباقي". بنقول Here you are وبعدها Keep the change، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذي تشينج', ar: 'اتفضل. خلي الباقي' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like six rolls, please.', pr: 'آي ود لايك سيكس رولز بليز', ar: 'عايز ست عيش فينو لو سمحت' },
+            { en: 'I want them fresh, please.', pr: 'آي وانت ذيم فريش بليز', ar: 'عايزهم طازة لو سمحت' },
+            { en: 'Yes, one loaf of brown bread.', pr: 'يس وان لوف أوف براون بريد', ar: 'أيوه، رغيف عيش بلدي' },
+            { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذي تشينج', ar: 'اتفضل. خلي الباقي' },
+        ],
+    },
 ];
 
 const quiz = [
