@@ -3662,6 +3662,57 @@ const lessons = [
             { en: 'Great. Thank you for your help.', pr: 'جريت. ثانك يو فور يور هيلب', ar: 'حلو. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'donation',
+        number: 72,
+        title: 'تبرع لمؤسسة خيرية',
+        subtitle: 'قول إنك عايز تتبرع واسأل تدفع إزاي',
+        intro: 'انت عايز تتبرع لمؤسسة خيرية بتساعد الأطفال. هتقول إنك عايز تتبرع، وتقول عايز تدعم إيه، وتسأل تدفع بالكارت، وتتمنى الخير. المؤسسة في الدرس مثال للتدريب.',
+        steps: [
+            {
+                scene: 'انت قدام مؤسسة خيرية عايز تتبرع:',
+                them: 'Welcome. Are you here to help?',
+                themAr: 'أهلا بيك. جاي تساعد؟',
+                choices: ["Yes, I would like to make a donation.", "Yes, I would like to a donation make.", "Yes, like I would donation a to make."],
+                correct: 0,
+                explain: '"Make a donation" يعني "أتبرع". بنقول Yes وبعدها I would like to make a donation، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I would like to make a donation.', pr: 'يس آي وود لايك تو ميك ا دونيشن', ar: 'أيوه، عايز أتبرع' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'Thank you. What would you like to support?',
+                themAr: 'شكرا. عايز تدعم إيه؟',
+                choices: ["I want to help children with school supplies.", "I want to help children school with supplies.", "Want I help to children supplies school with."],
+                correct: 0,
+                explain: '"School supplies" يعني "أدوات مدرسية". بنقول I want to help children وبعدها with school supplies، وده الترتيب الصح.',
+                phrase: { en: 'I want to help children with school supplies.', pr: 'آي وانت تو هيلب تشيلدرن ويذ سكول سابلايز', ar: 'عايز أساعد الأطفال بأدوات مدرسية' },
+            },
+            {
+                scene: 'الموظف بيشرح:',
+                them: 'We buy the supplies and give them to families.',
+                themAr: 'إحنا بنشتري الأدوات ونديها للأسر.',
+                choices: ["That sounds good. Can I donate by card?", "That sounds good. Can I by card donate?", "Good that sounds. Donate can I card by?"],
+                correct: 0,
+                explain: '"Donate by card" يعني "أتبرع بالكارت". بنقول That sounds good وبعدها can I donate by card، وده الترتيب الصح.',
+                phrase: { en: 'That sounds good. Can I donate by card?', pr: 'ذات ساوندز جود. كان آي دونيت باي كارد', ar: 'كويس. أقدر أتبرع بالكارت؟' },
+            },
+            {
+                scene: 'الموظف بيجاوب:',
+                them: 'Yes, and we will give you a receipt.',
+                themAr: 'أيوه، وهنديك إيصال.',
+                choices: ["Great. I hope it helps many children.", "Great. I hope it many children helps.", "Great. Hope I helps it children many."],
+                correct: 0,
+                explain: '"I hope it helps many children" يعني "أتمنى إنها تساعد أطفال كتير". بنقول Great وبعدها I hope it helps many children، وده الترتيب الصح.',
+                phrase: { en: 'Great. I hope it helps many children.', pr: 'جريت. آي هوب إت هيلبس ميني تشيلدرن', ar: 'حلو. أتمنى إنها تساعد أطفال كتير' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I would like to make a donation.', pr: 'يس آي وود لايك تو ميك ا دونيشن', ar: 'أيوه، عايز أتبرع' },
+            { en: 'I want to help children with school supplies.', pr: 'آي وانت تو هيلب تشيلدرن ويذ سكول سابلايز', ar: 'عايز أساعد الأطفال بأدوات مدرسية' },
+            { en: 'That sounds good. Can I donate by card?', pr: 'ذات ساوندز جود. كان آي دونيت باي كارد', ar: 'كويس. أقدر أتبرع بالكارت؟' },
+            { en: 'Great. I hope it helps many children.', pr: 'جريت. آي هوب إت هيلبس ميني تشيلدرن', ar: 'حلو. أتمنى إنها تساعد أطفال كتير' },
+        ],
+    },
 ];
 
 const quiz = [
