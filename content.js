@@ -3713,6 +3713,57 @@ const lessons = [
             { en: 'Great. I hope it helps many children.', pr: 'جريت. آي هوب إت هيلبس ميني تشيلدرن', ar: 'حلو. أتمنى إنها تساعد أطفال كتير' },
         ],
     },
+    {
+        id: 'petrolstation',
+        number: 73,
+        title: 'محطة البنزين',
+        subtitle: 'قول للعامل يملا التانك ويراجع الكاوتش',
+        intro: 'انت وقفت عربيتك في محطة بنزين. هتقول عايز تملا التانك بنزين عادي، وتطلب مراجعة الكاوتش، وتدفع وتطلب إيصال. الأسعار في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت وقفت عربيتك في محطة البنزين:',
+                them: 'Good afternoon. How much petrol do you need?',
+                themAr: 'مساء الخير. محتاج بنزين قد إيه؟',
+                choices: ["Please fill it up with regular petrol.", "Please fill up it with petrol regular.", "Fill please it up regular with petrol."],
+                correct: 0,
+                explain: '"Fill it up" يعني "املا التانك". بنقول Please fill it up وبعدها with regular petrol، وده الترتيب الصح.',
+                phrase: { en: 'Please fill it up with regular petrol.', pr: 'بليز فيل إت أب ويذ ريجيولر بيترول', ar: 'املا التانك بنزين عادي لو سمحت' },
+            },
+            {
+                scene: 'العامل بيبدأ التعبئة:',
+                them: 'Do you want me to check the tyres too?',
+                themAr: 'عايزني أراجع الكاوتش كمان؟',
+                choices: ["Yes, please. Check the front ones first.", "Yes, please. Check the ones front first.", "Please yes. First the front check ones."],
+                correct: 0,
+                explain: '"The front ones" يعني "الأمامية". بنقول Yes, please وبعدها check the front ones first، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. Check the front ones first.', pr: 'يس بليز. تشيك ذا فرونت وانز فيرست', ar: 'أيوه لو سمحت. راجع الأمامية الأول' },
+            },
+            {
+                scene: 'العامل خلص:',
+                them: 'The tyres are fine. That is two hundred pounds.',
+                themAr: 'الكاوتش تمام. المبلغ مية ومية جنيه.',
+                choices: ["Here you are. Can I have a receipt?", "Here you are. Can I a receipt have?", "You here are. I can have receipt a?"],
+                correct: 0,
+                explain: '"Can I have a receipt" يعني "ممكن إيصال". بنقول Here you are وبعدها can I have a receipt، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. Can I have a receipt?', pr: 'هير يو آر. كان آي هاف ا ريسيت', ar: 'اتفضل. ممكن إيصال؟' },
+            },
+            {
+                scene: 'العامل بيدّيك الإيصال:',
+                them: 'Here it is. Drive safely.',
+                themAr: 'اتفضل. سوق بالسلامة.',
+                choices: ["Thank you. Have a nice day.", "Thank you. Have day a nice.", "Thank you. A nice have day."],
+                correct: 0,
+                explain: '"Have a nice day" يعني "يومك سعيد". بنقول Thank you وبعدها have a nice day، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Have a nice day.', pr: 'ثانك يو. هاف ا نايس دي', ar: 'شكرا. يومك سعيد' },
+            },
+        ],
+        phrases: [
+            { en: 'Please fill it up with regular petrol.', pr: 'بليز فيل إت أب ويذ ريجيولر بيترول', ar: 'املا التانك بنزين عادي لو سمحت' },
+            { en: 'Yes, please. Check the front ones first.', pr: 'يس بليز. تشيك ذا فرونت وانز فيرست', ar: 'أيوه لو سمحت. راجع الأمامية الأول' },
+            { en: 'Here you are. Can I have a receipt?', pr: 'هير يو آر. كان آي هاف ا ريسيت', ar: 'اتفضل. ممكن إيصال؟' },
+            { en: 'Thank you. Have a nice day.', pr: 'ثانك يو. هاف ا نايس دي', ar: 'شكرا. يومك سعيد' },
+        ],
+    },
 ];
 
 const quiz = [
