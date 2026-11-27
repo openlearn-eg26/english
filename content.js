@@ -1673,6 +1673,57 @@ const lessons = [
             { en: 'I will bring it.', pr: 'آي ويل برينج إت', ar: 'هجيبه معايا' },
         ],
     },
+    {
+        id: 'laundry',
+        number: 33,
+        title: 'المكوجي والتنظيف',
+        subtitle: 'سلّم هدومك للتنضيف',
+        intro: 'عندك جاكيت عايز تنضفه. هتروح محل التنضيف، وتقول للموظف إنك عايز تنضف الجاكيت، وتوريه البقعة، وتسأل تستلمه إمتى. الجمل دي بتنفع في أي محل تنضيف.',
+        steps: [
+            {
+                scene: 'دخلت محل التنضيف والموظف رحب بيك:',
+                them: 'Welcome. How can I help you?',
+                themAr: 'أهلاً بيك. أقدر أساعدك إزاي؟',
+                choices: ["I would like to clean this jacket.", "I would like clean to this jacket.", "Like I would to this jacket clean."],
+                correct: 0,
+                explain: '"I would like to clean" يعني "عايز أنضف". بنقول would like وبعدها to وبعدها الفعل clean، وده الترتيب الصح.',
+                phrase: { en: 'I would like to clean this jacket.', pr: 'آي ود لايك تو كلين ذيس جاكيت', ar: 'عايز أنضف الجاكيت ده' },
+            },
+            {
+                scene: 'الموظف بص على الجاكيت وسألك:',
+                them: 'Is there a stain on it?',
+                themAr: 'فيه بقعة عليه؟',
+                choices: ["Yes, there is a small stain here.", "Yes, is there small a stain here.", "Yes, there a small is stain here."],
+                correct: 0,
+                explain: '"There is a small stain" يعني "فيه بقعة صغيرة". بنقول there is وبعدها a small stain، وبعدها here يعني "هنا"، وده الترتيب الصح.',
+                phrase: { en: 'There is a small stain here.', pr: 'ذير إز أ سمول ستين هير', ar: 'فيه بقعة صغيرة هنا' },
+            },
+            {
+                scene: 'الموظف قالك إن الجاكيت هيخلص قريب وإنت عايز تستلمه:',
+                them: 'It will be ready soon.',
+                themAr: 'هيبقى جاهز قريب.',
+                choices: ["Can I pick it up tomorrow?", "Can I up pick it tomorrow?", "I can pick tomorrow it up?"],
+                correct: 0,
+                explain: '"pick it up" يعني "آخده". بنقول Can I وبعدها pick it up، وكلمة tomorrow في الآخر معناها "بكرة"، وده الترتيب الصح.',
+                phrase: { en: 'Can I pick it up tomorrow?', pr: 'كان آي بيك إت أب تومورو', ar: 'ممكن آخده بكرة؟' },
+            },
+            {
+                scene: 'الموظف إداك الإيصال وقالك:',
+                them: 'Here is your receipt.',
+                themAr: 'اتفضل الإيصال بتاعك.',
+                choices: ["Thank you. Have a nice day.", "Thank you. A nice have day.", "Thank you. Day nice a have."],
+                correct: 0,
+                explain: '"Have a nice day" يعني "يومك سعيد". بنقولها لما بنمشي، وبنقول Have وبعدها a nice day، وده الترتيب الصح.',
+                phrase: { en: 'Have a nice day.', pr: 'هاف أ نايس داي', ar: 'يومك سعيد' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to clean this jacket.', pr: 'آي ود لايك تو كلين ذيس جاكيت', ar: 'عايز أنضف الجاكيت ده' },
+            { en: 'There is a small stain here.', pr: 'ذير إز أ سمول ستين هير', ar: 'فيه بقعة صغيرة هنا' },
+            { en: 'Can I pick it up tomorrow?', pr: 'كان آي بيك إت أب تومورو', ar: 'ممكن آخده بكرة؟' },
+            { en: 'Have a nice day.', pr: 'هاف أ نايس داي', ar: 'يومك سعيد' },
+        ],
+    },
 ];
 
 const quiz = [
