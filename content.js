@@ -2489,6 +2489,57 @@ const lessons = [
             { en: 'You are welcome. Enjoy your visit.', pr: 'يو آر ويلكم. إنجوي يور فيزيت', ar: 'العفو. استمتع بزيارتك' },
         ],
     },
+    {
+        id: 'dailyroutine',
+        number: 49,
+        title: 'الكلام عن يومك',
+        subtitle: 'احكي عن روتينك من الصبح للمغرب',
+        intro: 'حد سألك بتعمل إيه في يومك. هتقوله بتصحى الساعة كام، وبتعمل إيه بعد كده، وبتخلص شغلك امتى، وبتعمل إيه بالليل. الساعات في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'صاحبك سألك عن يومك:',
+                them: 'What time do you wake up?',
+                themAr: 'بتصحى الساعة كام؟',
+                choices: ["I wake up at six every morning.", "I up wake at six every morning.", "I wake at up six morning every."],
+                correct: 0,
+                explain: '"I wake up at six" يعني "بصحى الساعة ستة". بنقول I wake up وبعدها at six وبعدها every morning، وده الترتيب الصح.',
+                phrase: { en: 'I wake up at six every morning.', pr: 'آي ويك آب آت سيكس إفري مورنينج', ar: 'بصحى الساعة ستة كل صباح' },
+            },
+            {
+                scene: 'صاحبك سألك عن اللي بعد كده:',
+                them: 'What do you do after that?',
+                themAr: 'بتعمل إيه بعد كده؟',
+                choices: ["I have breakfast and go to work.", "I breakfast have and work go to.", "Have I breakfast and to work go."],
+                correct: 0,
+                explain: '"I have breakfast" يعني "بفطر". بنقول I have breakfast وبعدها and go to work، وده الترتيب الصح.',
+                phrase: { en: 'I have breakfast and go to work.', pr: 'آي هاف بريكفست آند جو تو ورك', ar: 'بفطر وبروح الشغل' },
+            },
+            {
+                scene: 'صاحبك عايز يعرف بتخلص امتى:',
+                them: 'What time do you finish work?',
+                themAr: 'بتخلص شغل الساعة كام؟',
+                choices: ["I finish at four in the afternoon.", "I at four finish in the afternoon.", "Finish I at four afternoon the in."],
+                correct: 0,
+                explain: '"I finish at four" يعني "بخلص الساعة أربعة". بنقول I finish وبعدها at four وبعدها in the afternoon، وده الترتيب الصح.',
+                phrase: { en: 'I finish at four in the afternoon.', pr: 'آي فينيش آت فور إن ذي آفترنون', ar: 'بخلص الساعة أربعة العصر' },
+            },
+            {
+                scene: 'صاحبك سألك عن الليل:',
+                them: 'What do you do in the evening?',
+                themAr: 'بتعمل إيه بالليل؟',
+                choices: ["I study English for one hour.", "I English study for one hour.", "I study for English one hour."],
+                correct: 0,
+                explain: '"I study English" يعني "بذاكر إنجليزي". بنقول I study English وبعدها for one hour، وده الترتيب الصح.',
+                phrase: { en: 'I study English for one hour.', pr: 'آي ستادي إنجلش فور وان أور', ar: 'بذاكر إنجليزي ساعة' },
+            },
+        ],
+        phrases: [
+            { en: 'I wake up at six every morning.', pr: 'آي ويك آب آت سيكس إفري مورنينج', ar: 'بصحى الساعة ستة كل صباح' },
+            { en: 'I have breakfast and go to work.', pr: 'آي هاف بريكفست آند جو تو ورك', ar: 'بفطر وبروح الشغل' },
+            { en: 'I finish at four in the afternoon.', pr: 'آي فينيش آت فور إن ذي آفترنون', ar: 'بخلص الساعة أربعة العصر' },
+            { en: 'I study English for one hour.', pr: 'آي ستادي إنجلش فور وان أور', ar: 'بذاكر إنجليزي ساعة' },
+        ],
+    },
 ];
 
 const quiz = [
