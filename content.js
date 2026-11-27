@@ -2234,6 +2234,57 @@ const lessons = [
             { en: 'Great. See you on Friday.', pr: 'جريت. سي يو أون فرايداي', ar: 'تمام. أشوفك يوم الجمعة' },
         ],
     },
+    {
+        id: 'phonecall',
+        number: 44,
+        title: 'مكالمة تليفون وترك رسالة',
+        subtitle: 'اتصل بصاحبك واترك له رسالة',
+        intro: 'اتصلت بصاحبك وحد تاني رد عليك. هتعرّف بنفسك، وتطلب تكلم صاحبك، وتسيب رسالة، وتودّع. الأسماء في الدرس مجرد أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'اتصلت بصاحبك وحد تاني رد:',
+                them: 'Hello. Who is calling, please?',
+                themAr: 'ألو. مين بيتكلم، لو سمحت؟',
+                choices: ["Hello, this is Omar. Can I speak to Karim?", "Hello, Omar this is. I can speak Karim?", "Hello, this Omar is. Speak I can to Karim?"],
+                correct: 0,
+                explain: '"This is Omar" يعني "أنا عمر" في التليفون. و"Can I speak to Karim?" يعني "ممكن أكلم كريم؟"، وده الترتيب الصح.',
+                phrase: { en: 'Hello, this is Omar. Can I speak to Karim?', pr: 'هالو، ذيس إز عمر. كان آي سبيك تو كريم', ar: 'ألو، أنا عمر. ممكن أكلم كريم؟' },
+            },
+            {
+                scene: 'قالك إن كريم مش موجود:',
+                them: 'I am sorry, he is not here right now.',
+                themAr: 'آسف، هو مش هنا دلوقتي.',
+                choices: ["Can I leave a message?", "I can leave a message?", "Can leave I a message?"],
+                correct: 0,
+                explain: '"Can I leave a message?" يعني "ممكن أسيب رسالة؟". بنبدأ بـ Can وبعدها I leave وبعدها a message، وده الترتيب الصح.',
+                phrase: { en: 'Can I leave a message?', pr: 'كان آي ليف ا ميسدج', ar: 'ممكن أسيب رسالة؟' },
+            },
+            {
+                scene: 'الراجل وافق وسألك عن الرسالة:',
+                them: 'Of course. What is the message?',
+                themAr: 'طبعًا. إيه الرسالة؟',
+                choices: ["Please ask him to call me back.", "Please him ask to call me back.", "Please ask to him call back me."],
+                correct: 0,
+                explain: '"Please ask him to call me back" يعني "من فضلك قوله يتصل بيا". بنقول Please ask him وبعدها to call me back، وده الترتيب الصح.',
+                phrase: { en: 'Please ask him to call me back.', pr: 'بليز آسك هيم تو كول مي باك', ar: 'من فضلك قوله يتصل بيا' },
+            },
+            {
+                scene: 'الراجل قالك إنه هيبلغه:',
+                them: 'I will tell him. Goodbye.',
+                themAr: 'هبلغه. مع السلامة.',
+                choices: ["Thank you. Goodbye.", "You thank. Goodbye.", "Thank goodbye. You."],
+                correct: 0,
+                explain: '"Thank you. Goodbye." يعني "شكرًا. مع السلامة.". بنقول Thank you وبعدها Goodbye، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Goodbye.', pr: 'ثانك يو. جودباي', ar: 'شكرًا. مع السلامة' },
+            },
+        ],
+        phrases: [
+            { en: 'Hello, this is Omar. Can I speak to Karim?', pr: 'هالو، ذيس إز عمر. كان آي سبيك تو كريم', ar: 'ألو، أنا عمر. ممكن أكلم كريم؟' },
+            { en: 'Can I leave a message?', pr: 'كان آي ليف ا ميسدج', ar: 'ممكن أسيب رسالة؟' },
+            { en: 'Please ask him to call me back.', pr: 'بليز آسك هيم تو كول مي باك', ar: 'من فضلك قوله يتصل بيا' },
+            { en: 'Thank you. Goodbye.', pr: 'ثانك يو. جودباي', ar: 'شكرًا. مع السلامة' },
+        ],
+    },
 ];
 
 const quiz = [
