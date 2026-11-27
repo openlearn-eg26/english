@@ -4325,6 +4325,57 @@ const lessons = [
             { en: 'You are welcome. Call me if you need anything.', pr: 'يو آر ويلكم. كول مي إف يو نيد إنيثينج', ar: 'العفو. كلمني لو احتجت أي حاجة' },
         ],
     },
+    {
+        id: 'umbrella',
+        number: 85,
+        title: 'يوم مطير',
+        subtitle: 'اشتري شمسية في يوم ممطر',
+        intro: 'الدنيا بتمطر وإنت محتاج شمسية. هتطلبها من البايع، وتسأل تشوف الصغيرة، وتسأل عن السعر، وتقرر تشتري. الموقف ده مثال للتدريب. الأسعار فيه مخترعة.',
+        steps: [
+            {
+                scene: 'الدنيا بتمطر وإنت دخلت محل صغير تحتمي فيه:',
+                them: 'It is raining hard today. Can I help you?',
+                themAr: 'الدنيا بتمطر جامد النهارده. أقدر أساعدك؟',
+                choices: ["Yes, I need an umbrella, please.", "Yes, I an umbrella need, please.", "Yes, need I umbrella an, please."],
+                correct: 0,
+                explain: '"I need an umbrella" يعني "محتاج شمسية". بنقول Yes وبعدها I need an umbrella، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I need an umbrella, please.', pr: 'يس آي نيد أن أمبريلا بليز', ar: 'أيوه، محتاج شمسية لو سمحت' },
+            },
+            {
+                scene: 'البايع بيوريك شمسيتين:',
+                them: 'I have a big one and a small one.',
+                themAr: 'عندي واحدة كبيرة وواحدة صغيرة.',
+                choices: ["The small one is better. Can I see it?", "The one small is better. I can see it?", "Better is small the one. See it can I?"],
+                correct: 0,
+                explain: '"Can I see it?" يعني "أقدر أشوفها؟". بنقول The small one is better وبعدها can I see it، وده الترتيب الصح.',
+                phrase: { en: 'The small one is better. Can I see it?', pr: 'ذا سمول وان إز بيتر. كان آي سي إت', ar: 'الصغيرة أحسن. أقدر أشوفها؟' },
+            },
+            {
+                scene: 'البايع بيفتح الشمسية:',
+                them: 'It is light and strong. It is very good for the rain.',
+                themAr: 'خفيفة وقوية. كويسة جدا للمطر.',
+                choices: ["It looks good. How much is it?", "It good looks. How much it is?", "Looks it good. Is it how much?"],
+                correct: 0,
+                explain: '"How much is it?" يعني "بكام؟". بنقول It looks good وبعدها how much is it، وده الترتيب الصح.',
+                phrase: { en: 'It looks good. How much is it?', pr: 'إت لوكس جود. هاو ماتش إز إت', ar: 'شكلها حلو. بكام؟' },
+            },
+            {
+                scene: 'البايع بيقولك:',
+                them: 'It is ten pounds. The rain will stop soon.',
+                themAr: 'بعشرة جنيه. المطر هيوقف قريب.',
+                choices: ["I will take it. Thank you for your help.", "I take will it. Thank you for help your.", "Take I it will. Your help for thank you."],
+                correct: 0,
+                explain: '"I will take it" يعني "هاخدها". بنقول I will take it وبعدها Thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'I will take it. Thank you for your help.', pr: 'آي ويل تيك إت. ثانك يو فور يور هيلب', ar: 'هاخدها. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I need an umbrella, please.', pr: 'يس آي نيد أن أمبريلا بليز', ar: 'أيوه، محتاج شمسية لو سمحت' },
+            { en: 'The small one is better. Can I see it?', pr: 'ذا سمول وان إز بيتر. كان آي سي إت', ar: 'الصغيرة أحسن. أقدر أشوفها؟' },
+            { en: 'It looks good. How much is it?', pr: 'إت لوكس جود. هاو ماتش إز إت', ar: 'شكلها حلو. بكام؟' },
+            { en: 'I will take it. Thank you for your help.', pr: 'آي ويل تيك إت. ثانك يو فور يور هيلب', ar: 'هاخدها. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
