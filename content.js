@@ -2387,6 +2387,57 @@ const lessons = [
             { en: 'Here you are. Thank you.', pr: 'هير يو آر. ثانك يو', ar: 'اتفضل. شكرًا' },
         ],
     },
+    {
+        id: 'booktable',
+        number: 47,
+        title: 'حجز طاولة بالتليفون',
+        subtitle: 'احجز طاولة في مطعم واذكر الميعاد والاسم',
+        intro: 'اتصلت بمطعم عشان تحجز طاولة. هتقول إنك عايز تحجز لأربعة، وتحدد الساعة، وتقول اسمك، وتشكرهم. الساعة والاسم في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'اتصلت بمطعم والموظف رد عليك:',
+                them: 'Good evening. How can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك إزاي؟',
+                choices: ["I would like to book a table for four.", "I would like book to a table for four.", "I like would to book table a for four."],
+                correct: 0,
+                explain: '"I would like to book a table" يعني "عايز أحجز طاولة". بنقول I would like to book وبعدها a table for four، وده الترتيب الصح.',
+                phrase: { en: 'I would like to book a table for four.', pr: 'آي وود لايك تو بوك ا تيبل فور فور', ar: 'عايز أحجز طاولة لأربعة' },
+            },
+            {
+                scene: 'الموظف عايز يعرف الميعاد:',
+                them: 'For what time?',
+                themAr: 'لأنهي ساعة؟',
+                choices: ["For eight o'clock, please.", "Eight for o'clock, please.", "For o'clock eight, please."],
+                correct: 0,
+                explain: '"For eight o\'clock" يعني "للساعة تمانية". بنقول For وبعدها eight o\'clock، وده الترتيب الصح.',
+                phrase: { en: 'For eight o\'clock, please.', pr: 'فور إيت أوكلوك، بليز', ar: 'للساعة تمانية، لو سمحت' },
+            },
+            {
+                scene: 'الموظف سألك عن اسمك:',
+                them: 'May I have your name?',
+                themAr: 'ممكن أعرف اسمك؟',
+                choices: ["My name is Omar.", "Name my is Omar.", "My is name Omar."],
+                correct: 0,
+                explain: '"My name is Omar" يعني "اسمي عمر". بنقول My name is وبعدها الاسم، وده الترتيب الصح.',
+                phrase: { en: 'My name is Omar.', pr: 'ماي نيم إز عمر', ar: 'اسمي عمر' },
+            },
+            {
+                scene: 'الموظف أكد الحجز:',
+                them: 'Your table is ready for eight o\'clock. We will see you tonight.',
+                themAr: 'طاولتك جاهزة للساعة تمانية. هنشوفك الليلة.',
+                choices: ["Thank you. See you tonight.", "Thank you. You see tonight.", "Thank you. Tonight see you."],
+                correct: 0,
+                explain: '"See you tonight" يعني "أشوفك الليلة". بنقول Thank you وبعدها See you tonight، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. See you tonight.', pr: 'ثانك يو. سي يو تونايت', ar: 'شكرًا. أشوفك الليلة' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to book a table for four.', pr: 'آي وود لايك تو بوك ا تيبل فور فور', ar: 'عايز أحجز طاولة لأربعة' },
+            { en: 'For eight o\'clock, please.', pr: 'فور إيت أوكلوك، بليز', ar: 'للساعة تمانية، لو سمحت' },
+            { en: 'My name is Omar.', pr: 'ماي نيم إز عمر', ar: 'اسمي عمر' },
+            { en: 'Thank you. See you tonight.', pr: 'ثانك يو. سي يو تونايت', ar: 'شكرًا. أشوفك الليلة' },
+        ],
+    },
 ];
 
 const quiz = [
