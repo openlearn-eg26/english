@@ -2081,6 +2081,57 @@ const lessons = [
             { en: 'Now I understand. Thank you very much.', pr: 'ناو آي أندرستاند. ثانك يو فيري ماتش', ar: 'دلوقتي فهمت. شكرًا جزيلًا' },
         ],
     },
+    {
+        id: 'guest',
+        number: 41,
+        title: 'زيارة صاحبك في بيته',
+        subtitle: 'اتكلم كويس لما تكون ضيف',
+        intro: 'صاحبك عزمك في بيته. هتشكره على العزومة، وتقبل الشاي، وتمدح الأكل، وتستأذن لما تمشي. الجمل دي بتنفع في أي زيارة.',
+        steps: [
+            {
+                scene: 'وصلت بيت صاحبك وفتحلك الباب:',
+                them: 'Welcome. Please come in.',
+                themAr: 'أهلاً. اتفضل ادخل.',
+                choices: ["Thank you for inviting me.", "Thank you for me inviting.", "Thank for you inviting me."],
+                correct: 0,
+                explain: '"Thank you for inviting me" يعني "شكرًا على عزومتك ليا". بنقول Thank you وبعدها for inviting me، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for inviting me.', pr: 'ثانك يو فور إنفايتينج مي', ar: 'شكرًا على عزومتك ليا' },
+            },
+            {
+                scene: 'قعدت وصاحبك عرض عليك مشروب:',
+                them: 'Would you like some tea?',
+                themAr: 'تحب شوية شاي؟',
+                choices: ["Yes, please. With a little sugar.", "Yes, please. With sugar a little.", "Yes, please. A little with sugar."],
+                correct: 0,
+                explain: '"With a little sugar" يعني "بشوية سكر". بنقول With وبعدها a little وبعدها sugar، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. With a little sugar.', pr: 'ياس بليز. ويذ ا ليتل شوجر', ar: 'أيوه لو سمحت. بشوية سكر' },
+            },
+            {
+                scene: 'الأكل اتحط على السفرة وإنت عايز تمدحه:',
+                them: 'Please, help yourself.',
+                themAr: 'اتفضل خد براحتك.',
+                choices: ["The food is delicious.", "The is food delicious.", "Delicious the food is."],
+                correct: 0,
+                explain: '"The food is delicious" يعني "الأكل لذيذ". بنقول The food وبعدها is وبعدها delicious، وده الترتيب الصح.',
+                phrase: { en: 'The food is delicious.', pr: 'ذا فود إز ديليشس', ar: 'الأكل لذيذ' },
+            },
+            {
+                scene: 'الوقت اتأخر وعايز تستأذن:',
+                them: 'Thank you. Please have some more.',
+                themAr: 'شكرًا. خد كمان شوية.',
+                choices: ["I should go now. Thank you for everything.", "I go should now. Thank you for everything.", "Should I go now. Everything for thank you."],
+                correct: 0,
+                explain: '"I should go now" يعني "لازم أمشي دلوقتي". بنقول I should go وبعدها now وبعدها Thank you for everything، وده الترتيب الصح.',
+                phrase: { en: 'I should go now. Thank you for everything.', pr: 'آي شود جو ناو. ثانك يو فور إفريثينج', ar: 'لازم أمشي دلوقتي. شكرًا على كل حاجة' },
+            },
+        ],
+        phrases: [
+            { en: 'Thank you for inviting me.', pr: 'ثانك يو فور إنفايتينج مي', ar: 'شكرًا على عزومتك ليا' },
+            { en: 'Yes, please. With a little sugar.', pr: 'ياس بليز. ويذ ا ليتل شوجر', ar: 'أيوه لو سمحت. بشوية سكر' },
+            { en: 'The food is delicious.', pr: 'ذا فود إز ديليشس', ar: 'الأكل لذيذ' },
+            { en: 'I should go now. Thank you for everything.', pr: 'آي شود جو ناو. ثانك يو فور إفريثينج', ar: 'لازم أمشي دلوقتي. شكرًا على كل حاجة' },
+        ],
+    },
 ];
 
 const quiz = [
