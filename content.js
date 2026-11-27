@@ -4376,6 +4376,57 @@ const lessons = [
             { en: 'I will take it. Thank you for your help.', pr: 'آي ويل تيك إت. ثانك يو فور يور هيلب', ar: 'هاخدها. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'bakerycake',
+        number: 86,
+        title: 'كيكة من المخبز',
+        subtitle: 'اطلب كيكة لعزومة العيلة',
+        intro: 'عندك عزومة للعيلة وراحت المخبز تشتري كيكة. هتطلب الحجم، وتختار النكهة، وتسأل عن الطازج، وتطلب علبة. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'دخلت مخبز عشان تشتري كيكة لعزومة عيلتك:',
+                them: 'Welcome to our bakery. What can I get for you?',
+                themAr: 'أهلا بيك في مخبزنا. أجيبلك إيه؟',
+                choices: ["I would like a cake for ten people.", "I would like a cake for people ten.", "I like would a cake ten for people."],
+                correct: 0,
+                explain: '"A cake for ten people" يعني "كيكة لعشرة أشخاص". بنقول I would like وبعدها a cake for ten people، وده الترتيب الصح.',
+                phrase: { en: 'I would like a cake for ten people.', pr: 'آي وود لايك أ كيك فور تن بيبل', ar: 'عايز كيكة لعشرة أشخاص' },
+            },
+            {
+                scene: 'البايع بيسأل عن النكهة:',
+                them: 'We have chocolate and vanilla. Which one do you prefer?',
+                themAr: 'عندنا شوكولاتة وفانيليا. تفضل أنهي؟',
+                choices: ["Vanilla, please. Is it fresh today?", "Vanilla, please. Is it today fresh?", "Please vanilla. Fresh is it today?"],
+                correct: 0,
+                explain: '"Is it fresh today?" يعني "طازجة النهارده؟". بنقول Vanilla, please وبعدها is it fresh today، وده الترتيب الصح.',
+                phrase: { en: 'Vanilla, please. Is it fresh today?', pr: 'فانيلا بليز. إز إت فريش تودي', ar: 'فانيليا لو سمحت. طازجة النهارده؟' },
+            },
+            {
+                scene: 'البايع بيأكد:',
+                them: 'Yes, we baked it this morning. Would you like a message on it?',
+                themAr: 'أيوه، عملناها الصبح. تحب نكتب عليها كلمة؟',
+                choices: ["No, thank you. Can you put it in a box?", "No, thank you. You can put it in a box?", "No, thank you. In a box put it can you?"],
+                correct: 0,
+                explain: '"Can you put it in a box?" يعني "ممكن تحطها في علبة؟". بنقول No, thank you وبعدها can you put it in a box، وده الترتيب الصح.',
+                phrase: { en: 'No, thank you. Can you put it in a box?', pr: 'نو ثانك يو. كان يو بوت إت إن أ بوكس', ar: 'لأ شكرا. ممكن تحطها في علبة؟' },
+            },
+            {
+                scene: 'البايع بيجهز العلبة:',
+                them: 'Of course. Here you are. Please carry it carefully.',
+                themAr: 'طبعا. اتفضل. شيلها بحرص لو سمحت.',
+                choices: ["I will. Thank you very much.", "I will. Very much thank you.", "Will I. Thank you much very."],
+                correct: 0,
+                explain: '"I will" يعني "حاضر هعمل كده". بنقول I will وبعدها Thank you very much، وده الترتيب الصح.',
+                phrase: { en: 'I will. Thank you very much.', pr: 'آي ويل. ثانك يو فيري ماتش', ar: 'حاضر. شكرا جزيلا' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like a cake for ten people.', pr: 'آي وود لايك أ كيك فور تن بيبل', ar: 'عايز كيكة لعشرة أشخاص' },
+            { en: 'Vanilla, please. Is it fresh today?', pr: 'فانيلا بليز. إز إت فريش تودي', ar: 'فانيليا لو سمحت. طازجة النهارده؟' },
+            { en: 'No, thank you. Can you put it in a box?', pr: 'نو ثانك يو. كان يو بوت إت إن أ بوكس', ar: 'لأ شكرا. ممكن تحطها في علبة؟' },
+            { en: 'I will. Thank you very much.', pr: 'آي ويل. ثانك يو فيري ماتش', ar: 'حاضر. شكرا جزيلا' },
+        ],
+    },
 ];
 
 const quiz = [
