@@ -3815,6 +3815,57 @@ const lessons = [
             { en: 'Thank you very much. You are very kind.', pr: 'ثانك يو فيري ماتش. يو آر فيري كايند', ar: 'شكرا جزيلا. انت لطيف جدا' },
         ],
     },
+    {
+        id: 'recipe',
+        number: 75,
+        title: 'اطلب وصفة',
+        subtitle: 'اسأل صاحبك إزاي عمل الأكلة',
+        intro: 'صاحبك عمل رز حلو وانت عايز تعرف إزاي. هتمدح الأكل، وتطلب الوصفة، وتسأل بيضيف إيه وبيطبخ قد إيه، وتشكره. الأوقات في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'صاحبك طبخ أكل حلو وانت عايز الوصفة:',
+                them: 'Do you like the rice? I made it myself.',
+                themAr: 'عجبك الرز؟ أنا عملته بنفسي.',
+                choices: ["It is delicious. Can you give me the recipe?", "It is delicious. Can you me give the recipe?", "Delicious it is. Recipe the give you can me?"],
+                correct: 0,
+                explain: '"Give me the recipe" يعني "ادّيني الوصفة". بنقول It is delicious وبعدها can you give me the recipe، وده الترتيب الصح.',
+                phrase: { en: 'It is delicious. Can you give me the recipe?', pr: 'إت إز ديليشس. كان يو جيڤ مي ذا ريسيبي', ar: 'طعمه حلو. ممكن تديني الوصفة؟' },
+            },
+            {
+                scene: 'صاحبك بيشرح:',
+                them: 'It is easy. First, I fry the onions.',
+                themAr: 'سهلة. الأول بحمّر البصل.',
+                choices: ["And then? What do you add next?", "And then? What you add do next?", "Then and? Next add you what do?"],
+                correct: 0,
+                explain: '"What do you add next" يعني "بتضيف إيه بعد كده". بنقول And then وبعدها what do you add next، وده الترتيب الصح.',
+                phrase: { en: 'And then? What do you add next?', pr: 'آند ذن؟ وات دو يو أد نكست', ar: 'وبعدين؟ بتضيف إيه بعد كده؟' },
+            },
+            {
+                scene: 'صاحبك بيكمل:',
+                them: 'Then I add the rice and some water.',
+                themAr: 'بعدين بحط الرز وشوية مية.',
+                choices: ["How long do you cook it?", "How long you do cook it?", "Cook how long do you it?"],
+                correct: 0,
+                explain: '"How long do you cook it" يعني "بتطبخه قد إيه". بنقول How long وبعدها do you cook it، وده الترتيب الصح.',
+                phrase: { en: 'How long do you cook it?', pr: 'هاو لونج دو يو كوك إت', ar: 'بتطبخه قد إيه؟' },
+            },
+            {
+                scene: 'صاحبك بيرد:',
+                them: 'About twenty minutes on low heat.',
+                themAr: 'حوالي عشرين دقيقة على نار هادية.',
+                choices: ["Thank you. I will try it this weekend.", "Thank you. I will it try this weekend.", "Thank you. Try I will this weekend it."],
+                correct: 0,
+                explain: '"I will try it this weekend" يعني "هجربه آخر الأسبوع". بنقول Thank you وبعدها I will try it this weekend، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I will try it this weekend.', pr: 'ثانك يو. آي ويل ترآي إت ذيس ويكيند', ar: 'شكرا. هجربه آخر الأسبوع' },
+            },
+        ],
+        phrases: [
+            { en: 'It is delicious. Can you give me the recipe?', pr: 'إت إز ديليشس. كان يو جيڤ مي ذا ريسيبي', ar: 'طعمه حلو. ممكن تديني الوصفة؟' },
+            { en: 'And then? What do you add next?', pr: 'آند ذن؟ وات دو يو أد نكست', ar: 'وبعدين؟ بتضيف إيه بعد كده؟' },
+            { en: 'How long do you cook it?', pr: 'هاو لونج دو يو كوك إت', ar: 'بتطبخه قد إيه؟' },
+            { en: 'Thank you. I will try it this weekend.', pr: 'ثانك يو. آي ويل ترآي إت ذيس ويكيند', ar: 'شكرا. هجربه آخر الأسبوع' },
+        ],
+    },
 ];
 
 const quiz = [
