@@ -2693,6 +2693,57 @@ const lessons = [
             { en: 'No, thank you. I hope to hear from you soon.', pr: 'نو ثانك يو. آي هوب تو هير فروم يو سون', ar: 'لا شكرا. أتمنى أسمع منكم قريب' },
         ],
     },
+    {
+        id: 'traindelay',
+        number: 53,
+        title: 'القطر اتأخر',
+        subtitle: 'اسأل عن تأخير القطر والرصيف',
+        intro: 'القطر اللي هتركبه اتأخر. هتسأل الموظف إذا كان متأخر، وهيوصل امتى، وعلى أنهي رصيف. الأوقات وأرقام الأرصفة في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت في محطة القطر والإعلان بيقول إن القطر اتأخر. الموظف سألك:',
+                them: 'Can I help you?',
+                themAr: 'أقدر أساعدك؟',
+                choices: ["Is the train to Alexandria delayed?", "Is delayed the train to Alexandria?", "The train is to delayed Alexandria?"],
+                correct: 0,
+                explain: '"Is the train delayed" يعني "هل القطر متأخر". بنقول Is the train وبعدها delayed وبعدها to Alexandria، وده الترتيب الصح.',
+                phrase: { en: 'Is the train to Alexandria delayed?', pr: 'إز ذي ترين تو أليكساندريا ديليد', ar: 'القطر بتاع إسكندرية متأخر؟' },
+            },
+            {
+                scene: 'الموظف رد عليك:',
+                them: 'Yes, it is twenty minutes late.',
+                themAr: 'أيوه، متأخر عشرين دقيقة.',
+                choices: ["What time will it arrive?", "What will time it arrive?", "Time what it will arrive?"],
+                correct: 0,
+                explain: '"What time will it arrive" يعني "هيوصل الساعة كام". بنقول What time وبعدها will it arrive، وده الترتيب الصح.',
+                phrase: { en: 'What time will it arrive?', pr: 'وات تايم ويل إت أراف', ar: 'هيوصل الساعة كام؟' },
+            },
+            {
+                scene: 'الموظف قالك الميعاد:',
+                them: 'It will arrive at ten fifteen.',
+                themAr: 'هيوصل عشرة وربع.',
+                choices: ["Which platform is it?", "Which is platform it?", "Platform which it is?"],
+                correct: 0,
+                explain: '"Which platform" يعني "أنهي رصيف". بنقول Which platform وبعدها is it، وده الترتيب الصح.',
+                phrase: { en: 'Which platform is it?', pr: 'ويتش بلاتفورم إز إت', ar: 'أنهي رصيف؟' },
+            },
+            {
+                scene: 'الموظف قالك الرصيف:',
+                them: 'It is platform three.',
+                themAr: 'على رصيف تلاتة.',
+                choices: ["Thank you. I will wait there.", "Thank you. I wait will there.", "You thank. Will I there wait."],
+                correct: 0,
+                explain: '"I will wait there" يعني "هستنى هناك". بنقول Thank you وبعدها I will wait there، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I will wait there.', pr: 'ثانك يو. آي ويل ويت ذير', ar: 'شكرا. هستنى هناك' },
+            },
+        ],
+        phrases: [
+            { en: 'Is the train to Alexandria delayed?', pr: 'إز ذي ترين تو أليكساندريا ديليد', ar: 'القطر بتاع إسكندرية متأخر؟' },
+            { en: 'What time will it arrive?', pr: 'وات تايم ويل إت أراف', ar: 'هيوصل الساعة كام؟' },
+            { en: 'Which platform is it?', pr: 'ويتش بلاتفورم إز إت', ar: 'أنهي رصيف؟' },
+            { en: 'Thank you. I will wait there.', pr: 'ثانك يو. آي ويل ويت ذير', ar: 'شكرا. هستنى هناك' },
+        ],
+    },
 ];
 
 const quiz = [
