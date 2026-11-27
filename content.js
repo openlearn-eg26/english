@@ -3254,6 +3254,57 @@ const lessons = [
             { en: 'Thank you. It looks fresh.', pr: 'ثانك يو. إت لوكس فريش', ar: 'شكرا. شكله طازة' },
         ],
     },
+    {
+        id: 'noisecomplaint',
+        number: 64,
+        title: 'الصوت عالي',
+        subtitle: 'اطلب من جارك بأدب يوطي الصوت',
+        intro: 'جارك صوته عالي بالليل وانت عايز تنام. هتخبط عليه وتتكلم بأدب، وتشرحله المشكلة، وتطلب منه يوطي الصوت، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'جارك فتح الباب بعد ما خبطت عليه بالليل:',
+                them: 'Hello. Is everything OK?',
+                themAr: 'أهلا. كل حاجة تمام؟',
+                choices: ["Sorry to bother you. The noise is quite loud.", "Sorry to bother you. The loud is noise quite.", "Bother sorry you to. Noise the quite loud is."],
+                correct: 0,
+                explain: '"The noise is quite loud" يعني "الصوت عالي شوية". بنقول Sorry to bother you وبعدها the noise is quite loud، وده الترتيب الصح.',
+                phrase: { en: 'Sorry to bother you. The noise is quite loud.', pr: 'سوري تو بوذر يو. ذا نويز إز كوايت لاود', ar: 'آسف على الإزعاج. الصوت عالي شوية' },
+            },
+            {
+                scene: 'الجار اتفاجئ:',
+                them: 'Oh, I am sorry. I did not know.',
+                themAr: 'أنا آسف. ماكنتش أعرف.',
+                choices: ["That is OK. I have to wake up early.", "That is OK. I have wake to up early.", "That OK is. Early up wake I have to."],
+                correct: 0,
+                explain: '"I have to wake up early" يعني "لازم أصحى بدري". بنقول That is OK وبعدها I have to wake up early، وده الترتيب الصح.',
+                phrase: { en: 'That is OK. I have to wake up early.', pr: 'ذات إز أوكي. آي هاف تو ويك أب إيرلي', ar: 'ولا يهمك. لازم أصحى بدري' },
+            },
+            {
+                scene: 'الجار بيعرض حل:',
+                them: 'Should I turn it down?',
+                themAr: 'أوطي الصوت؟',
+                choices: ["Yes, please. Could you turn it down?", "Yes, please. Could you it turn down?", "Please yes. Down turn it you could?"],
+                correct: 0,
+                explain: '"Could you turn it down" يعني "ممكن توطيه". بنقول Yes, please وبعدها could you turn it down، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. Could you turn it down?', pr: 'يس بليز. كود يو تيرن إت داون', ar: 'أيوه لو سمحت. ممكن توطيه؟' },
+            },
+            {
+                scene: 'الجار وطى الصوت:',
+                them: 'Is this better?',
+                themAr: 'كده أحسن؟',
+                choices: ["Yes, much better. Thank you very much.", "Yes, better much. Thank you much very.", "Much yes better. Very thank you much."],
+                correct: 0,
+                explain: '"Much better" يعني "أحسن بكتير". بنقول Yes وبعدها much better، وده الترتيب الصح.',
+                phrase: { en: 'Yes, much better. Thank you very much.', pr: 'يس ماتش بيتر. ثانك يو فيري ماتش', ar: 'أيوه أحسن بكتير. شكرا جدا' },
+            },
+        ],
+        phrases: [
+            { en: 'Sorry to bother you. The noise is quite loud.', pr: 'سوري تو بوذر يو. ذا نويز إز كوايت لاود', ar: 'آسف على الإزعاج. الصوت عالي شوية' },
+            { en: 'That is OK. I have to wake up early.', pr: 'ذات إز أوكي. آي هاف تو ويك أب إيرلي', ar: 'ولا يهمك. لازم أصحى بدري' },
+            { en: 'Yes, please. Could you turn it down?', pr: 'يس بليز. كود يو تيرن إت داون', ar: 'أيوه لو سمحت. ممكن توطيه؟' },
+            { en: 'Yes, much better. Thank you very much.', pr: 'يس ماتش بيتر. ثانك يو فيري ماتش', ar: 'أيوه أحسن بكتير. شكرا جدا' },
+        ],
+    },
 ];
 
 const quiz = [
