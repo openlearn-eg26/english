@@ -3152,6 +3152,57 @@ const lessons = [
             { en: 'They are perfect. Thank you so much.', pr: 'ذي آر بيرفكت. ثانك يو سو ماتش', ar: 'حلوين جدا. شكرا جزيلا' },
         ],
     },
+    {
+        id: 'askingtime',
+        number: 62,
+        title: 'الساعة كام؟',
+        subtitle: 'اسأل عن الوقت والتاريخ',
+        intro: 'انت في الشارع ومحتاج تعرف الوقت والتاريخ. هتسأل حد بأدب عن الساعة، وتسأل المحل لسه مفتوح ولا لأ، وتسأل عن تاريخ النهارده. الأوقات والتواريخ في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت في الشارع ومعكش ساعة:',
+                them: 'Hi. Can I help you?',
+                themAr: 'أهلا. أقدر أساعدك؟',
+                choices: ["Excuse me, what time is it?", "Excuse me, what is it time?", "Excuse me, time what is it?"],
+                correct: 0,
+                explain: '"What time is it" يعني "الساعة كام". بنقول Excuse me وبعدها what time is it، وده الترتيب الصح.',
+                phrase: { en: 'Excuse me, what time is it?', pr: 'إكسكيوز مي وات تايم إز إت', ar: 'لو سمحت، الساعة كام؟' },
+            },
+            {
+                scene: 'الراجل بص في ساعته:',
+                them: 'It is half past four.',
+                themAr: 'الساعة أربعة ونص.',
+                choices: ["Thank you. Is the shop still open?", "Thank you. Is open still the shop?", "Thank you. The shop is still open is?"],
+                correct: 0,
+                explain: '"Is the shop still open" يعني "المحل لسه مفتوح". بنقول Thank you وبعدها is the shop still open، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Is the shop still open?', pr: 'ثانك يو. إز ذا شوب ستيل أوبن', ar: 'شكرا. المحل لسه مفتوح؟' },
+            },
+            {
+                scene: 'الراجل بيرد:',
+                them: 'Yes, it closes at six.',
+                themAr: 'أيوه، بيقفل الساعة ستة.',
+                choices: ["Good. What is the date today?", "Good. What the date is today?", "Good. Today what is date the?"],
+                correct: 0,
+                explain: '"What is the date today" يعني "النهارده كام في الشهر". بنقول Good وبعدها what is the date today، وده الترتيب الصح.',
+                phrase: { en: 'Good. What is the date today?', pr: 'جود. وات إز ذا ديت توداي', ar: 'كويس. النهارده كام في الشهر؟' },
+            },
+            {
+                scene: 'الراجل فكر شوية:',
+                them: 'Today is the twentieth.',
+                themAr: 'النهارده عشرين.',
+                choices: ["Thank you. I have to hurry.", "Thank you. I to hurry have.", "Thank you. Hurry I have to."],
+                correct: 0,
+                explain: '"I have to hurry" يعني "لازم أستعجل". بنقول Thank you وبعدها I have to hurry، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I have to hurry.', pr: 'ثانك يو. آي هاف تو هري', ar: 'شكرا. لازم أستعجل' },
+            },
+        ],
+        phrases: [
+            { en: 'Excuse me, what time is it?', pr: 'إكسكيوز مي وات تايم إز إت', ar: 'لو سمحت، الساعة كام؟' },
+            { en: 'Thank you. Is the shop still open?', pr: 'ثانك يو. إز ذا شوب ستيل أوبن', ar: 'شكرا. المحل لسه مفتوح؟' },
+            { en: 'Good. What is the date today?', pr: 'جود. وات إز ذا ديت توداي', ar: 'كويس. النهارده كام في الشهر؟' },
+            { en: 'Thank you. I have to hurry.', pr: 'ثانك يو. آي هاف تو هري', ar: 'شكرا. لازم أستعجل' },
+        ],
+    },
 ];
 
 const quiz = [
