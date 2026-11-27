@@ -1571,6 +1571,57 @@ const lessons = [
             { en: 'What time do you open?', pr: 'وات تايم دو يو أوبن', ar: 'بتفتحوا الساعة كام؟' },
         ],
     },
+    {
+        id: 'bus',
+        number: 31,
+        title: 'تذكرة أتوبيس',
+        subtitle: 'اشتري تذكرة سفر بالأتوبيس',
+        intro: 'عايز تسافر بالأتوبيس لمدينة تانية. هتروح شباك التذاكر، وتطلب تذكرة، وتقول ذهاب وعودة، وتسأل الأتوبيس بيتحرك من أنهي بوابة. الجمل دي بتنفع في أي محطة أتوبيس.',
+        steps: [
+            {
+                scene: 'وصلت شباك التذاكر والموظف سألك:',
+                them: 'Hello. Where would you like to go?',
+                themAr: 'أهلاً. عايز تروح فين؟',
+                choices: ["I would like a ticket to Alexandria, please.", "I would like ticket a to Alexandria, please.", "Like I would a ticket Alexandria to, please."],
+                correct: 0,
+                explain: '"I would like a ticket to" يعني "عايز تذكرة إلى". بنقول would like وبعدها a ticket وبعدها to والمكان، وده الترتيب الصح.',
+                phrase: { en: 'I would like a ticket to Alexandria, please.', pr: 'آي ود لايك أ تيكت تو أليكساندريا بليز', ar: 'عايز تذكرة للإسكندرية لو سمحت' },
+            },
+            {
+                scene: 'الموظف سألك عن نوع التذكرة:',
+                them: 'One way or round trip?',
+                themAr: 'ذهاب بس ولا ذهاب وعودة؟',
+                choices: ["Round trip, please.", "Trip round, please.", "Please round, trip."],
+                correct: 0,
+                explain: '"round trip" يعني "ذهاب وعودة". بنقول round قبل trip، وبنختم بـ please عشان الطلب يبقى مؤدب.',
+                phrase: { en: 'Round trip, please.', pr: 'راوند تريب بليز', ar: 'ذهاب وعودة لو سمحت' },
+            },
+            {
+                scene: 'الموظف قالك إن الأتوبيس هيتحرك قريب وإنت عايز تعرف المكان:',
+                them: 'The bus leaves soon.',
+                themAr: 'الأتوبيس هيتحرك قريب.',
+                choices: ["Which gate does it leave from?", "Which gate it does leave from?", "Does which gate leave it from?"],
+                correct: 0,
+                explain: '"Which gate does it leave from?" يعني "بتتحرك من أنهي بوابة؟". بنبدأ بـ Which gate وبعدها does it وبعدها leave from، وده الترتيب الصح.',
+                phrase: { en: 'Which gate does it leave from?', pr: 'ويتش جيت داز إت ليف فروم', ar: 'بتتحرك من أنهي بوابة؟' },
+            },
+            {
+                scene: 'الموظف قالك المكان وإنت عايز تسأل عن دورة المياه:',
+                them: 'It leaves from the gate on the left.',
+                themAr: 'بتتحرك من البوابة اللي على الشمال.',
+                choices: ["Thank you. Is there a restroom here?", "Thank you. There is a restroom here?", "Thank you. Is a restroom there here?"],
+                correct: 0,
+                explain: '"Is there a restroom here?" يعني "فيه دورة مياه هنا؟". بنبدأ بـ Is there وبعدها a restroom وبعدها here، وده الترتيب الصح.',
+                phrase: { en: 'Is there a restroom here?', pr: 'إز ذير أ ريستروم هير', ar: 'فيه دورة مياه هنا؟' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like a ticket to Alexandria, please.', pr: 'آي ود لايك أ تيكت تو أليكساندريا بليز', ar: 'عايز تذكرة للإسكندرية لو سمحت' },
+            { en: 'Round trip, please.', pr: 'راوند تريب بليز', ar: 'ذهاب وعودة لو سمحت' },
+            { en: 'Which gate does it leave from?', pr: 'ويتش جيت داز إت ليف فروم', ar: 'بتتحرك من أنهي بوابة؟' },
+            { en: 'Is there a restroom here?', pr: 'إز ذير أ ريستروم هير', ar: 'فيه دورة مياه هنا؟' },
+        ],
+    },
 ];
 
 const quiz = [
