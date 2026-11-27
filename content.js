@@ -2030,6 +2030,57 @@ const lessons = [
             { en: 'No, that is all. Thank you for your help.', pr: 'نو، ذات إز أول. ثانك يو فور يور هيلب', ar: 'لا، ده كل حاجة. شكرًا على مساعدتك' },
         ],
     },
+    {
+        id: 'understand',
+        number: 40,
+        title: 'لما ماتفهمش الكلام',
+        subtitle: 'اطلب من حد يعيد الكلام أو يتكلم ببطء',
+        intro: 'حد بيكلمك إنجليزي بسرعة ومش فاهم. هتقوله إنك ماسمعتش كويس، وتطلب منه يعيد، وتطلب منه يتكلم ببطء، وتشكره لما تفهم. الجمل دي مفيدة جدًا في أي حوار.',
+        steps: [
+            {
+                scene: 'واحد بيشرحلك الطريق بسرعة وإنت مش فاهم:',
+                them: 'Excuse me. The station is two streets ahead, on the right.',
+                themAr: 'لو سمحت. المحطة قدامك شارعين، على اليمين.',
+                choices: ["Sorry, I did not understand.", "Sorry, I not did understand.", "Sorry, did I not understand."],
+                correct: 0,
+                explain: '"I did not understand" يعني "أنا مافهمتش". بنقول I did not وبعدها understand، وده الترتيب الصح.',
+                phrase: { en: 'Sorry, I did not understand.', pr: 'سوري، آي ديد نوت أندرستاند', ar: 'آسف، أنا مافهمتش' },
+            },
+            {
+                scene: 'الراجل قالك الكلام تاني وإنت لسه عايز تسمعه مرة كمان:',
+                them: 'Of course. The station is two streets ahead.',
+                themAr: 'طبعًا. المحطة قدامك شارعين.',
+                choices: ["Could you repeat that, please?", "Could repeat you that, please?", "You could repeat that, please?"],
+                correct: 0,
+                explain: '"Could you repeat that?" يعني "ممكن تعيد الكلام ده؟". بنبدأ بـ Could وبعدها you repeat وبعدها that، وده الترتيب الصح.',
+                phrase: { en: 'Could you repeat that, please?', pr: 'كود يو ريبيت ذات، بليز', ar: 'ممكن تعيد ده، لو سمحت؟' },
+            },
+            {
+                scene: 'الراجل عاد الكلام لكن لسه بسرعة:',
+                them: 'Two streets ahead, on the right.',
+                themAr: 'قدامك شارعين، على اليمين.',
+                choices: ["Could you speak more slowly, please?", "Could you more speak slowly, please?", "Could speak you slowly more, please?"],
+                correct: 0,
+                explain: '"Could you speak more slowly?" يعني "ممكن تتكلم ببطء أكتر؟". بنقول Could you speak وبعدها more slowly، وده الترتيب الصح.',
+                phrase: { en: 'Could you speak more slowly, please?', pr: 'كود يو سبيك مور سلولي، بليز', ar: 'ممكن تتكلم أبطأ، لو سمحت؟' },
+            },
+            {
+                scene: 'الراجل اتكلم ببطء وإنت فهمت:',
+                them: 'Sure. Go straight, then turn right.',
+                themAr: 'أكيد. امشي على طول، وبعدين لف يمين.',
+                choices: ["Now I understand. Thank you very much.", "Now understand I. Thank you very much.", "Now I understand. Very much you thank."],
+                correct: 0,
+                explain: '"Now I understand" يعني "دلوقتي فهمت". بنقول Now I understand وبعدها Thank you very much، وده الترتيب الصح.',
+                phrase: { en: 'Now I understand. Thank you very much.', pr: 'ناو آي أندرستاند. ثانك يو فيري ماتش', ar: 'دلوقتي فهمت. شكرًا جزيلًا' },
+            },
+        ],
+        phrases: [
+            { en: 'Sorry, I did not understand.', pr: 'سوري، آي ديد نوت أندرستاند', ar: 'آسف، أنا مافهمتش' },
+            { en: 'Could you repeat that, please?', pr: 'كود يو ريبيت ذات، بليز', ar: 'ممكن تعيد ده، لو سمحت؟' },
+            { en: 'Could you speak more slowly, please?', pr: 'كود يو سبيك مور سلولي، بليز', ar: 'ممكن تتكلم أبطأ، لو سمحت؟' },
+            { en: 'Now I understand. Thank you very much.', pr: 'ناو آي أندرستاند. ثانك يو فيري ماتش', ar: 'دلوقتي فهمت. شكرًا جزيلًا' },
+        ],
+    },
 ];
 
 const quiz = [
