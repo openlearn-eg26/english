@@ -1520,6 +1520,57 @@ const lessons = [
             { en: 'Where is the baggage claim?', pr: 'وير إز ذا باجيج كليم', ar: 'فين استلام الشنط؟' },
         ],
     },
+    {
+        id: 'gym',
+        number: 30,
+        title: 'الاشتراك في نادي رياضي',
+        subtitle: 'اسأل واشترك في النادي',
+        intro: 'عايز تشترك في نادي رياضي قريب منك. هتقول للموظف إنك عايز تشترك، وتختار نوع الاشتراك، وتطلب تشوف المكان قبل ما تدفع، وتسأل عن مواعيد الفتح. الجمل دي بتنفع في أي نادي.',
+        steps: [
+            {
+                scene: 'دخلت النادي والموظف سلم عليك:',
+                them: 'Hello. Can I help you?',
+                themAr: 'أهلاً. أقدر أساعدك؟',
+                choices: ["I would like to join the gym.", "I would like join to the gym.", "Like I would to join the gym."],
+                correct: 0,
+                explain: '"I would like to join" يعني "عايز أشترك". بنقول would like وبعدها to وبعدها الفعل join، وده الترتيب الصح.',
+                phrase: { en: 'I would like to join the gym.', pr: 'آي ود لايك تو جوين ذا جيم', ar: 'عايز أشترك في النادي' },
+            },
+            {
+                scene: 'الموظف عرض عليك أنواع الاشتراك:',
+                them: 'We have a monthly plan and a yearly plan.',
+                themAr: 'عندنا اشتراك شهري واشتراك سنوي.',
+                choices: ["I would like the monthly plan, please.", "I would like monthly the plan, please.", "Please the plan monthly like I would."],
+                correct: 0,
+                explain: '"the monthly plan" يعني "الاشتراك الشهري". بنقول الصفة monthly قبل plan، وبنختم بـ please عشان الطلب يبقى مؤدب.',
+                phrase: { en: 'I would like the monthly plan, please.', pr: 'آي ود لايك ذا مانثلي بلان بليز', ar: 'عايز الاشتراك الشهري لو سمحت' },
+            },
+            {
+                scene: 'الموظف أداك استمارة وقال:',
+                them: 'Please fill out this form.',
+                themAr: 'من فضلك املأ الاستمارة دي.',
+                choices: ["Can I see the gym first?", "Can I the gym see first?", "I can first see gym the?"],
+                correct: 0,
+                explain: '"Can I see" يعني "ممكن أشوف". بنبدأ بـ Can I وبعدها الفعل see، وكلمة first في الآخر معناها "الأول".',
+                phrase: { en: 'Can I see the gym first?', pr: 'كان آي سي ذا جيم فيرست', ar: 'ممكن أشوف النادي الأول؟' },
+            },
+            {
+                scene: 'الموظف وافق وقال:',
+                them: 'Of course. Come with me.',
+                themAr: 'طبعًا. تعالى معايا.',
+                choices: ["Thank you. What time do you open?", "Thank you. What time open you do?", "Thank you. Do what time you open?"],
+                correct: 0,
+                explain: '"What time do you open?" يعني "بتفتحوا الساعة كام؟". بنبدأ بـ What time وبعدها do you وبعدها الفعل open، وده الترتيب الصح.',
+                phrase: { en: 'What time do you open?', pr: 'وات تايم دو يو أوبن', ar: 'بتفتحوا الساعة كام؟' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to join the gym.', pr: 'آي ود لايك تو جوين ذا جيم', ar: 'عايز أشترك في النادي' },
+            { en: 'I would like the monthly plan, please.', pr: 'آي ود لايك ذا مانثلي بلان بليز', ar: 'عايز الاشتراك الشهري لو سمحت' },
+            { en: 'Can I see the gym first?', pr: 'كان آي سي ذا جيم فيرست', ar: 'ممكن أشوف النادي الأول؟' },
+            { en: 'What time do you open?', pr: 'وات تايم دو يو أوبن', ar: 'بتفتحوا الساعة كام؟' },
+        ],
+    },
 ];
 
 const quiz = [
