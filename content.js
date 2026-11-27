@@ -2846,6 +2846,57 @@ const lessons = [
             { en: 'Yes, there is one on the corner.', pr: 'يس ذير إز وان أون ذي كورنر', ar: 'أيوه، في واحدة على الناصية' },
         ],
     },
+    {
+        id: 'flattire',
+        number: 56,
+        title: 'كاوتش مفرغ',
+        subtitle: 'اطلب مساعدة لعربيتك على الطريق',
+        intro: 'عربيتك وقفت على الطريق بسبب كاوتش مفرغ، وكلمت ورشة. هتقولهم المشكلة، وانت فين، وهتستعجلهم، وتجاوب على سؤالهم. الأماكن والأوقات في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'عربيتك وقفت على الطريق وكلمت ورشة:',
+                them: 'Hello. How can I help you?',
+                themAr: 'أهلا. أقدر أساعدك إزاي؟',
+                choices: ["I have a flat tire on the highway.", "I have a tire flat on highway the.", "A flat I have tire the on highway."],
+                correct: 0,
+                explain: '"I have a flat tire" يعني "عندي كاوتش مفرغ". بنقول I have a flat tire وبعدها on the highway، وده الترتيب الصح.',
+                phrase: { en: 'I have a flat tire on the highway.', pr: 'آي هاف ا فلات تاير أون ذي هايواي', ar: 'عندي كاوتش مفرغ على الطريق السريع' },
+            },
+            {
+                scene: 'الميكانيكي سألك عن مكانك:',
+                them: 'Where are you now?',
+                themAr: 'انت فين دلوقتي؟',
+                choices: ["I am near the Cairo exit.", "I near am the Cairo exit.", "Near I am exit the Cairo."],
+                correct: 0,
+                explain: '"I am near the Cairo exit" يعني "أنا قريب من مخرج القاهرة". بنقول I am near وبعدها the Cairo exit، وده الترتيب الصح.',
+                phrase: { en: 'I am near the Cairo exit.', pr: 'آي آم نير ذي كايرو إكزيت', ar: 'أنا قريب من مخرج القاهرة' },
+            },
+            {
+                scene: 'الميكانيكي وعدك:',
+                them: 'We can be there in thirty minutes.',
+                themAr: 'نوصلك في تلاتين دقيقة.',
+                choices: ["Thank you. Please hurry.", "Thank you. Hurry please.", "You thank. Please hurry I."],
+                correct: 0,
+                explain: '"Please hurry" يعني "من فضلك استعجل". بنقول Thank you وبعدها Please hurry، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Please hurry.', pr: 'ثانك يو. بليز هيري', ar: 'شكرا. من فضلك استعجل' },
+            },
+            {
+                scene: 'الميكانيكي وصل وسألك:',
+                them: 'Do you have a spare tire?',
+                themAr: 'معاك كاوتش احتياطي؟',
+                choices: ["Yes, it is in the trunk.", "Yes, it in is the trunk.", "It yes is the in trunk."],
+                correct: 0,
+                explain: '"It is in the trunk" يعني "هو في شنطة العربية". بنقول Yes وبعدها it is in the trunk، وده الترتيب الصح.',
+                phrase: { en: 'Yes, it is in the trunk.', pr: 'يس إت إز إن ذي ترانك', ar: 'أيوه، في شنطة العربية' },
+            },
+        ],
+        phrases: [
+            { en: 'I have a flat tire on the highway.', pr: 'آي هاف ا فلات تاير أون ذي هايواي', ar: 'عندي كاوتش مفرغ على الطريق السريع' },
+            { en: 'I am near the Cairo exit.', pr: 'آي آم نير ذي كايرو إكزيت', ar: 'أنا قريب من مخرج القاهرة' },
+            { en: 'Thank you. Please hurry.', pr: 'ثانك يو. بليز هيري', ar: 'شكرا. من فضلك استعجل' },
+            { en: 'Yes, it is in the trunk.', pr: 'يس إت إز إن ذي ترانك', ar: 'أيوه، في شنطة العربية' },
+        ],
+    },
 ];
 
 const quiz = [
