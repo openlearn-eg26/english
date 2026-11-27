@@ -2285,6 +2285,57 @@ const lessons = [
             { en: 'Thank you. Goodbye.', pr: 'ثانك يو. جودباي', ar: 'شكرًا. مع السلامة' },
         ],
     },
+    {
+        id: 'checkin',
+        number: 45,
+        title: 'تسجيل الدخول في المطار',
+        subtitle: 'سجل شنطتك واسأل عن البوابة',
+        intro: 'وصلت المطار وبتسجل سفرك. هتدي الموظف جواز السفر، وتطلب كرسي جنب الشباك، وتقوله عندك شنطة، وتسأل عن ميعاد الركوب. رقم البوابة والمواعيد في الدرس أمثلة للتدريب بس.',
+        steps: [
+            {
+                scene: 'وصلت كاونتر المطار والموظف سألك:',
+                them: 'Good morning. May I see your passport and ticket?',
+                themAr: 'صباح الخير. ممكن أشوف جواز السفر والتذكرة؟',
+                choices: ["Here you are. I would like a window seat.", "Here you are. I like would a window seat.", "Here are you. Would I like seat window a."],
+                correct: 0,
+                explain: '"I would like a window seat" يعني "عايز كرسي جنب الشباك". بنقول I would like وبعدها a window seat، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. I would like a window seat.', pr: 'هير يو آر. آي وود لايك ا ويندو سيت', ar: 'اتفضل. عايز كرسي جنب الشباك' },
+            },
+            {
+                scene: 'الموظف سألك عن الشنط:',
+                them: 'Do you have any bags to check?',
+                themAr: 'معاك شنط للشحن؟',
+                choices: ["Yes, I have one suitcase.", "Yes, I one have suitcase.", "Yes, have I one suitcase."],
+                correct: 0,
+                explain: '"I have one suitcase" يعني "معايا شنطة واحدة". بنقول I have وبعدها one suitcase، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I have one suitcase.', pr: 'ياس، آي هاف وان سوتكيس', ar: 'أيوه، معايا شنطة واحدة' },
+            },
+            {
+                scene: 'الموظف إداك كارت الطلوع للطيارة:',
+                them: 'Here is your boarding pass. Your gate is number twelve.',
+                themAr: 'اتفضل كارت الطلوع. بوابتك رقم اتناشر.',
+                choices: ["Thank you. What time does boarding start?", "Thank you. What time boarding does start?", "Thank you. Does what time start boarding?"],
+                correct: 0,
+                explain: '"What time does boarding start?" يعني "الركوب بيبدأ الساعة كام؟". بنبدأ بـ What time وبعدها does boarding start، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. What time does boarding start?', pr: 'ثانك يو. وات تايم داز بوردينج ستارت', ar: 'شكرًا. الركوب بيبدأ الساعة كام؟' },
+            },
+            {
+                scene: 'الموظف جاوبك:',
+                them: 'Boarding starts in forty minutes.',
+                themAr: 'الركوب بيبدأ بعد أربعين دقيقة.',
+                choices: ["Thank you. Have a nice day.", "Thank you. Day nice a have.", "Thank you. You have day nice."],
+                correct: 0,
+                explain: '"Have a nice day" يعني "يوم سعيد". بنقول Thank you وبعدها Have a nice day، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Have a nice day.', pr: 'ثانك يو. هاف ا نايس داي', ar: 'شكرًا. يوم سعيد' },
+            },
+        ],
+        phrases: [
+            { en: 'Here you are. I would like a window seat.', pr: 'هير يو آر. آي وود لايك ا ويندو سيت', ar: 'اتفضل. عايز كرسي جنب الشباك' },
+            { en: 'Yes, I have one suitcase.', pr: 'ياس، آي هاف وان سوتكيس', ar: 'أيوه، معايا شنطة واحدة' },
+            { en: 'Thank you. What time does boarding start?', pr: 'ثانك يو. وات تايم داز بوردينج ستارت', ar: 'شكرًا. الركوب بيبدأ الساعة كام؟' },
+            { en: 'Thank you. Have a nice day.', pr: 'ثانك يو. هاف ا نايس داي', ar: 'شكرًا. يوم سعيد' },
+        ],
+    },
 ];
 
 const quiz = [
