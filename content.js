@@ -4682,6 +4682,57 @@ const lessons = [
             { en: 'Perfect. I will come tomorrow. Thank you.', pr: 'بيرفكت. آي ويل كام تومورو. ثانك يو', ar: 'تمام. هجي بكرة. شكرا' },
         ],
     },
+    {
+        id: 'marketstall',
+        number: 92,
+        title: 'بائع الخضار',
+        subtitle: 'اشتري طماطم وتفاح من السوق',
+        intro: 'رحت السوق تشتري طماطم وتفاح. هتسأل عن السعر، وتطلب الكمية، وتدفع الحساب. الموقف ده مثال للتدريب. الأسعار فيه مخترعة.',
+        steps: [
+            {
+                scene: 'وقفت عند بائع خضار وفاكهة في السوق:',
+                them: 'Good morning. Everything here is fresh today.',
+                themAr: 'صباح الخير. كل حاجة هنا طازجة النهارده.',
+                choices: ["Good morning. How much are the tomatoes?", "Good morning. How much the tomatoes are?", "Good morning. Are how much the tomatoes?"],
+                correct: 0,
+                explain: '"How much are the tomatoes?" يعني "الطماطم بكام؟". بنقول Good morning وبعدها how much are the tomatoes، وده الترتيب الصح.',
+                phrase: { en: 'Good morning. How much are the tomatoes?', pr: 'جود مورنينج. هاو ماتش آر ذا توميتوز', ar: 'صباح الخير. الطماطم بكام؟' },
+            },
+            {
+                scene: 'البائع بيقولك السعر:',
+                them: 'They are six pounds for one kilo.',
+                themAr: 'بستة جنيه الكيلو.',
+                choices: ["That is fine. I would like two kilos, please.", "That is fine. I would like kilos two, please.", "That fine is. Two kilos like I would, please."],
+                correct: 0,
+                explain: '"I would like two kilos" يعني "عايز كيلوين". بنقول That is fine وبعدها I would like two kilos، وده الترتيب الصح.',
+                phrase: { en: 'That is fine. I would like two kilos, please.', pr: 'ذات إز فاين. آي وود لايك تو كيلوز بليز', ar: 'ماشي. عايز كيلوين لو سمحت' },
+            },
+            {
+                scene: 'البائع بيوزن الطماطم:',
+                them: 'Anything else? The apples are very sweet.',
+                themAr: 'أي حاجة تانية؟ التفاح حلو جدا.',
+                choices: ["Yes, half a kilo of apples, please.", "Yes, a half kilo of apples, please.", "Yes, apples of half a kilo, please."],
+                correct: 0,
+                explain: '"Half a kilo" يعني "نص كيلو". بنقول Yes وبعدها half a kilo of apples، وده الترتيب الصح.',
+                phrase: { en: 'Yes, half a kilo of apples, please.', pr: 'يس هاف أ كيلو أوف أبلز بليز', ar: 'أيوه، نص كيلو تفاح لو سمحت' },
+            },
+            {
+                scene: 'البائع بيحسب الحساب:',
+                them: 'That is twelve pounds for the tomatoes and four for the apples.',
+                themAr: 'اتناشر جنيه للطماطم وأربعة للتفاح.',
+                choices: ["Here you are. Keep the bag, thank you.", "Here you are. The bag keep, thank you.", "Here are you. Keep bag the, you thank."],
+                correct: 0,
+                explain: '"Here you are" يعني "اتفضل". بنقول Here you are وبعدها keep the bag وبعدين thank you، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. Keep the bag, thank you.', pr: 'هير يو آر. كيب ذا باج ثانك يو', ar: 'اتفضل. خلي الكيس، شكرا' },
+            },
+        ],
+        phrases: [
+            { en: 'Good morning. How much are the tomatoes?', pr: 'جود مورنينج. هاو ماتش آر ذا توميتوز', ar: 'صباح الخير. الطماطم بكام؟' },
+            { en: 'That is fine. I would like two kilos, please.', pr: 'ذات إز فاين. آي وود لايك تو كيلوز بليز', ar: 'ماشي. عايز كيلوين لو سمحت' },
+            { en: 'Yes, half a kilo of apples, please.', pr: 'يس هاف أ كيلو أوف أبلز بليز', ar: 'أيوه، نص كيلو تفاح لو سمحت' },
+            { en: 'Here you are. Keep the bag, thank you.', pr: 'هير يو آر. كيب ذا باج ثانك يو', ar: 'اتفضل. خلي الكيس، شكرا' },
+        ],
+    },
 ];
 
 const quiz = [
