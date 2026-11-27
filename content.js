@@ -1928,6 +1928,57 @@ const lessons = [
             { en: 'Great. See you soon.', pr: 'جريت. سي يو سون', ar: 'ممتاز. أشوفك قريب' },
         ],
     },
+    {
+        id: 'seatmate',
+        number: 38,
+        title: 'الكلام مع راكب جنبك',
+        subtitle: 'اتكلم مع راكب جنبك في الأتوبيس',
+        intro: 'ركبت أتوبيس وعايز تقعد جنب راكب. هتسأله لو الكرسي فاضي، وتسأله رايح فين، وتقوله إنت رايح فين، وتشكره لما يعرض عليك ماية. الجمل دي بتنفع في أي رحلة.',
+        steps: [
+            {
+                scene: 'الأتوبيس زحمة وراكب سألك:',
+                them: 'Hello. Are you looking for a seat?',
+                themAr: 'أهلاً. بتدور على كرسي؟',
+                choices: ["Yes. Is this seat taken?", "Yes. Is taken this seat?", "Yes. This is taken seat?"],
+                correct: 0,
+                explain: '"Is this seat taken?" يعني "الكرسي ده محجوز؟". بنبدأ بـ Is وبعدها this seat وبعدها taken، وده الترتيب الصح.',
+                phrase: { en: 'Yes. Is this seat taken?', pr: 'ياس. إز ذيس سيت تيكن', ar: 'أيوه. الكرسي ده محجوز؟' },
+            },
+            {
+                scene: 'الراكب قالك تقعد وإنت عايز تسأله رايح فين:',
+                them: 'No, please sit down.',
+                themAr: 'لا، اتفضل اقعد.',
+                choices: ["Thank you. Where are you going?", "Thank you. Where you are going?", "Thank you. You are where going?"],
+                correct: 0,
+                explain: '"Where are you going?" يعني "رايح فين؟". بنبدأ بـ Where وبعدها are you وبعدها going، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Where are you going?', pr: 'ثانك يو. وير آر يو جوينج', ar: 'شكرًا. رايح فين؟' },
+            },
+            {
+                scene: 'الراكب جاوبك وسألك:',
+                them: 'I am going to Alexandria. And you?',
+                themAr: 'أنا رايح الإسكندرية. وإنت؟',
+                choices: ["I am going to Cairo.", "I going am to Cairo.", "Going I am to Cairo."],
+                correct: 0,
+                explain: '"I am going to" يعني "أنا رايح". بنقول I am وبعدها going to وبعدها المكان، وده الترتيب الصح.',
+                phrase: { en: 'I am going to Cairo.', pr: 'آي أم جوينج تو كايرو', ar: 'أنا رايح القاهرة' },
+            },
+            {
+                scene: 'الراكب عرض عليك ماية:',
+                them: 'It is a long trip. Would you like some water?',
+                themAr: 'الرحلة طويلة. تحب شوية ماية؟',
+                choices: ["Yes, please. That is very kind.", "Yes, please. That very is kind.", "Yes, please. Kind very that is."],
+                correct: 0,
+                explain: '"That is very kind" يعني "ده لطف منك". بنقول That is وبعدها very وبعدها kind، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. That is very kind.', pr: 'ياس بليز. ذات إز فيري كايند', ar: 'أيوه لو سمحت. ده لطف منك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes. Is this seat taken?', pr: 'ياس. إز ذيس سيت تيكن', ar: 'أيوه. الكرسي ده محجوز؟' },
+            { en: 'Thank you. Where are you going?', pr: 'ثانك يو. وير آر يو جوينج', ar: 'شكرًا. رايح فين؟' },
+            { en: 'I am going to Cairo.', pr: 'آي أم جوينج تو كايرو', ar: 'أنا رايح القاهرة' },
+            { en: 'Yes, please. That is very kind.', pr: 'ياس بليز. ذات إز فيري كايند', ar: 'أيوه لو سمحت. ده لطف منك' },
+        ],
+    },
 ];
 
 const quiz = [
