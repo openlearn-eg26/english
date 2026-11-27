@@ -2795,6 +2795,57 @@ const lessons = [
             { en: 'That is fine. I will take it.', pr: 'ذات إز فاين. آي ويل تيك إت', ar: 'تمام. هاخدها' },
         ],
     },
+    {
+        id: 'newneighbor',
+        number: 55,
+        title: 'جار جديد',
+        subtitle: 'رحب بجارك واتكلم عن المنطقة',
+        intro: 'جارك الجديد لسه ساكن جنبك. هترحب بيه، وتقوله اسمك، وتحكيله بقالك قد إيه ساكن هنا، وتوصفله المنطقة. الأسماء والأرقام في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'جارك الجديد قابلك قدام العمارة:',
+                them: 'Hello. I just moved into the apartment next to yours.',
+                themAr: 'أهلا. أنا لسه ساكن في الشقة اللي جنبك.',
+                choices: ["Welcome to the building. My name is Omar.", "Welcome to building the. Name my is Omar.", "The welcome building to. My is name Omar."],
+                correct: 0,
+                explain: '"Welcome to the building" يعني "أهلا بيك في العمارة". بنقول Welcome to the building وبعدها My name is Omar، وده الترتيب الصح.',
+                phrase: { en: 'Welcome to the building. My name is Omar.', pr: 'ويلكم تو ذي بيلدينج. ماي نيم إز عمر', ar: 'أهلا بيك في العمارة. اسمي عمر' },
+            },
+            {
+                scene: 'جارك عرّفك بنفسه وسألك:',
+                them: 'Nice to meet you. How long have you lived here?',
+                themAr: 'اتشرفت. بقالك قد إيه ساكن هنا؟',
+                choices: ["I have lived here for five years.", "I have here lived for five years.", "I lived have for here years five."],
+                correct: 0,
+                explain: '"I have lived here for five years" يعني "ساكن هنا من خمس سنين". بنقول I have lived here وبعدها for five years، وده الترتيب الصح.',
+                phrase: { en: 'I have lived here for five years.', pr: 'آي هاف ليفد هير فور فايف يرز', ar: 'ساكن هنا من خمس سنين' },
+            },
+            {
+                scene: 'جارك عايز يعرف عن المنطقة:',
+                them: 'Is it a quiet area?',
+                themAr: 'المنطقة هادية؟',
+                choices: ["Yes, it is very quiet and safe.", "Yes, it very is quiet and safe.", "It is yes very safe and quiet."],
+                correct: 0,
+                explain: '"It is very quiet and safe" يعني "هادية جدا وآمنة". بنقول Yes وبعدها it is very quiet and safe، وده الترتيب الصح.',
+                phrase: { en: 'Yes, it is very quiet and safe.', pr: 'يس إت إز فيري كوايت آند سيف', ar: 'أيوه، هادية جدا وآمنة' },
+            },
+            {
+                scene: 'جارك سألك عن محل قريب:',
+                them: 'Is there a grocery store nearby?',
+                themAr: 'في بقالة قريبة؟',
+                choices: ["Yes, there is one on the corner.", "Yes, there one is on the corner.", "There yes is one the on corner."],
+                correct: 0,
+                explain: '"There is one on the corner" يعني "في واحدة على الناصية". بنقول Yes وبعدها there is one on the corner، وده الترتيب الصح.',
+                phrase: { en: 'Yes, there is one on the corner.', pr: 'يس ذير إز وان أون ذي كورنر', ar: 'أيوه، في واحدة على الناصية' },
+            },
+        ],
+        phrases: [
+            { en: 'Welcome to the building. My name is Omar.', pr: 'ويلكم تو ذي بيلدينج. ماي نيم إز عمر', ar: 'أهلا بيك في العمارة. اسمي عمر' },
+            { en: 'I have lived here for five years.', pr: 'آي هاف ليفد هير فور فايف يرز', ar: 'ساكن هنا من خمس سنين' },
+            { en: 'Yes, it is very quiet and safe.', pr: 'يس إت إز فيري كوايت آند سيف', ar: 'أيوه، هادية جدا وآمنة' },
+            { en: 'Yes, there is one on the corner.', pr: 'يس ذير إز وان أون ذي كورنر', ar: 'أيوه، في واحدة على الناصية' },
+        ],
+    },
 ];
 
 const quiz = [
