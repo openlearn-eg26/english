@@ -1979,6 +1979,57 @@ const lessons = [
             { en: 'Yes, please. That is very kind.', pr: 'ياس بليز. ذات إز فيري كايند', ar: 'أيوه لو سمحت. ده لطف منك' },
         ],
     },
+    {
+        id: 'supermarket',
+        number: 39,
+        title: 'السؤال في السوبر ماركت',
+        subtitle: 'اسأل الموظف عن حاجة مش لاقيها',
+        intro: 'دخلت سوبر ماركت وعايز تشتري رز وزيت. هتسأل الموظف فين الحاجة، وتسأله لو في عرض، وتشكره. الجمل دي بتنفع في أي محل.',
+        steps: [
+            {
+                scene: 'عايز رز ومش لاقيه، فسألت الموظف:',
+                them: 'Can I help you?',
+                themAr: 'أقدر أساعدك؟',
+                choices: ["Excuse me, where is the rice?", "Excuse me, where the rice is?", "Excuse me, is where the rice?"],
+                correct: 0,
+                explain: '"Where is the rice?" يعني "فين الرز؟". بنبدأ بـ Where وبعدها is وبعدها the rice، وده الترتيب الصح.',
+                phrase: { en: 'Excuse me, where is the rice?', pr: 'إكسكيوز مي، وير إز ذا رايس', ar: 'لو سمحت، فين الرز؟' },
+            },
+            {
+                scene: 'الموظف دلك على الرز وإنت عايز زيت:',
+                them: 'It is in aisle three, on the left.',
+                themAr: 'في الممر تلاتة، على الشمال.',
+                choices: ["Thank you. Do you have cooking oil?", "Thank you. You have do cooking oil?", "Thank you. Have you do cooking oil?"],
+                correct: 0,
+                explain: '"Do you have cooking oil?" يعني "عندكم زيت طبخ؟". بنبدأ بـ Do وبعدها you have وبعدها الحاجة، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Do you have cooking oil?', pr: 'ثانك يو. دو يو هاف كوكينج أويل', ar: 'شكرًا. عندكم زيت طبخ؟' },
+            },
+            {
+                scene: 'خلصت اختيار وعايز كيس:',
+                them: 'Yes, it is next to the rice.',
+                themAr: 'أيوه، جنب الرز.',
+                choices: ["Is there a bag for my shopping?", "Is a bag there for shopping my?", "There is a bag is for my shopping?"],
+                correct: 0,
+                explain: '"Is there a bag?" يعني "في كيس؟". بنبدأ بـ Is there وبعدها a bag وبعدها for my shopping، وده الترتيب الصح.',
+                phrase: { en: 'Is there a bag for my shopping?', pr: 'إز ذير ا باج فور ماي شوبينج', ar: 'في كيس لمشترياتي؟' },
+            },
+            {
+                scene: 'الموظف إداك الكيس وسألك:',
+                them: 'Yes, here you are. Anything else?',
+                themAr: 'أيوه، اتفضل. حاجة تانية؟',
+                choices: ["No, that is all. Thank you for your help.", "No, that all is. Thank you for help your.", "No, all that is. Your help for thank you."],
+                correct: 0,
+                explain: '"That is all" يعني "ده كل حاجة". بنقول That is all وبعدها Thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'No, that is all. Thank you for your help.', pr: 'نو، ذات إز أول. ثانك يو فور يور هيلب', ar: 'لا، ده كل حاجة. شكرًا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Excuse me, where is the rice?', pr: 'إكسكيوز مي، وير إز ذا رايس', ar: 'لو سمحت، فين الرز؟' },
+            { en: 'Thank you. Do you have cooking oil?', pr: 'ثانك يو. دو يو هاف كوكينج أويل', ar: 'شكرًا. عندكم زيت طبخ؟' },
+            { en: 'Is there a bag for my shopping?', pr: 'إز ذير ا باج فور ماي شوبينج', ar: 'في كيس لمشترياتي؟' },
+            { en: 'No, that is all. Thank you for your help.', pr: 'نو، ذات إز أول. ثانك يو فور يور هيلب', ar: 'لا، ده كل حاجة. شكرًا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
