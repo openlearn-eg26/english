@@ -4427,6 +4427,57 @@ const lessons = [
             { en: 'I will. Thank you very much.', pr: 'آي ويل. ثانك يو فيري ماتش', ar: 'حاضر. شكرا جزيلا' },
         ],
     },
+    {
+        id: 'wrongorder',
+        number: 87,
+        title: 'الطلب الغلط',
+        subtitle: 'اشرح بأدب إن الطبق مش اللي طلبته',
+        intro: 'طلبت غدا في مطعم والطبق اللي وصل مش اللي طلبته. هتقول المشكلة بأدب، وتوضح طلبك، وتقبل الاعتذار، وتشكر الجرسون. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'طلبت أكل في مطعم والطبق وصل غلط:',
+                them: 'Here is your lunch. Enjoy your meal.',
+                themAr: 'اتفضل الغدا. بالهنا والشفا.',
+                choices: ["Excuse me, this is not what I ordered.", "Excuse me, this not is what I ordered.", "Excuse me, what I ordered is not this."],
+                correct: 0,
+                explain: '"This is not what I ordered" يعني "ده مش اللي طلبته". بنقول Excuse me وبعدها this is not what I ordered، وده الترتيب الصح.',
+                phrase: { en: 'Excuse me, this is not what I ordered.', pr: 'إكسكيوز مي. ذيس إز نوت وات آي أوردرد', ar: 'لو سمحت، ده مش اللي طلبته' },
+            },
+            {
+                scene: 'الجرسون مستغرب:',
+                them: 'I am sorry. What did you order?',
+                themAr: 'آسف. إنت طلبت إيه؟',
+                choices: ["I ordered the grilled chicken with rice.", "I ordered the chicken grilled with rice.", "Ordered I the grilled rice with chicken."],
+                correct: 0,
+                explain: '"I ordered the grilled chicken" يعني "طلبت الفراخ المشوية". بنقول I ordered وبعدها the grilled chicken with rice، وده الترتيب الصح.',
+                phrase: { en: 'I ordered the grilled chicken with rice.', pr: 'آي أوردرد ذا جريلد تشيكن ويذ رايس', ar: 'طلبت الفراخ المشوية بالرز' },
+            },
+            {
+                scene: 'الجرسون بيراجع الطلب:',
+                them: 'You are right. It was our mistake. We will fix it now.',
+                themAr: 'عندك حق. دي غلطتنا. هنصلحها دلوقتي.',
+                choices: ["Thank you. I do not mind waiting a little.", "Thank you. I do not waiting mind a little.", "Thank you. Mind I do not a little waiting."],
+                correct: 0,
+                explain: '"I do not mind waiting" يعني "مفيش مشكلة أستنى". بنقول Thank you وبعدها I do not mind waiting a little، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I do not mind waiting a little.', pr: 'ثانك يو. آي دو نوت مايند ويتنج أ ليتل', ar: 'شكرا. مفيش مشكلة أستنى شوية' },
+            },
+            {
+                scene: 'الأكل الصح وصل:',
+                them: 'Here is the right dish. Sorry again for the wait.',
+                themAr: 'ده الطبق الصح. آسف تاني على الانتظار.',
+                choices: ["It looks great. Thank you for fixing it.", "It great looks. Thank you for it fixing.", "Looks it great. Fixing it for thank you."],
+                correct: 0,
+                explain: '"Thank you for fixing it" يعني "شكرا إنك صلحتها". بنقول It looks great وبعدها thank you for fixing it، وده الترتيب الصح.',
+                phrase: { en: 'It looks great. Thank you for fixing it.', pr: 'إت لوكس جريت. ثانك يو فور فيكسينج إت', ar: 'شكله جميل. شكرا إنك صلحتها' },
+            },
+        ],
+        phrases: [
+            { en: 'Excuse me, this is not what I ordered.', pr: 'إكسكيوز مي. ذيس إز نوت وات آي أوردرد', ar: 'لو سمحت، ده مش اللي طلبته' },
+            { en: 'I ordered the grilled chicken with rice.', pr: 'آي أوردرد ذا جريلد تشيكن ويذ رايس', ar: 'طلبت الفراخ المشوية بالرز' },
+            { en: 'Thank you. I do not mind waiting a little.', pr: 'ثانك يو. آي دو نوت مايند ويتنج أ ليتل', ar: 'شكرا. مفيش مشكلة أستنى شوية' },
+            { en: 'It looks great. Thank you for fixing it.', pr: 'إت لوكس جريت. ثانك يو فور فيكسينج إت', ar: 'شكله جميل. شكرا إنك صلحتها' },
+        ],
+    },
 ];
 
 const quiz = [
