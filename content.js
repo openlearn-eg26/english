@@ -1877,6 +1877,57 @@ const lessons = [
             { en: 'You are very kind.', pr: 'يو آر فيري كايند', ar: 'إنت طيب جدًا' },
         ],
     },
+    {
+        id: 'lunch',
+        number: 37,
+        title: 'دعوة صاحبك على الغدا',
+        subtitle: 'اتفق مع صاحبك على مكان وميعاد',
+        intro: 'عايز تدعو صاحبك على الغدا. هتسأله لو عايز ييجي، وتقترح مكان قريب، وتتفق معاه على الميعاد، وتودعه. الجمل دي بتنفع مع أي صاحب أو زميل.',
+        steps: [
+            {
+                scene: 'صاحبك كلمك وسألك:',
+                them: 'Hi! What are you doing today?',
+                themAr: 'أهلاً! هتعمل إيه النهارده؟',
+                choices: ["I am free. Would you like to have lunch?", "I free am. Would you like have to lunch?", "Free I am. Like you would to have lunch?"],
+                correct: 0,
+                explain: '"Would you like to have lunch?" يعني "تحب تتغدى معايا؟". بنبدأ بـ Would you وبعدها like to have وبعدها lunch، وده الترتيب الصح.',
+                phrase: { en: 'I am free. Would you like to have lunch?', pr: 'آي أم فري. وود يو لايك تو هاف لانش', ar: 'أنا فاضي. تحب تتغدى معايا؟' },
+            },
+            {
+                scene: 'صاحبك وافق وسألك عن المكان:',
+                them: 'Yes, I would love to. Where should we go?',
+                themAr: 'أيوه يا ريت. نروح فين؟',
+                choices: ["Let us go to a restaurant near my house.", "Let go us to a restaurant near my house.", "Us let go a restaurant to near my house."],
+                correct: 0,
+                explain: '"Let us go to" يعني "تعالى نروح". بنقول Let us وبعدها go to وبعدها المكان، وده الترتيب الصح.',
+                phrase: { en: 'Let us go to a restaurant near my house.', pr: 'ليت أس جو تو أ ريستورانت نير ماي هاوس', ar: 'تعالى نروح مطعم جنب بيتي' },
+            },
+            {
+                scene: 'صاحبك عجبته الفكرة وسألك عن الميعاد:',
+                them: 'That sounds great. When should we meet?',
+                themAr: 'فكرة حلوة. نتقابل إمتى؟',
+                choices: ["Let us meet at noon.", "Let meet us at noon.", "Us let meet noon at."],
+                correct: 0,
+                explain: '"at noon" يعني "الضهر". بنقول Let us meet وبعدها at noon، وده الترتيب الصح.',
+                phrase: { en: 'Let us meet at noon.', pr: 'ليت أس ميت آت نون', ar: 'تعالى نتقابل الضهر' },
+            },
+            {
+                scene: 'صاحبك أكد الميعاد وقال:',
+                them: 'Perfect. I will see you there.',
+                themAr: 'تمام. هشوفك هناك.',
+                choices: ["Great. See you soon.", "Great. You see soon.", "Great. Soon see you."],
+                correct: 0,
+                explain: '"See you soon" يعني "أشوفك قريب". بنقولها لما بنودع حد، وبنقول See وبعدها you وبعدها soon، وده الترتيب الصح.',
+                phrase: { en: 'Great. See you soon.', pr: 'جريت. سي يو سون', ar: 'ممتاز. أشوفك قريب' },
+            },
+        ],
+        phrases: [
+            { en: 'I am free. Would you like to have lunch?', pr: 'آي أم فري. وود يو لايك تو هاف لانش', ar: 'أنا فاضي. تحب تتغدى معايا؟' },
+            { en: 'Let us go to a restaurant near my house.', pr: 'ليت أس جو تو أ ريستورانت نير ماي هاوس', ar: 'تعالى نروح مطعم جنب بيتي' },
+            { en: 'Let us meet at noon.', pr: 'ليت أس ميت آت نون', ar: 'تعالى نتقابل الضهر' },
+            { en: 'Great. See you soon.', pr: 'جريت. سي يو سون', ar: 'ممتاز. أشوفك قريب' },
+        ],
+    },
 ];
 
 const quiz = [
