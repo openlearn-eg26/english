@@ -2183,6 +2183,57 @@ const lessons = [
             { en: 'Thank you. It was nice to meet you.', pr: 'ثانك يو. إت واز نايس تو ميت يو', ar: 'شكرًا. سعدت بمعرفتك' },
         ],
     },
+    {
+        id: 'freetime',
+        number: 43,
+        title: 'الكلام عن وقت الفراغ',
+        subtitle: 'اتكلم عن هوايتك واتفق على لعب كورة',
+        intro: 'حد سألك بتعمل إيه في وقت فاضيك. هتقوله إنك بتحب الكورة، وتقوله كل قد إيه بتلعب، وتقبل عزومته، وتتفق معاه على الميعاد. المواعيد في الدرس مجرد أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'حد جديد سألك عن هوايتك:',
+                them: 'What do you do in your free time?',
+                themAr: 'بتعمل إيه في وقت فراغك؟',
+                choices: ["I like to play football with my friends.", "I like play to football with my friends.", "I to like play football with my friends."],
+                correct: 0,
+                explain: '"I like to play football" يعني "بحب ألعب كورة". بنقول I like وبعدها to play وبعدها football، وده الترتيب الصح.',
+                phrase: { en: 'I like to play football with my friends.', pr: 'آي لايك تو بلاي فوتبول ويذ ماي فريندز', ar: 'بحب ألعب كورة مع صحابي' },
+            },
+            {
+                scene: 'الراجل سألك عن عدد المرات:',
+                them: 'That sounds fun. How often do you play?',
+                themAr: 'ده شكله ممتع. كل قد إيه بتلعب؟',
+                choices: ["I play every Friday.", "I every Friday play.", "Every I play Friday."],
+                correct: 0,
+                explain: '"I play every Friday" يعني "بلعب كل جمعة". بنقول I play وبعدها every Friday، وده الترتيب الصح.',
+                phrase: { en: 'I play every Friday.', pr: 'آي بلاي إفري فرايداي', ar: 'بلعب كل جمعة' },
+            },
+            {
+                scene: 'الراجل عزمك تلعب معاهم:',
+                them: 'Would you like to join us this Friday?',
+                themAr: 'تحب تنضم لنا الجمعة دي؟',
+                choices: ["Yes, I would love to. What time?", "Yes, I love would to. What time?", "Yes, would I love to. Time what?"],
+                correct: 0,
+                explain: '"I would love to" يعني "أكيد أحب". بنقول I would love to وبعدها What time، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I would love to. What time?', pr: 'ياس، آي وود لاف تو. وات تايم', ar: 'أيوه، أحب جدًا. الساعة كام؟' },
+            },
+            {
+                scene: 'الراجل حدد الميعاد:',
+                them: 'We meet at five in the evening.',
+                themAr: 'بنتقابل الساعة خمسة بالليل.',
+                choices: ["Great. See you on Friday.", "Great. You see on Friday.", "Great. See Friday on you."],
+                correct: 0,
+                explain: '"See you on Friday" يعني "أشوفك يوم الجمعة". بنقول See you وبعدها on Friday، وده الترتيب الصح.',
+                phrase: { en: 'Great. See you on Friday.', pr: 'جريت. سي يو أون فرايداي', ar: 'تمام. أشوفك يوم الجمعة' },
+            },
+        ],
+        phrases: [
+            { en: 'I like to play football with my friends.', pr: 'آي لايك تو بلاي فوتبول ويذ ماي فريندز', ar: 'بحب ألعب كورة مع صحابي' },
+            { en: 'I play every Friday.', pr: 'آي بلاي إفري فرايداي', ar: 'بلعب كل جمعة' },
+            { en: 'Yes, I would love to. What time?', pr: 'ياس، آي وود لاف تو. وات تايم', ar: 'أيوه، أحب جدًا. الساعة كام؟' },
+            { en: 'Great. See you on Friday.', pr: 'جريت. سي يو أون فرايداي', ar: 'تمام. أشوفك يوم الجمعة' },
+        ],
+    },
 ];
 
 const quiz = [
