@@ -1724,6 +1724,57 @@ const lessons = [
             { en: 'Have a nice day.', pr: 'هاف أ نايس داي', ar: 'يومك سعيد' },
         ],
     },
+    {
+        id: 'internet',
+        number: 34,
+        title: 'مشكلة في الإنترنت',
+        subtitle: 'كلّم خدمة العملاء',
+        intro: 'النت في بيتك مش شغال. هتكلم خدمة العملاء، وتقولهم المشكلة، وتجاوب على أسئلتهم، وتسأل الفني هيجي إمتى. الجمل دي بتنفع مع أي شركة إنترنت.',
+        steps: [
+            {
+                scene: 'كلمت خدمة العملاء والموظف رد عليك:',
+                them: 'Customer service. How can I help you?',
+                themAr: 'خدمة العملاء. أقدر أساعدك إزاي؟',
+                choices: ["My internet is not working.", "My internet working is not.", "Not my internet is working."],
+                correct: 0,
+                explain: '"is not working" يعني "مش شغال". بنقول My internet وبعدها is not working، وده الترتيب الصح.',
+                phrase: { en: 'My internet is not working.', pr: 'ماي إنترنت إز نوت ووركينج', ar: 'النت عندي مش شغال' },
+            },
+            {
+                scene: 'الموظف اعتذر وسألك عن الراوتر:',
+                them: 'I am sorry. Is the router turned on?',
+                themAr: 'آسف. هل الراوتر شغال؟',
+                choices: ["Yes, it is turned on.", "Yes, it turned is on.", "Yes, turned it is on."],
+                correct: 0,
+                explain: '"it is turned on" يعني "هو شغال". بنقول it is وبعدها turned on، وده الترتيب الصح.',
+                phrase: { en: 'Yes, it is turned on.', pr: 'ياس إت إز ترند أون', ar: 'أيوه، هو شغال' },
+            },
+            {
+                scene: 'الموظف طلب منك تعيد تشغيل الراوتر:',
+                them: 'Please turn it off and on again.',
+                themAr: 'من فضلك اقفله وافتحه تاني.',
+                choices: ["I did it, but it still does not work.", "I did it, but it does still not work.", "I it did, but still it not work."],
+                correct: 0,
+                explain: '"it still does not work" يعني "لسه مش شغال". بنقول still بعد it وقبل does not، وده الترتيب الصح.',
+                phrase: { en: 'It still does not work.', pr: 'إت ستيل داز نوت ويرك', ar: 'لسه مش شغال' },
+            },
+            {
+                scene: 'الموظف قالك إنه هيبعت فني وإنت عايز تعرف الميعاد:',
+                them: 'We will send a technician.',
+                themAr: 'هنبعت لك فني.',
+                choices: ["Thank you. When will he come?", "Thank you. When he will come?", "Thank you. Will when he come?"],
+                correct: 0,
+                explain: '"When will he come?" يعني "هيجي إمتى؟". بنبدأ بـ When وبعدها will he وبعدها come، وده الترتيب الصح.',
+                phrase: { en: 'When will he come?', pr: 'ون ويل هي كام', ar: 'هيجي إمتى؟' },
+            },
+        ],
+        phrases: [
+            { en: 'My internet is not working.', pr: 'ماي إنترنت إز نوت ووركينج', ar: 'النت عندي مش شغال' },
+            { en: 'Yes, it is turned on.', pr: 'ياس إت إز ترند أون', ar: 'أيوه، هو شغال' },
+            { en: 'It still does not work.', pr: 'إت ستيل داز نوت ويرك', ar: 'لسه مش شغال' },
+            { en: 'When will he come?', pr: 'ون ويل هي كام', ar: 'هيجي إمتى؟' },
+        ],
+    },
 ];
 
 const quiz = [
