@@ -2540,6 +2540,57 @@ const lessons = [
             { en: 'I study English for one hour.', pr: 'آي ستادي إنجلش فور وان أور', ar: 'بذاكر إنجليزي ساعة' },
         ],
     },
+    {
+        id: 'wifichargers',
+        number: 50,
+        title: 'الواي فاي والشاحن',
+        subtitle: 'اطلب باسورد النت ومكان تشحن فيه',
+        intro: 'انت قاعد في مكان عام ومحتاج نت وشحن لموبايلك. هتطلب باسورد الواي فاي، وتقول انت على أنهي شبكة، وتسأل عن مكان تشحن فيه. أسماء الشبكات في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت في مكان عام وعايز تدخل على النت:',
+                them: 'Can I help you?',
+                themAr: 'أقدر أساعدك؟',
+                choices: ["Can I have the Wi-Fi password, please?", "Can I the Wi-Fi have password, please?", "I can have Wi-Fi the password, please?"],
+                correct: 0,
+                explain: '"Can I have the Wi-Fi password" يعني "ممكن باسورد الواي فاي". بنقول Can I have وبعدها the Wi-Fi password وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'Can I have the Wi-Fi password, please?', pr: 'كان آي هاف ذي واي فاي باسورد بليز', ar: 'ممكن باسورد الواي فاي لو سمحت' },
+            },
+            {
+                scene: 'الموظف رد عليك:',
+                them: 'Sure. Which network are you on?',
+                themAr: 'أكيد. انت على أنهي شبكة؟',
+                choices: ["I am on the guest network.", "I am on network the guest.", "On I am the guest network."],
+                correct: 0,
+                explain: '"I am on the guest network" يعني "أنا على شبكة الضيوف". بنقول I am on وبعدها the guest network، وده الترتيب الصح.',
+                phrase: { en: 'I am on the guest network.', pr: 'آي آم أون ذي جيست نتورك', ar: 'أنا على شبكة الضيوف' },
+            },
+            {
+                scene: 'النت وصل بس موبايلك فاضل شحنه قليل:',
+                them: 'Is everything working?',
+                themAr: 'كل حاجة شغالة؟',
+                choices: ["Yes, but my battery is low.", "Yes, but battery my is low.", "Yes, my but low is battery."],
+                correct: 0,
+                explain: '"My battery is low" يعني "الشحن عندي قليل". بنقول Yes, but وبعدها my battery is low، وده الترتيب الصح.',
+                phrase: { en: 'Yes, but my battery is low.', pr: 'يس بات ماي باتري إز لو', ar: 'أيوه بس الشحن عندي قليل' },
+            },
+            {
+                scene: 'عايز تشحن موبايلك:',
+                them: 'Do you need anything else?',
+                themAr: 'محتاج حاجة تانية؟',
+                choices: ["Is there a place to charge my phone?", "Is there a place charge to my phone?", "There is a place to my phone charge?"],
+                correct: 0,
+                explain: '"Is there a place to charge my phone" يعني "في مكان أشحن فيه موبايلي". بنقول Is there a place وبعدها to charge my phone، وده الترتيب الصح.',
+                phrase: { en: 'Is there a place to charge my phone?', pr: 'إز ذير ا بليس تو تشارج ماي فون', ar: 'في مكان أشحن فيه موبايلي' },
+            },
+        ],
+        phrases: [
+            { en: 'Can I have the Wi-Fi password, please?', pr: 'كان آي هاف ذي واي فاي باسورد بليز', ar: 'ممكن باسورد الواي فاي لو سمحت' },
+            { en: 'I am on the guest network.', pr: 'آي آم أون ذي جيست نتورك', ar: 'أنا على شبكة الضيوف' },
+            { en: 'Yes, but my battery is low.', pr: 'يس بات ماي باتري إز لو', ar: 'أيوه بس الشحن عندي قليل' },
+            { en: 'Is there a place to charge my phone?', pr: 'إز ذير ا بليس تو تشارج ماي فون', ar: 'في مكان أشحن فيه موبايلي' },
+        ],
+    },
 ];
 
 const quiz = [
