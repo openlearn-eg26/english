@@ -3509,6 +3509,57 @@ const lessons = [
             { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذا تشينج', ar: 'اتفضل. خلي الباقي' },
         ],
     },
+    {
+        id: 'drycleaner',
+        number: 69,
+        title: 'عند المكوجي',
+        subtitle: 'سلّم قميص للتنضيف واسأل هيجهز إمتى',
+        intro: 'انت معاك قميص عليه بقعة وهتسلمه للمكوجي. هتشرحله المشكلة، وتطلب الكي، وتسأل هيجهز إمتى، وتتفق إنك تدفع وقت الاستلام. الأيام في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت داخل محل مكوجي بقميص عليه بقعة:',
+                them: 'Good morning. What do you have there?',
+                themAr: 'صباح الخير. معاك إيه؟',
+                choices: ["Good morning. I have a shirt with a stain.", "Good morning. I have a shirt a stain with.", "Morning good. A shirt I have with stain."],
+                correct: 0,
+                explain: '"A shirt with a stain" يعني "قميص عليه بقعة". بنقول Good morning وبعدها I have a shirt with a stain، وده الترتيب الصح.',
+                phrase: { en: 'Good morning. I have a shirt with a stain.', pr: 'جود مورنينج. آي هاف ا شيرت ويذ ا ستين', ar: 'صباح الخير. معايا قميص عليه بقعة' },
+            },
+            {
+                scene: 'المكوجي بيبص عليه:',
+                them: 'I can clean it. Do you want it ironed too?',
+                themAr: 'أقدر أنضفه. عايزه يتكوي كمان؟',
+                choices: ["Yes, please. When will it be ready?", "Yes, please. When it will be ready?", "Please yes. Ready be it will when?"],
+                correct: 0,
+                explain: '"When will it be ready" يعني "هيكون جاهز إمتى". بنقول Yes, please وبعدها when will it be ready، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. When will it be ready?', pr: 'يس بليز. ون ويل إت بي ريدي', ar: 'أيوه لو سمحت. هيكون جاهز إمتى؟' },
+            },
+            {
+                scene: 'المكوجي بيرد:',
+                them: 'It will be ready on Thursday afternoon.',
+                themAr: 'هيكون جاهز يوم الخميس بعد الضهر.',
+                choices: ["Perfect. Can I pay when I pick it up?", "Perfect. Can I pay when I it pick up?", "Perfect. I can when pay up it pick?"],
+                correct: 0,
+                explain: '"Pick it up" يعني "أستلمه". بنقول Perfect وبعدها can I pay when I pick it up، وده الترتيب الصح.',
+                phrase: { en: 'Perfect. Can I pay when I pick it up?', pr: 'بيرفكت. كان آي باي ون آي بيك إت أب', ar: 'تمام. أقدر أدفع وقت ما أستلمه؟' },
+            },
+            {
+                scene: 'المكوجي كتب الإيصال:',
+                them: 'Of course. Here is your ticket.',
+                themAr: 'طبعا. دي ورقة الاستلام.',
+                choices: ["Thank you. I will bring this ticket on Thursday.", "Thank you. I will this ticket bring on Thursday.", "Thank you. Bring I will ticket this Thursday on."],
+                correct: 0,
+                explain: '"I will bring this ticket" يعني "هجيب الورقة دي". بنقول Thank you وبعدها I will bring this ticket on Thursday، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I will bring this ticket on Thursday.', pr: 'ثانك يو. آي ويل برينج ذيس تيكيت أون ثيرزداي', ar: 'شكرا. هجيب الورقة دي يوم الخميس' },
+            },
+        ],
+        phrases: [
+            { en: 'Good morning. I have a shirt with a stain.', pr: 'جود مورنينج. آي هاف ا شيرت ويذ ا ستين', ar: 'صباح الخير. معايا قميص عليه بقعة' },
+            { en: 'Yes, please. When will it be ready?', pr: 'يس بليز. ون ويل إت بي ريدي', ar: 'أيوه لو سمحت. هيكون جاهز إمتى؟' },
+            { en: 'Perfect. Can I pay when I pick it up?', pr: 'بيرفكت. كان آي باي ون آي بيك إت أب', ar: 'تمام. أقدر أدفع وقت ما أستلمه؟' },
+            { en: 'Thank you. I will bring this ticket on Thursday.', pr: 'ثانك يو. آي ويل برينج ذيس تيكيت أون ثيرزداي', ar: 'شكرا. هجيب الورقة دي يوم الخميس' },
+        ],
+    },
 ];
 
 const quiz = [
