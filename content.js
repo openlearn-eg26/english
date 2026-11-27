@@ -2132,6 +2132,57 @@ const lessons = [
             { en: 'I should go now. Thank you for everything.', pr: 'آي شود جو ناو. ثانك يو فور إفريثينج', ar: 'لازم أمشي دلوقتي. شكرًا على كل حاجة' },
         ],
     },
+    {
+        id: 'jobs',
+        number: 42,
+        title: 'الكلام عن الشغل والدراسة',
+        subtitle: 'اتعرف على حد واتكلموا عن شغلك ودراستك',
+        intro: 'اتعرفت على حد جديد وهو بيسألك بتشتغل إيه. هتقوله إنك طالب، وتقوله بتدرس إيه، وتسأله عن شغله، وتودعه. الجمل دي بتنفع في أي تعارف.',
+        steps: [
+            {
+                scene: 'اتعرفت على حد جديد وسألك:',
+                them: 'Nice to meet you. What do you do?',
+                themAr: 'أهلاً بيك. بتشتغل إيه؟',
+                choices: ["I am a student at Cairo University.", "I student am at Cairo University.", "Am I a student at Cairo University."],
+                correct: 0,
+                explain: '"I am a student" يعني "أنا طالب". بنقول I am وبعدها a student وبعدها at وبعدها اسم الجامعة، وده الترتيب الصح.',
+                phrase: { en: 'I am a student at Cairo University.', pr: 'آي أم ا ستيودنت آت كايرو يونيفرسيتي', ar: 'أنا طالب في جامعة القاهرة' },
+            },
+            {
+                scene: 'الراجل سألك عن دراستك:',
+                them: 'What are you studying?',
+                themAr: 'بتدرس إيه؟',
+                choices: ["I am studying computer science.", "I studying am computer science.", "Studying I am computer science."],
+                correct: 0,
+                explain: '"I am studying" يعني "أنا بدرس". بنقول I am وبعدها studying وبعدها المادة، وده الترتيب الصح.',
+                phrase: { en: 'I am studying computer science.', pr: 'آي أم ستادينج كومبيوتر ساينس', ar: 'أنا بدرس علوم الحاسب' },
+            },
+            {
+                scene: 'الراجل قالك على شغله وإنت عايز تسأله:',
+                them: 'I work as an engineer.',
+                themAr: 'أنا بشتغل مهندس.',
+                choices: ["Do you like your work?", "You do like your work?", "Like you do your work?"],
+                correct: 0,
+                explain: '"Do you like your work?" يعني "بتحب شغلك؟". بنبدأ بـ Do وبعدها you like وبعدها your work، وده الترتيب الصح.',
+                phrase: { en: 'Do you like your work?', pr: 'دو يو لايك يور ورك', ar: 'بتحب شغلك؟' },
+            },
+            {
+                scene: 'الراجل جاوبك وبيودعك:',
+                them: 'Yes, I like it very much. Good luck with your studies.',
+                themAr: 'أيوه، بحبه جدًا. بالتوفيق في دراستك.',
+                choices: ["Thank you. It was nice to meet you.", "Thank you. Was it nice to meet you.", "Thank you. Nice it was meet to you."],
+                correct: 0,
+                explain: '"It was nice to meet you" يعني "سعدت بمعرفتك". بنقول It was nice وبعدها to meet you، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. It was nice to meet you.', pr: 'ثانك يو. إت واز نايس تو ميت يو', ar: 'شكرًا. سعدت بمعرفتك' },
+            },
+        ],
+        phrases: [
+            { en: 'I am a student at Cairo University.', pr: 'آي أم ا ستيودنت آت كايرو يونيفرسيتي', ar: 'أنا طالب في جامعة القاهرة' },
+            { en: 'I am studying computer science.', pr: 'آي أم ستادينج كومبيوتر ساينس', ar: 'أنا بدرس علوم الحاسب' },
+            { en: 'Do you like your work?', pr: 'دو يو لايك يور ورك', ar: 'بتحب شغلك؟' },
+            { en: 'Thank you. It was nice to meet you.', pr: 'ثانك يو. إت واز نايس تو ميت يو', ar: 'شكرًا. سعدت بمعرفتك' },
+        ],
+    },
 ];
 
 const quiz = [
