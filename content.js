@@ -3101,6 +3101,57 @@ const lessons = [
             { en: 'Thank you. I will be back on time.', pr: 'ثانك يو. آي ويل بي باك أون تايم', ar: 'شكرا. هرجع في الميعاد' },
         ],
     },
+    {
+        id: 'takephoto',
+        number: 61,
+        title: 'صورني من فضلك',
+        subtitle: 'اطلب من حد يصورك في مكان سياحي',
+        intro: 'انت في مكان سياحي وعايز صورة تفتكر بيها المكان. هتطلب من حد يصورك، وتشرحله إزاي يستخدم الكاميرا، وتقوله عايز إيه في الصورة، وتشكره. الأماكن في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت قدام الأهرامات وعايز حد يصورك:',
+                them: 'Hello. Do you need something?',
+                themAr: 'أهلا. محتاج حاجة؟',
+                choices: ["Excuse me, can you take a photo of me?", "Excuse me, can you a photo take of me?", "Can excuse me, take you me a photo?"],
+                correct: 0,
+                explain: '"Can you take a photo of me" يعني "ممكن تصورني". بنقول Excuse me وبعدها can you take a photo of me، وده الترتيب الصح.',
+                phrase: { en: 'Excuse me, can you take a photo of me?', pr: 'إكسكيوز مي كان يو تيك ا فوتو أوف مي', ar: 'لو سمحت، ممكن تصورني؟' },
+            },
+            {
+                scene: 'الراجل وافق:',
+                them: 'Sure. Is it this button?',
+                themAr: 'أكيد. هو الزرار ده؟',
+                choices: ["Yes, just press the big button.", "Yes, press just the button big.", "Just yes, the big press button."],
+                correct: 0,
+                explain: '"Press the big button" يعني "اضغط على الزرار الكبير". بنقول Yes وبعدها just press the big button، وده الترتيب الصح.',
+                phrase: { en: 'Yes, just press the big button.', pr: 'يس جست بريس ذي بيج باتن', ar: 'أيوه، اضغط على الزرار الكبير' },
+            },
+            {
+                scene: 'الراجل جهز الكاميرا:',
+                them: 'Do you want the pyramids in the photo?',
+                themAr: 'عايز الأهرامات في الصورة؟',
+                choices: ["Yes, please. I want them behind me.", "Yes, please. I them want behind me.", "Please yes. Behind me want I them."],
+                correct: 0,
+                explain: '"I want them behind me" يعني "عايزهم ورايا". بنقول Yes, please وبعدها I want them behind me، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. I want them behind me.', pr: 'يس بليز. آي وانت ذيم بيهايند مي', ar: 'أيوه لو سمحت. عايزهم ورايا' },
+            },
+            {
+                scene: 'الراجل صورك:',
+                them: 'I took three photos. Are they good?',
+                themAr: 'صورت تلات صور. حلوين؟',
+                choices: ["They are perfect. Thank you so much.", "They perfect are. Thank so you much.", "Perfect are they. You thank so much."],
+                correct: 0,
+                explain: '"They are perfect" يعني "حلوين جدا". بنقول They are perfect وبعدها Thank you so much، وده الترتيب الصح.',
+                phrase: { en: 'They are perfect. Thank you so much.', pr: 'ذي آر بيرفكت. ثانك يو سو ماتش', ar: 'حلوين جدا. شكرا جزيلا' },
+            },
+        ],
+        phrases: [
+            { en: 'Excuse me, can you take a photo of me?', pr: 'إكسكيوز مي كان يو تيك ا فوتو أوف مي', ar: 'لو سمحت، ممكن تصورني؟' },
+            { en: 'Yes, just press the big button.', pr: 'يس جست بريس ذي بيج باتن', ar: 'أيوه، اضغط على الزرار الكبير' },
+            { en: 'Yes, please. I want them behind me.', pr: 'يس بليز. آي وانت ذيم بيهايند مي', ar: 'أيوه لو سمحت. عايزهم ورايا' },
+            { en: 'They are perfect. Thank you so much.', pr: 'ذي آر بيرفكت. ثانك يو سو ماتش', ar: 'حلوين جدا. شكرا جزيلا' },
+        ],
+    },
 ];
 
 const quiz = [
