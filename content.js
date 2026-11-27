@@ -4529,6 +4529,57 @@ const lessons = [
             { en: 'You too. Let me know if you need any help.', pr: 'يو تو. ليت مي نو إف يو نيد إني هيلب', ar: 'وإنت كمان. قولي لو محتاج أي مساعدة' },
         ],
     },
+    {
+        id: 'parkday',
+        number: 89,
+        title: 'يوم في الحديقة',
+        subtitle: 'اسأل الحارس عن الظل والمياه وأمان الأطفال',
+        intro: 'رحت حديقة عامة مع صحابك. هتسأل الحارس عن مكان في الظل، وعن المياه، وعن أمان الأطفال. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'وصلت حديقة عامة مع صحابك وبتكلم الحارس عند البوابة:',
+                them: 'Good morning. The park is open until eight tonight.',
+                themAr: 'صباح الخير. الحديقة مفتوحة لحد ثمانية بالليل.',
+                choices: ["Thank you. Is there a place to sit in the shade?", "Thank you. Is there a place in the shade to sit?", "Thank you. There is a shade place sit to?"],
+                correct: 0,
+                explain: '"A place to sit in the shade" يعني "مكان نقعد فيه في الظل". بنقول Thank you وبعدها is there a place to sit in the shade، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Is there a place to sit in the shade?', pr: 'ثانك يو. إز ذير أ بليس تو سيت إن ذا شيد', ar: 'شكرا. فيه مكان نقعد فيه في الظل؟' },
+            },
+            {
+                scene: 'الحارس بيشاور:',
+                them: 'Yes, there are benches under the big trees.',
+                themAr: 'أيوه، فيه كراسي تحت الشجر الكبير.',
+                choices: ["Great. Where can I buy a bottle of water?", "Great. Where I can buy a bottle of water?", "Great. Buy where can I water of a bottle?"],
+                correct: 0,
+                explain: '"Where can I buy a bottle of water?" يعني "أشتري إزازة مياه منين؟". بنقول Great وبعدها where can I buy a bottle of water، وده الترتيب الصح.',
+                phrase: { en: 'Great. Where can I buy a bottle of water?', pr: 'جريت. وير كان آي باي أ بوتل أوف ووتر', ar: 'تمام. أشتري إزازة مياه منين؟' },
+            },
+            {
+                scene: 'الحارس بيرد:',
+                them: 'There is a small kiosk near the fountain.',
+                themAr: 'فيه كشك صغير جنب النافورة.',
+                choices: ["Thank you. Is the park safe for children?", "Thank you. Is the park for children safe?", "Thank you. Safe is children for the park?"],
+                correct: 0,
+                explain: '"Is the park safe for children?" يعني "الحديقة آمنة للأطفال؟". بنقول Thank you وبعدها is the park safe for children، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Is the park safe for children?', pr: 'ثانك يو. إز ذا بارك سيف فور تشيلدرن', ar: 'شكرا. الحديقة آمنة للأطفال؟' },
+            },
+            {
+                scene: 'الحارس بيطمنك:',
+                them: 'Yes, it is. There is a playground and I am here all day.',
+                themAr: 'أيوه آمنة. فيه ملعب أطفال وأنا موجود طول اليوم.',
+                choices: ["Perfect. Thank you for your help. Have a nice day.", "Perfect. Thank you for help your. A nice day have.", "Perfect. Your help for thank you. Day nice a have."],
+                correct: 0,
+                explain: '"Have a nice day" يعني "يومك سعيد". بنقول Perfect وبعدها Thank you for your help وبعدين Have a nice day، وده الترتيب الصح.',
+                phrase: { en: 'Perfect. Thank you for your help. Have a nice day.', pr: 'بيرفكت. ثانك يو فور يور هيلب. هاف أ نايس داي', ar: 'ممتاز. شكرا على مساعدتك. يومك سعيد' },
+            },
+        ],
+        phrases: [
+            { en: 'Thank you. Is there a place to sit in the shade?', pr: 'ثانك يو. إز ذير أ بليس تو سيت إن ذا شيد', ar: 'شكرا. فيه مكان نقعد فيه في الظل؟' },
+            { en: 'Great. Where can I buy a bottle of water?', pr: 'جريت. وير كان آي باي أ بوتل أوف ووتر', ar: 'تمام. أشتري إزازة مياه منين؟' },
+            { en: 'Thank you. Is the park safe for children?', pr: 'ثانك يو. إز ذا بارك سيف فور تشيلدرن', ar: 'شكرا. الحديقة آمنة للأطفال؟' },
+            { en: 'Perfect. Thank you for your help. Have a nice day.', pr: 'بيرفكت. ثانك يو فور يور هيلب. هاف أ نايس داي', ar: 'ممتاز. شكرا على مساعدتك. يومك سعيد' },
+        ],
+    },
 ];
 
 const quiz = [
