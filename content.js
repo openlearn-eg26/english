@@ -3917,6 +3917,57 @@ const lessons = [
             { en: 'Thank you very much. I will send it today.', pr: 'ثانك يو فيري ماتش. آي ويل سيند إت توداي', ar: 'شكرا جزيلا. هبعته النهارده' },
         ],
     },
+    {
+        id: 'phonemessage',
+        number: 77,
+        title: 'مكالمة تليفون',
+        subtitle: 'اطلب زميلك في التليفون واترك رسالة',
+        intro: 'انت بتتصل بزميلك في الشغل وحد تاني بيرد. هتعرّف بنفسك، وتطلب زميلك، وتسأل هيفضى إمتى، وتسيب رسالة يكلمك تاني. الأسماء في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت بتتصل بزميلك في الشغل وحد تاني رد:',
+                them: 'Hello? Who is calling, please?',
+                themAr: 'ألو؟ مين بيتكلم لو سمحت؟',
+                choices: ["Hello. This is Omar. Can I speak to Karim?", "Hello. This is Omar. Can I to Karim speak?", "Hello. Omar this is. Speak can I Karim to?"],
+                correct: 0,
+                explain: '"Can I speak to Karim" يعني "ممكن أكلم كريم". بنقول This is Omar وبعدها can I speak to Karim، وده الترتيب الصح. الأسماء في الدرس أمثلة.',
+                phrase: { en: 'Hello. This is Omar. Can I speak to Karim?', pr: 'هالو. ذيس إز عمر. كان آي سبيك تو كريم', ar: 'ألو. أنا عمر. ممكن أكلم كريم؟' },
+            },
+            {
+                scene: 'الراجل بيرد:',
+                them: 'I am sorry. He is in a meeting right now.',
+                themAr: 'آسف. هو في اجتماع دلوقتي.',
+                choices: ["That is OK. When will he be free?", "That is OK. When he will be free?", "OK that is. Free be he will when?"],
+                correct: 0,
+                explain: '"When will he be free" يعني "هيفضى إمتى". بنقول That is OK وبعدها when will he be free، وده الترتيب الصح.',
+                phrase: { en: 'That is OK. When will he be free?', pr: 'ذات إز أوكي. ون ويل هي بي فري', ar: 'ولا يهمك. هيفضى إمتى؟' },
+            },
+            {
+                scene: 'الراجل بيجاوب:',
+                them: 'Probably in an hour. Do you want to leave a message?',
+                themAr: 'غالبا بعد ساعة. تحب تسيب رسالة؟',
+                choices: ["Yes, please ask him to call me back.", "Yes, please ask him me to call back.", "Please yes, call back me ask him to."],
+                correct: 0,
+                explain: '"Call me back" يعني "يكلمني تاني". بنقول Yes, please وبعدها ask him to call me back، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please ask him to call me back.', pr: 'يس بليز آسك هيم تو كول مي باك', ar: 'أيوه لو سمحت قوله يكلمني تاني' },
+            },
+            {
+                scene: 'الراجل بيسجل:',
+                them: 'Sure. Does he have your number?',
+                themAr: 'أكيد. معاه رقمك؟',
+                choices: ["Yes, he does. Thank you for your help.", "Yes, he does have. Thank you for help your.", "He does yes. Help your for thank you."],
+                correct: 0,
+                explain: '"Yes, he does" يعني "أيوه معاه". بنقول Yes, he does وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Yes, he does. Thank you for your help.', pr: 'يس هي داز. ثانك يو فور يور هيلب', ar: 'أيوه معاه. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Hello. This is Omar. Can I speak to Karim?', pr: 'هالو. ذيس إز عمر. كان آي سبيك تو كريم', ar: 'ألو. أنا عمر. ممكن أكلم كريم؟' },
+            { en: 'That is OK. When will he be free?', pr: 'ذات إز أوكي. ون ويل هي بي فري', ar: 'ولا يهمك. هيفضى إمتى؟' },
+            { en: 'Yes, please ask him to call me back.', pr: 'يس بليز آسك هيم تو كول مي باك', ar: 'أيوه لو سمحت قوله يكلمني تاني' },
+            { en: 'Yes, he does. Thank you for your help.', pr: 'يس هي داز. ثانك يو فور يور هيلب', ar: 'أيوه معاه. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
