@@ -4121,6 +4121,57 @@ const lessons = [
             { en: 'It is correct. Thank you very much.', pr: 'إت إز كوريكت. ثانك يو فيري ماتش', ar: 'مظبوط. شكرا جزيلا' },
         ],
     },
+    {
+        id: 'dinnerguest',
+        number: 81,
+        title: 'عزومة غدا',
+        subtitle: 'اتصرف كضيف في بيت صاحبك',
+        intro: 'صاحبك عزمك على الغدا في بيته. هتشكره على العزومة، وتمدح الأكل، وتقبل تاخد تاني، وتستأذن بأدب. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'صاحبك عزمك على الغدا في بيته ودخلت:',
+                them: 'Welcome to my home. I am glad you could come.',
+                themAr: 'أهلا بيك في بيتي. مبسوط إنك جيت.',
+                choices: ["Thank you for inviting me. I brought some sweets.", "Thank you for me inviting. Some sweets I brought.", "Thank you inviting for me. I sweets some brought."],
+                correct: 0,
+                explain: '"Thank you for inviting me" يعني "شكرا إنك عزمتني". بنقول Thank you for inviting me وبعدها I brought some sweets، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for inviting me. I brought some sweets.', pr: 'ثانك يو فور إنفايتينج مي. آي بروت سام سويتس', ar: 'شكرا إنك عزمتني. جبت معايا حلويات' },
+            },
+            {
+                scene: 'صاحبك بيشكرك:',
+                them: 'That is very kind. Please sit down and make yourself comfortable.',
+                themAr: 'ده لطف منك. اتفضل اقعد وخد راحتك.',
+                choices: ["Thank you. The food smells wonderful.", "Thank you. The food wonderful smells.", "Thank you. Smells the food wonderful."],
+                correct: 0,
+                explain: '"The food smells wonderful" يعني "ريحة الأكل جميلة". بنقول Thank you وبعدها the food smells wonderful، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. The food smells wonderful.', pr: 'ثانك يو. ذا فود سميلز وندرفل', ar: 'شكرا. ريحة الأكل جميلة' },
+            },
+            {
+                scene: 'صاحبك بيحط الأكل:',
+                them: 'Please help yourself. Would you like some more?',
+                themAr: 'اتفضل. تحب تاخد تاني؟',
+                choices: ["Yes, please. It is really delicious.", "Yes, please. It really is delicious.", "Please yes. Delicious it is really."],
+                correct: 0,
+                explain: '"It is really delicious" يعني "طعمه حلو بجد". بنقول Yes, please وبعدها it is really delicious، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. It is really delicious.', pr: 'يس بليز. إت إز ريلي ديليشس', ar: 'أيوه لو سمحت. طعمه حلو بجد' },
+            },
+            {
+                scene: 'الغدا خلص وبتستأذن:',
+                them: 'Must you go already? Stay a little longer.',
+                themAr: 'لازم تمشي دلوقتي؟ خليك شوية.',
+                choices: ["I wish I could, but I have an early start tomorrow.", "I wish could I, but I an early start have tomorrow.", "Wish I could, but tomorrow I have start early an."],
+                correct: 0,
+                explain: '"I have an early start tomorrow" يعني "بكرة هبدأ بدري". بنقول I wish I could وبعدها but I have an early start tomorrow، وده الترتيب الصح.',
+                phrase: { en: 'I wish I could, but I have an early start tomorrow.', pr: 'آي ويش آي كود بات آي هاف أن إيرلي ستارت تومورو', ar: 'يا ريت أقدر بس بكرة هبدأ بدري' },
+            },
+        ],
+        phrases: [
+            { en: 'Thank you for inviting me. I brought some sweets.', pr: 'ثانك يو فور إنفايتينج مي. آي بروت سام سويتس', ar: 'شكرا إنك عزمتني. جبت معايا حلويات' },
+            { en: 'Thank you. The food smells wonderful.', pr: 'ثانك يو. ذا فود سميلز وندرفل', ar: 'شكرا. ريحة الأكل جميلة' },
+            { en: 'Yes, please. It is really delicious.', pr: 'يس بليز. إت إز ريلي ديليشس', ar: 'أيوه لو سمحت. طعمه حلو بجد' },
+            { en: 'I wish I could, but I have an early start tomorrow.', pr: 'آي ويش آي كود بات آي هاف أن إيرلي ستارت تومورو', ar: 'يا ريت أقدر بس بكرة هبدأ بدري' },
+        ],
+    },
 ];
 
 const quiz = [
