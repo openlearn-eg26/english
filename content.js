@@ -3560,6 +3560,57 @@ const lessons = [
             { en: 'Thank you. I will bring this ticket on Thursday.', pr: 'ثانك يو. آي ويل برينج ذيس تيكيت أون ثيرزداي', ar: 'شكرا. هجيب الورقة دي يوم الخميس' },
         ],
     },
+    {
+        id: 'powercut',
+        number: 70,
+        title: 'النور قاطع',
+        subtitle: 'بلّغ الحارس إن النور قطع',
+        intro: 'النور قطع في العمارة وانت هتكلم الحارس. هتقوله إيه اللي حصل، وتقوله هل هي شقتك بس ولا العمارة كلها، وتسأل هياخد قد إيه، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'النور قطع في العمارة وانت نازل على الحارس:',
+                them: 'Good evening. What happened?',
+                themAr: 'مساء الخير. إيه اللي حصل؟',
+                choices: ["Good evening. The power is out in my flat.", "Good evening. The power out is in flat my.", "Evening good. Out is the power my flat in."],
+                correct: 0,
+                explain: '"The power is out" يعني "النور قاطع". بنقول Good evening وبعدها the power is out in my flat، وده الترتيب الصح.',
+                phrase: { en: 'Good evening. The power is out in my flat.', pr: 'جود إيفنينج. ذا باور إز آوت إن ماي فلات', ar: 'مساء الخير. النور قاطع في شقتي' },
+            },
+            {
+                scene: 'الحارس بيسأل:',
+                them: 'Is it only your flat, or the whole building?',
+                themAr: 'شقتك بس ولا العمارة كلها؟',
+                choices: ["I think it is the whole building.", "I think is it the building whole.", "Think I it is whole the building."],
+                correct: 0,
+                explain: '"The whole building" يعني "العمارة كلها". بنقول I think it is the whole building، وده الترتيب الصح.',
+                phrase: { en: 'I think it is the whole building.', pr: 'آي ثينك إت إز ذا هول بيلدينج', ar: 'أنا شايف إنها العمارة كلها' },
+            },
+            {
+                scene: 'الحارس بيتأكد:',
+                them: 'I will check the main switch. Please wait here.',
+                themAr: 'هشوف المفتاح الرئيسي. استنى هنا من فضلك.',
+                choices: ["OK. How long will it take?", "OK. How long it will take?", "OK. Take it will how long?"],
+                correct: 0,
+                explain: '"How long will it take" يعني "هياخد قد إيه". بنقول OK وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'OK. How long will it take?', pr: 'أوكي. هاو لونج ويل إت تيك', ar: 'تمام. هياخد قد إيه؟' },
+            },
+            {
+                scene: 'النور رجع:',
+                them: 'It is working again. Sorry for the trouble.',
+                themAr: 'اشتغل تاني. آسف على المشكلة.',
+                choices: ["No problem. Thank you for your help.", "No problem. Thank you for help your.", "Problem no. Your help for thank you."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول No problem وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'No problem. Thank you for your help.', pr: 'نو پروبلم. ثانك يو فور يور هيلب', ar: 'مفيش مشكلة. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Good evening. The power is out in my flat.', pr: 'جود إيفنينج. ذا باور إز آوت إن ماي فلات', ar: 'مساء الخير. النور قاطع في شقتي' },
+            { en: 'I think it is the whole building.', pr: 'آي ثينك إت إز ذا هول بيلدينج', ar: 'أنا شايف إنها العمارة كلها' },
+            { en: 'OK. How long will it take?', pr: 'أوكي. هاو لونج ويل إت تيك', ar: 'تمام. هياخد قد إيه؟' },
+            { en: 'No problem. Thank you for your help.', pr: 'نو پروبلم. ثانك يو فور يور هيلب', ar: 'مفيش مشكلة. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
