@@ -3050,6 +3050,57 @@ const lessons = [
             { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذي تشينج', ar: 'اتفضل. خلي الباقي' },
         ],
     },
+    {
+        id: 'bikerental',
+        number: 60,
+        title: 'إيجار عجلة',
+        subtitle: 'اطلب عجلة بالساعة من المحل',
+        intro: 'انت عايز تأجر عجلة تتمشى بيها على الكورنيش. هتقول عايزها لمدة قد إيه، وتسأل عن البطاقة، وتسأل عن الكرسي، وتوعد برجوعها في الميعاد. الأسعار والمدد في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت قدام محل بيأجر عجل في الكورنيش:',
+                them: 'Hi there. Are you interested in a bike?',
+                themAr: 'أهلا. مهتم بعجلة؟',
+                choices: ["Yes, I want to rent a bike for two hours.", "Yes, I want to a bike rent for two hours.", "Yes, bike a I want rent two hours for."],
+                correct: 0,
+                explain: '"I want to rent a bike" يعني "عايز أأجر عجلة". بنقول I want to rent a bike وبعدها for two hours، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I want to rent a bike for two hours.', pr: 'يس آي وانت تو رنت ا بايك فور تو آورز', ar: 'أيوه، عايز أأجر عجلة لمدة ساعتين' },
+            },
+            {
+                scene: 'البائع قالك السعر:',
+                them: 'It is ten pounds per hour.',
+                themAr: 'عشرة جنيه في الساعة.',
+                choices: ["Do I need to leave an ID?", "Do I leave need to an ID?", "I do need an ID leave to?"],
+                correct: 0,
+                explain: '"Do I need to leave an ID" يعني "لازم أسيب بطاقة". بنقول Do I need وبعدها to leave an ID، وده الترتيب الصح.',
+                phrase: { en: 'Do I need to leave an ID?', pr: 'دو آي نيد تو ليف آن آي دي', ar: 'لازم أسيب بطاقة؟' },
+            },
+            {
+                scene: 'البائع رد عليك:',
+                them: 'Yes, please. I will give it back when you return.',
+                themAr: 'أيوه. هرجعها لك لما ترجع.',
+                choices: ["Here is my ID. Is the seat comfortable?", "Here my ID is. The seat is comfortable?", "Is here my ID. Comfortable the seat is?"],
+                correct: 0,
+                explain: '"Is the seat comfortable" يعني "الكرسي مريح". بنقول Here is my ID وبعدها Is the seat comfortable، وده الترتيب الصح.',
+                phrase: { en: 'Here is my ID. Is the seat comfortable?', pr: 'هير إز ماي آي دي. إز ذي سيت كومفرتابل', ar: 'اتفضل بطاقتي. الكرسي مريح؟' },
+            },
+            {
+                scene: 'البائع ظبط لك العجلة:',
+                them: 'You can adjust it. Please bring it back in two hours.',
+                themAr: 'تقدر تظبطه. رجعها بعد ساعتين.',
+                choices: ["Thank you. I will be back on time.", "Thank you. I will back be on time.", "You thank. Be I back on will time."],
+                correct: 0,
+                explain: '"I will be back on time" يعني "هرجع في الميعاد". بنقول Thank you وبعدها I will be back on time، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I will be back on time.', pr: 'ثانك يو. آي ويل بي باك أون تايم', ar: 'شكرا. هرجع في الميعاد' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I want to rent a bike for two hours.', pr: 'يس آي وانت تو رنت ا بايك فور تو آورز', ar: 'أيوه، عايز أأجر عجلة لمدة ساعتين' },
+            { en: 'Do I need to leave an ID?', pr: 'دو آي نيد تو ليف آن آي دي', ar: 'لازم أسيب بطاقة؟' },
+            { en: 'Here is my ID. Is the seat comfortable?', pr: 'هير إز ماي آي دي. إز ذي سيت كومفرتابل', ar: 'اتفضل بطاقتي. الكرسي مريح؟' },
+            { en: 'Thank you. I will be back on time.', pr: 'ثانك يو. آي ويل بي باك أون تايم', ar: 'شكرا. هرجع في الميعاد' },
+        ],
+    },
 ];
 
 const quiz = [
