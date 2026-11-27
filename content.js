@@ -4580,6 +4580,57 @@ const lessons = [
             { en: 'Perfect. Thank you for your help. Have a nice day.', pr: 'بيرفكت. ثانك يو فور يور هيلب. هاف أ نايس داي', ar: 'ممتاز. شكرا على مساعدتك. يومك سعيد' },
         ],
     },
+    {
+        id: 'returnitem',
+        number: 90,
+        title: 'إرجاع حاجة بايظة',
+        subtitle: 'اشرح المشكلة واطلب استرداد أو بديل',
+        intro: 'اشتريت كشاف وطلع بايظ ورجعت المحل. هتشرح المشكلة، وتطلع الإيصال، وتختار بديل جديد، وتشكر البائع. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'اشتريت كشاف من محل امبارح وطلع بايظ، ورجعت المحل:',
+                them: 'Good evening. How can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك إزاي؟',
+                choices: ["I bought this flashlight yesterday, but it does not work.", "I bought this flashlight yesterday, but it not works.", "Yesterday I this flashlight bought, but works not."],
+                correct: 0,
+                explain: '"It does not work" يعني "مش شغال". بنقول I bought this flashlight yesterday وبعدها but it does not work، وده الترتيب الصح.',
+                phrase: { en: 'I bought this flashlight yesterday, but it does not work.', pr: 'آي بوت ذيس فلاش لايت يسترداي بات إت داز نوت وورك', ar: 'اشتريت الكشاف ده امبارح بس مش شغال' },
+            },
+            {
+                scene: 'البائع بيفحص الكشاف:',
+                them: 'I am sorry about that. Do you have the receipt?',
+                themAr: 'آسف على كده. معاك الإيصال؟',
+                choices: ["Yes, here it is. Can I get a refund, please?", "Yes, here is it. I can a refund get, please?", "Yes, it here is. Refund a can I get, please?"],
+                correct: 0,
+                explain: '"Can I get a refund?" يعني "أقدر أسترد فلوسي؟". بنقول Yes, here it is وبعدها can I get a refund, please، وده الترتيب الصح.',
+                phrase: { en: 'Yes, here it is. Can I get a refund, please?', pr: 'يس هير إت إز. كان آي جيت أ ريفاند بليز', ar: 'أيوه، اتفضل. أقدر أسترد فلوسي لو سمحت؟' },
+            },
+            {
+                scene: 'البائع بيعرض حل تاني:',
+                them: 'I can give you a refund, or you can choose a new one.',
+                themAr: 'أقدر أرجعلك فلوسك، أو تختار واحد جديد.',
+                choices: ["I prefer a new one. Can you check that it works?", "I prefer a new one. Can you check that works it?", "Prefer I a new one. That it works check you can?"],
+                correct: 0,
+                explain: '"Can you check that it works?" يعني "ممكن تتأكد إنه شغال؟". بنقول I prefer a new one وبعدها can you check that it works، وده الترتيب الصح.',
+                phrase: { en: 'I prefer a new one. Can you check that it works?', pr: 'آي بريفر أ نيو وان. كان يو تشيك ذات إت ووركس', ar: 'أفضل واحد جديد. ممكن تتأكد إنه شغال؟' },
+            },
+            {
+                scene: 'البائع بيجرب الكشاف الجديد:',
+                them: 'Yes, it works well. Here you are.',
+                themAr: 'أيوه، شغال كويس. اتفضل.',
+                choices: ["Thank you for your patience. Have a good evening.", "Thank you for patience your. A good evening have.", "Thank you your for patience. Evening good a have."],
+                correct: 0,
+                explain: '"Thank you for your patience" يعني "شكرا على صبرك". بنقول Thank you for your patience وبعدها have a good evening، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your patience. Have a good evening.', pr: 'ثانك يو فور يور باشنس. هاف أ جود إيفنينج', ar: 'شكرا على صبرك. مساء الخير عليك' },
+            },
+        ],
+        phrases: [
+            { en: 'I bought this flashlight yesterday, but it does not work.', pr: 'آي بوت ذيس فلاش لايت يسترداي بات إت داز نوت وورك', ar: 'اشتريت الكشاف ده امبارح بس مش شغال' },
+            { en: 'Yes, here it is. Can I get a refund, please?', pr: 'يس هير إت إز. كان آي جيت أ ريفاند بليز', ar: 'أيوه، اتفضل. أقدر أسترد فلوسي لو سمحت؟' },
+            { en: 'I prefer a new one. Can you check that it works?', pr: 'آي بريفر أ نيو وان. كان يو تشيك ذات إت ووركس', ar: 'أفضل واحد جديد. ممكن تتأكد إنه شغال؟' },
+            { en: 'Thank you for your patience. Have a good evening.', pr: 'ثانك يو فور يور باشنس. هاف أ جود إيفنينج', ar: 'شكرا على صبرك. مساء الخير عليك' },
+        ],
+    },
 ];
 
 const quiz = [
