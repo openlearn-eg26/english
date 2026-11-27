@@ -2744,6 +2744,57 @@ const lessons = [
             { en: 'Thank you. I will wait there.', pr: 'ثانك يو. آي ويل ويت ذير', ar: 'شكرا. هستنى هناك' },
         ],
     },
+    {
+        id: 'giftshop',
+        number: 54,
+        title: 'محل هدايا',
+        subtitle: 'اسأل عن هدية وعن السعر',
+        intro: 'انت في محل هدايا وعايز تشتري حاجة صغيرة لصاحبك. هتقول بتدور على إيه، وتسأل عن السعر، وتطلب سعر أحسن، وتقرر تشتري. الأسعار في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت في محل هدايا وبتبص على حاجات:',
+                them: 'Welcome. Are you looking for something special?',
+                themAr: 'أهلا بيك. بتدور على حاجة معينة؟',
+                choices: ["I am looking for a small gift for my friend.", "I am looking for a gift small for friend my.", "Looking I am for a small my friend gift."],
+                correct: 0,
+                explain: '"I am looking for a small gift" يعني "بدور على هدية صغيرة". بنقول I am looking for وبعدها a small gift وبعدها for my friend، وده الترتيب الصح.',
+                phrase: { en: 'I am looking for a small gift for my friend.', pr: 'آي آم لوكينج فور ا سمول جيفت فور ماي فريند', ar: 'بدور على هدية صغيرة لصاحبي' },
+            },
+            {
+                scene: 'البائع وراك حاجة:',
+                them: 'How about this wooden box?',
+                themAr: 'إيه رأيك في العلبة الخشب دي؟',
+                choices: ["It is beautiful. How much is it?", "It beautiful is. How is much it?", "Beautiful it is. Much how is it?"],
+                correct: 0,
+                explain: '"How much is it" يعني "بكام دي". بنقول It is beautiful وبعدها How much is it، وده الترتيب الصح.',
+                phrase: { en: 'It is beautiful. How much is it?', pr: 'إت إز بيوتيفول. هاو ماتش إز إت', ar: 'حلوة. بكام دي؟' },
+            },
+            {
+                scene: 'البائع قالك السعر:',
+                them: 'It is thirty dollars.',
+                themAr: 'تلاتين دولار.',
+                choices: ["Is that your best price?", "Is that best your price?", "That is your price best?"],
+                correct: 0,
+                explain: '"Is that your best price" يعني "ده أحسن سعر عندك". بنقول Is that وبعدها your best price، وده الترتيب الصح.',
+                phrase: { en: 'Is that your best price?', pr: 'إز ذات يور بيست برايس', ar: 'ده أحسن سعر عندك؟' },
+            },
+            {
+                scene: 'البائع وافق ينزل السعر:',
+                them: 'I can do twenty-five.',
+                themAr: 'أقدر أخليها خمسة وعشرين.',
+                choices: ["That is fine. I will take it.", "That fine is. I take will it.", "Fine that is. It will I take."],
+                correct: 0,
+                explain: '"I will take it" يعني "هاخدها". بنقول That is fine وبعدها I will take it، وده الترتيب الصح.',
+                phrase: { en: 'That is fine. I will take it.', pr: 'ذات إز فاين. آي ويل تيك إت', ar: 'تمام. هاخدها' },
+            },
+        ],
+        phrases: [
+            { en: 'I am looking for a small gift for my friend.', pr: 'آي آم لوكينج فور ا سمول جيفت فور ماي فريند', ar: 'بدور على هدية صغيرة لصاحبي' },
+            { en: 'It is beautiful. How much is it?', pr: 'إت إز بيوتيفول. هاو ماتش إز إت', ar: 'حلوة. بكام دي؟' },
+            { en: 'Is that your best price?', pr: 'إز ذات يور بيست برايس', ar: 'ده أحسن سعر عندك؟' },
+            { en: 'That is fine. I will take it.', pr: 'ذات إز فاين. آي ويل تيك إت', ar: 'تمام. هاخدها' },
+        ],
+    },
 ];
 
 const quiz = [
