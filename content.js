@@ -2642,6 +2642,57 @@ const lessons = [
             { en: 'I will be back on Sunday night.', pr: 'آي ويل بي باك أون صانداي نايت', ar: 'هرجع الأحد بالليل' },
         ],
     },
+    {
+        id: 'jobinterview',
+        number: 52,
+        title: 'مقابلة شغل',
+        subtitle: 'عرّف بنفسك واتكلم عن خبرتك',
+        intro: 'انت في مقابلة شغل. هتسلم على المدير، وتعرّف بنفسك، وتقوله ليه عايز الوظيفة، وتختم المقابلة بأدب. الوظيفة والخبرة في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت داخل مقابلة شغل والمدير رحب بيك:',
+                them: 'Good morning. Please have a seat.',
+                themAr: 'صباح الخير. اتفضل اقعد.',
+                choices: ["Thank you. It is nice to meet you.", "Thank you. Nice it is to you meet.", "You thank. It nice is meet to you."],
+                correct: 0,
+                explain: '"It is nice to meet you" يعني "اتشرفت بمعرفتك". بنقول Thank you وبعدها It is nice to meet you، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. It is nice to meet you.', pr: 'ثانك يو. إت إز نايس تو ميت يو', ar: 'شكرا. اتشرفت بمعرفتك' },
+            },
+            {
+                scene: 'المدير عايز يتعرف عليك:',
+                them: 'Please tell me about yourself.',
+                themAr: 'احكيلي عن نفسك.',
+                choices: ["I am an accountant with three years of experience.", "I am accountant an with experience three of years.", "Accountant I am three with years experience of."],
+                correct: 0,
+                explain: '"I am an accountant" يعني "أنا محاسب". بنقول I am an accountant وبعدها with three years of experience، وده الترتيب الصح.',
+                phrase: { en: 'I am an accountant with three years of experience.', pr: 'آي آم آن أكاونتنت ويذ ثري يرز أوف إكسبيرينس', ar: 'أنا محاسب وعندي تلات سنين خبرة' },
+            },
+            {
+                scene: 'المدير سألك ليه عايز الوظيفة:',
+                them: 'Why do you want this job?',
+                themAr: 'ليه عايز الوظيفة دي؟',
+                choices: ["I want to learn and grow with your company.", "I want learn to and grow your company with.", "I to want learn grow and with company your."],
+                correct: 0,
+                explain: '"I want to learn and grow" يعني "عايز أتعلم وأتطور". بنقول I want to learn and grow وبعدها with your company، وده الترتيب الصح.',
+                phrase: { en: 'I want to learn and grow with your company.', pr: 'آي وانت تو لرن آند جرو ويذ يور كامباني', ar: 'عايز أتعلم وأتطور مع شركتكم' },
+            },
+            {
+                scene: 'المقابلة خلصت:',
+                them: 'Do you have any questions for us?',
+                themAr: 'عندك أي أسئلة لينا؟',
+                choices: ["No, thank you. I hope to hear from you soon.", "No, thank you. I to hope hear from soon you.", "No thank. You hope I hear to soon from you."],
+                correct: 0,
+                explain: '"I hope to hear from you soon" يعني "أتمنى أسمع منكم قريب". بنقول No, thank you وبعدها I hope to hear from you soon، وده الترتيب الصح.',
+                phrase: { en: 'No, thank you. I hope to hear from you soon.', pr: 'نو ثانك يو. آي هوب تو هير فروم يو سون', ar: 'لا شكرا. أتمنى أسمع منكم قريب' },
+            },
+        ],
+        phrases: [
+            { en: 'Thank you. It is nice to meet you.', pr: 'ثانك يو. إت إز نايس تو ميت يو', ar: 'شكرا. اتشرفت بمعرفتك' },
+            { en: 'I am an accountant with three years of experience.', pr: 'آي آم آن أكاونتنت ويذ ثري يرز أوف إكسبيرينس', ar: 'أنا محاسب وعندي تلات سنين خبرة' },
+            { en: 'I want to learn and grow with your company.', pr: 'آي وانت تو لرن آند جرو ويذ يور كامباني', ar: 'عايز أتعلم وأتطور مع شركتكم' },
+            { en: 'No, thank you. I hope to hear from you soon.', pr: 'نو ثانك يو. آي هوب تو هير فروم يو سون', ar: 'لا شكرا. أتمنى أسمع منكم قريب' },
+        ],
+    },
 ];
 
 const quiz = [
