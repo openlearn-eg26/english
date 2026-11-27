@@ -4631,6 +4631,57 @@ const lessons = [
             { en: 'Thank you for your patience. Have a good evening.', pr: 'ثانك يو فور يور باشنس. هاف أ جود إيفنينج', ar: 'شكرا على صبرك. مساء الخير عليك' },
         ],
     },
+    {
+        id: 'tailor',
+        number: 91,
+        title: 'عند الترزي',
+        subtitle: 'اطلب تقصير بنطلون واسأل عن الميعاد',
+        intro: 'اشتريت بنطلون جديد وهو طويل عليك. هتطلب من الترزي يقصره، وتسأل عن القياس، وتسأل هتاخده إمتى. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'دخلت محل ترزي ومعاك بنطلون جديد طويل عليك:',
+                them: 'Welcome. What would you like me to do?',
+                themAr: 'أهلا بيك. تحب أعملك إيه؟',
+                choices: ["These trousers are too long. Can you shorten them?", "These trousers too long are. Can you them shorten?", "These trousers are long too. You can shorten them?"],
+                correct: 0,
+                explain: '"Can you shorten them?" يعني "ممكن تقصرهم؟". بنقول These trousers are too long وبعدها can you shorten them، وده الترتيب الصح.',
+                phrase: { en: 'These trousers are too long. Can you shorten them?', pr: 'ذيز تراوزرز آر تو لونج. كان يو شورتن ذيم', ar: 'البنطلون ده طويل عليا. ممكن تقصره؟' },
+            },
+            {
+                scene: 'الترزي بيجيب شريط القياس:',
+                them: 'Of course. Please stand here. I will measure the length.',
+                themAr: 'طبعا. اقف هنا لو سمحت. هقيس الطول.',
+                choices: ["Thank you. How many centimeters will you cut?", "Thank you. How many centimeters you will cut?", "Thank you. Will you cut how many centimeters?"],
+                correct: 0,
+                explain: '"How many centimeters will you cut?" يعني "هتقص كام سنتي؟". بنقول Thank you وبعدها how many centimeters will you cut، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. How many centimeters will you cut?', pr: 'ثانك يو. هاو ميني سنتيميترز ويل يو كات', ar: 'شكرا. هتقص كام سنتي؟' },
+            },
+            {
+                scene: 'الترزي بيحدد القياس:',
+                them: 'About four centimeters. It will look perfect.',
+                themAr: 'حوالي أربع سنتي. هيبان مظبوط.',
+                choices: ["Good. When can I pick them up?", "Good. When I can pick them up?", "Good. Up them pick can I when?"],
+                correct: 0,
+                explain: '"When can I pick them up?" يعني "أقدر آخدهم إمتى؟". بنقول Good وبعدها when can I pick them up، وده الترتيب الصح.',
+                phrase: { en: 'Good. When can I pick them up?', pr: 'جود. وين كان آي بيك ذيم أب', ar: 'كويس. أقدر آخدهم إمتى؟' },
+            },
+            {
+                scene: 'الترزي بيكتب اسمك:',
+                them: 'They will be ready tomorrow afternoon.',
+                themAr: 'هيكونوا جاهزين بكرة بعد الضهر.',
+                choices: ["Perfect. I will come tomorrow. Thank you.", "Perfect. I come will tomorrow. Thank you.", "Perfect. Tomorrow will come I. You thank."],
+                correct: 0,
+                explain: '"I will come tomorrow" يعني "هيجي بكرة". بنقول Perfect وبعدها I will come tomorrow وبعدين Thank you، وده الترتيب الصح.',
+                phrase: { en: 'Perfect. I will come tomorrow. Thank you.', pr: 'بيرفكت. آي ويل كام تومورو. ثانك يو', ar: 'تمام. هجي بكرة. شكرا' },
+            },
+        ],
+        phrases: [
+            { en: 'These trousers are too long. Can you shorten them?', pr: 'ذيز تراوزرز آر تو لونج. كان يو شورتن ذيم', ar: 'البنطلون ده طويل عليا. ممكن تقصره؟' },
+            { en: 'Thank you. How many centimeters will you cut?', pr: 'ثانك يو. هاو ميني سنتيميترز ويل يو كات', ar: 'شكرا. هتقص كام سنتي؟' },
+            { en: 'Good. When can I pick them up?', pr: 'جود. وين كان آي بيك ذيم أب', ar: 'كويس. أقدر آخدهم إمتى؟' },
+            { en: 'Perfect. I will come tomorrow. Thank you.', pr: 'بيرفكت. آي ويل كام تومورو. ثانك يو', ar: 'تمام. هجي بكرة. شكرا' },
+        ],
+    },
 ];
 
 const quiz = [
