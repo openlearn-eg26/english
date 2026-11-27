@@ -1826,6 +1826,57 @@ const lessons = [
             { en: 'I will take it.', pr: 'آي ويل تيك إت', ar: 'هاخده' },
         ],
     },
+    {
+        id: 'neighbor',
+        number: 36,
+        title: 'استلاف حاجة من الجار',
+        subtitle: 'اطلب مساعدة من جارك بأدب',
+        intro: 'محتاج سلم عشان تصلح لمبة، وجارك عنده واحد. هتطلب منه يسلفك السلم بأدب، وتقوله هتعمل بيه إيه، وتوعده إنك هترجعه، وتشكره. الجمل دي بتنفع مع أي جار أو صاحب.',
+        steps: [
+            {
+                scene: 'قابلت جارك في العمارة وسألك:',
+                them: 'Hello. Do you need something?',
+                themAr: 'أهلاً. محتاج حاجة؟',
+                choices: ["Can I borrow your ladder, please?", "Can I your ladder borrow, please?", "I can borrow ladder your, please?"],
+                correct: 0,
+                explain: '"Can I borrow" يعني "ممكن أستلف". بنبدأ بـ Can I وبعدها الفعل borrow وبعدها الحاجة، وده الترتيب الصح.',
+                phrase: { en: 'Can I borrow your ladder, please?', pr: 'كان آي بورو يور لادر بليز', ar: 'ممكن أستلف السلم بتاعك لو سمحت؟' },
+            },
+            {
+                scene: 'جارك وافق وسألك:',
+                them: 'Of course. What do you need it for?',
+                themAr: 'طبعًا. محتاجه ليه؟',
+                choices: ["I need to fix a light.", "I need fix to a light.", "Need I to a light fix."],
+                correct: 0,
+                explain: '"I need to fix" يعني "محتاج أصلح". بنقول I need وبعدها to وبعدها الفعل fix، وده الترتيب الصح.',
+                phrase: { en: 'I need to fix a light.', pr: 'آي نيد تو فيكس أ لايت', ar: 'محتاج أصلح لمبة' },
+            },
+            {
+                scene: 'جارك إداك السلم وقالك:',
+                them: 'Please be careful.',
+                themAr: 'خلي بالك من فضلك.',
+                choices: ["I will bring it back tomorrow.", "I bring will it back tomorrow.", "I will back bring it tomorrow."],
+                correct: 0,
+                explain: '"bring it back" يعني "أرجعه". بنقول I will وبعدها bring it back وبعدها tomorrow يعني "بكرة"، وده الترتيب الصح.',
+                phrase: { en: 'I will bring it back tomorrow.', pr: 'آي ويل برينج إت باك تومورو', ar: 'هرجعه بكرة' },
+            },
+            {
+                scene: 'جارك رد عليك:',
+                them: 'No problem.',
+                themAr: 'مفيش مشكلة.',
+                choices: ["Thank you. You are very kind.", "Thank you. Very you are kind.", "Thank you. You kind are very."],
+                correct: 0,
+                explain: '"You are very kind" يعني "إنت طيب جدًا". بنقول You are وبعدها very وبعدها kind، وده الترتيب الصح.',
+                phrase: { en: 'You are very kind.', pr: 'يو آر فيري كايند', ar: 'إنت طيب جدًا' },
+            },
+        ],
+        phrases: [
+            { en: 'Can I borrow your ladder, please?', pr: 'كان آي بورو يور لادر بليز', ar: 'ممكن أستلف السلم بتاعك لو سمحت؟' },
+            { en: 'I need to fix a light.', pr: 'آي نيد تو فيكس أ لايت', ar: 'محتاج أصلح لمبة' },
+            { en: 'I will bring it back tomorrow.', pr: 'آي ويل برينج إت باك تومورو', ar: 'هرجعه بكرة' },
+            { en: 'You are very kind.', pr: 'يو آر فيري كايند', ar: 'إنت طيب جدًا' },
+        ],
+    },
 ];
 
 const quiz = [
