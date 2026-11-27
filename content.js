@@ -2948,6 +2948,57 @@ const lessons = [
             { en: 'Sure. Please call me if you find it.', pr: 'شور. بليز كول مي إف يو فايند إت', ar: 'أكيد. كلمني لو لقيتها' },
         ],
     },
+    {
+        id: 'congrats',
+        number: 58,
+        title: 'مبروك لصاحبك',
+        subtitle: 'هنّي صاحبك على شغله الجديد',
+        intro: 'صاحبك جاب شغل جديد وفرحان. هتقوله مبروك، وتسأله هيشتغل إيه، وتقوله إنه يستاهل، وتوافق على الاحتفال. الشغل والأيام في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'صاحبك قابلك وهو فرحان:',
+                them: 'Guess what? I got a new job!',
+                themAr: 'خمّن إيه؟ جبت شغل جديد!',
+                choices: ["Congratulations! I am so happy for you.", "Congratulations! I so am happy for you.", "I am happy so congratulations for you."],
+                correct: 0,
+                explain: '"I am so happy for you" يعني "فرحان لك جدا". بنقول Congratulations وبعدها I am so happy for you، وده الترتيب الصح.',
+                phrase: { en: 'Congratulations! I am so happy for you.', pr: 'كونجراتشوليشنز! آي آم سو هابي فور يو', ar: 'مبروك! فرحان لك جدا' },
+            },
+            {
+                scene: 'صاحبك بدأ يحكي:',
+                them: 'I start next Sunday at a big company.',
+                themAr: 'هبدأ الأحد الجاي في شركة كبيرة.',
+                choices: ["That is great news. What will you do there?", "That great is news. What you will do there?", "Great that news is. Will you what there do?"],
+                correct: 0,
+                explain: '"That is great news" يعني "دي أخبار حلوة". بنقول That is great news وبعدها What will you do there، وده الترتيب الصح.',
+                phrase: { en: 'That is great news. What will you do there?', pr: 'ذات إز جريت نيوز. وات ويل يو دو ذير', ar: 'دي أخبار حلوة. هتشتغل إيه هناك؟' },
+            },
+            {
+                scene: 'صاحبك رد:',
+                them: 'I will be a software engineer.',
+                themAr: 'هشتغل مهندس برمجيات.',
+                choices: ["You deserve it. You worked very hard.", "You it deserve. Worked you very hard.", "Deserve you it. You hard very worked."],
+                correct: 0,
+                explain: '"You deserve it" يعني "تستاهلها". بنقول You deserve it وبعدها You worked very hard، وده الترتيب الصح.',
+                phrase: { en: 'You deserve it. You worked very hard.', pr: 'يو ديزيرف إت. يو وركد فيري هارد', ar: 'تستاهلها. تعبت كتير' },
+            },
+            {
+                scene: 'صاحبك شكرك:',
+                them: 'Thank you. Let us celebrate this weekend.',
+                themAr: 'شكرا. تعالى نحتفل في الويك إند.',
+                choices: ["Good idea. I would love to.", "Good idea. I love would to.", "Idea good. Would I to love."],
+                correct: 0,
+                explain: '"I would love to" يعني "يسعدني". بنقول Good idea وبعدها I would love to، وده الترتيب الصح.',
+                phrase: { en: 'Good idea. I would love to.', pr: 'جود آيديا. آي ود لاف تو', ar: 'فكرة حلوة. يسعدني' },
+            },
+        ],
+        phrases: [
+            { en: 'Congratulations! I am so happy for you.', pr: 'كونجراتشوليشنز! آي آم سو هابي فور يو', ar: 'مبروك! فرحان لك جدا' },
+            { en: 'That is great news. What will you do there?', pr: 'ذات إز جريت نيوز. وات ويل يو دو ذير', ar: 'دي أخبار حلوة. هتشتغل إيه هناك؟' },
+            { en: 'You deserve it. You worked very hard.', pr: 'يو ديزيرف إت. يو وركد فيري هارد', ar: 'تستاهلها. تعبت كتير' },
+            { en: 'Good idea. I would love to.', pr: 'جود آيديا. آي ود لاف تو', ar: 'فكرة حلوة. يسعدني' },
+        ],
+    },
 ];
 
 const quiz = [
