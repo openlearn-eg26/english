@@ -3611,6 +3611,57 @@ const lessons = [
             { en: 'No problem. Thank you for your help.', pr: 'نو پروبلم. ثانك يو فور يور هيلب', ar: 'مفيش مشكلة. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'postoffice',
+        number: 71,
+        title: 'مكتب البريد',
+        subtitle: 'ابعت طرد واسأل عن المدة والسعر',
+        intro: 'انت في مكتب البريد وعايز تبعت طرد. هتقول عايز تبعته فين، وتختار عادي ولا سريع، وتسأل هياخد قد إيه، وتطلب رقم تتبع. المدة والسعر في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت في مكتب البريد ومعاك طرد:',
+                them: 'Next, please. How can I help you?',
+                themAr: 'الدور الجاي. أقدر أساعدك إزاي؟',
+                choices: ["I would like to send this parcel to Alexandria.", "I would like to send parcel this to Alexandria.", "Like I would this parcel send Alexandria to."],
+                correct: 0,
+                explain: '"Send this parcel to Alexandria" يعني "ابعت الطرد ده إسكندرية". بنقول I would like to وبعدها send this parcel to Alexandria، وده الترتيب الصح.',
+                phrase: { en: 'I would like to send this parcel to Alexandria.', pr: 'آي وود لايك تو سيند ذيس بارسل تو إسكندرية', ar: 'عايز أبعت الطرد ده إسكندرية' },
+            },
+            {
+                scene: 'الموظف بيحط الطرد على الميزان:',
+                them: 'It weighs two kilos. Do you want it express or normal?',
+                themAr: 'وزنه اتنين كيلو. سريع ولا عادي؟',
+                choices: ["Normal, please. How long will it take?", "Normal, please. How long it will take?", "Please normal. Take it will how long?"],
+                correct: 0,
+                explain: '"How long will it take" يعني "هياخد قد إيه". بنقول Normal, please وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'Normal, please. How long will it take?', pr: 'نورمال بليز. هاو لونج ويل إت تيك', ar: 'عادي لو سمحت. هياخد قد إيه؟' },
+            },
+            {
+                scene: 'الموظف بيرد:',
+                them: 'About three days. It costs forty pounds.',
+                themAr: 'حوالي تلات أيام. بأربعين جنيه.',
+                choices: ["That is fine. Can I get a tracking number?", "That is fine. Can I a tracking number get?", "Fine that is. Number tracking can I get?"],
+                correct: 0,
+                explain: '"A tracking number" يعني "رقم تتبع". بنقول That is fine وبعدها can I get a tracking number، وده الترتيب الصح.',
+                phrase: { en: 'That is fine. Can I get a tracking number?', pr: 'ذات إز فاين. كان آي جت ا تراكينج نمبر', ar: 'تمام. ممكن رقم تتبع؟' },
+            },
+            {
+                scene: 'الموظف بيطبع الإيصال:',
+                them: 'Sure. It is on your receipt.',
+                themAr: 'أكيد. هو مكتوب على الإيصال.',
+                choices: ["Great. Thank you for your help.", "Great. Thank you for help your.", "Great. You thank for your help."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Great وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Great. Thank you for your help.', pr: 'جريت. ثانك يو فور يور هيلب', ar: 'حلو. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to send this parcel to Alexandria.', pr: 'آي وود لايك تو سيند ذيس بارسل تو إسكندرية', ar: 'عايز أبعت الطرد ده إسكندرية' },
+            { en: 'Normal, please. How long will it take?', pr: 'نورمال بليز. هاو لونج ويل إت تيك', ar: 'عادي لو سمحت. هياخد قد إيه؟' },
+            { en: 'That is fine. Can I get a tracking number?', pr: 'ذات إز فاين. كان آي جت ا تراكينج نمبر', ar: 'تمام. ممكن رقم تتبع؟' },
+            { en: 'Great. Thank you for your help.', pr: 'جريت. ثانك يو فور يور هيلب', ar: 'حلو. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
