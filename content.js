@@ -4478,6 +4478,57 @@ const lessons = [
             { en: 'It looks great. Thank you for fixing it.', pr: 'إت لوكس جريت. ثانك يو فور فيكسينج إت', ar: 'شكله جميل. شكرا إنك صلحتها' },
         ],
     },
+    {
+        id: 'newneighbor',
+        number: 88,
+        title: 'الجار الجديد',
+        subtitle: 'رحّب بجارك الجديد في الأسانسير',
+        intro: 'قابلت جارك الجديد في الأسانسير. هترحب بيه، وتتكلم عن العمارة والحي، وتعرض مساعدتك. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'قابلت جارك الجديد في الأسانسير:',
+                them: 'Hello. I am your new neighbor. I live on the third floor.',
+                themAr: 'أهلا. أنا جارك الجديد. ساكن في الدور التالت.',
+                choices: ["Nice to meet you. Welcome to the building.", "Nice to you meet. Welcome to building the.", "To meet nice you. The building welcome to."],
+                correct: 0,
+                explain: '"Welcome to the building" يعني "أهلا بيك في العمارة". بنقول Nice to meet you وبعدها welcome to the building، وده الترتيب الصح.',
+                phrase: { en: 'Nice to meet you. Welcome to the building.', pr: 'نايس تو ميت يو. ويلكم تو ذا بيلدينج', ar: 'اتشرفت بيك. أهلا بيك في العمارة' },
+            },
+            {
+                scene: 'جارك بيسأل:',
+                them: 'Thank you. Have you lived here for a long time?',
+                themAr: 'شكرا. ساكن هنا من زمان؟',
+                choices: ["Yes, for about five years. It is a quiet building.", "Yes, for five about years. It a quiet building is.", "Yes, about for five years. Quiet it is a building."],
+                correct: 0,
+                explain: '"For about five years" يعني "من حوالي خمس سنين". بنقول Yes وبعدها for about five years، وده الترتيب الصح.',
+                phrase: { en: 'Yes, for about five years. It is a quiet building.', pr: 'يس فور أباوت فايف يرز. إت إز أ كوايت بيلدينج', ar: 'أيوه، من حوالي خمس سنين. العمارة هادية' },
+            },
+            {
+                scene: 'جارك بيسأل عن الحي:',
+                them: 'That is good to hear. Is there a market nearby?',
+                themAr: 'ده كويس أسمع كده. فيه سوق قريب؟',
+                choices: ["Yes, there is a small market on the corner.", "Yes, there a small market is on the corner.", "Yes, market small there is the corner on."],
+                correct: 0,
+                explain: '"There is a small market" يعني "فيه سوق صغير". بنقول Yes وبعدها there is a small market on the corner، وده الترتيب الصح.',
+                phrase: { en: 'Yes, there is a small market on the corner.', pr: 'يس ذير إز أ سمول ماركت أون ذا كورنر', ar: 'أيوه، فيه سوق صغير على الناصية' },
+            },
+            {
+                scene: 'الأسانسير وصل دورك:',
+                them: 'Great, thank you. It was nice talking to you.',
+                themAr: 'تمام، شكرا. كان لطيف أتكلم معاك.',
+                choices: ["You too. Let me know if you need any help.", "You too. Me let know if you any help need.", "Too you. Know me let if help you need any."],
+                correct: 0,
+                explain: '"Let me know if you need any help" يعني "قولي لو محتاج أي مساعدة". بنقول You too وبعدها let me know if you need any help، وده الترتيب الصح.',
+                phrase: { en: 'You too. Let me know if you need any help.', pr: 'يو تو. ليت مي نو إف يو نيد إني هيلب', ar: 'وإنت كمان. قولي لو محتاج أي مساعدة' },
+            },
+        ],
+        phrases: [
+            { en: 'Nice to meet you. Welcome to the building.', pr: 'نايس تو ميت يو. ويلكم تو ذا بيلدينج', ar: 'اتشرفت بيك. أهلا بيك في العمارة' },
+            { en: 'Yes, for about five years. It is a quiet building.', pr: 'يس فور أباوت فايف يرز. إت إز أ كوايت بيلدينج', ar: 'أيوه، من حوالي خمس سنين. العمارة هادية' },
+            { en: 'Yes, there is a small market on the corner.', pr: 'يس ذير إز أ سمول ماركت أون ذا كورنر', ar: 'أيوه، فيه سوق صغير على الناصية' },
+            { en: 'You too. Let me know if you need any help.', pr: 'يو تو. ليت مي نو إف يو نيد إني هيلب', ar: 'وإنت كمان. قولي لو محتاج أي مساعدة' },
+        ],
+    },
 ];
 
 const quiz = [
