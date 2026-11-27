@@ -4019,6 +4019,57 @@ const lessons = [
             { en: 'Perfect. Thank you for changing it.', pr: 'بيرفكت. ثانك يو فور تشينجينج إت', ar: 'تمام. شكرا إنك غيرته' },
         ],
     },
+    {
+        id: 'runninglate',
+        number: 79,
+        title: 'اعتذار عن التأخير',
+        subtitle: 'اعتذر لصاحبك لأنك اتأخرت',
+        intro: 'انت اتأخرت على معاد مع صاحبك في الكافيه. هتعتذر وتقول السبب، وتقول إنك حاولت تتصل، وتعزمه على المشروب، وتوعده مش هتتأخر تاني. المدة في الدرس مثال للتدريب.',
+        steps: [
+            {
+                scene: 'انت اتأخرت على معاد مع صاحبك في الكافيه:',
+                them: 'Hey. I have been waiting for twenty minutes.',
+                themAr: 'أهلا. أنا مستني من عشرين دقيقة.',
+                choices: ["I am so sorry. I am late because of the traffic.", "I am so sorry. I late am because the traffic of.", "Sorry so I am. Of the traffic because late I am."],
+                correct: 0,
+                explain: '"Because of the traffic" يعني "بسبب الزحمة". بنقول I am so sorry وبعدها I am late because of the traffic، وده الترتيب الصح.',
+                phrase: { en: 'I am so sorry. I am late because of the traffic.', pr: 'آي أم سو سوري. آي أم ليت بيكوز أوف ذا ترافيك', ar: 'أنا آسف جدا. اتأخرت بسبب الزحمة' },
+            },
+            {
+                scene: 'صاحبك بيرد:',
+                them: 'It is OK. Did you try to call me?',
+                themAr: 'ولا يهمك. حاولت تتصل بيا؟',
+                choices: ["Yes, but my phone had no battery.", "Yes, but my phone no battery had.", "Yes, but battery no had my phone."],
+                correct: 0,
+                explain: '"Had no battery" يعني "البطارية خلصت". بنقول Yes, but وبعدها my phone had no battery، وده الترتيب الصح.',
+                phrase: { en: 'Yes, but my phone had no battery.', pr: 'يس بات ماي فون هاد نو باترى', ar: 'أيوه بس تليفوني البطارية خلصت' },
+            },
+            {
+                scene: 'صاحبك بيضحك:',
+                them: 'No problem. Let us order something to drink.',
+                themAr: 'مفيش مشكلة. تعالى نطلب حاجة نشربها.',
+                choices: ["Good idea. This one is on me.", "Good idea. This one on me is.", "Idea good. On me is this one."],
+                correct: 0,
+                explain: '"This one is on me" يعني "دي عليا". بنقول Good idea وبعدها this one is on me، وده الترتيب الصح.',
+                phrase: { en: 'Good idea. This one is on me.', pr: 'جود آيديا. ذيس وان إز أون مي', ar: 'فكرة حلوة. دي عليا' },
+            },
+            {
+                scene: 'صاحبك بيشكرك:',
+                them: 'Thank you. That is very kind of you.',
+                themAr: 'شكرا. ده لطف منك.',
+                choices: ["You are welcome. I will not be late again.", "You are welcome. I will be not late again.", "Welcome you are. Again late not I will be."],
+                correct: 0,
+                explain: '"I will not be late again" يعني "مش هتأخر تاني". بنقول You are welcome وبعدها I will not be late again، وده الترتيب الصح.',
+                phrase: { en: 'You are welcome. I will not be late again.', pr: 'يو آر ويلكم. آي ويل نوت بي ليت أجين', ar: 'العفو. مش هتأخر تاني' },
+            },
+        ],
+        phrases: [
+            { en: 'I am so sorry. I am late because of the traffic.', pr: 'آي أم سو سوري. آي أم ليت بيكوز أوف ذا ترافيك', ar: 'أنا آسف جدا. اتأخرت بسبب الزحمة' },
+            { en: 'Yes, but my phone had no battery.', pr: 'يس بات ماي فون هاد نو باترى', ar: 'أيوه بس تليفوني البطارية خلصت' },
+            { en: 'Good idea. This one is on me.', pr: 'جود آيديا. ذيس وان إز أون مي', ar: 'فكرة حلوة. دي عليا' },
+            { en: 'You are welcome. I will not be late again.', pr: 'يو آر ويلكم. آي ويل نوت بي ليت أجين', ar: 'العفو. مش هتأخر تاني' },
+        ],
+    },
 ];
 
 const quiz = [
