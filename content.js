@@ -2336,6 +2336,57 @@ const lessons = [
             { en: 'Thank you. Have a nice day.', pr: 'ثانك يو. هاف ا نايس داي', ar: 'شكرًا. يوم سعيد' },
         ],
     },
+    {
+        id: 'fruitmarket',
+        number: 46,
+        title: 'شراء فاكهة من السوق',
+        subtitle: 'اطلب فاكهة واسأل عن الحساب',
+        intro: 'وقفت عند بتاع فاكهة في السوق. هتطلب كيلو برتقان، وتسأله لو التفاح طازة، وتسأل عن الحساب، وتدفع. السعر في الدرس مجرد مثال للتدريب.',
+        steps: [
+            {
+                scene: 'وصلت عند بتاع الفاكهة وسألك:',
+                them: 'Good morning. What would you like?',
+                themAr: 'صباح الخير. تحب تاخد إيه؟',
+                choices: ["I would like one kilo of oranges, please.", "I like would one kilo of oranges, please.", "One kilo I would like oranges of, please."],
+                correct: 0,
+                explain: '"I would like one kilo of oranges" يعني "عايز كيلو برتقان". بنقول I would like وبعدها one kilo of oranges، وده الترتيب الصح.',
+                phrase: { en: 'I would like one kilo of oranges, please.', pr: 'آي وود لايك وان كيلو أوف أورنجز، بليز', ar: 'عايز كيلو برتقان، لو سمحت' },
+            },
+            {
+                scene: 'البياع وزن البرتقان وسألك:',
+                them: 'Here you are. Anything else?',
+                themAr: 'اتفضل. أي حاجة تانية؟',
+                choices: ["Are these apples fresh?", "These are apples fresh?", "Apples these are fresh?"],
+                correct: 0,
+                explain: '"Are these apples fresh?" يعني "التفاح ده طازة؟". بنبدأ بـ Are وبعدها these apples وبعدها fresh، وده الترتيب الصح.',
+                phrase: { en: 'Are these apples fresh?', pr: 'آر ذيز آبلز فريش', ar: 'التفاح ده طازة؟' },
+            },
+            {
+                scene: 'البياع جاوبك وإنت عايز تعرف الحساب:',
+                them: 'Yes, they are very fresh. They came this morning.',
+                themAr: 'أيوه، طازة جدًا. جت الصبح.',
+                choices: ["How much is it all together?", "How is much it all together?", "How much it is together all?"],
+                correct: 0,
+                explain: '"How much is it all together?" يعني "الحساب كله كام؟". بنبدأ بـ How much وبعدها is it وبعدها all together، وده الترتيب الصح.',
+                phrase: { en: 'How much is it all together?', pr: 'هاو ماتش إز إت أول توجيذر', ar: 'الحساب كله كام؟' },
+            },
+            {
+                scene: 'البياع قالك السعر وإنت هتدفع:',
+                them: 'It is thirty pounds.',
+                themAr: 'تلاتين جنيه.',
+                choices: ["Here you are. Thank you.", "You are here. Thank you.", "Here are you. You thank."],
+                correct: 0,
+                explain: '"Here you are" يعني "اتفضل" لما تدي حد حاجة. بنقول Here you are وبعدها Thank you، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. Thank you.', pr: 'هير يو آر. ثانك يو', ar: 'اتفضل. شكرًا' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like one kilo of oranges, please.', pr: 'آي وود لايك وان كيلو أوف أورنجز، بليز', ar: 'عايز كيلو برتقان، لو سمحت' },
+            { en: 'Are these apples fresh?', pr: 'آر ذيز آبلز فريش', ar: 'التفاح ده طازة؟' },
+            { en: 'How much is it all together?', pr: 'هاو ماتش إز إت أول توجيذر', ar: 'الحساب كله كام؟' },
+            { en: 'Here you are. Thank you.', pr: 'هير يو آر. ثانك يو', ar: 'اتفضل. شكرًا' },
+        ],
+    },
 ];
 
 const quiz = [
