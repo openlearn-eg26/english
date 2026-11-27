@@ -1622,6 +1622,57 @@ const lessons = [
             { en: 'Is there a restroom here?', pr: 'إز ذير أ ريستروم هير', ar: 'فيه دورة مياه هنا؟' },
         ],
     },
+    {
+        id: 'meeting',
+        number: 32,
+        title: 'تحديد ميعاد مع زميل',
+        subtitle: 'اتفق على وقت ومكان للقاء',
+        intro: 'زميلك في الشغل عايز يتقابل معاك. هتسأله عن الوقت اللي يناسبه، وتقوله إنت فاضي إمتى، وتتفق معاه على اللقاء، وتوعده إنك هتجيب اللي طلبه. الجمل دي بتنفع في أي شغل.',
+        steps: [
+            {
+                scene: 'زميلك في الشغل كلمك وقال:',
+                them: 'Hi. Do you have time to talk?',
+                themAr: 'أهلاً. عندك وقت نتكلم؟',
+                choices: ["Yes. When would you like to meet?", "Yes. When you would like meet?", "Yes. Would when you like to meet?"],
+                correct: 0,
+                explain: '"When would you like to meet?" يعني "تحب نتقابل إمتى؟". بنبدأ بـ When وبعدها would you وبعدها like to meet، وده الترتيب الصح.',
+                phrase: { en: 'When would you like to meet?', pr: 'ون ود يو لايك تو ميت', ar: 'تحب نتقابل إمتى؟' },
+            },
+            {
+                scene: 'زميلك سألك عن وقتك:',
+                them: 'Are you free tomorrow morning?',
+                themAr: 'إنت فاضي بكرة الصبح؟',
+                choices: ["Yes, I am free in the morning.", "Yes, I free am in the morning.", "Yes, free I am the morning in."],
+                correct: 0,
+                explain: '"I am free" يعني "أنا فاضي". بنقول I am وبعدها free، وبعدها in the morning يعني "الصبح"، وده الترتيب الصح.',
+                phrase: { en: 'I am free in the morning.', pr: 'آي أم فري إن ذا مورنينج', ar: 'أنا فاضي الصبح' },
+            },
+            {
+                scene: 'زميلك اقترح مكان اللقاء:',
+                them: 'Let us meet in my office.',
+                themAr: 'تعالى نتقابل في مكتبي.',
+                choices: ["Sounds good. See you tomorrow.", "Good sounds. You see tomorrow.", "Sounds good. Tomorrow see you."],
+                correct: 0,
+                explain: '"Sounds good" يعني "تمام، كلامك كويس". وبعدها "See you tomorrow" يعني "أشوفك بكرة"، وبنقولها بالترتيب ده.',
+                phrase: { en: 'See you tomorrow.', pr: 'سي يو تومورو', ar: 'أشوفك بكرة' },
+            },
+            {
+                scene: 'زميلك طلب منك حاجة:',
+                them: 'Please bring your laptop.',
+                themAr: 'من فضلك هات اللابتوب بتاعك.',
+                choices: ["Okay. I will bring it.", "Okay. I bring will it.", "Okay. Will I it bring."],
+                correct: 0,
+                explain: '"I will bring it" يعني "هجيبه". بنقول I will وبعدها الفعل bring وبعدها it، وده الترتيب الصح.',
+                phrase: { en: 'I will bring it.', pr: 'آي ويل برينج إت', ar: 'هجيبه معايا' },
+            },
+        ],
+        phrases: [
+            { en: 'When would you like to meet?', pr: 'ون ود يو لايك تو ميت', ar: 'تحب نتقابل إمتى؟' },
+            { en: 'I am free in the morning.', pr: 'آي أم فري إن ذا مورنينج', ar: 'أنا فاضي الصبح' },
+            { en: 'See you tomorrow.', pr: 'سي يو تومورو', ar: 'أشوفك بكرة' },
+            { en: 'I will bring it.', pr: 'آي ويل برينج إت', ar: 'هجيبه معايا' },
+        ],
+    },
 ];
 
 const quiz = [
