@@ -3407,6 +3407,57 @@ const lessons = [
             { en: 'Yes, I would love to. See you then.', pr: 'يس آي وود لاڤ تو. سي يو ذن', ar: 'أيوه يسعدني. أشوفكم وقتها' },
         ],
     },
+    {
+        id: 'helptourist',
+        number: 67,
+        title: 'ساعد سائح',
+        subtitle: 'دل سائح على طريق المتحف',
+        intro: 'المرة دي انت اللي بتساعد. سائح بيسألك على المتحف، وانت هتقوله إنك بتتكلم إنجليزي شوية، وتقوله المتحف قريب، وتدله على الطريق. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'سائح بيسألك في الشارع وانت اللي هتساعده:',
+                them: 'Excuse me. Do you speak English?',
+                themAr: 'لو سمحت. بتتكلم إنجليزي؟',
+                choices: ["Yes, a little. How can I help?", "Yes, little a. Can how I help?", "Yes, a little. I can how help?"],
+                correct: 0,
+                explain: '"How can I help" يعني "أقدر أساعدك إزاي". بنقول Yes, a little وبعدها how can I help، وده الترتيب الصح.',
+                phrase: { en: 'Yes, a little. How can I help?', pr: 'يس ا ليتل. هاو كان آي هيلب', ar: 'أيوه شوية. أقدر أساعدك إزاي؟' },
+            },
+            {
+                scene: 'السائح عايز المتحف:',
+                them: 'I am looking for the museum. Is it far?',
+                themAr: 'أنا بدور على المتحف. بعيد؟',
+                choices: ["No, it is close. Walk two streets.", "No, it close is. Two streets walk.", "No, close it is. Walk streets two."],
+                correct: 0,
+                explain: '"Walk two streets" يعني "امشي شارعين". بنقول No, it is close وبعدها walk two streets، وده الترتيب الصح.',
+                phrase: { en: 'No, it is close. Walk two streets.', pr: 'نو إت إز كلوز. ووك تو ستريتس', ar: 'لا قريب. امشي شارعين' },
+            },
+            {
+                scene: 'السائح مش متأكد:',
+                them: 'And then? Which way do I go?',
+                themAr: 'وبعدين؟ أروح ناحية فين؟',
+                choices: ["Then turn right. You will see it.", "Then right turn. See you will it.", "Turn then right. It you will see."],
+                correct: 0,
+                explain: '"You will see it" يعني "هتشوفه". بنقول Then turn right وبعدها you will see it، وده الترتيب الصح.',
+                phrase: { en: 'Then turn right. You will see it.', pr: 'ذن تيرن رايت. يو ويل سي إت', ar: 'وبعدين لف يمين. هتشوفه' },
+            },
+            {
+                scene: 'السائح فهم:',
+                them: 'Thank you so much. You are very kind.',
+                themAr: 'شكرا جدا. انت لطيف جدا.',
+                choices: ["You are welcome. Enjoy your visit.", "You welcome are. Your visit enjoy.", "Welcome you are. Enjoy visit your."],
+                correct: 0,
+                explain: '"Enjoy your visit" يعني "استمتع بزيارتك". بنقول You are welcome وبعدها enjoy your visit، وده الترتيب الصح.',
+                phrase: { en: 'You are welcome. Enjoy your visit.', pr: 'يو آر ويلكم. إنجوي يور ڤيزيت', ar: 'العفو. استمتع بزيارتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, a little. How can I help?', pr: 'يس ا ليتل. هاو كان آي هيلب', ar: 'أيوه شوية. أقدر أساعدك إزاي؟' },
+            { en: 'No, it is close. Walk two streets.', pr: 'نو إت إز كلوز. ووك تو ستريتس', ar: 'لا قريب. امشي شارعين' },
+            { en: 'Then turn right. You will see it.', pr: 'ذن تيرن رايت. يو ويل سي إت', ar: 'وبعدين لف يمين. هتشوفه' },
+            { en: 'You are welcome. Enjoy your visit.', pr: 'يو آر ويلكم. إنجوي يور ڤيزيت', ar: 'العفو. استمتع بزيارتك' },
+        ],
+    },
 ];
 
 const quiz = [
