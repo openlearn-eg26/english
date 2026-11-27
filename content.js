@@ -3866,6 +3866,57 @@ const lessons = [
             { en: 'Thank you. I will try it this weekend.', pr: 'ثانك يو. آي ويل ترآي إت ذيس ويكيند', ar: 'شكرا. هجربه آخر الأسبوع' },
         ],
     },
+    {
+        id: 'dayoff',
+        number: 76,
+        title: 'طلب إجازة',
+        subtitle: 'اطلب يوم إجازة من مديرك بأدب',
+        intro: 'انت عايز تاخد يوم إجازة وهتتكلم مع مديرك. هتسأله لو معاه دقيقة، وتطلب الإجازة، وتقوله السبب، وتوعده تخلص شغلك. المناسبة في الدرس مثال للتدريب.',
+        steps: [
+            {
+                scene: 'انت عايز تطلب إجازة من مديرك في الشغل:',
+                them: 'Come in. Is it urgent?',
+                themAr: 'اتفضل. الموضوع مستعجل؟',
+                choices: ["Not really. Do you have a minute?", "Not really. Do you a minute have?", "Really not. A minute have you do?"],
+                correct: 0,
+                explain: '"Do you have a minute" يعني "معاك دقيقة". بنقول Not really وبعدها do you have a minute، وده الترتيب الصح.',
+                phrase: { en: 'Not really. Do you have a minute?', pr: 'نوت ريلي. دو يو هاف ا مينيت', ar: 'مش أوي. معاك دقيقة؟' },
+            },
+            {
+                scene: 'المدير سايب الشغل وبيسمعك:',
+                them: 'Of course. What can I do for you?',
+                themAr: 'طبعا. أقدر أعمللك إيه؟',
+                choices: ["I would like to take a day off next Monday.", "I would like to take a off day next Monday.", "Like I would a day off take Monday next."],
+                correct: 0,
+                explain: '"Take a day off" يعني "آخد يوم إجازة". بنقول I would like to take a day off وبعدها next Monday، وده الترتيب الصح.',
+                phrase: { en: 'I would like to take a day off next Monday.', pr: 'آي وود لايك تو تيك ا دي أوف نكست مندي', ar: 'عايز آخد يوم إجازة الاتنين الجاي' },
+            },
+            {
+                scene: 'المدير بيسأل:',
+                them: 'Is there a reason? We have a busy week.',
+                themAr: 'في سبب؟ عندنا أسبوع مزدحم.',
+                choices: ["I have a family event. I will finish my work before.", "I have a family event. I finish will my work before.", "Event family I have. Before work my finish I will."],
+                correct: 0,
+                explain: '"Before" يعني "قبلها". بنقول I have a family event وبعدها I will finish my work before، وده الترتيب الصح.',
+                phrase: { en: 'I have a family event. I will finish my work before.', pr: 'آي هاف ا فاميلي إيفنت. آي ويل فينيش ماي ورك بيفور', ar: 'عندي مناسبة عائلية. هخلص شغلي قبلها' },
+            },
+            {
+                scene: 'المدير وافق:',
+                them: 'That is fine. Please send me an email.',
+                themAr: 'تمام. ابعتلي إيميل من فضلك.',
+                choices: ["Thank you very much. I will send it today.", "Thank you very much. I will it send today.", "Very much thank you. Send I will today it."],
+                correct: 0,
+                explain: '"I will send it today" يعني "هبعته النهارده". بنقول Thank you very much وبعدها I will send it today، وده الترتيب الصح.',
+                phrase: { en: 'Thank you very much. I will send it today.', pr: 'ثانك يو فيري ماتش. آي ويل سيند إت توداي', ar: 'شكرا جزيلا. هبعته النهارده' },
+            },
+        ],
+        phrases: [
+            { en: 'Not really. Do you have a minute?', pr: 'نوت ريلي. دو يو هاف ا مينيت', ar: 'مش أوي. معاك دقيقة؟' },
+            { en: 'I would like to take a day off next Monday.', pr: 'آي وود لايك تو تيك ا دي أوف نكست مندي', ar: 'عايز آخد يوم إجازة الاتنين الجاي' },
+            { en: 'I have a family event. I will finish my work before.', pr: 'آي هاف ا فاميلي إيفنت. آي ويل فينيش ماي ورك بيفور', ar: 'عندي مناسبة عائلية. هخلص شغلي قبلها' },
+            { en: 'Thank you very much. I will send it today.', pr: 'ثانك يو فيري ماتش. آي ويل سيند إت توداي', ar: 'شكرا جزيلا. هبعته النهارده' },
+        ],
+    },
 ];
 
 const quiz = [
