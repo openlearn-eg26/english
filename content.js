@@ -3968,6 +3968,57 @@ const lessons = [
             { en: 'Yes, he does. Thank you for your help.', pr: 'يس هي داز. ثانك يو فور يور هيلب', ar: 'أيوه معاه. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'changeappointment',
+        number: 78,
+        title: 'غيّر ميعادك',
+        subtitle: 'اتصل بالعيادة وغيّر يوم الميعاد',
+        intro: 'انت عندك ميعاد في العيادة ومش هتقدر تحضر. هتتصل وتقول إنك عايز تغير الميعاد، وتقول ميعادك إمتى، وتتفق على يوم جديد، وتشكر الموظف. الأيام والأوقات في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت بتتصل بالعيادة عشان تغير ميعادك:',
+                them: 'Good morning. Clinic reception. How can I help?',
+                themAr: 'صباح الخير. استقبال العيادة. أقدر أساعدك إزاي؟',
+                choices: ["Good morning. I need to change my appointment.", "Good morning. I need to my appointment change.", "Morning good. Change I need appointment my."],
+                correct: 0,
+                explain: '"Change my appointment" يعني "أغير ميعادي". بنقول Good morning وبعدها I need to change my appointment، وده الترتيب الصح.',
+                phrase: { en: 'Good morning. I need to change my appointment.', pr: 'جود مورنينج. آي نيد تو تشينج ماي أبوينتمنت', ar: 'صباح الخير. محتاج أغير ميعادي' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'Of course. What day is your appointment?',
+                themAr: 'طبعا. ميعادك أنهي يوم؟',
+                choices: ["It is on Tuesday at ten o'clock.", "It is on Tuesday at o'clock ten.", "Tuesday on it is ten at o'clock."],
+                correct: 0,
+                explain: '"At ten o\'clock" يعني "الساعة عشرة". بنقول It is on Tuesday وبعدها at ten o\'clock، وده الترتيب الصح.',
+                phrase: { en: 'It is on Tuesday at ten o\'clock.', pr: 'إت إز أون توزداي آت تين أوكلوك', ar: 'هو يوم الثلاثاء الساعة عشرة' },
+            },
+            {
+                scene: 'الموظف بيبص على الجدول:',
+                them: 'I can move it to Thursday. Is that possible?',
+                themAr: 'أقدر أنقله الخميس. ينفع؟',
+                choices: ["Yes, Thursday is fine. Is the morning free?", "Yes, Thursday is fine. Is free the morning?", "Yes, fine is Thursday. The morning free is?"],
+                correct: 0,
+                explain: '"Is the morning free" يعني "الصبح فاضي". بنقول Yes, Thursday is fine وبعدها is the morning free، وده الترتيب الصح.',
+                phrase: { en: 'Yes, Thursday is fine. Is the morning free?', pr: 'يس ثيرزداي إز فاين. إز ذا مورنينج فري', ar: 'أيوه الخميس تمام. الصبح فاضي؟' },
+            },
+            {
+                scene: 'الموظف بيأكد:',
+                them: 'Yes. I will book you at nine thirty.',
+                themAr: 'أيوه. هحجزلك الساعة تسعة ونص.',
+                choices: ["Perfect. Thank you for changing it.", "Perfect. Thank you for it changing.", "Perfect. For changing it you thank."],
+                correct: 0,
+                explain: '"Thank you for changing it" يعني "شكرا إنك غيرته". بنقول Perfect وبعدها thank you for changing it، وده الترتيب الصح.',
+                phrase: { en: 'Perfect. Thank you for changing it.', pr: 'بيرفكت. ثانك يو فور تشينجينج إت', ar: 'تمام. شكرا إنك غيرته' },
+            },
+        ],
+        phrases: [
+            { en: 'Good morning. I need to change my appointment.', pr: 'جود مورنينج. آي نيد تو تشينج ماي أبوينتمنت', ar: 'صباح الخير. محتاج أغير ميعادي' },
+            { en: 'It is on Tuesday at ten o\'clock.', pr: 'إت إز أون توزداي آت تين أوكلوك', ar: 'هو يوم الثلاثاء الساعة عشرة' },
+            { en: 'Yes, Thursday is fine. Is the morning free?', pr: 'يس ثيرزداي إز فاين. إز ذا مورنينج فري', ar: 'أيوه الخميس تمام. الصبح فاضي؟' },
+            { en: 'Perfect. Thank you for changing it.', pr: 'بيرفكت. ثانك يو فور تشينجينج إت', ar: 'تمام. شكرا إنك غيرته' },
+        ],
+    },
 ];
 
 const quiz = [
