@@ -3203,6 +3203,57 @@ const lessons = [
             { en: 'Thank you. I have to hurry.', pr: 'ثانك يو. آي هاف تو هري', ar: 'شكرا. لازم أستعجل' },
         ],
     },
+    {
+        id: 'juicestand',
+        number: 63,
+        title: 'كشك العصير',
+        subtitle: 'اطلب عصير وقول الحجم والسعر',
+        intro: 'انت عند كشك عصير وعايز تشرب حاجة طازة. هتطلب العصير، وتقول الحجم، وتسأل عن السعر، وتقول من غير سكر. الأسعار في الدرس أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'انت عند كشك عصير:',
+                them: 'Welcome. What would you like?',
+                themAr: 'أهلا بيك. تحب تشرب إيه؟',
+                choices: ["Hello. I would like a mango juice, please.", "Hello. I would like a juice mango, please.", "Hello. Like I would a mango juice, please."],
+                correct: 0,
+                explain: '"I would like a mango juice" يعني "عايز عصير مانجة". بنقول Hello وبعدها I would like a mango juice, please، وده الترتيب الصح.',
+                phrase: { en: 'Hello. I would like a mango juice, please.', pr: 'هالو. آي وود لايك ا مانجو جوس بليز', ar: 'أهلا. عايز عصير مانجة لو سمحت' },
+            },
+            {
+                scene: 'البائع بيسألك عن الحجم:',
+                them: 'Small or large?',
+                themAr: 'صغير ولا كبير؟',
+                choices: ["Large, please. How much is it?", "Please large. How is much it?", "Large, please. It is how much?"],
+                correct: 0,
+                explain: '"How much is it" يعني "بكام". بنقول Large, please وبعدها how much is it، وده الترتيب الصح.',
+                phrase: { en: 'Large, please. How much is it?', pr: 'لارج بليز. هاو ماتش إز إت', ar: 'كبير لو سمحت. بكام؟' },
+            },
+            {
+                scene: 'البائع بيرد:',
+                them: 'It is thirty pounds.',
+                themAr: 'تلاتين جنيه.',
+                choices: ["OK. Can I have it without sugar?", "OK. Can I it have without sugar?", "OK. Without sugar I can have it?"],
+                correct: 0,
+                explain: '"Without sugar" يعني "من غير سكر". بنقول OK وبعدها can I have it without sugar، وده الترتيب الصح.',
+                phrase: { en: 'OK. Can I have it without sugar?', pr: 'أوكي. كان آي هاف إت ويذاوت شوجر', ar: 'تمام. ممكن من غير سكر؟' },
+            },
+            {
+                scene: 'البائع جهز العصير:',
+                them: 'Here you go. Enjoy.',
+                themAr: 'اتفضل. بالهنا.',
+                choices: ["Thank you. It looks fresh.", "Thank you. It fresh looks.", "Thank you. Looks it fresh."],
+                correct: 0,
+                explain: '"It looks fresh" يعني "شكله طازة". بنقول Thank you وبعدها it looks fresh، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. It looks fresh.', pr: 'ثانك يو. إت لوكس فريش', ar: 'شكرا. شكله طازة' },
+            },
+        ],
+        phrases: [
+            { en: 'Hello. I would like a mango juice, please.', pr: 'هالو. آي وود لايك ا مانجو جوس بليز', ar: 'أهلا. عايز عصير مانجة لو سمحت' },
+            { en: 'Large, please. How much is it?', pr: 'لارج بليز. هاو ماتش إز إت', ar: 'كبير لو سمحت. بكام؟' },
+            { en: 'OK. Can I have it without sugar?', pr: 'أوكي. كان آي هاف إت ويذاوت شوجر', ar: 'تمام. ممكن من غير سكر؟' },
+            { en: 'Thank you. It looks fresh.', pr: 'ثانك يو. إت لوكس فريش', ar: 'شكرا. شكله طازة' },
+        ],
+    },
 ];
 
 const quiz = [
