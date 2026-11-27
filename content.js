@@ -3305,6 +3305,57 @@ const lessons = [
             { en: 'Yes, much better. Thank you very much.', pr: 'يس ماتش بيتر. ثانك يو فيري ماتش', ar: 'أيوه أحسن بكتير. شكرا جدا' },
         ],
     },
+    {
+        id: 'teachermeeting',
+        number: 65,
+        title: 'مقابلة المدرس',
+        subtitle: 'اسأل مدرس ابنك عن مستواه',
+        intro: 'انت رايح المدرسة تقابل مدرس ابنك. هتقوله انت جاي ليه، وتسأله عن مستوى ابنك، وتسأله نعمل إيه، وتشكره على وقته. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'انت بتقابل مدرس ابنك في المدرسة:',
+                them: 'Good afternoon. How can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك إزاي؟',
+                choices: ["Good afternoon. I am here about my son.", "Good afternoon. I am here about son my.", "Afternoon good. About my son here I am."],
+                correct: 0,
+                explain: '"I am here about my son" يعني "أنا هنا بخصوص ابني". بنقول Good afternoon وبعدها I am here about my son، وده الترتيب الصح.',
+                phrase: { en: 'Good afternoon. I am here about my son.', pr: 'جود آفترنون. آي أم هير أباوت ماي سن', ar: 'مساء الخير. أنا هنا بخصوص ابني' },
+            },
+            {
+                scene: 'المدرس بيسألك:',
+                them: 'Is there a problem?',
+                themAr: 'في مشكلة؟',
+                choices: ["No, no problem. How is he doing in class?", "No, no problem. How he is doing in class?", "No, problem no. Doing how is he class in?"],
+                correct: 0,
+                explain: '"How is he doing in class" يعني "مستواه إيه في الفصل". بنقول No, no problem وبعدها how is he doing in class، وده الترتيب الصح.',
+                phrase: { en: 'No, no problem. How is he doing in class?', pr: 'نو نو پروبلم. هاو إز هي دوينج إن كلاس', ar: 'لا مفيش مشكلة. مستواه إيه في الفصل؟' },
+            },
+            {
+                scene: 'المدرس بيجاوب:',
+                them: 'He is doing well, but he forgets his homework.',
+                themAr: 'مستواه كويس، بس بينسى الواجب.',
+                choices: ["I see. What can we do about it?", "I see. What we can do about it?", "I see. Do what can we it about?"],
+                correct: 0,
+                explain: '"What can we do about it" يعني "نعمل إيه في الموضوع ده". بنقول I see وبعدها what can we do about it، وده الترتيب الصح.',
+                phrase: { en: 'I see. What can we do about it?', pr: 'آي سي. وات كان وي دو أباوت إت', ar: 'فاهم. نعمل إيه في الموضوع ده؟' },
+            },
+            {
+                scene: 'المدرس بيقترح:',
+                them: 'Please check his bag every evening.',
+                themAr: 'من فضلك راجع شنطته كل مساء.',
+                choices: ["Of course. Thank you for your time.", "Of course. Thank you for time your.", "Course of. You thank for your time."],
+                correct: 0,
+                explain: '"Thank you for your time" يعني "شكرا على وقتك". بنقول Of course وبعدها thank you for your time، وده الترتيب الصح.',
+                phrase: { en: 'Of course. Thank you for your time.', pr: 'أوف كورس. ثانك يو فور يور تايم', ar: 'طبعا. شكرا على وقتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Good afternoon. I am here about my son.', pr: 'جود آفترنون. آي أم هير أباوت ماي سن', ar: 'مساء الخير. أنا هنا بخصوص ابني' },
+            { en: 'No, no problem. How is he doing in class?', pr: 'نو نو پروبلم. هاو إز هي دوينج إن كلاس', ar: 'لا مفيش مشكلة. مستواه إيه في الفصل؟' },
+            { en: 'I see. What can we do about it?', pr: 'آي سي. وات كان وي دو أباوت إت', ar: 'فاهم. نعمل إيه في الموضوع ده؟' },
+            { en: 'Of course. Thank you for your time.', pr: 'أوف كورس. ثانك يو فور يور تايم', ar: 'طبعا. شكرا على وقتك' },
+        ],
+    },
 ];
 
 const quiz = [
