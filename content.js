@@ -2438,6 +2438,57 @@ const lessons = [
             { en: 'Thank you. See you tonight.', pr: 'ثانك يو. سي يو تونايت', ar: 'شكرًا. أشوفك الليلة' },
         ],
     },
+    {
+        id: 'helptourist',
+        number: 48,
+        title: 'مساعدة سائح تايه',
+        subtitle: 'دل سائح على المتحف بالإنجليزي',
+        intro: 'سائح تاه في الشارع وبيسألك. هتقوله إنك بتتكلم إنجليزي شوية، وتدله على الطريق، وتقوله المتحف بعيد ولا قريب، وتتمنى له زيارة حلوة. الدقايق في الدرس مثال للتدريب.',
+        steps: [
+            {
+                scene: 'سائح وقفك في الشارع:',
+                them: 'Excuse me, I am lost. Do you speak English?',
+                themAr: 'لو سمحت، أنا تايه. بتتكلم إنجليزي؟',
+                choices: ["Yes, a little. How can I help you?", "Yes, little a. How I can help you?", "Yes, a little. How help can I you?"],
+                correct: 0,
+                explain: '"How can I help you?" يعني "أقدر أساعدك إزاي؟". بنبدأ بـ How وبعدها can I help you، وده الترتيب الصح.',
+                phrase: { en: 'Yes, a little. How can I help you?', pr: 'ياس، ا ليتل. هاو كان آي هيلب يو', ar: 'أيوه، شوية. أقدر أساعدك إزاي؟' },
+            },
+            {
+                scene: 'السائح قالك هو بيدور على إيه:',
+                them: 'I am looking for the museum.',
+                themAr: 'أنا بدور على المتحف.',
+                choices: ["Go straight, then turn left at the corner.", "Straight go, then left turn at the corner.", "Go straight, then at the corner turn left the."],
+                correct: 0,
+                explain: '"Go straight, then turn left" يعني "امشي على طول وبعدين لف شمال". بنقول Go straight وبعدها then turn left، وده الترتيب الصح.',
+                phrase: { en: 'Go straight, then turn left at the corner.', pr: 'جو ستريت، ذن ترن ليفت آت ذا كورنر', ar: 'امشي على طول، وبعدين لف شمال عند الناصية' },
+            },
+            {
+                scene: 'السائح عايز يعرف المسافة:',
+                them: 'Is it far from here?',
+                themAr: 'هو بعيد من هنا؟',
+                choices: ["No, it is about five minutes on foot.", "No, it is five about minutes on foot.", "No, it about is five on foot minutes."],
+                correct: 0,
+                explain: '"About five minutes on foot" يعني "حوالي خمس دقايق مشي". بنقول it is about وبعدها five minutes on foot، وده الترتيب الصح.',
+                phrase: { en: 'No, it is about five minutes on foot.', pr: 'نو، إت إز أباوت فايف مينتس أون فوت', ar: 'لا، حوالي خمس دقايق مشي' },
+            },
+            {
+                scene: 'السائح شكرك:',
+                them: 'Thank you so much.',
+                themAr: 'شكرًا جزيلًا.',
+                choices: ["You are welcome. Enjoy your visit.", "You welcome are. Enjoy visit your.", "Welcome you are. Your enjoy visit."],
+                correct: 0,
+                explain: '"Enjoy your visit" يعني "استمتع بزيارتك". بنقول You are welcome وبعدها Enjoy your visit، وده الترتيب الصح.',
+                phrase: { en: 'You are welcome. Enjoy your visit.', pr: 'يو آر ويلكم. إنجوي يور فيزيت', ar: 'العفو. استمتع بزيارتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, a little. How can I help you?', pr: 'ياس، ا ليتل. هاو كان آي هيلب يو', ar: 'أيوه، شوية. أقدر أساعدك إزاي؟' },
+            { en: 'Go straight, then turn left at the corner.', pr: 'جو ستريت، ذن ترن ليفت آت ذا كورنر', ar: 'امشي على طول، وبعدين لف شمال عند الناصية' },
+            { en: 'No, it is about five minutes on foot.', pr: 'نو، إت إز أباوت فايف مينتس أون فوت', ar: 'لا، حوالي خمس دقايق مشي' },
+            { en: 'You are welcome. Enjoy your visit.', pr: 'يو آر ويلكم. إنجوي يور فيزيت', ar: 'العفو. استمتع بزيارتك' },
+        ],
+    },
 ];
 
 const quiz = [
