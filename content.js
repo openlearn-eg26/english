@@ -4733,6 +4733,57 @@ const lessons = [
             { en: 'Here you are. Keep the bag, thank you.', pr: 'هير يو آر. كيب ذا باج ثانك يو', ar: 'اتفضل. خلي الكيس، شكرا' },
         ],
     },
+    {
+        id: 'topupphone',
+        number: 93,
+        title: 'شحن الرصيد',
+        subtitle: 'اشحن رصيد موبايلك من الكشك',
+        intro: 'رصيد موبايلك خلص وراحت كشك تشحنه. هتقول عايز تشحن، وتحدد المبلغ، وتديله رقمك، وتطلب إيصال. الموقف ده مثال للتدريب. الأرقام فيه مخترعة.',
+        steps: [
+            {
+                scene: 'رصيد موبايلك خلص وراحت كشك شحن:',
+                them: 'Hello. How can I help you?',
+                themAr: 'أهلا. أقدر أساعدك إزاي؟',
+                choices: ["I would like to top up my phone credit.", "I would like to up top my phone credit.", "I like would top up credit my phone."],
+                correct: 0,
+                explain: '"Top up my phone credit" يعني "أشحن رصيد موبايلي". بنقول I would like to وبعدها top up my phone credit، وده الترتيب الصح.',
+                phrase: { en: 'I would like to top up my phone credit.', pr: 'آي وود لايك تو توب أب ماي فون كريديت', ar: 'عايز أشحن رصيد موبايلي' },
+            },
+            {
+                scene: 'البائع بيسأل:',
+                them: 'Sure. How much credit do you want?',
+                themAr: 'أكيد. عايز رصيد بكام؟',
+                choices: ["Twenty pounds, please. Can you do it now?", "Twenty pounds, please. You can do it now?", "Pounds twenty, please. Now it do can you?"],
+                correct: 0,
+                explain: '"Can you do it now?" يعني "ممكن تعملها دلوقتي؟". بنقول Twenty pounds, please وبعدها can you do it now، وده الترتيب الصح.',
+                phrase: { en: 'Twenty pounds, please. Can you do it now?', pr: 'توينتي باوندز بليز. كان يو دو إت ناو', ar: 'عشرين جنيه لو سمحت. ممكن تعملها دلوقتي؟' },
+            },
+            {
+                scene: 'البائع بيطلب الرقم:',
+                them: 'Of course. What is your phone number?',
+                themAr: 'طبعا. رقم موبايلك كام؟',
+                choices: ["It is on this paper. Please check it carefully.", "It is on paper this. Please carefully check it.", "On this paper is it. Check carefully please it."],
+                correct: 0,
+                explain: '"Please check it carefully" يعني "راجعه كويس لو سمحت". بنقول It is on this paper وبعدها please check it carefully، وده الترتيب الصح.',
+                phrase: { en: 'It is on this paper. Please check it carefully.', pr: 'إت إز أون ذيس بيبر. بليز تشيك إت كيرفولي', ar: 'هو على الورقة دي. راجعه كويس لو سمحت' },
+            },
+            {
+                scene: 'البائع بيخلص الشحن:',
+                them: 'Done. Your credit is twenty pounds now.',
+                themAr: 'خلاص. رصيدك دلوقتي عشرين جنيه.',
+                choices: ["Great. Can I get a receipt, please?", "Great. I can get a receipt, please?", "Great. A receipt get can I, please?"],
+                correct: 0,
+                explain: '"Can I get a receipt?" يعني "ممكن إيصال؟". بنقول Great وبعدها can I get a receipt, please، وده الترتيب الصح.',
+                phrase: { en: 'Great. Can I get a receipt, please?', pr: 'جريت. كان آي جيت أ ريسيت بليز', ar: 'تمام. ممكن إيصال لو سمحت؟' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to top up my phone credit.', pr: 'آي وود لايك تو توب أب ماي فون كريديت', ar: 'عايز أشحن رصيد موبايلي' },
+            { en: 'Twenty pounds, please. Can you do it now?', pr: 'توينتي باوندز بليز. كان يو دو إت ناو', ar: 'عشرين جنيه لو سمحت. ممكن تعملها دلوقتي؟' },
+            { en: 'It is on this paper. Please check it carefully.', pr: 'إت إز أون ذيس بيبر. بليز تشيك إت كيرفولي', ar: 'هو على الورقة دي. راجعه كويس لو سمحت' },
+            { en: 'Great. Can I get a receipt, please?', pr: 'جريت. كان آي جيت أ ريسيت بليز', ar: 'تمام. ممكن إيصال لو سمحت؟' },
+        ],
+    },
 ];
 
 const quiz = [
