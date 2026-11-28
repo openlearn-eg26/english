@@ -5090,6 +5090,57 @@ const lessons = [
             { en: 'Thank you. I will wait outside.', pr: 'ثانك يو. آي ويل ويت أوتسايد', ar: 'شكرا. هستنى بره' },
         ],
     },
+    {
+        id: 'tripback',
+        number: 100,
+        title: 'صاحبك رجع من سفرية',
+        subtitle: 'اسأله عن سفريته وعن الصور',
+        intro: 'صاحبك رجع من سفرية. هترحب بيه، وتسأله عن السفرية وعن أحسن مدينة، وعن الصور، وتقبل دعوته لبيته. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'صاحبك رجع من سفرية وقابلته:',
+                them: 'Hello, my friend. I am back from my trip.',
+                themAr: 'أهلا يا صاحبي. أنا رجعت من السفرية.',
+                choices: ["Welcome back. How was your trip?", "Welcome back. How your trip was?", "Back welcome. Was how your trip?"],
+                correct: 0,
+                explain: '"How was your trip?" يعني "السفرية كانت عاملة إزاي؟". بنقول Welcome back وبعدها how was your trip، وده الترتيب الصح.',
+                phrase: { en: 'Welcome back. How was your trip?', pr: 'ويلكم باك. هاو واز يور تريب', ar: 'حمد الله على السلامة. السفرية كانت عاملة إزاي؟' },
+            },
+            {
+                scene: 'صاحبك بيحكي:',
+                them: 'It was wonderful, but I am a little tired.',
+                themAr: 'كانت رائعة، بس أنا تعبان شوية.',
+                choices: ["I am glad to hear that. Which city did you like most?", "I am glad hear that to. Which city you did like most?", "Glad I am that to hear. Most like you which city did?"],
+                correct: 0,
+                explain: '"Which city did you like most?" يعني "أنهي مدينة عجبتك أكتر؟". بنقول I am glad to hear that وبعدها which city did you like most، وده الترتيب الصح.',
+                phrase: { en: 'I am glad to hear that. Which city did you like most?', pr: 'آي أم جلاد تو هير ذات. ويتش سيتي ديد يو لايك موست', ar: 'مبسوط إني أسمع كده. أنهي مدينة عجبتك أكتر؟' },
+            },
+            {
+                scene: 'صاحبك بيرد:',
+                them: 'I liked Alexandria the most. The sea was beautiful.',
+                themAr: 'عجبتني الإسكندرية أكتر. البحر كان جميل.',
+                choices: ["That sounds nice. Did you take any photos?", "That sounds nice. You did take any photos?", "Nice that sounds. Photos any take did you?"],
+                correct: 0,
+                explain: '"Did you take any photos?" يعني "صورت صور؟". بنقول That sounds nice وبعدها did you take any photos، وده الترتيب الصح.',
+                phrase: { en: 'That sounds nice. Did you take any photos?', pr: 'ذات ساوندز نايس. ديد يو تيك إني فوتوز', ar: 'شكلها حلوة. صورت صور؟' },
+            },
+            {
+                scene: 'صاحبك بيقترح:',
+                them: 'Yes, many. Come to my house tomorrow and I will show you.',
+                themAr: 'أيوه كتير. تعالى بيتي بكرة وهوريك.',
+                choices: ["I would love to. What time should I come?", "I would love to. What time I should come?", "Love would I to. Come should I what time?"],
+                correct: 0,
+                explain: '"What time should I come?" يعني "أجي الساعة كام؟". بنقول I would love to وبعدها what time should I come، وده الترتيب الصح.',
+                phrase: { en: 'I would love to. What time should I come?', pr: 'آي وود لاف تو. وات تايم شد آي كام', ar: 'يسعدني جدا. أجي الساعة كام؟' },
+            },
+        ],
+        phrases: [
+            { en: 'Welcome back. How was your trip?', pr: 'ويلكم باك. هاو واز يور تريب', ar: 'حمد الله على السلامة. السفرية كانت عاملة إزاي؟' },
+            { en: 'I am glad to hear that. Which city did you like most?', pr: 'آي أم جلاد تو هير ذات. ويتش سيتي ديد يو لايك موست', ar: 'مبسوط إني أسمع كده. أنهي مدينة عجبتك أكتر؟' },
+            { en: 'That sounds nice. Did you take any photos?', pr: 'ذات ساوندز نايس. ديد يو تيك إني فوتوز', ar: 'شكلها حلوة. صورت صور؟' },
+            { en: 'I would love to. What time should I come?', pr: 'آي وود لاف تو. وات تايم شد آي كام', ar: 'يسعدني جدا. أجي الساعة كام؟' },
+        ],
+    },
 ];
 
 const quiz = [
