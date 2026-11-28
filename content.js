@@ -4835,6 +4835,57 @@ const lessons = [
             { en: 'Good. Please come as soon as you can. Thank you.', pr: 'جود. بليز كام أز سون أز يو كان. ثانك يو', ar: 'كويس. تعالى بأسرع وقت لو سمحت. شكرا' },
         ],
     },
+    {
+        id: 'languagecourse',
+        number: 95,
+        title: 'التسجيل في كورس',
+        subtitle: 'اتصل بالمعهد واسأل عن المواعيد',
+        intro: 'عايز تتعلم إنجليزي وبتتصل بمعهد لغات. هتقول إنك عايز تسجل، وتختار المحاضرات بالليل، وتسأل عن مدة المحاضرة. الموقف ده مثال للتدريب. المواعيد فيه مخترعة.',
+        steps: [
+            {
+                scene: 'اتصلت بمعهد عشان تسجل في كورس لغة:',
+                them: 'Good afternoon. Language center. How can I help?',
+                themAr: 'مساء الخير. معهد اللغات. أقدر أساعدك إزاي؟',
+                choices: ["I would like to register for an English course.", "I would like to register for a course English.", "I like would register for English a course."],
+                correct: 0,
+                explain: '"Register for an English course" يعني "أسجل في كورس إنجليزي". بنقول I would like to وبعدها register for an English course، وده الترتيب الصح.',
+                phrase: { en: 'I would like to register for an English course.', pr: 'آي وود لايك تو ريجستر فور أن إنجلش كورس', ar: 'عايز أسجل في كورس إنجليزي' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'Certainly. Do you prefer morning or evening classes?',
+                themAr: 'طبعا. تفضل المحاضرات الصبح ولا بالليل؟',
+                choices: ["I prefer evening classes. They start after my work.", "I prefer classes evening. They after my work start.", "Evening prefer I classes. After work my start they."],
+                correct: 0,
+                explain: '"After my work" يعني "بعد شغلي". بنقول I prefer evening classes وبعدها they start after my work، وده الترتيب الصح.',
+                phrase: { en: 'I prefer evening classes. They start after my work.', pr: 'آي بريفر إيفنينج كلاسيز. ذي ستارت آفتر ماي وورك', ar: 'أفضل محاضرات الليل. بتبدأ بعد شغلي' },
+            },
+            {
+                scene: 'الموظف بيشرح الجدول:',
+                them: 'We have classes on Sunday and Tuesday at seven.',
+                themAr: 'عندنا محاضرات يوم الأحد والتلات الساعة سبعة.',
+                choices: ["That works for me. How long is each class?", "That works for me. How long each class is?", "That for me works. Each how long is class?"],
+                correct: 0,
+                explain: '"How long is each class?" يعني "المحاضرة بتاخد قد إيه؟". بنقول That works for me وبعدها how long is each class، وده الترتيب الصح.',
+                phrase: { en: 'That works for me. How long is each class?', pr: 'ذات ووركس فور مي. هاو لونج إز إيتش كلاس', ar: 'ده مناسب ليا. المحاضرة بتاخد قد إيه؟' },
+            },
+            {
+                scene: 'الموظف بيكمل:',
+                them: 'Each class is two hours. You can start next week.',
+                themAr: 'المحاضرة ساعتين. تقدر تبدأ الأسبوع الجاي.',
+                choices: ["Wonderful. I will come to register tomorrow.", "Wonderful. I come will to register tomorrow.", "Wonderful. Tomorrow register to come will I."],
+                correct: 0,
+                explain: '"I will come to register tomorrow" يعني "هجي أسجل بكرة". بنقول Wonderful وبعدها I will come to register tomorrow، وده الترتيب الصح.',
+                phrase: { en: 'Wonderful. I will come to register tomorrow.', pr: 'وندرفول. آي ويل كام تو ريجستر تومورو', ar: 'رائع. هجي أسجل بكرة' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like to register for an English course.', pr: 'آي وود لايك تو ريجستر فور أن إنجلش كورس', ar: 'عايز أسجل في كورس إنجليزي' },
+            { en: 'I prefer evening classes. They start after my work.', pr: 'آي بريفر إيفنينج كلاسيز. ذي ستارت آفتر ماي وورك', ar: 'أفضل محاضرات الليل. بتبدأ بعد شغلي' },
+            { en: 'That works for me. How long is each class?', pr: 'ذات ووركس فور مي. هاو لونج إز إيتش كلاس', ar: 'ده مناسب ليا. المحاضرة بتاخد قد إيه؟' },
+            { en: 'Wonderful. I will come to register tomorrow.', pr: 'وندرفول. آي ويل كام تو ريجستر تومورو', ar: 'رائع. هجي أسجل بكرة' },
+        ],
+    },
 ];
 
 const quiz = [
