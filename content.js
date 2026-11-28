@@ -6416,6 +6416,57 @@ const lessons = [
             { en: 'That is very kind of you.', pr: 'ذات إز فيري كايند أوف يو', ar: 'ده لطف كبير منك.' },
         ],
     },
+    {
+        id: 'taxistop',
+        number: 126,
+        title: 'وقّف هنا',
+        subtitle: 'قول للسواق يقف جنب بيتك',
+        intro: 'إنت في تاكسي وقربت من بيتك. هتقول للسواق يقف فين، وتدفع الأجرة، وتنزل. الموقف ده مثال للتدريب. الأسعار أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في تاكسي وقربت من بيتك. السواق بيسألك:',
+                them: 'Is this the right street?',
+                themAr: 'ده الشارع الصح؟',
+                choices: ["Yes. Please stop near the green gate.", "Yes. Stop please near the gate green.", "Yes. Please near stop the green gate."],
+                correct: 0,
+                explain: '"Please stop near the green gate" يعني "لو سمحت وقّف جنب البوابة الخضرا". بنقول Yes وبعدها please stop near the green gate، وده الترتيب الصح.',
+                phrase: { en: 'Please stop near the green gate.', pr: 'بليز ستوب نير ذا جرين جيت', ar: 'لو سمحت وقّف جنب البوابة الخضرا.' },
+            },
+            {
+                scene: 'السواق بيبطّأ:',
+                them: 'Here? Or a little further?',
+                themAr: 'هنا؟ ولا بعدها شوية؟',
+                choices: ["A little further, please. After the bakery.", "A further little, please. The bakery after.", "Little a further, please. After bakery the."],
+                correct: 0,
+                explain: '"A little further" يعني "بعدها شوية". بنقول A little further وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'A little further, please.', pr: 'إيه ليتل فيرذر بليز', ar: 'بعدها شوية لو سمحت.' },
+            },
+            {
+                scene: 'السواق وقّف:',
+                them: 'We are here. The fare is forty pounds.',
+                themAr: 'وصلنا. الأجرة أربعين جنيه.',
+                choices: ["Here you are. Keep the change.", "Here are you. The change keep.", "You here are. Keep change the."],
+                correct: 0,
+                explain: '"Keep the change" يعني "خلّي الباقي". بنقول Here you are وبعدها keep the change، وده الترتيب الصح.',
+                phrase: { en: 'Keep the change.', pr: 'كيب ذا تشينج', ar: 'خلّي الباقي.' },
+            },
+            {
+                scene: 'إنت نازل من التاكسي:',
+                them: 'Thank you. Have a good day.',
+                themAr: 'شكرا. يوم سعيد.',
+                choices: ["Thank you. You too. Goodbye.", "Thank you. Too you. Goodbye.", "You thank. Too you. Goodbye."],
+                correct: 0,
+                explain: '"You too" يعني "وإنت كمان". بنقول Thank you وبعدها you too، وده الترتيب الصح.',
+                phrase: { en: 'You too.', pr: 'يو تو', ar: 'وإنت كمان.' },
+            },
+        ],
+        phrases: [
+            { en: 'Please stop near the green gate.', pr: 'بليز ستوب نير ذا جرين جيت', ar: 'لو سمحت وقّف جنب البوابة الخضرا.' },
+            { en: 'A little further, please.', pr: 'إيه ليتل فيرذر بليز', ar: 'بعدها شوية لو سمحت.' },
+            { en: 'Keep the change.', pr: 'كيب ذا تشينج', ar: 'خلّي الباقي.' },
+            { en: 'You too.', pr: 'يو تو', ar: 'وإنت كمان.' },
+        ],
+    },
 ];
 
 const quiz = [
