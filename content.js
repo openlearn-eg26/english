@@ -6824,6 +6824,57 @@ const lessons = [
             { en: 'Thank you for understanding.', pr: 'ثانك يو فور أندرستاندينج', ar: 'شكرا إنك متفهّم.' },
         ],
     },
+    {
+        id: 'wrongnumber',
+        number: 134,
+        title: 'رقم غلط',
+        subtitle: 'اتصلت برقم غلط واعتذرت',
+        intro: 'إنت اتصلت بصاحبك بس واحد غريب رد. هتتأكد من الرقم، وتعتذر، وتقفل بأدب. الموقف ده مثال للتدريب. الأسماء والأرقام أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت اتصلت بصاحبك بس واحد غريب رد:',
+                them: 'Hello?',
+                themAr: 'ألو؟',
+                choices: ["Hello. Is this Samir?", "Hello. This is Samir is?", "Hello. Is Samir this?"],
+                correct: 0,
+                explain: '"Is this Samir?" يعني "ده سمير؟". بنقول Hello وبعدها is this Samir، وده الترتيب الصح.',
+                phrase: { en: 'Is this Samir?', pr: 'إز ذيس سمير', ar: 'ده سمير؟' },
+            },
+            {
+                scene: 'الراجل بيرد:',
+                them: 'No, I am sorry. I think you have the wrong number.',
+                themAr: 'لا آسف. أظن إنك غلطان في الرقم.',
+                choices: ["Oh, I am sorry. I dialed the wrong number.", "Oh, I am sorry. I the wrong number dialed.", "Oh, sorry I am. Dialed I wrong the number."],
+                correct: 0,
+                explain: '"I dialed the wrong number" يعني "أنا اتصلت برقم غلط". بنقول Oh, I am sorry وبعدها I dialed the wrong number، وده الترتيب الصح.',
+                phrase: { en: 'I dialed the wrong number.', pr: 'آي دايلد ذا رونج نمبر', ar: 'أنا اتصلت برقم غلط.' },
+            },
+            {
+                scene: 'الراجل بيوضّح:',
+                them: 'No, this is a different number. That is okay.',
+                themAr: 'لا ده رقم تاني. مفيش مشكلة.',
+                choices: ["Thank you. I will check the number again.", "Thank you. I check will again the number.", "You thank. The number again will I check."],
+                correct: 0,
+                explain: '"I will check the number again" يعني "هراجع الرقم تاني". بنقول Thank you وبعدها I will check the number again، وده الترتيب الصح.',
+                phrase: { en: 'I will check the number again.', pr: 'آي ويل تشيك ذا نمبر أجين', ar: 'هراجع الرقم تاني.' },
+            },
+            {
+                scene: 'الراجل بيقفل:',
+                them: 'No problem. Goodbye.',
+                themAr: 'ولا يهمك. مع السلامة.',
+                choices: ["Sorry again. Have a nice day.", "Sorry again. A nice day have.", "Again sorry. Nice day a have."],
+                correct: 0,
+                explain: '"Have a nice day" يعني "يوم سعيد". بنقول Sorry again وبعدها have a nice day، وده الترتيب الصح.',
+                phrase: { en: 'Have a nice day.', pr: 'هاف إيه نايس داي', ar: 'يوم سعيد.' },
+            },
+        ],
+        phrases: [
+            { en: 'Is this Samir?', pr: 'إز ذيس سمير', ar: 'ده سمير؟' },
+            { en: 'I dialed the wrong number.', pr: 'آي دايلد ذا رونج نمبر', ar: 'أنا اتصلت برقم غلط.' },
+            { en: 'I will check the number again.', pr: 'آي ويل تشيك ذا نمبر أجين', ar: 'هراجع الرقم تاني.' },
+            { en: 'Have a nice day.', pr: 'هاف إيه نايس داي', ar: 'يوم سعيد.' },
+        ],
+    },
 ];
 
 const quiz = [
