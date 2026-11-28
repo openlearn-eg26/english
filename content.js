@@ -5651,6 +5651,57 @@ const lessons = [
             { en: 'That is better. I will take it, please.', pr: 'ذات إز بيتر. آي ويل تيك إت، بليز', ar: 'ده أحسن. هاخدها لو سمحت' },
         ],
     },
+    {
+        id: 'findproduct',
+        number: 111,
+        title: 'دوّر على حاجة',
+        subtitle: 'اسأل موظف المحل فين المنتج',
+        intro: 'إنت في محل كبير وبتدور على فرشة أسنان. هتقول إنت بتدور على إيه، وتسأل عن مكانها، وتسأل عن حجم صغير للسفر. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في محل كبير وبتدور على حاجة ومش لاقيها:',
+                them: 'Excuse me. Can I help you find something?',
+                themAr: 'لو سمحت. أقدر أساعدك تلاقي حاجة؟',
+                choices: ["Yes, I am looking for a toothbrush.", "Yes, I am looking for toothbrush a.", "Yes, looking I am for a toothbrush."],
+                correct: 0,
+                explain: '"I am looking for" يعني "بدور على". بنقول Yes وبعدها I am looking for a toothbrush، وده الترتيب الصح.',
+                phrase: { en: 'I am looking for a toothbrush.', pr: 'آي أم لوكينج فور أ توثبراش', ar: 'بدور على فرشة أسنان' },
+            },
+            {
+                scene: 'الموظف بيشاور:',
+                them: 'They are in aisle five, next to the soap.',
+                themAr: 'في الممر الخامس، جنب الصابون.',
+                choices: ["Thank you. Where is aisle five?", "Thank you. Where aisle five is?", "Thank you. Is where five aisle?"],
+                correct: 0,
+                explain: '"Where is aisle five?" يعني "الممر الخامس فين؟". بنقول Thank you وبعدها where is aisle five، وده الترتيب الصح.',
+                phrase: { en: 'Where is aisle five?', pr: 'وير إز آيل فايف', ar: 'الممر الخامس فين؟' },
+            },
+            {
+                scene: 'الموظف بيوضح:',
+                them: 'It is at the back of the store, on the left.',
+                themAr: 'في آخر المحل ناحية الشمال.',
+                choices: ["I see. Do you have a small one for travel?", "I see. You have a small one for travel do?", "I see. Small do you have one travel for?"],
+                correct: 0,
+                explain: '"A small one for travel" يعني "واحدة صغيرة للسفر". بنقول I see وبعدها do you have a small one for travel، وده الترتيب الصح.',
+                phrase: { en: 'Do you have a small one for travel?', pr: 'دو يو هاف أ سمول وان فور ترافل', ar: 'عندكم واحدة صغيرة للسفر؟' },
+            },
+            {
+                scene: 'الموظف بيرد:',
+                them: 'Yes, we do. It is next to the large ones.',
+                themAr: 'أيوه عندنا. جنب الكبيرة.',
+                choices: ["Great. Thank you for your help.", "Great. Thank you for help your.", "Great. Your help for thank you."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Great وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'I am looking for a toothbrush.', pr: 'آي أم لوكينج فور أ توثبراش', ar: 'بدور على فرشة أسنان' },
+            { en: 'Where is aisle five?', pr: 'وير إز آيل فايف', ar: 'الممر الخامس فين؟' },
+            { en: 'Do you have a small one for travel?', pr: 'دو يو هاف أ سمول وان فور ترافل', ar: 'عندكم واحدة صغيرة للسفر؟' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
