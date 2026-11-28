@@ -5345,6 +5345,57 @@ const lessons = [
             { en: 'Thank you. See you at four.', pr: 'ثانك يو. سي يو آت فور', ar: 'شكرا. أشوفك الساعة أربعة' },
         ],
     },
+    {
+        id: 'schoolpickup',
+        number: 105,
+        title: 'مكتب المدرسة',
+        subtitle: 'اسأل عن ميعاد خروج ابنك من المدرسة',
+        intro: 'إنت أب وعايز تعرف ميعاد خروج ابنك من المدرسة. هتسأل عن الميعاد، وتقول إنك هتاخده، وتدي اسمه وفصله. الأسماء والمواعيد في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت أب وبتكلم مكتب المدرسة بالتليفون:',
+                them: 'School office. How can I help you?',
+                themAr: 'مكتب المدرسة. أقدر أساعدك إزاي؟',
+                choices: ["Hello. What time does school finish today?", "Hello. What time school does finish today?", "Hello. School what time finish does today?"],
+                correct: 0,
+                explain: '"What time does school finish?" يعني "المدرسة بتخلص الساعة كام؟". بنقول Hello وبعدها what time does school finish today، وده الترتيب الصح.',
+                phrase: { en: 'What time does school finish today?', pr: 'وات تايم داز سكول فينيش تودي', ar: 'المدرسة بتخلص الساعة كام النهارده؟' },
+            },
+            {
+                scene: 'موظف المدرسة بيرد:',
+                them: 'Today it finishes at two o\'clock.',
+                themAr: 'النهارده بتخلص الساعة اتنين.',
+                choices: ["Thank you. I will pick up my son at two.", "Thank you. I pick up will my son at two.", "Thank you. My son I will up pick two at."],
+                correct: 0,
+                explain: '"I will pick up my son" يعني "هاخد ابني". بنقول Thank you وبعدها I will pick up my son at two، وده الترتيب الصح.',
+                phrase: { en: 'I will pick up my son at two.', pr: 'آي ويل بيك آب ماي سان آت تو', ar: 'هاخد ابني الساعة اتنين' },
+            },
+            {
+                scene: 'موظف المدرسة بيسأل:',
+                them: 'What is his name and class, please?',
+                themAr: 'اسمه إيه وفصله إيه لو سمحت؟',
+                choices: ["His name is Omar. He is in class four.", "His name Omar is. He in class is four.", "Name his is Omar. Four class he is in."],
+                correct: 0,
+                explain: '"He is in class four" يعني "هو في الفصل الرابع". بنقول His name is Omar وبعدها he is in class four، وده الترتيب الصح.',
+                phrase: { en: 'His name is Omar. He is in class four.', pr: 'هيز نيم إز عمر. هي إز إن كلاس فور', ar: 'اسمه عمر. هو في الفصل الرابع' },
+            },
+            {
+                scene: 'موظف المدرسة بيأكد:',
+                them: 'Good. Please wait at the main gate.',
+                themAr: 'تمام. من فضلك استنى عند البوابة الرئيسية.',
+                choices: ["Of course. Thank you for your help.", "Of course. Thank you for help your.", "Of course. Your help for thank you."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Of course وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'What time does school finish today?', pr: 'وات تايم داز سكول فينيش تودي', ar: 'المدرسة بتخلص الساعة كام النهارده؟' },
+            { en: 'I will pick up my son at two.', pr: 'آي ويل بيك آب ماي سان آت تو', ar: 'هاخد ابني الساعة اتنين' },
+            { en: 'His name is Omar. He is in class four.', pr: 'هيز نيم إز عمر. هي إز إن كلاس فور', ar: 'اسمه عمر. هو في الفصل الرابع' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
