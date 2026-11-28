@@ -6008,6 +6008,57 @@ const lessons = [
             { en: 'Please send me the address.', pr: 'بليز سيند مي ذي أدريس', ar: 'ابعتلي العنوان لو سمحت' },
         ],
     },
+    {
+        id: 'ticketbooth',
+        number: 118,
+        title: 'شباك التذاكر',
+        subtitle: 'اشتري تذاكر لموقع أثري',
+        intro: 'إنت مع أسرتك قدام شباك تذاكر موقع أثري. هتطلب التذاكر، وتسأل عن ميعاد القفل، وتسأل عن التصوير. الأسعار والمواعيد في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت قدام شباك التذاكر في موقع أثري مع أسرتك:',
+                them: 'Good morning. How many tickets do you need?',
+                themAr: 'صباح الخير. محتاج كام تذكرة؟',
+                choices: ["Four tickets, please. Two adults and two children.", "Four tickets, please. Two adults and children two.", "Tickets four, please. Adults two and two children."],
+                correct: 0,
+                explain: '"Two adults and two children" يعني "اتنين كبار واتنين أطفال". بنقول Four tickets, please وبعدها two adults and two children، وده الترتيب الصح.',
+                phrase: { en: 'Four tickets, please. Two adults and two children.', pr: 'فور تيكتس، بليز. تو أدلتس أند تو تشيلدرن', ar: 'أربع تذاكر لو سمحت. اتنين كبار واتنين أطفال' },
+            },
+            {
+                scene: 'موظف الشباك بيحسب:',
+                them: 'The adult ticket is two hundred pounds. Children pay half.',
+                themAr: 'تذكرة الكبير مئتين جنيه. والأطفال بنص السعر.',
+                choices: ["Okay. What time do you close today?", "Okay. What time you close do today?", "Okay. Close what time do you today?"],
+                correct: 0,
+                explain: '"What time do you close?" يعني "بتقفلوا الساعة كام؟". بنقول Okay وبعدها what time do you close today، وده الترتيب الصح.',
+                phrase: { en: 'What time do you close today?', pr: 'وات تايم دو يو كلوز تودي', ar: 'بتقفلوا الساعة كام النهارده؟' },
+            },
+            {
+                scene: 'موظف الشباك بيرد:',
+                them: 'We close at five o\'clock. The last entry is at four.',
+                themAr: 'بنقفل الساعة خمسة. وآخر دخول الساعة أربعة.',
+                choices: ["Thank you. Can we take photos inside?", "Thank you. We can take photos inside?", "Thank you. Photos take can we inside?"],
+                correct: 0,
+                explain: '"Can we take photos?" يعني "نقدر نصور؟". بنقول Thank you وبعدها can we take photos inside، وده الترتيب الصح.',
+                phrase: { en: 'Can we take photos inside?', pr: 'كان وي تيك فوتوز إنسايد', ar: 'نقدر نصور جوه؟' },
+            },
+            {
+                scene: 'موظف الشباك بيوضح:',
+                them: 'Yes, you can take photos, but please do not touch the walls.',
+                themAr: 'أيوه تقدر تصور، بس من فضلك متلمسش الحيطان.',
+                choices: ["Of course. Thank you for telling us.", "Of course. Thank you for us telling.", "Of course. Telling us for thank you."],
+                correct: 0,
+                explain: '"Thank you for telling us" يعني "شكرا إنك قلتلنا". بنقول Of course وبعدها thank you for telling us، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for telling us.', pr: 'ثانك يو فور تيلينج أس', ar: 'شكرا إنك قلتلنا' },
+            },
+        ],
+        phrases: [
+            { en: 'Four tickets, please. Two adults and two children.', pr: 'فور تيكتس، بليز. تو أدلتس أند تو تشيلدرن', ar: 'أربع تذاكر لو سمحت. اتنين كبار واتنين أطفال' },
+            { en: 'What time do you close today?', pr: 'وات تايم دو يو كلوز تودي', ar: 'بتقفلوا الساعة كام النهارده؟' },
+            { en: 'Can we take photos inside?', pr: 'كان وي تيك فوتوز إنسايد', ar: 'نقدر نصور جوه؟' },
+            { en: 'Thank you for telling us.', pr: 'ثانك يو فور تيلينج أس', ar: 'شكرا إنك قلتلنا' },
+        ],
+    },
 ];
 
 const quiz = [
