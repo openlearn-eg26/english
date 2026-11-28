@@ -5447,6 +5447,57 @@ const lessons = [
             { en: 'It fits well now. Thank you very much.', pr: 'إت فيتس ويل ناو. ثانك يو فيري ماتش', ar: 'مقاسه مظبوط دلوقتي. شكرا جدا' },
         ],
     },
+    {
+        id: 'watchbattery',
+        number: 107,
+        title: 'محل الساعات',
+        subtitle: 'اطلب تغيير بطارية الساعة',
+        intro: 'ساعتك وقفت وإنت في محل الساعات. هتشرح المشكلة، وتسأل عن الوقت والسعر، وتوافق على التصليح. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'ساعتك وقفت وإنت داخل محل ساعات:',
+                them: 'Good evening. How can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك إزاي؟',
+                choices: ["My watch has stopped. Can you check it?", "My watch stopped has. Can you it check?", "Watch my has stopped. Check you can it?"],
+                correct: 0,
+                explain: '"My watch has stopped" يعني "ساعتي وقفت". بنقول My watch has stopped وبعدها can you check it، وده الترتيب الصح.',
+                phrase: { en: 'My watch has stopped. Can you check it?', pr: 'ماي ووتش هاز ستوبد. كان يو تشيك إت', ar: 'ساعتي وقفت. تقدر تفحصها؟' },
+            },
+            {
+                scene: 'البائع بيفتح الساعة ويفحصها:',
+                them: 'I think the battery is old. I can change it.',
+                themAr: 'أظن البطارية قديمة. أقدر أغيرها.',
+                choices: ["Yes, please. How long will it take?", "Yes, please. How long it will take?", "Yes, please. Long how will take it?"],
+                correct: 0,
+                explain: '"How long will it take?" يعني "هياخد قد إيه؟". بنقول Yes, please وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'Yes, please. How long will it take?', pr: 'يس، بليز. هاو لونج ويل إت تيك', ar: 'أيوه لو سمحت. هياخد قد إيه؟' },
+            },
+            {
+                scene: 'البائع بيرد:',
+                them: 'Only ten minutes. You can wait here.',
+                themAr: 'عشر دقايق بس. تقدر تستنى هنا.',
+                choices: ["Okay. How much is the new battery?", "Okay. How much the new battery is?", "Okay. Is how much battery new the?"],
+                correct: 0,
+                explain: '"How much is the new battery?" يعني "البطارية الجديدة بكام؟". بنقول Okay وبعدها how much is the new battery، وده الترتيب الصح.',
+                phrase: { en: 'How much is the new battery?', pr: 'هاو ماتش إز ذا نيو باتري', ar: 'البطارية الجديدة بكام؟' },
+            },
+            {
+                scene: 'البائع بيقولك السعر:',
+                them: 'It is thirty pounds. It also has a one year guarantee.',
+                themAr: 'تلاتين جنيه. وفيها ضمان سنة.',
+                choices: ["That sounds good. Please go ahead.", "That good sounds. Please ahead go.", "That sounds good. Go please ahead."],
+                correct: 0,
+                explain: '"Please go ahead" يعني "اتفضل كمل". بنقول That sounds good وبعدها please go ahead، وده الترتيب الصح.',
+                phrase: { en: 'That sounds good. Please go ahead.', pr: 'ذات ساوندز جود. بليز جو أهيد', ar: 'ده كويس. اتفضل كمل' },
+            },
+        ],
+        phrases: [
+            { en: 'My watch has stopped. Can you check it?', pr: 'ماي ووتش هاز ستوبد. كان يو تشيك إت', ar: 'ساعتي وقفت. تقدر تفحصها؟' },
+            { en: 'Yes, please. How long will it take?', pr: 'يس، بليز. هاو لونج ويل إت تيك', ar: 'أيوه لو سمحت. هياخد قد إيه؟' },
+            { en: 'How much is the new battery?', pr: 'هاو ماتش إز ذا نيو باتري', ar: 'البطارية الجديدة بكام؟' },
+            { en: 'That sounds good. Please go ahead.', pr: 'ذات ساوندز جود. بليز جو أهيد', ar: 'ده كويس. اتفضل كمل' },
+        ],
+    },
 ];
 
 const quiz = [
