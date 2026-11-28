@@ -6263,6 +6263,57 @@ const lessons = [
             { en: 'Yes, it works. Thank you for your help.', pr: 'يس، إت ووركس. ثانك يو فور يور هيلب', ar: 'أيوه شغالة. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'hotelbooking',
+        number: 123,
+        title: 'حجز أوضة',
+        subtitle: 'احجز أوضة في فندق بالتليفون',
+        intro: 'عايز أوضة في فندق الليلة دي، فاتصلت بالفندق. هتسأل عن الأوضة والسعر والخدمات، وتقول اسمك. الأسعار والأسماء في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت بتتصل بفندق عشان تحجز أوضة الليلة دي:',
+                them: 'Hotel Nile View. How can I help you?',
+                themAr: 'فندق نايل فيو. أقدر أساعدك إزاي؟',
+                choices: ["Hello. Do you have a room for tonight?", "Hello. You have a room for tonight do?", "Hello. A room do you have tonight for?"],
+                correct: 0,
+                explain: '"A room for tonight" يعني "أوضة لليلة دي". بنقول Hello وبعدها do you have a room for tonight، وده الترتيب الصح.',
+                phrase: { en: 'Do you have a room for tonight?', pr: 'دو يو هاف أ روم فور تونايت', ar: 'عندكم أوضة لليلة دي؟' },
+            },
+            {
+                scene: 'موظف الفندق بيراجع:',
+                them: 'Yes, we do. Would you like a single or a double room?',
+                themAr: 'أيوه عندنا. تحب أوضة سنجل ولا دبل؟',
+                choices: ["A double room, please. How much is it per night?", "A room double, please. How much it is per night?", "Double a room, please. Per night how much is it?"],
+                correct: 0,
+                explain: '"Per night" يعني "في الليلة". بنقول A double room, please وبعدها how much is it per night، وده الترتيب الصح.',
+                phrase: { en: 'A double room, please. How much is it per night?', pr: 'أ دابل روم، بليز. هاو ماتش إز إت بر نايت', ar: 'أوضة دبل لو سمحت. بكام في الليلة؟' },
+            },
+            {
+                scene: 'موظف الفندق بيرد:',
+                them: 'It is one thousand two hundred pounds, with breakfast.',
+                themAr: 'ألف ومتين جنيه، مع الفطار.',
+                choices: ["That is fine. Is there a pool or a gym?", "That is fine. Is there pool a or gym a?", "That fine is. A pool or a gym is there?"],
+                correct: 0,
+                explain: '"A pool or a gym" يعني "حمام سباحة أو جيم". بنقول That is fine وبعدها is there a pool or a gym، وده الترتيب الصح.',
+                phrase: { en: 'Is there a pool or a gym?', pr: 'إز ذير أ بول أور أ جيم', ar: 'فيه حمام سباحة أو جيم؟' },
+            },
+            {
+                scene: 'موظف الفندق بيوضح:',
+                them: 'There is a small gym. May I have your name, please?',
+                themAr: 'فيه جيم صغير. ممكن اسمك لو سمحت؟',
+                choices: ["My name is Karim. I will arrive at eight.", "My name Karim is. I arrive will at eight.", "Name my is Karim. Eight at arrive will I."],
+                correct: 0,
+                explain: '"I will arrive at eight" يعني "هوصل الساعة تمانية". بنقول My name is Karim وبعدها I will arrive at eight، وده الترتيب الصح.',
+                phrase: { en: 'My name is Karim. I will arrive at eight.', pr: 'ماي نيم إز كريم. آي ويل أرايف آت إيت', ar: 'اسمي كريم. هوصل الساعة تمانية' },
+            },
+        ],
+        phrases: [
+            { en: 'Do you have a room for tonight?', pr: 'دو يو هاف أ روم فور تونايت', ar: 'عندكم أوضة لليلة دي؟' },
+            { en: 'A double room, please. How much is it per night?', pr: 'أ دابل روم، بليز. هاو ماتش إز إت بر نايت', ar: 'أوضة دبل لو سمحت. بكام في الليلة؟' },
+            { en: 'Is there a pool or a gym?', pr: 'إز ذير أ بول أور أ جيم', ar: 'فيه حمام سباحة أو جيم؟' },
+            { en: 'My name is Karim. I will arrive at eight.', pr: 'ماي نيم إز كريم. آي ويل أرايف آت إيت', ar: 'اسمي كريم. هوصل الساعة تمانية' },
+        ],
+    },
 ];
 
 const quiz = [
