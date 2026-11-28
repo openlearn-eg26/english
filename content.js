@@ -7028,6 +7028,57 @@ const lessons = [
             { en: 'I hope you can come.', pr: 'آي هوب يو كان كام', ar: 'أتمنى تقدر تيجي.' },
         ],
     },
+    {
+        id: 'introfriend',
+        number: 138,
+        title: 'عرّف صاحبك',
+        subtitle: 'عرّف صاحبك على زميلك',
+        intro: 'إنت ماشي مع صاحبك وقابلتوا زميلك. هتعرّفهم على بعض، وتتكلموا شوية، وتودّعوا بعض. الموقف ده مثال للتدريب. الأسماء والمدد أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت ماشي مع صاحبك آدم ومقابلتوا زميلك عمر في الشغل. عمر بيسلّم:',
+                them: 'Hi! Good to see you.',
+                themAr: 'أهلا! حلو إني شفتك.',
+                choices: ["Hi, Omar. This is my friend, Adam.", "Hi, Omar. This my friend is, Adam.", "Hi, Omar. Is this friend my, Adam."],
+                correct: 0,
+                explain: '"This is my friend, Adam" يعني "ده صاحبي آدم". بنقول Hi, Omar وبعدها this is my friend, Adam، وده الترتيب الصح.',
+                phrase: { en: 'This is my friend, Adam.', pr: 'ذيس إز ماي فريند آدم', ar: 'ده صاحبي آدم.' },
+            },
+            {
+                scene: 'زميلك بيسلّم:',
+                them: 'Nice to meet you, Adam. How do you two know each other?',
+                themAr: 'أهلا يا آدم. تعرفوا بعض منين؟',
+                choices: ["We work in the same office.", "We in the same office work.", "Work we in the same office."],
+                correct: 0,
+                explain: '"We work in the same office" يعني "بنشتغل في نفس المكتب". بنقول We work وبعدها in the same office، وده الترتيب الصح.',
+                phrase: { en: 'We work in the same office.', pr: 'وي ورك إن ذا سيم أوفيس', ar: 'بنشتغل في نفس المكتب.' },
+            },
+            {
+                scene: 'صاحبك بيسأل:',
+                them: 'Oh, nice. How long have you worked there?',
+                themAr: 'حلو. بقالك قد إيه بتشتغل هناك؟',
+                choices: ["I have worked there for three years.", "I have there worked for three years.", "I worked have there for three years."],
+                correct: 0,
+                explain: '"I have worked there for three years" يعني "بقالي تلات سنين بشتغل هناك". بنقول I have worked there وبعدها for three years، وده الترتيب الصح.',
+                phrase: { en: 'I have worked there for three years.', pr: 'آي هاف وركت ذير فور ثري يرز', ar: 'بقالي تلات سنين بشتغل هناك.' },
+            },
+            {
+                scene: 'بعد شوية الكلام خلص وعمر بيمشي:',
+                them: 'It was nice meeting you both. See you soon.',
+                themAr: 'كان حلو أقابلكم. أشوفكم قريب.',
+                choices: ["Nice meeting you too. See you soon.", "Nice you meeting too. You see soon.", "Meeting nice you too. See soon you."],
+                correct: 0,
+                explain: '"Nice meeting you too" يعني "وأنا كمان حلو إني قابلتك". بنقول Nice meeting you too وبعدها see you soon، وده الترتيب الصح.',
+                phrase: { en: 'Nice meeting you too.', pr: 'نايس ميتينج يو تو', ar: 'وأنا كمان حلو إني قابلتك.' },
+            },
+        ],
+        phrases: [
+            { en: 'This is my friend, Adam.', pr: 'ذيس إز ماي فريند آدم', ar: 'ده صاحبي آدم.' },
+            { en: 'We work in the same office.', pr: 'وي ورك إن ذا سيم أوفيس', ar: 'بنشتغل في نفس المكتب.' },
+            { en: 'I have worked there for three years.', pr: 'آي هاف وركت ذير فور ثري يرز', ar: 'بقالي تلات سنين بشتغل هناك.' },
+            { en: 'Nice meeting you too.', pr: 'نايس ميتينج يو تو', ar: 'وأنا كمان حلو إني قابلتك.' },
+        ],
+    },
 ];
 
 const quiz = [
