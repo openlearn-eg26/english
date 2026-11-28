@@ -6365,6 +6365,57 @@ const lessons = [
             { en: 'Just water, please. Thank you.', pr: 'جاست ووتر، بليز. ثانك يو', ar: 'مياه بس لو سمحت. شكرا' },
         ],
     },
+    {
+        id: 'borrowcharger',
+        number: 125,
+        title: 'شاحن موبايل',
+        subtitle: 'اطلب من زميلك يسلفك شاحن',
+        intro: 'موبايلك على وشك يفصل وإنت في الشغل. هتطلب شاحن من زميلك، وتسأل ينفع تستخدمه قد إيه، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'موبايلك فاضل فيه شحن قليل وإنت في الشغل. زميلك قاعد جنبك:',
+                them: 'Hi. Do you need something?',
+                themAr: 'أهلا. محتاج حاجة؟',
+                choices: ["Yes. Do you have a phone charger?", "Yes. Do you a phone charger have?", "Yes. Have you phone a charger?"],
+                correct: 0,
+                explain: '"Do you have a phone charger?" يعني "معاك شاحن موبايل؟". بنقول Yes وبعدها do you have a phone charger، وده الترتيب الصح.',
+                phrase: { en: 'Do you have a phone charger?', pr: 'دو يو هاف إيه فون شارجر', ar: 'معاك شاحن موبايل؟' },
+            },
+            {
+                scene: 'زميلك بيرد:',
+                them: 'Yes, I do. What kind of phone do you have?',
+                themAr: 'أيوه معايا. موبايلك نوعه إيه؟',
+                choices: ["It is a small Android phone.", "It is a phone small Android.", "Is it Android small a phone."],
+                correct: 0,
+                explain: '"It is a small Android phone" يعني "هو موبايل أندرويد صغير". بنقول It is وبعدها a small Android phone، وده الترتيب الصح.',
+                phrase: { en: 'It is a small Android phone.', pr: 'إت إز إيه سمول أندرويد فون', ar: 'هو موبايل أندرويد صغير.' },
+            },
+            {
+                scene: 'زميلك بيدّيك الشاحن:',
+                them: 'Here you go. You can use it at my desk.',
+                themAr: 'اتفضل. تقدر تشحن على مكتبي.',
+                choices: ["Thank you. Can I use it for twenty minutes?", "Thank you. I can use it for twenty minutes?", "Thank you. Can use I it twenty for minutes?"],
+                correct: 0,
+                explain: '"Can I use it for twenty minutes?" يعني "ينفع أستخدمه عشرين دقيقة؟". بنقول Thank you وبعدها can I use it for twenty minutes، وده الترتيب الصح.',
+                phrase: { en: 'Can I use it for twenty minutes?', pr: 'كان آي يوز إت فور توينتي مينيتس', ar: 'ينفع أستخدمه عشرين دقيقة؟' },
+            },
+            {
+                scene: 'زميلك موافق:',
+                them: 'Of course. Take your time.',
+                themAr: 'طبعا. خد وقتك.',
+                choices: ["That is very kind of you. Thanks again.", "That is kind very of you. Again thanks.", "That kind is very you of. Thanks again."],
+                correct: 0,
+                explain: '"That is very kind of you" يعني "ده لطف كبير منك". بنقول That is very kind of you وبعدها Thanks again، وده الترتيب الصح.',
+                phrase: { en: 'That is very kind of you.', pr: 'ذات إز فيري كايند أوف يو', ar: 'ده لطف كبير منك.' },
+            },
+        ],
+        phrases: [
+            { en: 'Do you have a phone charger?', pr: 'دو يو هاف إيه فون شارجر', ar: 'معاك شاحن موبايل؟' },
+            { en: 'It is a small Android phone.', pr: 'إت إز إيه سمول أندرويد فون', ar: 'هو موبايل أندرويد صغير.' },
+            { en: 'Can I use it for twenty minutes?', pr: 'كان آي يوز إت فور توينتي مينيتس', ar: 'ينفع أستخدمه عشرين دقيقة؟' },
+            { en: 'That is very kind of you.', pr: 'ذات إز فيري كايند أوف يو', ar: 'ده لطف كبير منك.' },
+        ],
+    },
 ];
 
 const quiz = [
