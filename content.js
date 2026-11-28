@@ -5600,6 +5600,57 @@ const lessons = [
             { en: 'I will come back in ten minutes.', pr: 'آي ويل كام باك إن تن مينتس', ar: 'هرجع بعد عشر دقايق' },
         ],
     },
+    {
+        id: 'dataplan',
+        number: 110,
+        title: 'باقة الإنترنت',
+        subtitle: 'اسأل عن باقة إنترنت شهرية للموبايل',
+        intro: 'عايز باقة إنترنت شهرية لموبايلك. هتسأل عن الباقات والأسعار، وتختار الأنسب. الأسعار والأرقام في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في فرع شركة المحمول وعايز باقة إنترنت:',
+                them: 'Good morning. How can I help you?',
+                themAr: 'صباح الخير. أقدر أساعدك إزاي؟',
+                choices: ["I would like a monthly internet plan for my phone.", "I would like a plan monthly internet for phone my.", "Like I would internet a monthly plan my phone for."],
+                correct: 0,
+                explain: '"A monthly internet plan" يعني "باقة إنترنت شهرية". بنقول I would like وبعدها a monthly internet plan for my phone، وده الترتيب الصح.',
+                phrase: { en: 'I would like a monthly internet plan for my phone.', pr: 'آي وود لايك أ مانثلي إنترنت بلان فور ماي فون', ar: 'عايز باقة إنترنت شهرية لموبايلي' },
+            },
+            {
+                scene: 'الموظف بيعرض الباقات:',
+                them: 'We have a ten gigabyte plan and a twenty gigabyte plan.',
+                themAr: 'عندنا باقة عشر جيجا وباقة عشرين جيجا.',
+                choices: ["What is the price of the twenty gigabyte plan?", "What is the price of the plan twenty gigabyte?", "What the price is of twenty plan the gigabyte?"],
+                correct: 0,
+                explain: '"What is the price of" يعني "سعر ... كام؟". بنقول What is the price of وبعدها the twenty gigabyte plan، وده الترتيب الصح.',
+                phrase: { en: 'What is the price of the twenty gigabyte plan?', pr: 'وات إز ذا برايس أوف ذا توينتي جيجابايت بلان', ar: 'سعر باقة العشرين جيجا كام؟' },
+            },
+            {
+                scene: 'الموظف بيرد:',
+                them: 'It is one hundred pounds per month.',
+                themAr: 'بمية جنيه في الشهر.',
+                choices: ["That is a little expensive. Is there a cheaper plan?", "That is a little expensive. Is there plan a cheaper?", "That a little is expensive. Cheaper a there is plan?"],
+                correct: 0,
+                explain: '"A cheaper plan" يعني "باقة أرخص". بنقول That is a little expensive وبعدها is there a cheaper plan، وده الترتيب الصح.',
+                phrase: { en: 'Is there a cheaper plan?', pr: 'إز ذير أ تشيبر بلان', ar: 'فيه باقة أرخص؟' },
+            },
+            {
+                scene: 'الموظف بيعرض البديل:',
+                them: 'Yes, the ten gigabyte plan is sixty pounds.',
+                themAr: 'أيوه، باقة العشر جيجا بستين جنيه.',
+                choices: ["That is better. I will take it, please.", "That better is. I take will it, please.", "Better that is. It will I take, please."],
+                correct: 0,
+                explain: '"I will take it" يعني "هاخدها". بنقول That is better وبعدها I will take it, please، وده الترتيب الصح.',
+                phrase: { en: 'That is better. I will take it, please.', pr: 'ذات إز بيتر. آي ويل تيك إت، بليز', ar: 'ده أحسن. هاخدها لو سمحت' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like a monthly internet plan for my phone.', pr: 'آي وود لايك أ مانثلي إنترنت بلان فور ماي فون', ar: 'عايز باقة إنترنت شهرية لموبايلي' },
+            { en: 'What is the price of the twenty gigabyte plan?', pr: 'وات إز ذا برايس أوف ذا توينتي جيجابايت بلان', ar: 'سعر باقة العشرين جيجا كام؟' },
+            { en: 'Is there a cheaper plan?', pr: 'إز ذير أ تشيبر بلان', ar: 'فيه باقة أرخص؟' },
+            { en: 'That is better. I will take it, please.', pr: 'ذات إز بيتر. آي ويل تيك إت، بليز', ar: 'ده أحسن. هاخدها لو سمحت' },
+        ],
+    },
 ];
 
 const quiz = [
