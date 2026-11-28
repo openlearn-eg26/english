@@ -4988,6 +4988,57 @@ const lessons = [
             { en: 'No problem. I will wait here. Thank you.', pr: 'نو بروبلم. آي ويل ويت هير. ثانك يو', ar: 'مفيش مشكلة. هستنى هنا. شكرا' },
         ],
     },
+    {
+        id: 'lostbag',
+        number: 98,
+        title: 'شنطة ضايعة',
+        subtitle: 'بلّغ مكتب المفقودات عن شنطتك',
+        intro: 'نسيت شنطتك في المترو وراحت مكتب المفقودات. هتشرح مكانها وشكلها، وتقول القطر والميعاد، وتسيب رقمك. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'نسيت شنطتك في المترو وراحت مكتب المفقودات:',
+                them: 'Good evening. Can I help you?',
+                themAr: 'مساء الخير. أقدر أساعدك؟',
+                choices: ["Yes, I left my bag on the metro.", "Yes, I left on the metro my bag.", "Yes, my bag I metro left the on."],
+                correct: 0,
+                explain: '"I left my bag on the metro" يعني "نسيت شنطتي في المترو". بنقول Yes وبعدها I left my bag on the metro، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I left my bag on the metro.', pr: 'يس آي ليفت ماي باج أون ذا ميترو', ar: 'أيوه، نسيت شنطتي في المترو' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'I am sorry to hear that. What does it look like?',
+                themAr: 'آسف إني أسمع كده. شكلها عامل إزاي؟',
+                choices: ["It is a small black bag with a blue zipper.", "It is a black small bag with a zipper blue.", "It a small bag black is with blue a zipper."],
+                correct: 0,
+                explain: '"A small black bag" يعني "شنطة صغيرة سودا". بنقول It is وبعدها a small black bag with a blue zipper، وده الترتيب الصح.',
+                phrase: { en: 'It is a small black bag with a blue zipper.', pr: 'إت إز أ سمول بلاك باج ويذ أ بلو زيبر', ar: 'هي شنطة صغيرة سودا بسوستة زرقا' },
+            },
+            {
+                scene: 'الموظف بيسأل عن الرحلة:',
+                them: 'Which train were you on, and what time?',
+                themAr: 'كنت في أنهي قطر، وإمتى؟',
+                choices: ["I was on the six o'clock train to Giza.", "I was on the train six o'clock to Giza.", "On the six o'clock I was train to Giza."],
+                correct: 0,
+                explain: '"The six o\'clock train" يعني "قطر الساعة ستة". بنقول I was on وبعدها the six o\'clock train to Giza، وده الترتيب الصح.',
+                phrase: { en: 'I was on the six o\'clock train to Giza.', pr: 'آي واز أون ذا سيكس أوكلوك ترين تو جيزا', ar: 'كنت في قطر الساعة ستة رايح الجيزة' },
+            },
+            {
+                scene: 'الموظف بيسجل بياناتك:',
+                them: 'Please leave your phone number. We will call you if we find it.',
+                themAr: 'سيب رقم موبايلك. هنتصل بيك لو لقيناها.',
+                choices: ["Of course. Thank you for your help.", "Of course. Thank you for help your.", "Of course. Your help for thank you."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Of course وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Of course. Thank you for your help.', pr: 'أوف كورس. ثانك يو فور يور هيلب', ar: 'طبعا. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I left my bag on the metro.', pr: 'يس آي ليفت ماي باج أون ذا ميترو', ar: 'أيوه، نسيت شنطتي في المترو' },
+            { en: 'It is a small black bag with a blue zipper.', pr: 'إت إز أ سمول بلاك باج ويذ أ بلو زيبر', ar: 'هي شنطة صغيرة سودا بسوستة زرقا' },
+            { en: 'I was on the six o\'clock train to Giza.', pr: 'آي واز أون ذا سيكس أوكلوك ترين تو جيزا', ar: 'كنت في قطر الساعة ستة رايح الجيزة' },
+            { en: 'Of course. Thank you for your help.', pr: 'أوف كورس. ثانك يو فور يور هيلب', ar: 'طبعا. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
