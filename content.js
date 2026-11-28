@@ -5549,6 +5549,57 @@ const lessons = [
             { en: 'Thank you for your advice.', pr: 'ثانك يو فور يور أدفايس', ar: 'شكرا على نصيحتك' },
         ],
     },
+    {
+        id: 'photostudio',
+        number: 109,
+        title: 'استوديو التصوير',
+        subtitle: 'اطلب صور باسبور',
+        intro: 'محتاج صور باسبور فدخلت استوديو التصوير. هتطلب الصور، وتقول العدد، وتسأل عن السعر. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت محتاج صور شخصية للأوراق وداخل استوديو تصوير:',
+                them: 'Hello. How can I help you?',
+                themAr: 'أهلا. أقدر أساعدك إزاي؟',
+                choices: ["I need passport photos, please.", "I need photos passport, please.", "Photos I passport need, please."],
+                correct: 0,
+                explain: '"Passport photos" يعني "صور باسبور". بنقول I need passport photos وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'I need passport photos, please.', pr: 'آي نيد باسبورت فوتوز، بليز', ar: 'محتاج صور باسبور لو سمحت' },
+            },
+            {
+                scene: 'المصور بيسأل:',
+                them: 'How many photos do you need?',
+                themAr: 'محتاج كام صورة؟',
+                choices: ["I need six photos. How much is it?", "I need six photos. How much it is?", "Six I need photos. Much how is it?"],
+                correct: 0,
+                explain: '"How much is it?" يعني "بكام؟". بنقول I need six photos وبعدها how much is it، وده الترتيب الصح.',
+                phrase: { en: 'I need six photos. How much is it?', pr: 'آي نيد سيكس فوتوز. هاو ماتش إز إت', ar: 'محتاج ست صور. بكام؟' },
+            },
+            {
+                scene: 'المصور بيرد:',
+                them: 'It is sixty pounds for six photos. Please sit here.',
+                themAr: 'ستين جنيه لست صور. اقعد هنا من فضلك.',
+                choices: ["Okay. Should I look at the camera?", "Okay. I should look at camera the?", "Okay. Look I should the at camera?"],
+                correct: 0,
+                explain: '"Look at the camera" يعني "بص للكاميرا". بنقول Okay وبعدها should I look at the camera، وده الترتيب الصح.',
+                phrase: { en: 'Should I look at the camera?', pr: 'شود آي لوك آت ذا كاميرا', ar: 'أبص للكاميرا؟' },
+            },
+            {
+                scene: 'المصور بعد التصوير:',
+                them: 'Yes, please. Done. The photos will be ready in ten minutes.',
+                themAr: 'أيوه لو سمحت. خلصنا. الصور هتبقى جاهزة بعد عشر دقايق.',
+                choices: ["Great. I will come back in ten minutes.", "Great. I come back will in ten minutes.", "Great. Back come I will ten in minutes."],
+                correct: 0,
+                explain: '"In ten minutes" يعني "بعد عشر دقايق". بنقول Great وبعدها I will come back in ten minutes، وده الترتيب الصح.',
+                phrase: { en: 'I will come back in ten minutes.', pr: 'آي ويل كام باك إن تن مينتس', ar: 'هرجع بعد عشر دقايق' },
+            },
+        ],
+        phrases: [
+            { en: 'I need passport photos, please.', pr: 'آي نيد باسبورت فوتوز، بليز', ar: 'محتاج صور باسبور لو سمحت' },
+            { en: 'I need six photos. How much is it?', pr: 'آي نيد سيكس فوتوز. هاو ماتش إز إت', ar: 'محتاج ست صور. بكام؟' },
+            { en: 'Should I look at the camera?', pr: 'شود آي لوك آت ذا كاميرا', ar: 'أبص للكاميرا؟' },
+            { en: 'I will come back in ten minutes.', pr: 'آي ويل كام باك إن تن مينتس', ar: 'هرجع بعد عشر دقايق' },
+        ],
+    },
 ];
 
 const quiz = [
