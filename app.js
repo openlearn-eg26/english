@@ -187,6 +187,7 @@
     Object.assign(AUDIO_MAP, {"I would like to top up my phone credit.": "9d70e9bce7", "Sure. How much credit do you want?": "354d1302e7", "Twenty pounds, please. Can you do it now?": "611d09c3d4", "Of course. What is your phone number?": "d840bf3dcf", "It is on this paper. Please check it carefully.": "7b27493936", "Done. Your credit is twenty pounds now.": "8b0b9395c8", "Great. Can I get a receipt, please?": "bc75ed84a5"});
     Object.assign(AUDIO_MAP, {"Hello, locksmith service. What is the problem?": "2f1ee3b713", "I left my key inside and the door is locked.": "7a5d3c03c0", "I understand. What is your address?": "f975ae486e", "It is building twelve, on the second floor.": "a0d2075d5b", "I can be there in thirty minutes.": "db6df4fb77", "That is fine. Will you damage the door?": "ffa684ca7b", "No, I have a special tool. It will not damage anything.": "29089cdef0", "Good. Please come as soon as you can. Thank you.": "0891756b2b"});
     Object.assign(AUDIO_MAP, {"Good afternoon. Language center. How can I help?": "e4a4e67a58", "I would like to register for an English course.": "c77cdded70", "Certainly. Do you prefer morning or evening classes?": "a958ab6b85", "I prefer evening classes. They start after my work.": "3fbb885011", "We have classes on Sunday and Tuesday at seven.": "25ecc49946", "That works for me. How long is each class?": "9b60e3f928", "Each class is two hours. You can start next week.": "3827476a0c", "Wonderful. I will come to register tomorrow.": "8198c1c358"});
+    Object.assign(AUDIO_MAP, {"Hi there. Are you looking for something?": "e0c11f2e1a", "Yes, where can I find the cooking oil?": "acfd1c215b", "It is in aisle four, next to the rice.": "5c1aadb165", "Thank you. Is the large bottle on sale today?": "dd53994df9", "Yes, the large bottle is cheaper this week.": "b8d57814dc", "Good. Which checkout is open, please?": "f2e0eaa45d", "Checkout two is open. There is no line there.": "6cc8b515ee"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -1037,7 +1038,7 @@
     /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
     const TOUR = [
         { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
-        { img: 'tour/2.jpg', t: 'الدروس: ٩٥ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ٩٦ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
         { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
         { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
         { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
