@@ -6977,6 +6977,57 @@ const lessons = [
             { en: 'I would like six rolls.', pr: 'آي وود لايك سيكس رولز', ar: 'عايز ستة عيش.' },
         ],
     },
+    {
+        id: 'birthdaylunch',
+        number: 137,
+        title: 'عزومة عيد ميلاد',
+        subtitle: 'اعزم زميلك على غدا',
+        intro: 'عيد ميلادك الأسبوع الجاي. هتعزم زميلك على غدا، وتقوله الميعاد والمكان. الموقف ده مثال للتدريب. الأيام والمواعيد أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'عيد ميلادك الأسبوع الجاي وعايز تعزم زميلك على غدا. بتقوله:',
+                them: 'Hi. How is your week going?',
+                themAr: 'أهلا. أسبوعك ماشي إزاي؟',
+                choices: ["Good, thanks. Next Friday is my birthday.", "Good, thanks. My birthday is Friday next.", "Good, thanks. Birthday my next Friday is."],
+                correct: 0,
+                explain: '"Next Friday is my birthday" يعني "يوم الجمعة الجاية عيد ميلادي". بنقول Good, thanks وبعدها next Friday is my birthday، وده الترتيب الصح.',
+                phrase: { en: 'Next Friday is my birthday.', pr: 'نكست فرايداي إز ماي بيرثداي', ar: 'الجمعة الجاية عيد ميلادي.' },
+            },
+            {
+                scene: 'زميلك بيرد:',
+                them: 'Oh, happy early birthday! Are you doing anything special?',
+                themAr: 'كل سنة وإنت طيب! هتعمل حاجة مميزة؟',
+                choices: ["Yes. I would like to invite you to lunch.", "Yes. I like would to invite you lunch.", "Yes. Invite you I would like to lunch."],
+                correct: 0,
+                explain: '"I would like to invite you to lunch" يعني "أحب أعزمك على الغدا". بنقول Yes وبعدها I would like to invite you to lunch، وده الترتيب الصح.',
+                phrase: { en: 'I would like to invite you to lunch.', pr: 'آي وود لايك تو إنفايت يو تو لانش', ar: 'أحب أعزمك على الغدا.' },
+            },
+            {
+                scene: 'زميلك مبسوط:',
+                them: 'Thank you! That is very kind. What time?',
+                themAr: 'شكرا! ده لطف منك. الساعة كام؟',
+                choices: ["It is at two o'clock, at my house.", "It at two o'clock is, at house my.", "Two at o'clock it is, my at house."],
+                correct: 0,
+                explain: '"It is at two o\'clock" يعني "الساعة اتنين". بنقول It is at two o\'clock وبعدها at my house، وده الترتيب الصح.',
+                phrase: { en: 'It is at two o\'clock.', pr: 'إت إز آت تو أوكلوك', ar: 'الساعة اتنين.' },
+            },
+            {
+                scene: 'زميلك بيأكد:',
+                them: 'Great. I will be there. Can I bring something?',
+                themAr: 'تمام. هكون هناك. أجيب حاجة؟',
+                choices: ["Just yourself. I hope you can come.", "Yourself just. I hope you come can.", "Just yourself. Hope I you can come."],
+                correct: 0,
+                explain: '"I hope you can come" يعني "أتمنى تقدر تيجي". بنقول Just yourself وبعدها I hope you can come، وده الترتيب الصح.',
+                phrase: { en: 'I hope you can come.', pr: 'آي هوب يو كان كام', ar: 'أتمنى تقدر تيجي.' },
+            },
+        ],
+        phrases: [
+            { en: 'Next Friday is my birthday.', pr: 'نكست فرايداي إز ماي بيرثداي', ar: 'الجمعة الجاية عيد ميلادي.' },
+            { en: 'I would like to invite you to lunch.', pr: 'آي وود لايك تو إنفايت يو تو لانش', ar: 'أحب أعزمك على الغدا.' },
+            { en: 'It is at two o\'clock.', pr: 'إت إز آت تو أوكلوك', ar: 'الساعة اتنين.' },
+            { en: 'I hope you can come.', pr: 'آي هوب يو كان كام', ar: 'أتمنى تقدر تيجي.' },
+        ],
+    },
 ];
 
 const quiz = [
