@@ -6671,6 +6671,57 @@ const lessons = [
             { en: 'That is okay.', pr: 'ذات إز أوكاي', ar: 'ولا يهمك.' },
         ],
     },
+    {
+        id: 'mallparking',
+        number: 131,
+        title: 'جراج المول',
+        subtitle: 'اسأل عن ركنة وسعرها',
+        intro: 'إنت وصلت بعربيتك على جراج مول. هتسأل عن مكان فاضي، وتسأل عن السعر، وتعرف تدفع فين. الموقف ده مثال للتدريب. الأسعار أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت وصلت بعربيتك على جراج مول. الحارس بيقولك:',
+                them: 'Good morning. Are you looking for parking?',
+                themAr: 'صباح الخير. بتدوّر على ركنة؟',
+                choices: ["Yes, please. Is there a free space?", "Yes, please. There is a space free?", "Yes, please. Is free there a space?"],
+                correct: 0,
+                explain: '"Is there a free space?" يعني "في مكان فاضي؟". بنقول Yes, please وبعدها is there a free space، وده الترتيب الصح.',
+                phrase: { en: 'Is there a free space?', pr: 'إز ذير إيه فري سبيس', ar: 'في مكان فاضي؟' },
+            },
+            {
+                scene: 'الحارس بيشاور:',
+                them: 'Yes. Go straight, then turn left.',
+                themAr: 'أيوه. امشي دغري وبعدين لف شمال.',
+                choices: ["Thank you. How much is it for two hours?", "Thank you. How is much it for two hours?", "Thank you. For two hours it how much is?"],
+                correct: 0,
+                explain: '"How much is it for two hours?" يعني "بكام لمدة ساعتين؟". بنقول Thank you وبعدها how much is it for two hours، وده الترتيب الصح.',
+                phrase: { en: 'How much is it for two hours?', pr: 'هاو ماتش إز إت فور تو أورز', ar: 'بكام لمدة ساعتين؟' },
+            },
+            {
+                scene: 'الحارس بيرد:',
+                them: 'It is twenty pounds. Please take this ticket.',
+                themAr: 'عشرين جنيه. خد التذكرة دي.',
+                choices: ["Okay. Where do I pay?", "Okay. Where I do pay?", "Okay. Do where I pay?"],
+                correct: 0,
+                explain: '"Where do I pay?" يعني "أدفع فين؟". بنقول Okay وبعدها where do I pay، وده الترتيب الصح.',
+                phrase: { en: 'Where do I pay?', pr: 'وير دو آي باي', ar: 'أدفع فين؟' },
+            },
+            {
+                scene: 'الحارس بيشرحلك:',
+                them: 'You pay at the machine before you leave.',
+                themAr: 'بتدفع عند الماكينة قبل ما تمشي.',
+                choices: ["Great. Thank you for your help.", "Great. Thank you for help your.", "Great. You thank for your help."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Great وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
+            },
+        ],
+        phrases: [
+            { en: 'Is there a free space?', pr: 'إز ذير إيه فري سبيس', ar: 'في مكان فاضي؟' },
+            { en: 'How much is it for two hours?', pr: 'هاو ماتش إز إت فور تو أورز', ar: 'بكام لمدة ساعتين؟' },
+            { en: 'Where do I pay?', pr: 'وير دو آي باي', ar: 'أدفع فين؟' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
+        ],
+    },
 ];
 
 const quiz = [
