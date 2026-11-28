@@ -6926,6 +6926,57 @@ const lessons = [
             { en: 'I will take it.', pr: 'آي ويل تيك إت', ar: 'هاخدها.' },
         ],
     },
+    {
+        id: 'bakeryline',
+        number: 136,
+        title: 'الطابور',
+        subtitle: 'اسأل لو ده طابور المخبز',
+        intro: 'المخبز زحمة. هتسأل لو ده الطابور، وتستنى دورك، وتطلب. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت داخل مخبز والدنيا زحمة. بتسأل راجل واقف:',
+                them: 'Hello.',
+                themAr: 'أهلا.',
+                choices: ["Hello. Is this the line for the bakery?", "Hello. This is the line for the bakery is?", "Hello. Is the line this for bakery the?"],
+                correct: 0,
+                explain: '"Is this the line?" يعني "ده الطابور؟". بنقول Hello وبعدها is this the line for the bakery، وده الترتيب الصح.',
+                phrase: { en: 'Is this the line?', pr: 'إز ذيس ذا لاين', ar: 'ده الطابور؟' },
+            },
+            {
+                scene: 'الراجل بيرد:',
+                them: 'Yes, it is. I am the last one.',
+                themAr: 'أيوه. أنا آخر واحد.',
+                choices: ["Thank you. So I am behind you.", "Thank you. So I behind am you.", "Thank you. So behind I am you."],
+                correct: 0,
+                explain: '"I am behind you" يعني "أنا وراك". بنقول Thank you وبعدها so I am behind you، وده الترتيب الصح.',
+                phrase: { en: 'I am behind you.', pr: 'آي أم بيهايند يو', ar: 'أنا وراك.' },
+            },
+            {
+                scene: 'بعد شوية الراجل بيقولك:',
+                them: 'It is almost my turn. Please go ahead if you are in a hurry.',
+                themAr: 'دوري قرب. اتفضل قدّامي لو مستعجل.',
+                choices: ["That is kind of you, but I can wait.", "That kind is of you, but I wait can.", "Kind that is you of, but wait I can."],
+                correct: 0,
+                explain: '"I can wait" يعني "أقدر أستنى". بنقول That is kind of you وبعدها but I can wait، وده الترتيب الصح.',
+                phrase: { en: 'I can wait.', pr: 'آي كان ويت', ar: 'أقدر أستنى.' },
+            },
+            {
+                scene: 'وصل دورك والبايع بيسأل:',
+                them: 'Next, please. What would you like?',
+                themAr: 'اللي بعده. تحب إيه؟',
+                choices: ["Hello. I would like six rolls, please.", "Hello. I like would six rolls, please.", "Hello. Six I would like rolls, please."],
+                correct: 0,
+                explain: '"I would like six rolls" يعني "عايز ستة عيش". بنقول Hello وبعدها I would like six rolls, please، وده الترتيب الصح.',
+                phrase: { en: 'I would like six rolls.', pr: 'آي وود لايك سيكس رولز', ar: 'عايز ستة عيش.' },
+            },
+        ],
+        phrases: [
+            { en: 'Is this the line?', pr: 'إز ذيس ذا لاين', ar: 'ده الطابور؟' },
+            { en: 'I am behind you.', pr: 'آي أم بيهايند يو', ar: 'أنا وراك.' },
+            { en: 'I can wait.', pr: 'آي كان ويت', ar: 'أقدر أستنى.' },
+            { en: 'I would like six rolls.', pr: 'آي وود لايك سيكس رولز', ar: 'عايز ستة عيش.' },
+        ],
+    },
 ];
 
 const quiz = [
