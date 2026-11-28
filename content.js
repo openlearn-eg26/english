@@ -5957,6 +5957,57 @@ const lessons = [
             { en: 'Please start now. I will wait outside.', pr: 'بليز ستارت ناو. آي ويل ويت أوتسايد', ar: 'ابدأ دلوقتي لو سمحت. هستنى بره' },
         ],
     },
+    {
+        id: 'flatrent',
+        number: 117,
+        title: 'شقة للإيجار',
+        subtitle: 'اسأل صاحب الشقة عن التفاصيل',
+        intro: 'شفت إعلان شقة للإيجار فكلمت صاحبها. هتسأل عن عدد الأوض والإيجار، وتطلب تشوف الشقة. الأسعار والتفاصيل في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت بتكلم صاحب شقة معلن عنها للإيجار:',
+                them: 'Hello. Yes, the apartment is still available.',
+                themAr: 'أهلا. أيوه الشقة لسه متاحة.',
+                choices: ["Good. How many rooms does it have?", "Good. How many rooms it has?", "Good. Rooms how many has it?"],
+                correct: 0,
+                explain: '"How many rooms does it have?" يعني "فيها كام أوضة؟". بنقول Good وبعدها how many rooms does it have، وده الترتيب الصح.',
+                phrase: { en: 'How many rooms does it have?', pr: 'هاو ميني رومز داز إت هاف', ar: 'فيها كام أوضة؟' },
+            },
+            {
+                scene: 'صاحب الشقة بيرد:',
+                them: 'It has two bedrooms, a kitchen and a small balcony.',
+                themAr: 'فيها أوضتين نوم ومطبخ وبلكونة صغيرة.',
+                choices: ["That sounds nice. What is the monthly rent?", "That sounds nice. What the monthly rent is?", "Nice that sounds. Rent monthly what is the?"],
+                correct: 0,
+                explain: '"The monthly rent" يعني "الإيجار الشهري". بنقول That sounds nice وبعدها what is the monthly rent، وده الترتيب الصح.',
+                phrase: { en: 'What is the monthly rent?', pr: 'وات إز ذا مانثلي رنت', ar: 'الإيجار الشهري كام؟' },
+            },
+            {
+                scene: 'صاحب الشقة بيحدد السعر:',
+                them: 'It is three thousand pounds a month. Water is included.',
+                themAr: 'تلات تلاف جنيه في الشهر. والمياه مشمولة.',
+                choices: ["Okay. Can I see the apartment tomorrow?", "Okay. I can see the apartment tomorrow?", "Okay. See can I tomorrow the apartment?"],
+                correct: 0,
+                explain: '"Can I see the apartment?" يعني "أقدر أشوف الشقة؟". بنقول Okay وبعدها can I see the apartment tomorrow، وده الترتيب الصح.',
+                phrase: { en: 'Can I see the apartment tomorrow?', pr: 'كان آي سي ذي أبارتمنت تومورو', ar: 'أقدر أشوف الشقة بكرة؟' },
+            },
+            {
+                scene: 'صاحب الشقة بيحدد الميعاد:',
+                them: 'Yes, of course. Come at five o\'clock.',
+                themAr: 'أيوه طبعا. تعالى الساعة خمسة.',
+                choices: ["Perfect. Please send me the address.", "Perfect. Please me send the address.", "Perfect. Send please address me the."],
+                correct: 0,
+                explain: '"Send me the address" يعني "ابعتلي العنوان". بنقول Perfect وبعدها please send me the address، وده الترتيب الصح.',
+                phrase: { en: 'Please send me the address.', pr: 'بليز سيند مي ذي أدريس', ar: 'ابعتلي العنوان لو سمحت' },
+            },
+        ],
+        phrases: [
+            { en: 'How many rooms does it have?', pr: 'هاو ميني رومز داز إت هاف', ar: 'فيها كام أوضة؟' },
+            { en: 'What is the monthly rent?', pr: 'وات إز ذا مانثلي رنت', ar: 'الإيجار الشهري كام؟' },
+            { en: 'Can I see the apartment tomorrow?', pr: 'كان آي سي ذي أبارتمنت تومورو', ar: 'أقدر أشوف الشقة بكرة؟' },
+            { en: 'Please send me the address.', pr: 'بليز سيند مي ذي أدريس', ar: 'ابعتلي العنوان لو سمحت' },
+        ],
+    },
 ];
 
 const quiz = [
