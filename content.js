@@ -5906,6 +5906,57 @@ const lessons = [
             { en: 'That is a good price. I will buy them.', pr: 'ذات إز أ جود برايس. آي ويل باي ذيم', ar: 'ده سعر كويس. هشتريهم' },
         ],
     },
+    {
+        id: 'phonescreen',
+        number: 116,
+        title: 'شاشة الموبايل',
+        subtitle: 'اطلب تصليح شاشة موبايل مكسورة',
+        intro: 'شاشة موبايلك اتكسرت، فروحت محل الصيانة. هتشرح المشكلة، وتسأل عن السعر والوقت، وتسأل عن الضمان. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'شاشة موبايلك اتكسرت وإنت داخل محل صيانة:',
+                them: 'Hello. What is the problem with your phone?',
+                themAr: 'أهلا. إيه مشكلة موبايلك؟',
+                choices: ["The screen is broken. Can you repair it today?", "The screen broken is. Can you it repair today?", "Screen the is broken. Repair you can today it?"],
+                correct: 0,
+                explain: '"The screen is broken" يعني "الشاشة مكسورة". بنقول The screen is broken وبعدها can you repair it today، وده الترتيب الصح.',
+                phrase: { en: 'The screen is broken. Can you repair it today?', pr: 'ذا سكرين إز بروكن. كان يو ريبير إت تودي', ar: 'الشاشة مكسورة. تقدر تصلحها النهارده؟' },
+            },
+            {
+                scene: 'الفني بيفحص الموبايل:',
+                them: 'Yes, I can. I need to change the whole screen.',
+                themAr: 'أيوه أقدر. لازم أغير الشاشة كلها.',
+                choices: ["How much will it cost? How long will it take?", "How much it will cost? How long it will take?", "Much how will cost it? Long how will take it?"],
+                correct: 0,
+                explain: '"How long will it take?" يعني "هتاخد قد إيه؟". بنقول How much will it cost وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'How much will it cost? How long will it take?', pr: 'هاو ماتش ويل إت كوست؟ هاو لونج ويل إت تيك', ar: 'هتكلف كام؟ هتاخد قد إيه؟' },
+            },
+            {
+                scene: 'الفني بيرد:',
+                them: 'It will cost five hundred pounds. It takes about one hour.',
+                themAr: 'هتكلف خمسمية جنيه. وهتاخد حوالي ساعة.',
+                choices: ["That is fine. Do you give a guarantee?", "That is fine. You give a guarantee do?", "That fine is. Guarantee a give you do?"],
+                correct: 0,
+                explain: '"Do you give a guarantee?" يعني "بتدي ضمان؟". بنقول That is fine وبعدها do you give a guarantee، وده الترتيب الصح.',
+                phrase: { en: 'Do you give a guarantee?', pr: 'دو يو جيف أ جارانتي', ar: 'بتدي ضمان؟' },
+            },
+            {
+                scene: 'الفني بيوضح:',
+                them: 'Yes, we give a three month guarantee on the screen.',
+                themAr: 'أيوه بنديك ضمان تلات شهور على الشاشة.',
+                choices: ["Good. Please start now. I will wait outside.", "Good. Please now start. I wait will outside.", "Good. Start please now. Outside will I wait."],
+                correct: 0,
+                explain: '"I will wait outside" يعني "هستنى بره". بنقول Good, please start now وبعدها I will wait outside، وده الترتيب الصح.',
+                phrase: { en: 'Please start now. I will wait outside.', pr: 'بليز ستارت ناو. آي ويل ويت أوتسايد', ar: 'ابدأ دلوقتي لو سمحت. هستنى بره' },
+            },
+        ],
+        phrases: [
+            { en: 'The screen is broken. Can you repair it today?', pr: 'ذا سكرين إز بروكن. كان يو ريبير إت تودي', ar: 'الشاشة مكسورة. تقدر تصلحها النهارده؟' },
+            { en: 'How much will it cost? How long will it take?', pr: 'هاو ماتش ويل إت كوست؟ هاو لونج ويل إت تيك', ar: 'هتكلف كام؟ هتاخد قد إيه؟' },
+            { en: 'Do you give a guarantee?', pr: 'دو يو جيف أ جارانتي', ar: 'بتدي ضمان؟' },
+            { en: 'Please start now. I will wait outside.', pr: 'بليز ستارت ناو. آي ويل ويت أوتسايد', ar: 'ابدأ دلوقتي لو سمحت. هستنى بره' },
+        ],
+    },
 ];
 
 const quiz = [
