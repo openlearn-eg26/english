@@ -6620,6 +6620,57 @@ const lessons = [
             { en: 'You too.', pr: 'يو تو', ar: 'وإنت كمان.' },
         ],
     },
+    {
+        id: 'billmistake',
+        number: 130,
+        title: 'غلطة في الحساب',
+        subtitle: 'قول للكاشير إن الحساب غلط',
+        intro: 'إنت دفعت في كافيه وشفت غلطة في الحساب. هتقول للكاشير بأدب، وتطلب فلوسك، وتشكره. الموقف ده مثال للتدريب. الأسعار أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت دفعت في كافيه وشفت إن الحساب فيه غلطة. بتكلم الكاشير:',
+                them: 'Your total is thirty pounds.',
+                themAr: 'الحساب تلاتين جنيه.',
+                choices: ["Excuse me. I think there is a mistake.", "Excuse me. I think a mistake there is.", "Excuse me. Think I there is mistake a."],
+                correct: 0,
+                explain: '"I think there is a mistake" يعني "أظن في غلطة". بنقول Excuse me وبعدها I think there is a mistake، وده الترتيب الصح.',
+                phrase: { en: 'I think there is a mistake.', pr: 'آي ثينك ذير إز إيه ميستيك', ar: 'أظن في غلطة.' },
+            },
+            {
+                scene: 'الكاشير بيبص على الفاتورة:',
+                them: 'What is the problem?',
+                themAr: 'إيه المشكلة؟',
+                choices: ["I ordered one coffee, but you charged me for two.", "I ordered coffee one, but me you charged for two.", "One coffee I ordered, but charged you two me for."],
+                correct: 0,
+                explain: '"You charged me for two" يعني "حاسبتني على اتنين". بنقول I ordered one coffee وبعدها but you charged me for two، وده الترتيب الصح.',
+                phrase: { en: 'You charged me for two.', pr: 'يو شارجد مي فور تو', ar: 'حاسبتني على اتنين.' },
+            },
+            {
+                scene: 'الكاشير بيراجع:',
+                them: 'Let me check. Yes, you are right.',
+                themAr: 'خليني أراجع. أيوه إنت صح.',
+                choices: ["Thank you. Could I get a refund, please?", "Thank you. I could a refund get, please?", "Thank you. Could get I refund a, please?"],
+                correct: 0,
+                explain: '"Could I get a refund?" يعني "ينفع أسترد الفرق؟". بنقول Thank you وبعدها could I get a refund، وده الترتيب الصح.',
+                phrase: { en: 'Could I get a refund?', pr: 'كود آي جيت إيه ريفند', ar: 'ينفع أسترد الفرق؟' },
+            },
+            {
+                scene: 'الكاشير رجّع لك الفلوس:',
+                them: 'Here is your money. I am sorry about that.',
+                themAr: 'دي فلوسك. آسف على كده.',
+                choices: ["That is okay. Thank you for your help.", "That okay is. Thank you for help your.", "Okay that is. You thank for your help."],
+                correct: 0,
+                explain: '"That is okay" يعني "ولا يهمك". بنقول That is okay وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'That is okay.', pr: 'ذات إز أوكاي', ar: 'ولا يهمك.' },
+            },
+        ],
+        phrases: [
+            { en: 'I think there is a mistake.', pr: 'آي ثينك ذير إز إيه ميستيك', ar: 'أظن في غلطة.' },
+            { en: 'You charged me for two.', pr: 'يو شارجد مي فور تو', ar: 'حاسبتني على اتنين.' },
+            { en: 'Could I get a refund?', pr: 'كود آي جيت إيه ريفند', ar: 'ينفع أسترد الفرق؟' },
+            { en: 'That is okay.', pr: 'ذات إز أوكاي', ar: 'ولا يهمك.' },
+        ],
+    },
 ];
 
 const quiz = [
