@@ -6314,6 +6314,57 @@ const lessons = [
             { en: 'My name is Karim. I will arrive at eight.', pr: 'ماي نيم إز كريم. آي ويل أرايف آت إيت', ar: 'اسمي كريم. هوصل الساعة تمانية' },
         ],
     },
+    {
+        id: 'recommenddish',
+        number: 124,
+        title: 'إيه تنصحني آكل',
+        subtitle: 'اطلب من الجرسون ينصحك بطبق',
+        intro: 'إنت في مطعم لأول مرة. هتسأل الجرسون ينصحك بطبق، وتسأل لو حرّاق، وتطلب. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في مطعم لأول مرة ومش عارف تطلب إيه:',
+                them: 'Are you ready to order?',
+                themAr: 'جاهز تطلب؟',
+                choices: ["Not yet. What do you recommend?", "Not yet. What you recommend do?", "Yet not. Recommend what do you?"],
+                correct: 0,
+                explain: '"What do you recommend?" يعني "إيه اللي تنصح بيه؟". بنقول Not yet وبعدها what do you recommend، وده الترتيب الصح.',
+                phrase: { en: 'What do you recommend?', pr: 'وات دو يو ريكومند', ar: 'إيه اللي تنصح بيه؟' },
+            },
+            {
+                scene: 'الجرسون بيقترح:',
+                them: 'The grilled chicken is very popular. It comes with rice.',
+                themAr: 'الفراخ المشوية مشهورة جدا. وبتيجي مع رز.',
+                choices: ["That sounds good. Is it spicy?", "That sounds good. It is spicy?", "That good sounds. Spicy is it?"],
+                correct: 0,
+                explain: '"Is it spicy?" يعني "هو حرّاق؟". بنقول That sounds good وبعدها is it spicy، وده الترتيب الصح.',
+                phrase: { en: 'Is it spicy?', pr: 'إز إت سبايسي', ar: 'هو حرّاق؟' },
+            },
+            {
+                scene: 'الجرسون بيرد:',
+                them: 'No, it is not spicy. It is very mild.',
+                themAr: 'لا مش حرّاق. هو خفيف أوي.',
+                choices: ["Perfect. I will have the chicken, please.", "Perfect. I have will the chicken, please.", "Perfect. The chicken will I have, please."],
+                correct: 0,
+                explain: '"I will have the chicken" يعني "هاخد الفراخ". بنقول Perfect وبعدها I will have the chicken, please، وده الترتيب الصح.',
+                phrase: { en: 'I will have the chicken, please.', pr: 'آي ويل هاف ذا تشيكن، بليز', ar: 'هاخد الفراخ لو سمحت' },
+            },
+            {
+                scene: 'الجرسون بيسأل:',
+                them: 'Would you like something to drink with it?',
+                themAr: 'تحب تشرب حاجة معاها؟',
+                choices: ["Just water, please. Thank you.", "Just water, please. You thank.", "Water just, please. Thank you."],
+                correct: 0,
+                explain: '"Just water" يعني "مياه بس". بنقول Just water, please وبعدها thank you، وده الترتيب الصح.',
+                phrase: { en: 'Just water, please. Thank you.', pr: 'جاست ووتر، بليز. ثانك يو', ar: 'مياه بس لو سمحت. شكرا' },
+            },
+        ],
+        phrases: [
+            { en: 'What do you recommend?', pr: 'وات دو يو ريكومند', ar: 'إيه اللي تنصح بيه؟' },
+            { en: 'Is it spicy?', pr: 'إز إت سبايسي', ar: 'هو حرّاق؟' },
+            { en: 'I will have the chicken, please.', pr: 'آي ويل هاف ذا تشيكن، بليز', ar: 'هاخد الفراخ لو سمحت' },
+            { en: 'Just water, please. Thank you.', pr: 'جاست ووتر، بليز. ثانك يو', ar: 'مياه بس لو سمحت. شكرا' },
+        ],
+    },
 ];
 
 const quiz = [
