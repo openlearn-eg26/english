@@ -5855,6 +5855,57 @@ const lessons = [
             { en: 'I got it. Thank you for your help.', pr: 'آي جات إت. ثانك يو فور يور هيلب', ar: 'فهمت. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'runningshoes',
+        number: 115,
+        title: 'جزمة الجري',
+        subtitle: 'اشتري جزمة رياضية بمقاس مناسب',
+        intro: 'إنت في محل ملابس رياضية وعايز جزمة جري. هتقول مقاسك، وتطلب مقاس أكبر، وتسأل عن السعر. الأسعار والمقاسات في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في محل ملابس رياضية وعايز جزمة للجري:',
+                them: 'Welcome. What are you looking for?',
+                themAr: 'أهلا بيك. بتدور على إيه؟',
+                choices: ["I am looking for running shoes, size forty-two.", "I am looking running for shoes, size forty-two.", "Looking I am for shoes running, forty-two size."],
+                correct: 0,
+                explain: '"Running shoes" يعني "جزمة جري". بنقول I am looking for وبعدها running shoes, size forty-two، وده الترتيب الصح.',
+                phrase: { en: 'I am looking for running shoes, size forty-two.', pr: 'آي أم لوكينج فور رانينج شوز، سايز فورتي تو', ar: 'بدور على جزمة جري مقاس اتنين وأربعين' },
+            },
+            {
+                scene: 'البائع بيجيب جزمة:',
+                them: 'Try these. They are very light and comfortable.',
+                themAr: 'جرب دول. خفيفين ومريحين جدا.',
+                choices: ["They feel a little tight. Do you have a bigger size?", "They feel tight a little. You have a size bigger do?", "Feel they a little tight. Bigger do you have size a?"],
+                correct: 0,
+                explain: '"A little tight" يعني "ضيقين شوية". بنقول They feel a little tight وبعدها do you have a bigger size، وده الترتيب الصح.',
+                phrase: { en: 'Do you have a bigger size?', pr: 'دو يو هاف أ بيجر سايز', ar: 'عندك مقاس أكبر؟' },
+            },
+            {
+                scene: 'البائع بيرجع بمقاس تاني:',
+                them: 'Here is size forty-three. Please try them on.',
+                themAr: 'اتفضل مقاس تلاتة وأربعين. جربهم.',
+                choices: ["These fit well. How much are they?", "These well fit. How much they are?", "These fit well. They are how much?"],
+                correct: 0,
+                explain: '"How much are they?" يعني "بكام دول؟". بنقول These fit well وبعدها how much are they، وده الترتيب الصح.',
+                phrase: { en: 'These fit well. How much are they?', pr: 'ذيز فيت ويل. هاو ماتش آر ذاي', ar: 'مقاسهم مظبوط. بكام دول؟' },
+            },
+            {
+                scene: 'البائع بيقولك السعر:',
+                them: 'They are four hundred pounds. They are on sale today.',
+                themAr: 'بأربعمية جنيه. عليهم تخفيض النهارده.',
+                choices: ["That is a good price. I will buy them.", "That is a price good. I buy will them.", "Good price that is a. Them will I buy."],
+                correct: 0,
+                explain: '"I will buy them" يعني "هشتريهم". بنقول That is a good price وبعدها I will buy them، وده الترتيب الصح.',
+                phrase: { en: 'That is a good price. I will buy them.', pr: 'ذات إز أ جود برايس. آي ويل باي ذيم', ar: 'ده سعر كويس. هشتريهم' },
+            },
+        ],
+        phrases: [
+            { en: 'I am looking for running shoes, size forty-two.', pr: 'آي أم لوكينج فور رانينج شوز، سايز فورتي تو', ar: 'بدور على جزمة جري مقاس اتنين وأربعين' },
+            { en: 'Do you have a bigger size?', pr: 'دو يو هاف أ بيجر سايز', ar: 'عندك مقاس أكبر؟' },
+            { en: 'These fit well. How much are they?', pr: 'ذيز فيت ويل. هاو ماتش آر ذاي', ar: 'مقاسهم مظبوط. بكام دول؟' },
+            { en: 'That is a good price. I will buy them.', pr: 'ذات إز أ جود برايس. آي ويل باي ذيم', ar: 'ده سعر كويس. هشتريهم' },
+        ],
+    },
 ];
 
 const quiz = [
