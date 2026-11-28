@@ -6467,6 +6467,57 @@ const lessons = [
             { en: 'You too.', pr: 'يو تو', ar: 'وإنت كمان.' },
         ],
     },
+    {
+        id: 'coldsoup',
+        number: 127,
+        title: 'الشوربة باردة',
+        subtitle: 'قول للجرسون إن الأكل بارد',
+        intro: 'الشوربة وصلت باردة. هتقول للجرسون بأدب، وتطلب يسخّنها، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'الشوربة وصلت على الترابيزة، بس إنت حاسس إنها باردة. الجرسون بيسأل:',
+                them: 'Is everything fine?',
+                themAr: 'كله تمام؟',
+                choices: ["Excuse me, the soup is cold.", "Excuse me, the soup cold is.", "Excuse me, cold the soup is."],
+                correct: 0,
+                explain: '"The soup is cold" يعني "الشوربة باردة". بنقول Excuse me وبعدها the soup is cold، وده الترتيب الصح.',
+                phrase: { en: 'The soup is cold.', pr: 'ذا سوب إز كولد', ar: 'الشوربة باردة.' },
+            },
+            {
+                scene: 'الجرسون بيعتذر:',
+                them: 'I am sorry. Would you like me to warm it up?',
+                themAr: 'آسف. تحب أسخّنها؟',
+                choices: ["Yes, please. Could you warm it up?", "Yes, please. Warm could you it up?", "Yes, please. Could warm you it up?"],
+                correct: 0,
+                explain: '"Could you warm it up?" يعني "ينفع تسخّنها؟". بنقول Yes, please وبعدها could you warm it up، وده الترتيب الصح.',
+                phrase: { en: 'Could you warm it up?', pr: 'كود يو ورم إت آب', ar: 'ينفع تسخّنها؟' },
+            },
+            {
+                scene: 'الجرسون رجّع الشوربة سخنة:',
+                them: 'Here is your soup. Is it hot enough now?',
+                themAr: 'دي الشوربة. سخنة كفاية دلوقتي؟',
+                choices: ["Yes, it is perfect now. Thank you.", "Yes, it perfect is now. Thank you.", "Yes, perfect it is now. You thank."],
+                correct: 0,
+                explain: '"It is perfect now" يعني "هي مظبوطة دلوقتي". بنقول Yes وبعدها it is perfect now، وده الترتيب الصح.',
+                phrase: { en: 'It is perfect now.', pr: 'إت إز بيرفكت ناو', ar: 'هي مظبوطة دلوقتي.' },
+            },
+            {
+                scene: 'الجرسون بيمشي:',
+                them: 'Enjoy your meal.',
+                themAr: 'بالهنا والشفا.',
+                choices: ["Thank you for your help.", "Thank you for help your.", "You thank for your help."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Thank you وبعدها for your help، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
+            },
+        ],
+        phrases: [
+            { en: 'The soup is cold.', pr: 'ذا سوب إز كولد', ar: 'الشوربة باردة.' },
+            { en: 'Could you warm it up?', pr: 'كود يو ورم إت آب', ar: 'ينفع تسخّنها؟' },
+            { en: 'It is perfect now.', pr: 'إت إز بيرفكت ناو', ar: 'هي مظبوطة دلوقتي.' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
+        ],
+    },
 ];
 
 const quiz = [
