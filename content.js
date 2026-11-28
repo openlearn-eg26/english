@@ -5702,6 +5702,57 @@ const lessons = [
             { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'falafelstand',
+        number: 112,
+        title: 'عربية الطعمية',
+        subtitle: 'اطلب ساندوتشات طعمية من البائع',
+        intro: 'إنت واقف قدام عربية طعمية في الشارع. هتطلب ساندوتشين، وتقول من غير بصل، وتسأل عن الحساب. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت واقف قدام عربية فول وطعمية في الشارع:',
+                them: 'Hi there. What would you like?',
+                themAr: 'أهلا بيك. تحب تاخد إيه؟',
+                choices: ["I would like two falafel sandwiches, please.", "I would like falafel two sandwiches, please.", "Two I would like sandwiches falafel, please."],
+                correct: 0,
+                explain: '"Two falafel sandwiches" يعني "ساندوتشين طعمية". بنقول I would like وبعدها two falafel sandwiches، وده الترتيب الصح.',
+                phrase: { en: 'I would like two falafel sandwiches, please.', pr: 'آي وود لايك تو فلافل ساندويتشز، بليز', ar: 'عايز ساندوتشين طعمية لو سمحت' },
+            },
+            {
+                scene: 'البائع بيسأل:',
+                them: 'Sure. Do you want them with salad?',
+                themAr: 'حاضر. عايزهم بسلطة؟',
+                choices: ["Yes, with salad, but no onions, please.", "Yes, with salad, but onions no, please.", "Yes, salad with, no but onions, please."],
+                correct: 0,
+                explain: '"No onions" يعني "من غير بصل". بنقول Yes, with salad وبعدها but no onions، وده الترتيب الصح.',
+                phrase: { en: 'With salad, but no onions, please.', pr: 'ويذ ساليد، بات نو أنيونز، بليز', ar: 'بسلطة بس من غير بصل لو سمحت' },
+            },
+            {
+                scene: 'البائع بيجهز الساندوتشات:',
+                them: 'It will be ready in two minutes. Anything to drink?',
+                themAr: 'هيبقوا جاهزين في دقيقتين. تشرب حاجة؟',
+                choices: ["No, thank you. How much is it altogether?", "No, thank you. How much it is altogether?", "No, thank you. Altogether how is much it?"],
+                correct: 0,
+                explain: '"How much is it altogether?" يعني "الحساب كله كام؟". بنقول No, thank you وبعدها how much is it altogether، وده الترتيب الصح.',
+                phrase: { en: 'How much is it altogether?', pr: 'هاو ماتش إز إت أولتوجيذر', ar: 'الحساب كله كام؟' },
+            },
+            {
+                scene: 'البائع بيحاسبك:',
+                them: 'It is twenty pounds. Here you are.',
+                themAr: 'عشرين جنيه. اتفضل.',
+                choices: ["Here is the money. Thank you very much.", "Here the money is. Thank you very much.", "Money the here is. Very thank you much."],
+                correct: 0,
+                explain: '"Here is the money" يعني "اتفضل الفلوس". بنقول Here is the money وبعدها thank you very much، وده الترتيب الصح.',
+                phrase: { en: 'Here is the money. Thank you very much.', pr: 'هير إز ذا ماني. ثانك يو فيري ماتش', ar: 'اتفضل الفلوس. شكرا جدا' },
+            },
+        ],
+        phrases: [
+            { en: 'I would like two falafel sandwiches, please.', pr: 'آي وود لايك تو فلافل ساندويتشز، بليز', ar: 'عايز ساندوتشين طعمية لو سمحت' },
+            { en: 'With salad, but no onions, please.', pr: 'ويذ ساليد، بات نو أنيونز، بليز', ar: 'بسلطة بس من غير بصل لو سمحت' },
+            { en: 'How much is it altogether?', pr: 'هاو ماتش إز إت أولتوجيذر', ar: 'الحساب كله كام؟' },
+            { en: 'Here is the money. Thank you very much.', pr: 'هير إز ذا ماني. ثانك يو فيري ماتش', ar: 'اتفضل الفلوس. شكرا جدا' },
+        ],
+    },
 ];
 
 const quiz = [
