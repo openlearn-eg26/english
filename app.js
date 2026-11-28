@@ -198,6 +198,7 @@
     Object.assign(AUDIO_MAP, {"Welcome to the bike shop. What can I do for you?": "7cbd50d25a", "My bike chain is loose. Can you fix it?": "5f92574473", "Yes, I can. It is a small problem.": "7f7acafd9c", "Great. How much will it cost?": "69b00ba75f", "It will be fifty pounds. It takes half an hour.": "3db6f254db", "That is fine. I will come back later.": "7e07abd9bf", "Good. Your bike will be ready at four.": "27a83674b4", "Thank you. See you at four.": "db579fb705"});
     Object.assign(AUDIO_MAP, {"School office. How can I help you?": "dfeb15a1ff", "Hello. What time does school finish today?": "85ddfe8175", "Today it finishes at two o'clock.": "7548f84e5b", "Thank you. I will pick up my son at two.": "6c44f25cde", "What is his name and class, please?": "0a62fa8abf", "His name is Omar. He is in class four.": "d391b90c58", "Good. Please wait at the main gate.": "5103896f4d"});
     Object.assign(AUDIO_MAP, {"Hello. Can I help you with something?": "12fd5bf366", "Yes, I bought this shirt yesterday. It is too small.": "907419cc69", "I see. Do you have the receipt with you?": "2fb67ed237", "Yes, here it is. Can I change it for a bigger size?": "821afc5d83", "Of course. Let me find a large one for you.": "23acdc86e3", "Thank you. Is the price the same?": "63e8cb47da", "Yes, the price is the same. Here you are.": "624689fcd3", "It fits well now. Thank you very much.": "e469a9ed4b"});
+    Object.assign(AUDIO_MAP, {"My watch has stopped. Can you check it?": "574d74ea2b", "I think the battery is old. I can change it.": "bcfdd95178", "Yes, please. How long will it take?": "70bdde2dc3", "Only ten minutes. You can wait here.": "a75de7a02d", "Okay. How much is the new battery?": "90470df7dc", "It is thirty pounds. It also has a one year guarantee.": "992e4dfa52", "That sounds good. Please go ahead.": "600f981d9f"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -1048,7 +1049,7 @@
     /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
     const TOUR = [
         { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
-        { img: 'tour/2.jpg', t: 'الدروس: ١٠٦ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ١٠٧ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
         { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
         { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
         { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
