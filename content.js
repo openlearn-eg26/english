@@ -6569,6 +6569,57 @@ const lessons = [
             { en: 'Thank you very much.', pr: 'ثانك يو فيري ماتش', ar: 'شكرا جزيلا.' },
         ],
     },
+    {
+        id: 'liftfloor',
+        number: 129,
+        title: 'الأسانسير',
+        subtitle: 'قول أنهي دور وإنت في الأسانسير',
+        intro: 'إنت في أسانسير مبنى مكاتب. هتقول أنهي دور، وتسأل عن المكاتب، وتنزل. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت داخل مبنى مكاتب وبتركب الأسانسير. راجل بيسألك:',
+                them: 'Which floor?',
+                themAr: 'أنهي دور؟',
+                choices: ["The fifth floor, please.", "The floor fifth, please.", "Fifth the floor, please."],
+                correct: 0,
+                explain: '"The fifth floor, please" يعني "الدور الخامس لو سمحت". بنقول The fifth floor وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'The fifth floor, please.', pr: 'ذا فيفث فلور بليز', ar: 'الدور الخامس لو سمحت.' },
+            },
+            {
+                scene: 'الراجل بيدوس الزرار:',
+                them: 'Okay. I am going to the eighth floor.',
+                themAr: 'تمام. أنا رايح الدور التامن.',
+                choices: ["Thank you. Is this the lift to the offices?", "Thank you. This is the lift to offices the?", "Thank you. Is the lift this to the offices?"],
+                correct: 0,
+                explain: '"Is this the lift to the offices?" يعني "ده الأسانسير بتاع المكاتب؟". بنقول Thank you وبعدها is this the lift to the offices، وده الترتيب الصح.',
+                phrase: { en: 'Is this the lift to the offices?', pr: 'إز ذيس ذا ليفت تو ذي أوفيسيز', ar: 'ده الأسانسير بتاع المكاتب؟' },
+            },
+            {
+                scene: 'الأسانسير وقف على الدور الخامس:',
+                them: 'Yes, it is. This is the fifth floor.',
+                themAr: 'أيوه. ده الدور الخامس.',
+                choices: ["Excuse me. I am getting off here.", "Excuse me. I off getting am here.", "Excuse me. Getting I am here off."],
+                correct: 0,
+                explain: '"I am getting off here" يعني "أنا نازل هنا". بنقول Excuse me وبعدها I am getting off here، وده الترتيب الصح.',
+                phrase: { en: 'I am getting off here.', pr: 'آي أم جيتينج أوف هير', ar: 'أنا نازل هنا.' },
+            },
+            {
+                scene: 'إنت نازل من الأسانسير:',
+                them: 'Sure. Have a nice day.',
+                themAr: 'طبعا. يوم سعيد.',
+                choices: ["Thank you. You too.", "Thank you. Too you.", "You thank. You too."],
+                correct: 0,
+                explain: '"You too" يعني "وإنت كمان". بنقول Thank you وبعدها you too، وده الترتيب الصح.',
+                phrase: { en: 'You too.', pr: 'يو تو', ar: 'وإنت كمان.' },
+            },
+        ],
+        phrases: [
+            { en: 'The fifth floor, please.', pr: 'ذا فيفث فلور بليز', ar: 'الدور الخامس لو سمحت.' },
+            { en: 'Is this the lift to the offices?', pr: 'إز ذيس ذا ليفت تو ذي أوفيسيز', ar: 'ده الأسانسير بتاع المكاتب؟' },
+            { en: 'I am getting off here.', pr: 'آي أم جيتينج أوف هير', ar: 'أنا نازل هنا.' },
+            { en: 'You too.', pr: 'يو تو', ar: 'وإنت كمان.' },
+        ],
+    },
 ];
 
 const quiz = [
