@@ -5192,6 +5192,57 @@ const lessons = [
             { en: 'No, thank you. I will carry it. Have a nice day.', pr: 'نو ثانك يو. آي ويل كاري إت. هاف أ نايس داي', ar: 'لأ شكرا. هشيله بإيدي. يومك سعيد' },
         ],
     },
+    {
+        id: 'electricitybill',
+        number: 102,
+        title: 'فاتورة الكهربا',
+        subtitle: 'اسأل عن فاتورة جت أعلى من العادة',
+        intro: 'فاتورة الكهربا جت أعلى من العادة وراحت مكتب الشركة. هتسأل عن السبب، وتطلب تشوف التفاصيل، وتشكر الموظف. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'فاتورة الكهربا جت أعلى من العادة وراحت مكتب الشركة:',
+                them: 'Good morning. How can I help you today?',
+                themAr: 'صباح الخير. أقدر أساعدك إزاي النهارده؟',
+                choices: ["I have a question about my electricity bill.", "I have a question about my bill electricity.", "I a question have about my electricity bill."],
+                correct: 0,
+                explain: '"A question about my electricity bill" يعني "سؤال عن فاتورة الكهربا". بنقول I have وبعدها a question about my electricity bill، وده الترتيب الصح.',
+                phrase: { en: 'I have a question about my electricity bill.', pr: 'آي هاف أ كويستشن أباوت ماي إلكتريسيتي بيل', ar: 'عندي سؤال عن فاتورة الكهربا' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'Of course. What seems to be the problem?',
+                themAr: 'طبعا. إيه المشكلة؟',
+                choices: ["This month it is higher than usual. Why is that?", "This month it higher is than usual. Why is that?", "Higher it is this month usual than. Is why that?"],
+                correct: 0,
+                explain: '"Higher than usual" يعني "أعلى من المعتاد". بنقول This month it is higher than usual وبعدها why is that، وده الترتيب الصح.',
+                phrase: { en: 'This month it is higher than usual. Why is that?', pr: 'ذيس مانث إت إز هاير ذان يوجوال. واي إز ذات', ar: 'الشهر ده أعلى من المعتاد. ليه كده؟' },
+            },
+            {
+                scene: 'الموظف بيراجع الحساب:',
+                them: 'Let me check your account. Did you use more air conditioning?',
+                themAr: 'خليني أراجع حسابك. استخدمت التكييف أكتر؟',
+                choices: ["Yes, it was very hot. Can I see the details?", "Yes, it very hot was. I can see the details?", "Yes, hot was it very. See details the can I?"],
+                correct: 0,
+                explain: '"Can I see the details?" يعني "أقدر أشوف التفاصيل؟". بنقول Yes, it was very hot وبعدها can I see the details، وده الترتيب الصح.',
+                phrase: { en: 'Yes, it was very hot. Can I see the details?', pr: 'يس إت واز فيري هوت. كان آي سي ذا ديتيلز', ar: 'أيوه الجو كان حر جدا. أقدر أشوف التفاصيل؟' },
+            },
+            {
+                scene: 'الموظف بيطبع التفاصيل:',
+                them: 'Here is the list. The use was higher in August.',
+                themAr: 'اتفضل القايمة. الاستهلاك كان أعلى في أغسطس.',
+                choices: ["I understand now. Thank you for explaining.", "I understand now. Thank you for explain.", "Understand I now. Explaining for thank you."],
+                correct: 0,
+                explain: '"Thank you for explaining" يعني "شكرا إنك وضحت". بنقول I understand now وبعدها thank you for explaining، وده الترتيب الصح.',
+                phrase: { en: 'I understand now. Thank you for explaining.', pr: 'آي أندرستاند ناو. ثانك يو فور إكسبلينينج', ar: 'فهمت دلوقتي. شكرا إنك وضحت' },
+            },
+        ],
+        phrases: [
+            { en: 'I have a question about my electricity bill.', pr: 'آي هاف أ كويستشن أباوت ماي إلكتريسيتي بيل', ar: 'عندي سؤال عن فاتورة الكهربا' },
+            { en: 'This month it is higher than usual. Why is that?', pr: 'ذيس مانث إت إز هاير ذان يوجوال. واي إز ذات', ar: 'الشهر ده أعلى من المعتاد. ليه كده؟' },
+            { en: 'Yes, it was very hot. Can I see the details?', pr: 'يس إت واز فيري هوت. كان آي سي ذا ديتيلز', ar: 'أيوه الجو كان حر جدا. أقدر أشوف التفاصيل؟' },
+            { en: 'I understand now. Thank you for explaining.', pr: 'آي أندرستاند ناو. ثانك يو فور إكسبلينينج', ar: 'فهمت دلوقتي. شكرا إنك وضحت' },
+        ],
+    },
 ];
 
 const quiz = [
