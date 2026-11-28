@@ -6212,6 +6212,57 @@ const lessons = [
             { en: 'The food was very good.', pr: 'ذا فود واز فيري جود', ar: 'الأكل كان حلو أوي' },
         ],
     },
+    {
+        id: 'officeprinter',
+        number: 122,
+        title: 'الطابعة',
+        subtitle: 'اطلب مساعدة زميلك في الطابعة',
+        intro: 'الطابعة في المكتب مش بتطبع. هتطلب مساعدة زميلك، وتسأل عن الورق، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في المكتب والطابعة مش بتطبع، وزميلك قاعد جنبك:',
+                them: 'Hi. You look worried. What is wrong?',
+                themAr: 'أهلا. شكلك قلقان. فيه إيه؟',
+                choices: ["The printer is not working. Can you help me?", "The printer working is not. Can you me help?", "Printer the is not working. Help can you me?"],
+                correct: 0,
+                explain: '"The printer is not working" يعني "الطابعة مش شغالة". بنقول The printer is not working وبعدها can you help me، وده الترتيب الصح.',
+                phrase: { en: 'The printer is not working. Can you help me?', pr: 'ذا برينتر إز نوت ووركينج. كان يو هيلب مي', ar: 'الطابعة مش شغالة. تقدر تساعدني؟' },
+            },
+            {
+                scene: 'زميلك بيبص على الطابعة:',
+                them: 'Let me see. There is no paper in the tray.',
+                themAr: 'خليني أشوف. مفيش ورق في الدرج.',
+                choices: ["Oh, I see. Where do you keep the paper?", "Oh, I see. Where you keep do the paper?", "Oh, see I. The paper where keep you do?"],
+                correct: 0,
+                explain: '"Where do you keep the paper?" يعني "بتحطوا الورق فين؟". بنقول Oh, I see وبعدها where do you keep the paper، وده الترتيب الصح.',
+                phrase: { en: 'Where do you keep the paper?', pr: 'وير دو يو كيب ذا بيبر', ar: 'بتحطوا الورق فين؟' },
+            },
+            {
+                scene: 'زميلك بيشاور:',
+                them: 'It is in the cupboard next to the window.',
+                themAr: 'هو في الدولاب اللي جنب الشباك.',
+                choices: ["Thank you. I will get some now.", "Thank you. I get will some now.", "Thank you. Some will I get now."],
+                correct: 0,
+                explain: '"I will get some" يعني "هجيب شوية". بنقول Thank you وبعدها I will get some now، وده الترتيب الصح.',
+                phrase: { en: 'I will get some now.', pr: 'آي ويل جيت سم ناو', ar: 'هجيب شوية دلوقتي' },
+            },
+            {
+                scene: 'بعد ما حطيت الورق:',
+                them: 'It is printing now. Is it working?',
+                themAr: 'بتطبع دلوقتي. شغالة؟',
+                choices: ["Yes, it works. Thank you for your help.", "Yes, it works. Thank you for help your.", "Yes, works it. Your help for thank you."],
+                correct: 0,
+                explain: '"It works" يعني "شغالة". بنقول Yes, it works وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Yes, it works. Thank you for your help.', pr: 'يس، إت ووركس. ثانك يو فور يور هيلب', ar: 'أيوه شغالة. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'The printer is not working. Can you help me?', pr: 'ذا برينتر إز نوت ووركينج. كان يو هيلب مي', ar: 'الطابعة مش شغالة. تقدر تساعدني؟' },
+            { en: 'Where do you keep the paper?', pr: 'وير دو يو كيب ذا بيبر', ar: 'بتحطوا الورق فين؟' },
+            { en: 'I will get some now.', pr: 'آي ويل جيت سم ناو', ar: 'هجيب شوية دلوقتي' },
+            { en: 'Yes, it works. Thank you for your help.', pr: 'يس، إت ووركس. ثانك يو فور يور هيلب', ar: 'أيوه شغالة. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
