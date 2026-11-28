@@ -5039,6 +5039,57 @@ const lessons = [
             { en: 'Of course. Thank you for your help.', pr: 'أوف كورس. ثانك يو فور يور هيلب', ar: 'طبعا. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'calltaxi',
+        number: 99,
+        title: 'طلب تاكسي',
+        subtitle: 'اتصل بشركة تاكسي وحدد مكانك',
+        intro: 'محتاج تاكسي لمحطة القطر. هتتصل بالشركة، وتقول وجهتك ومكانك، وتسأل العربية هتوصل إمتى. الموقف ده مثال للتدريب. الأسماء والمدد فيه مخترعة.',
+        steps: [
+            {
+                scene: 'بتتصل بشركة تاكسي عشان تحجز عربية:',
+                them: 'Hello, City Taxi. How can I help you?',
+                themAr: 'أهلا، سيتي تاكسي. أقدر أساعدك إزاي؟',
+                choices: ["I need a taxi to the train station, please.", "I need a taxi to the station train, please.", "I a taxi need to the train station, please."],
+                correct: 0,
+                explain: '"A taxi to the train station" يعني "تاكسي لمحطة القطر". بنقول I need وبعدها a taxi to the train station، وده الترتيب الصح.',
+                phrase: { en: 'I need a taxi to the train station, please.', pr: 'آي نيد أ تاكسي تو ذا ترين ستيشن بليز', ar: 'محتاج تاكسي لمحطة القطر لو سمحت' },
+            },
+            {
+                scene: 'المشغل بيسأل:',
+                them: 'Sure. Where are you now?',
+                themAr: 'أكيد. إنت فين دلوقتي؟',
+                choices: ["I am in front of the library on Nile Street.", "I am in front the library of on Nile Street.", "In front of I am the library Nile Street on."],
+                correct: 0,
+                explain: '"In front of the library" يعني "قدام المكتبة". بنقول I am وبعدها in front of the library on Nile Street، وده الترتيب الصح.',
+                phrase: { en: 'I am in front of the library on Nile Street.', pr: 'آي أم إن فرونت أوف ذا لايبرري أون نايل ستريت', ar: 'أنا قدام المكتبة في شارع النيل' },
+            },
+            {
+                scene: 'المشغل بيسأل عن الميعاد:',
+                them: 'When do you need the car?',
+                themAr: 'محتاج العربية إمتى؟',
+                choices: ["As soon as possible. How long will it take?", "As soon as possible. How long it will take?", "Possible as soon as. Take how long will it?"],
+                correct: 0,
+                explain: '"How long will it take?" يعني "هتاخد وقت قد إيه؟". بنقول As soon as possible وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'As soon as possible. How long will it take?', pr: 'أز سون أز بوسيبل. هاو لونج ويل إت تيك', ar: 'في أسرع وقت. هتاخد وقت قد إيه؟' },
+            },
+            {
+                scene: 'المشغل بيأكد:',
+                them: 'The car will be there in ten minutes.',
+                themAr: 'العربية هتكون عندك في عشر دقايق.',
+                choices: ["Thank you. I will wait outside.", "Thank you. I wait will outside.", "Thank you. Outside will I wait."],
+                correct: 0,
+                explain: '"I will wait outside" يعني "هستنى بره". بنقول Thank you وبعدها I will wait outside، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. I will wait outside.', pr: 'ثانك يو. آي ويل ويت أوتسايد', ar: 'شكرا. هستنى بره' },
+            },
+        ],
+        phrases: [
+            { en: 'I need a taxi to the train station, please.', pr: 'آي نيد أ تاكسي تو ذا ترين ستيشن بليز', ar: 'محتاج تاكسي لمحطة القطر لو سمحت' },
+            { en: 'I am in front of the library on Nile Street.', pr: 'آي أم إن فرونت أوف ذا لايبرري أون نايل ستريت', ar: 'أنا قدام المكتبة في شارع النيل' },
+            { en: 'As soon as possible. How long will it take?', pr: 'أز سون أز بوسيبل. هاو لونج ويل إت تيك', ar: 'في أسرع وقت. هتاخد وقت قد إيه؟' },
+            { en: 'Thank you. I will wait outside.', pr: 'ثانك يو. آي ويل ويت أوتسايد', ar: 'شكرا. هستنى بره' },
+        ],
+    },
 ];
 
 const quiz = [
