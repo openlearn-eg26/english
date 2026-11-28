@@ -4937,6 +4937,57 @@ const lessons = [
             { en: 'Great. Thank you for your help.', pr: 'جريت. ثانك يو فور يور هيلب', ar: 'تمام. شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'photocopy',
+        number: 97,
+        title: 'تصوير مستندات',
+        subtitle: 'اطلب نسخ من ورقة واسأل عن السعر',
+        intro: 'محتاج تصور ورقة عشر نسخ. هتطلب النسخ، وتختار أبيض وأسود، وتسأل عن السعر، وتطلب الطباعة على الوجهين. الموقف ده مثال للتدريب. الأسعار فيه مخترعة.',
+        steps: [
+            {
+                scene: 'دخلت محل تصوير مستندات ومعاك ورقة:',
+                them: 'Welcome. What do you need today?',
+                themAr: 'أهلا بيك. محتاج إيه النهارده؟',
+                choices: ["I need ten copies of this paper, please.", "I need ten copies of paper this, please.", "I ten need copies of this paper, please."],
+                correct: 0,
+                explain: '"Ten copies of this paper" يعني "عشر نسخ من الورقة دي". بنقول I need وبعدها ten copies of this paper، وده الترتيب الصح.',
+                phrase: { en: 'I need ten copies of this paper, please.', pr: 'آي نيد تن كوبيز أوف ذيس بيبر بليز', ar: 'محتاج عشر نسخ من الورقة دي لو سمحت' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'Do you want them in black and white or in color?',
+                themAr: 'عايزهم أبيض وأسود ولا ملون؟',
+                choices: ["Black and white is fine. How much is each copy?", "Black and white fine is. How much each copy is?", "Fine is black and white. Each copy how much is?"],
+                correct: 0,
+                explain: '"How much is each copy?" يعني "النسخة بكام؟". بنقول Black and white is fine وبعدها how much is each copy، وده الترتيب الصح.',
+                phrase: { en: 'Black and white is fine. How much is each copy?', pr: 'بلاك آند وايت إز فاين. هاو ماتش إز إيتش كوبي', ar: 'أبيض وأسود كويس. النسخة بكام؟' },
+            },
+            {
+                scene: 'الموظف بيقولك السعر:',
+                them: 'It is one pound for each copy.',
+                themAr: 'بجنيه للنسخة.',
+                choices: ["Okay. Can you make them double-sided?", "Okay. You can make them double-sided?", "Okay. Make can you them double-sided?"],
+                correct: 0,
+                explain: '"Can you make them double-sided?" يعني "ممكن تطبعهم على الوجهين؟". بنقول Okay وبعدها can you make them double-sided، وده الترتيب الصح.',
+                phrase: { en: 'Okay. Can you make them double-sided?', pr: 'أوكيه. كان يو ميك ذيم دابل سايدد', ar: 'ماشي. ممكن تطبعهم على الوجهين؟' },
+            },
+            {
+                scene: 'الموظف بيبدأ التصوير:',
+                them: 'Of course. Please wait five minutes.',
+                themAr: 'طبعا. استنى خمس دقايق لو سمحت.',
+                choices: ["No problem. I will wait here. Thank you.", "No problem. I wait will here. Thank you.", "No problem. Here wait I will. You thank."],
+                correct: 0,
+                explain: '"I will wait here" يعني "هستنى هنا". بنقول No problem وبعدها I will wait here وبعدين Thank you، وده الترتيب الصح.',
+                phrase: { en: 'No problem. I will wait here. Thank you.', pr: 'نو بروبلم. آي ويل ويت هير. ثانك يو', ar: 'مفيش مشكلة. هستنى هنا. شكرا' },
+            },
+        ],
+        phrases: [
+            { en: 'I need ten copies of this paper, please.', pr: 'آي نيد تن كوبيز أوف ذيس بيبر بليز', ar: 'محتاج عشر نسخ من الورقة دي لو سمحت' },
+            { en: 'Black and white is fine. How much is each copy?', pr: 'بلاك آند وايت إز فاين. هاو ماتش إز إيتش كوبي', ar: 'أبيض وأسود كويس. النسخة بكام؟' },
+            { en: 'Okay. Can you make them double-sided?', pr: 'أوكيه. كان يو ميك ذيم دابل سايدد', ar: 'ماشي. ممكن تطبعهم على الوجهين؟' },
+            { en: 'No problem. I will wait here. Thank you.', pr: 'نو بروبلم. آي ويل ويت هير. ثانك يو', ar: 'مفيش مشكلة. هستنى هنا. شكرا' },
+        ],
+    },
 ];
 
 const quiz = [
