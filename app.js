@@ -210,6 +210,7 @@
     Object.assign(AUDIO_MAP, {"Hello. What is the problem with your phone?": "92816be5e3", "The screen is broken. Can you repair it today?": "fcee1a2bc4", "Yes, I can. I need to change the whole screen.": "2e3c3fe43c", "How much will it cost? How long will it take?": "239ea85cce", "It will cost five hundred pounds. It takes about one hour.": "c9af6d6bde", "That is fine. Do you give a guarantee?": "7ea3c0bd36", "Yes, we give a three month guarantee on the screen.": "db332066a5", "Good. Please start now. I will wait outside.": "a57fb9252b"});
     Object.assign(AUDIO_MAP, {"Hello. Yes, the apartment is still available.": "30deaae160", "Good. How many rooms does it have?": "786d5c3cab", "It has two bedrooms, a kitchen and a small balcony.": "1bea679a47", "That sounds nice. What is the monthly rent?": "08b95a7116", "It is three thousand pounds a month. Water is included.": "bb1dad6486", "Okay. Can I see the apartment tomorrow?": "2e4d41cb4a", "Yes, of course. Come at five o'clock.": "2d633a8e9a", "Perfect. Please send me the address.": "671db689ce"});
     Object.assign(AUDIO_MAP, {"Good morning. How many tickets do you need?": "4d39c5fb21", "Four tickets, please. Two adults and two children.": "5920aef197", "The adult ticket is two hundred pounds. Children pay half.": "71f765cb84", "Okay. What time do you close today?": "99a13632b1", "We close at five o'clock. The last entry is at four.": "a9a77e6a35", "Thank you. Can we take photos inside?": "ec6a903eec", "Yes, you can take photos, but please do not touch the walls.": "7fe89d8dcf", "Of course. Thank you for telling us.": "ad111e21ba"});
+    Object.assign(AUDIO_MAP, {"Hello. Are you the new neighbor?": "1482953176", "Yes, I moved in yesterday. When do they collect the trash?": "12a9d1688a", "They come every morning at eight. Leave the bag outside your door.": "7f7fba6a11", "I see. Is there a place for recycling too?": "4a738d8082", "Yes, there are blue bins behind the building.": "06ea1d15de", "Great. Which bin is for plastic bottles?": "2b4d94cb04", "The bin on the left. Welcome to the building.": "7ea2cc2be2"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -1060,7 +1061,7 @@
     /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
     const TOUR = [
         { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
-        { img: 'tour/2.jpg', t: 'الدروس: ١١٨ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ١١٩ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
         { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
         { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
         { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
