@@ -5498,6 +5498,57 @@ const lessons = [
             { en: 'That sounds good. Please go ahead.', pr: 'ذات ساوندز جود. بليز جو أهيد', ar: 'ده كويس. اتفضل كمل' },
         ],
     },
+    {
+        id: 'gardenshop',
+        number: 108,
+        title: 'محل الزراعة',
+        subtitle: 'اشتري بذور أعشاب للبلكونة',
+        intro: 'عايز تزرع أعشاب في بلكونتك، فدخلت محل الزراعة. هتشرح اللي عايزه، وتسأل عن الري، وتشكر البائع. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت داخل محل زراعة عشان تزرع حاجة في البلكونة:',
+                them: 'Welcome. Are you looking for something?',
+                themAr: 'أهلا بيك. بتدور على حاجة؟',
+                choices: ["Yes, I want to grow some herbs on my balcony.", "Yes, I want grow to some herbs on balcony my.", "Yes, herbs some I want to grow my balcony on."],
+                correct: 0,
+                explain: '"Grow herbs" يعني "أزرع أعشاب". بنقول Yes, I want to grow وبعدها some herbs on my balcony، وده الترتيب الصح.',
+                phrase: { en: 'I want to grow some herbs on my balcony.', pr: 'آي وانت تو جرو سم هيربز أون ماي بالكوني', ar: 'عايز أزرع شوية أعشاب في البلكونة' },
+            },
+            {
+                scene: 'البائع بيقترح:',
+                them: 'Mint and basil are easy. Do you get much sun?',
+                themAr: 'النعناع والريحان سهلين. الشمس بتدخل عندك كتير؟',
+                choices: ["Yes, the balcony gets sun all morning.", "Yes, the balcony sun gets all morning.", "Yes, sun the balcony all gets morning."],
+                correct: 0,
+                explain: '"Gets sun all morning" يعني "بتدخلها الشمس طول الصبح". بنقول Yes وبعدها the balcony gets sun all morning، وده الترتيب الصح.',
+                phrase: { en: 'The balcony gets sun all morning.', pr: 'ذا بالكوني جيتس سان أول مورنينج', ar: 'البلكونة بتدخلها الشمس طول الصبح' },
+            },
+            {
+                scene: 'البائع بيجهز الحاجات:',
+                them: 'Then take these seeds and this small pot.',
+                themAr: 'يبقى خد البذور دي والإصيص الصغير ده.',
+                choices: ["Thank you. How often should I water them?", "Thank you. How often I should water them?", "Thank you. Water them should how often I?"],
+                correct: 0,
+                explain: '"How often should I water them?" يعني "أسقيهم كل قد إيه؟". بنقول Thank you وبعدها how often should I water them، وده الترتيب الصح.',
+                phrase: { en: 'How often should I water them?', pr: 'هاو أوفن شود آي ووتر ذيم', ar: 'أسقيهم كل قد إيه؟' },
+            },
+            {
+                scene: 'البائع بيشرح:',
+                them: 'Water them every two days. Not too much.',
+                themAr: 'اسقيهم كل يومين. من غير زيادة.',
+                choices: ["I understand. Thank you for your advice.", "I understand. Thank you for advice your.", "I understand. Your advice for thank you."],
+                correct: 0,
+                explain: '"Thank you for your advice" يعني "شكرا على نصيحتك". بنقول I understand وبعدها thank you for your advice، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your advice.', pr: 'ثانك يو فور يور أدفايس', ar: 'شكرا على نصيحتك' },
+            },
+        ],
+        phrases: [
+            { en: 'I want to grow some herbs on my balcony.', pr: 'آي وانت تو جرو سم هيربز أون ماي بالكوني', ar: 'عايز أزرع شوية أعشاب في البلكونة' },
+            { en: 'The balcony gets sun all morning.', pr: 'ذا بالكوني جيتس سان أول مورنينج', ar: 'البلكونة بتدخلها الشمس طول الصبح' },
+            { en: 'How often should I water them?', pr: 'هاو أوفن شود آي ووتر ذيم', ar: 'أسقيهم كل قد إيه؟' },
+            { en: 'Thank you for your advice.', pr: 'ثانك يو فور يور أدفايس', ar: 'شكرا على نصيحتك' },
+        ],
+    },
 ];
 
 const quiz = [
