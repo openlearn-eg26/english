@@ -6518,6 +6518,57 @@ const lessons = [
             { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
         ],
     },
+    {
+        id: 'takepicture',
+        number: 128,
+        title: 'صوّرنا لو سمحت',
+        subtitle: 'اطلب من حد يصوّرك في مكان سياحي',
+        intro: 'إنت في مكان سياحي مع صاحبك. هتطلب من راجل واقف يصوّركم، وتقوله إزاي يصوّر، وتشكره. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في مكان سياحي مع صاحبك وعايز صورة. بتكلم راجل واقف جنبكم:',
+                them: 'Hello. Can I help you?',
+                themAr: 'أهلا. أقدر أساعدك؟',
+                choices: ["Excuse me. Could you take a picture of us?", "Excuse me. Could you a picture take of us?", "Excuse me. You could take us of a picture?"],
+                correct: 0,
+                explain: '"Could you take a picture of us?" يعني "ينفع تصوّرنا؟". بنقول Excuse me وبعدها could you take a picture of us، وده الترتيب الصح.',
+                phrase: { en: 'Could you take a picture of us?', pr: 'كود يو تيك إيه بيكتشر أوف أس', ar: 'ينفع تصوّرنا؟' },
+            },
+            {
+                scene: 'الراجل ماسك الموبايل:',
+                them: 'Sure. Should I take it vertical or horizontal?',
+                themAr: 'أكيد. أصوّر طولي ولا عرضي؟',
+                choices: ["Vertical, please. Can you get the whole building?", "Vertical, please. You can the whole building get?", "Please vertical. Get can you whole building the?"],
+                correct: 0,
+                explain: '"Can you get the whole building?" يعني "تقدر تدخّل المبنى كله؟". بنقول Vertical, please وبعدها can you get the whole building، وده الترتيب الصح.',
+                phrase: { en: 'Can you get the whole building?', pr: 'كان يو جيت ذا هول بيلدنج', ar: 'تقدر تدخّل المبنى كله؟' },
+            },
+            {
+                scene: 'الراجل بيجهّز الكاميرا:',
+                them: 'Okay. Smile. One, two, three.',
+                themAr: 'تمام. ابتسموا. واحد، اتنين، تلاتة.',
+                choices: ["Could you take one more, please?", "Could you one more take, please?", "You could take more one, please?"],
+                correct: 0,
+                explain: '"Could you take one more?" يعني "ينفع تصوّر واحدة كمان؟". بنقول Could you take one more وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'Could you take one more?', pr: 'كود يو تيك وان مور', ar: 'ينفع تصوّر واحدة كمان؟' },
+            },
+            {
+                scene: 'الراجل رجّع لك الموبايل:',
+                them: 'Here you are. They look nice.',
+                themAr: 'اتفضل. طالعين حلوين.',
+                choices: ["Thank you very much. That is very kind of you.", "Thank you very much. That kind is very of you.", "Thank much very you. Kind that is."],
+                correct: 0,
+                explain: '"Thank you very much" يعني "شكرا جزيلا". بنقول Thank you very much وبعدها that is very kind of you، وده الترتيب الصح.',
+                phrase: { en: 'Thank you very much.', pr: 'ثانك يو فيري ماتش', ar: 'شكرا جزيلا.' },
+            },
+        ],
+        phrases: [
+            { en: 'Could you take a picture of us?', pr: 'كود يو تيك إيه بيكتشر أوف أس', ar: 'ينفع تصوّرنا؟' },
+            { en: 'Can you get the whole building?', pr: 'كان يو جيت ذا هول بيلدنج', ar: 'تقدر تدخّل المبنى كله؟' },
+            { en: 'Could you take one more?', pr: 'كود يو تيك وان مور', ar: 'ينفع تصوّر واحدة كمان؟' },
+            { en: 'Thank you very much.', pr: 'ثانك يو فيري ماتش', ar: 'شكرا جزيلا.' },
+        ],
+    },
 ];
 
 const quiz = [
