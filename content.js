@@ -5396,6 +5396,57 @@ const lessons = [
             { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك' },
         ],
     },
+    {
+        id: 'changeshirt',
+        number: 106,
+        title: 'تغيير القميص',
+        subtitle: 'غيّر قميص صغير بمقاس أكبر',
+        intro: 'اشتريت قميص وطلع صغير عليك، فرجعت المحل. هتشرح المشكلة، وتطلب مقاس أكبر، وتسأل عن السعر. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'اشتريت قميص أمس وطلع صغير عليك، ورجعت المحل:',
+                them: 'Hello. Can I help you with something?',
+                themAr: 'أهلا. أقدر أساعدك في حاجة؟',
+                choices: ["Yes, I bought this shirt yesterday. It is too small.", "Yes, I bought yesterday this shirt. It too is small.", "Yes, this shirt bought I yesterday. Small too it is."],
+                correct: 0,
+                explain: '"It is too small" يعني "صغير أوي عليّ". بنقول I bought this shirt yesterday وبعدها it is too small، وده الترتيب الصح.',
+                phrase: { en: 'I bought this shirt yesterday. It is too small.', pr: 'آي بوت ذيس شيرت يستردي. إت إز تو سمول', ar: 'اشتريت القميص ده امبارح. هو صغير عليّ' },
+            },
+            {
+                scene: 'البائع بيبص على القميص:',
+                them: 'I see. Do you have the receipt with you?',
+                themAr: 'فاهم. معاك الإيصال؟',
+                choices: ["Yes, here it is. Can I change it for a bigger size?", "Yes, here it is. I can change it for size a bigger?", "Yes, it here is. Change can I bigger a size for it?"],
+                correct: 0,
+                explain: '"A bigger size" يعني "مقاس أكبر". بنقول Yes, here it is وبعدها can I change it for a bigger size، وده الترتيب الصح.',
+                phrase: { en: 'Can I change it for a bigger size?', pr: 'كان آي تشينج إت فور أ بيجر سايز', ar: 'ممكن أغيره بمقاس أكبر؟' },
+            },
+            {
+                scene: 'البائع بيرد:',
+                them: 'Of course. Let me find a large one for you.',
+                themAr: 'طبعا. هدور لك على واحد كبير.',
+                choices: ["Thank you. Is the price the same?", "Thank you. The price is same the?", "Thank you. Same is the price?"],
+                correct: 0,
+                explain: '"Is the price the same?" يعني "السعر هو هو؟". بنقول Thank you وبعدها is the price the same، وده الترتيب الصح.',
+                phrase: { en: 'Is the price the same?', pr: 'إز ذا برايس ذا سيم', ar: 'السعر هو هو؟' },
+            },
+            {
+                scene: 'البائع بيرجع بالمقاس الجديد:',
+                them: 'Yes, the price is the same. Here you are.',
+                themAr: 'أيوه السعر هو هو. اتفضل.',
+                choices: ["It fits well now. Thank you very much.", "It well fits now. Thank very you much.", "Now fits it well. You thank very much."],
+                correct: 0,
+                explain: '"It fits well" يعني "مقاسه مظبوط". بنقول It fits well now وبعدها thank you very much، وده الترتيب الصح.',
+                phrase: { en: 'It fits well now. Thank you very much.', pr: 'إت فيتس ويل ناو. ثانك يو فيري ماتش', ar: 'مقاسه مظبوط دلوقتي. شكرا جدا' },
+            },
+        ],
+        phrases: [
+            { en: 'I bought this shirt yesterday. It is too small.', pr: 'آي بوت ذيس شيرت يستردي. إت إز تو سمول', ar: 'اشتريت القميص ده امبارح. هو صغير عليّ' },
+            { en: 'Can I change it for a bigger size?', pr: 'كان آي تشينج إت فور أ بيجر سايز', ar: 'ممكن أغيره بمقاس أكبر؟' },
+            { en: 'Is the price the same?', pr: 'إز ذا برايس ذا سيم', ar: 'السعر هو هو؟' },
+            { en: 'It fits well now. Thank you very much.', pr: 'إت فيتس ويل ناو. ثانك يو فيري ماتش', ar: 'مقاسه مظبوط دلوقتي. شكرا جدا' },
+        ],
+    },
 ];
 
 const quiz = [
