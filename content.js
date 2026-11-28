@@ -5141,6 +5141,57 @@ const lessons = [
             { en: 'I would love to. What time should I come?', pr: 'آي وود لاف تو. وات تايم شد آي كام', ar: 'يسعدني جدا. أجي الساعة كام؟' },
         ],
     },
+    {
+        id: 'bookstore',
+        number: 101,
+        title: 'في المكتبة',
+        subtitle: 'اشتري كتاب سهل لتعلم الإنجليزي',
+        intro: 'دخلت مكتبة تشتري كتاب لتعلم الإنجليزي. هتطلب كتاب سهل، وتسأل عن السي دي، وتوافق على السعر. الموقف ده مثال للتدريب. السعر فيه مخترع.',
+        steps: [
+            {
+                scene: 'دخلت مكتبة تشتري كتاب لتعلم الإنجليزي:',
+                them: 'Welcome to the bookstore. Are you looking for a book?',
+                themAr: 'أهلا بيك في المكتبة. بتدور على كتاب؟',
+                choices: ["Yes, I want an easy book for learning English.", "Yes, I want an easy book for English learning.", "Yes, an easy book I want for English learning."],
+                correct: 0,
+                explain: '"An easy book for learning English" يعني "كتاب سهل لتعلم الإنجليزي". بنقول Yes وبعدها I want an easy book for learning English، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I want an easy book for learning English.', pr: 'يس آي وونت أن إيزي بوك فور ليرنينج إنجلش', ar: 'أيوه، عايز كتاب سهل لتعلم الإنجليزي' },
+            },
+            {
+                scene: 'البائع بيرشح كتاب:',
+                them: 'I recommend this one. It has short stories and pictures.',
+                themAr: 'أنا بنصحك بالكتاب ده. فيه قصص قصيرة وصور.',
+                choices: ["That looks good. Does it have an audio CD?", "That looks good. It does have an audio CD?", "That good looks. Have it an audio CD does?"],
+                correct: 0,
+                explain: '"Does it have an audio CD?" يعني "فيه معاه سي دي صوتي؟". بنقول That looks good وبعدها does it have an audio CD، وده الترتيب الصح.',
+                phrase: { en: 'That looks good. Does it have an audio CD?', pr: 'ذات لوكس جود. داز إت هاف أن أوديو سي دي', ar: 'شكله حلو. معاه سي دي صوتي؟' },
+            },
+            {
+                scene: 'البائع بيرد:',
+                them: 'Yes, it does. The price is forty pounds.',
+                themAr: 'أيوه معاه. السعر أربعين جنيه.',
+                choices: ["That is a good price. I will take it.", "That is a price good. I will it take.", "That good is price a. Take I will it."],
+                correct: 0,
+                explain: '"I will take it" يعني "هاخده". بنقول That is a good price وبعدها I will take it، وده الترتيب الصح.',
+                phrase: { en: 'That is a good price. I will take it.', pr: 'ذات إز أ جود برايس. آي ويل تيك إت', ar: 'ده سعر كويس. هاخده' },
+            },
+            {
+                scene: 'البائع بيجهز الحساب:',
+                them: 'Would you like a bag for it?',
+                themAr: 'تحب كيس له؟',
+                choices: ["No, thank you. I will carry it. Have a nice day.", "No, thank you. I carry will it. Have a nice day.", "No, thank you. Carry I will it. A nice day have."],
+                correct: 0,
+                explain: '"I will carry it" يعني "هشيله بإيدي". بنقول No, thank you وبعدها I will carry it وبعدين Have a nice day، وده الترتيب الصح.',
+                phrase: { en: 'No, thank you. I will carry it. Have a nice day.', pr: 'نو ثانك يو. آي ويل كاري إت. هاف أ نايس داي', ar: 'لأ شكرا. هشيله بإيدي. يومك سعيد' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I want an easy book for learning English.', pr: 'يس آي وونت أن إيزي بوك فور ليرنينج إنجلش', ar: 'أيوه، عايز كتاب سهل لتعلم الإنجليزي' },
+            { en: 'That looks good. Does it have an audio CD?', pr: 'ذات لوكس جود. داز إت هاف أن أوديو سي دي', ar: 'شكله حلو. معاه سي دي صوتي؟' },
+            { en: 'That is a good price. I will take it.', pr: 'ذات إز أ جود برايس. آي ويل تيك إت', ar: 'ده سعر كويس. هاخده' },
+            { en: 'No, thank you. I will carry it. Have a nice day.', pr: 'نو ثانك يو. آي ويل كاري إت. هاف أ نايس داي', ar: 'لأ شكرا. هشيله بإيدي. يومك سعيد' },
+        ],
+    },
 ];
 
 const quiz = [
