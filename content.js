@@ -5804,6 +5804,57 @@ const lessons = [
             { en: 'I will wait here.', pr: 'آي ويل ويت هير', ar: 'هستنى هنا' },
         ],
     },
+    {
+        id: 'metroticket',
+        number: 114,
+        title: 'تذكرة المترو',
+        subtitle: 'اطلب مساعدة في ماكينة تذاكر المترو',
+        intro: 'إنت في محطة المترو ومش عارف تستخدم ماكينة التذاكر. هتطلب مساعدة، وتقول رايح فين، وتسأل عن مكان الفلوس. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في محطة المترو وماكينة التذاكر مش مفهومة:',
+                them: 'Excuse me. Do you need some help?',
+                themAr: 'لو سمحت. محتاج مساعدة؟',
+                choices: ["Yes, please. I do not know how to use this machine.", "Yes, please. I not know how to use this machine.", "Yes, please. How to use I do not know machine this."],
+                correct: 0,
+                explain: '"I do not know how to use" يعني "مش عارف أستخدم". بنقول Yes, please وبعدها I do not know how to use this machine، وده الترتيب الصح.',
+                phrase: { en: 'I do not know how to use this machine.', pr: 'آي دو نوت نو هاو تو يوز ذيس ماشين', ar: 'مش عارف أستخدم الماكينة دي' },
+            },
+            {
+                scene: 'الموظف بيسأل:',
+                them: 'No problem. Where do you want to go?',
+                themAr: 'مفيش مشكلة. عايز تروح فين؟',
+                choices: ["I want to go to Tahrir Square. How much is the ticket?", "I want go to Tahrir Square. How much the ticket is?", "I want to go Tahrir Square to. Ticket the how much is?"],
+                correct: 0,
+                explain: '"How much is the ticket?" يعني "التذكرة بكام؟". بنقول I want to go to Tahrir Square وبعدها how much is the ticket، وده الترتيب الصح.',
+                phrase: { en: 'I want to go to Tahrir Square. How much is the ticket?', pr: 'آي وانت تو جو تو تحرير سكوير. هاو ماتش إز ذا تيكيت', ar: 'عايز أروح ميدان التحرير. التذكرة بكام؟' },
+            },
+            {
+                scene: 'الموظف بيشرح:',
+                them: 'It is eight pounds. Press this button, then put in the money.',
+                themAr: 'تمانية جنيه. اضغط الزرار ده وبعدين حط الفلوس.',
+                choices: ["I have pressed it. Where do I put the money?", "I pressed have it. Where I do put the money?", "I have pressed it. The money where put I do?"],
+                correct: 0,
+                explain: '"Where do I put the money?" يعني "أحط الفلوس فين؟". بنقول I have pressed it وبعدها where do I put the money، وده الترتيب الصح.',
+                phrase: { en: 'Where do I put the money?', pr: 'وير دو آي بوت ذا ماني', ar: 'أحط الفلوس فين؟' },
+            },
+            {
+                scene: 'الموظف بيشاور على الفتحة:',
+                them: 'Put it here. Then take your ticket and your change.',
+                themAr: 'حطها هنا. وبعدين خد التذكرة والباقي.',
+                choices: ["I got it. Thank you for your help.", "I it got. Thank you for help your.", "Got I it. Your help for thank you."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول I got it وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'I got it. Thank you for your help.', pr: 'آي جات إت. ثانك يو فور يور هيلب', ar: 'فهمت. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'I do not know how to use this machine.', pr: 'آي دو نوت نو هاو تو يوز ذيس ماشين', ar: 'مش عارف أستخدم الماكينة دي' },
+            { en: 'I want to go to Tahrir Square. How much is the ticket?', pr: 'آي وانت تو جو تو تحرير سكوير. هاو ماتش إز ذا تيكيت', ar: 'عايز أروح ميدان التحرير. التذكرة بكام؟' },
+            { en: 'Where do I put the money?', pr: 'وير دو آي بوت ذا ماني', ar: 'أحط الفلوس فين؟' },
+            { en: 'I got it. Thank you for your help.', pr: 'آي جات إت. ثانك يو فور يور هيلب', ar: 'فهمت. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
