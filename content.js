@@ -6722,6 +6722,57 @@ const lessons = [
             { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
         ],
     },
+    {
+        id: 'spellname',
+        number: 132,
+        title: 'هجّي اسمك',
+        subtitle: 'قول اسمك وهجّيه للموظف',
+        intro: 'إنت بتسجّل في نادي. هتقول اسمك، وتهجّيه حرف حرف، وتقول رقم تليفونك. الموقف ده مثال للتدريب. الاسم والرقم أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت بتسجّل في نادي، والموظف بيسألك:',
+                them: 'Hello. What is your name, please?',
+                themAr: 'أهلا. اسمك إيه لو سمحت؟',
+                choices: ["My name is Karim Hassan.", "My name Karim Hassan is.", "Name my is Karim Hassan."],
+                correct: 0,
+                explain: '"My name is Karim Hassan" يعني "اسمي كريم حسن". بنقول My name is وبعدها الاسم، وده الترتيب الصح.',
+                phrase: { en: 'My name is Karim Hassan.', pr: 'ماي نيم إز كريم حسن', ar: 'اسمي كريم حسن.' },
+            },
+            {
+                scene: 'الموظف مش متأكد من الاسم:',
+                them: 'Sorry. Could you spell your last name?',
+                themAr: 'آسف. ممكن تهجّي اسم عيلتك؟',
+                choices: ["Of course. It is H, A, S, S, A, N.", "Of course. It H, A, S, S, A, N is.", "Course of. Is it H, A, S, S, A, N."],
+                correct: 0,
+                explain: '"Could you spell your last name?" يعني "ممكن تهجّي اسم العيلة؟". بنرد Of course وبعدها it is H, A, S, S, A, N، وده الترتيب الصح.',
+                phrase: { en: 'It is H, A, S, S, A, N.', pr: 'إت إز إتش إيه إس إس إيه إن', ar: 'هي H, A, S, S, A, N.' },
+            },
+            {
+                scene: 'الموظف بيكتب:',
+                them: 'Thank you. And what is your phone number?',
+                themAr: 'شكرا. ورقم تليفونك إيه؟',
+                choices: ["It is zero one zero, one two three, four five six seven.", "It zero one zero, one two three, four five six seven is.", "Is it one zero zero, three two one, seven six five four."],
+                correct: 0,
+                explain: '"What is your phone number?" يعني "رقم تليفونك إيه؟". بنرد It is وبعدها الأرقام واحد واحد، وده الترتيب الصح.',
+                phrase: { en: 'What is your phone number?', pr: 'وات إز يور فون نمبر', ar: 'رقم تليفونك إيه؟' },
+            },
+            {
+                scene: 'الموظف خلّص التسجيل:',
+                them: 'Perfect. You are all set.',
+                themAr: 'تمام. كل حاجة جاهزة.',
+                choices: ["Great. Thank you for your help.", "Great. Thank you for help your.", "Great. You thank for your help."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Great وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
+            },
+        ],
+        phrases: [
+            { en: 'My name is Karim Hassan.', pr: 'ماي نيم إز كريم حسن', ar: 'اسمي كريم حسن.' },
+            { en: 'It is H, A, S, S, A, N.', pr: 'إت إز إتش إيه إس إس إيه إن', ar: 'هي H, A, S, S, A, N.' },
+            { en: 'What is your phone number?', pr: 'وات إز يور فون نمبر', ar: 'رقم تليفونك إيه؟' },
+            { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
+        ],
+    },
 ];
 
 const quiz = [
