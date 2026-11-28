@@ -217,6 +217,7 @@
     Object.assign(AUDIO_MAP, {"Hotel Nile View. How can I help you?": "99fd52777b", "Hello. Do you have a room for tonight?": "01ad281186", "Yes, we do. Would you like a single or a double room?": "7d78ca1906", "A double room, please. How much is it per night?": "bf8403c663", "It is one thousand two hundred pounds, with breakfast.": "3271f17ef1", "That is fine. Is there a pool or a gym?": "a203ed447e", "There is a small gym. May I have your name, please?": "5622342736", "My name is Karim. I will arrive at eight.": "c6892a48a7"});
     Object.assign(AUDIO_MAP, {"Not yet. What do you recommend?": "73bd83787f", "The grilled chicken is very popular. It comes with rice.": "61829516b1", "That sounds good. Is it spicy?": "60fbc9e4fe", "No, it is not spicy. It is very mild.": "25577a6eca", "Perfect. I will have the chicken, please.": "dd58a53552", "Would you like something to drink with it?": "f843c44b3e", "Just water, please. Thank you.": "951f7247af"});
     Object.assign(AUDIO_MAP, {"Hi. Do you need something?": "503cb5e9bb", "Yes. Do you have a phone charger?": "baca8b7e09", "Yes, I do. What kind of phone do you have?": "ad19f79b54", "It is a small Android phone.": "d94b4cc03e", "Here you go. You can use it at my desk.": "19408f3e3d", "Thank you. Can I use it for twenty minutes?": "4fc9c0b1c5", "Of course. Take your time.": "615dad082d", "That is very kind of you. Thanks again.": "2f69510e98"});
+    Object.assign(AUDIO_MAP, {"Is this the right street?": "8246ea69a1", "Yes. Please stop near the green gate.": "a2cd723584", "Here? Or a little further?": "f8f3f38e5d", "A little further, please. After the bakery.": "f95562517d", "We are here. The fare is forty pounds.": "a26a1ee616", "Thank you. Have a good day.": "6511bf5839", "Thank you. You too. Goodbye.": "f0d66a54c0"});
     const Speech = (function () {
         const synth = 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function';
         const ok = true;
@@ -1067,7 +1068,7 @@
     /* ---------- first-entry quick tour: consecutive screenshots with Next ---------- */
     const TOUR = [
         { img: 'tour/1.jpg', t: 'أهلاً بيك!', d: 'الموقع بيعلّمك إنجليزي من مواقف حقيقية. هتشوف دلوقتي في ٦ صور سريعة إنت هتعمل إيه وفين. الشريط اللي فوق فيه كل الأقسام.' },
-        { img: 'tour/2.jpg', t: 'الدروس: ١٢٥ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
+        { img: 'tour/2.jpg', t: 'الدروس: ١٢٦ موقف', d: 'من قسم «الدروس» اختار موقف (مطار، فندق، مطعم...) وابدأ بالترتيب. كل درس بيتحسب ومحفوظ ليك.' },
         { img: 'tour/3.jpg', t: 'جوه الدرس', d: 'بتقرأ الموقف وتسمع الشخص اللي قدامك، وبعدين تختار ردك من ٣ اختيارات. التصحيح بيظهر فورًا مع السبب بالعربي.' },
         { img: 'tour/4.jpg', t: 'التدريب والاختبارات', d: 'من «تدريب واختبارات» جرّب أسئلة متنوعة، تمرين السمع، ترتيب الجملة، وراجع أخطاءك. وفيه اختبار لكل درس.' },
         { img: 'tour/5.jpg', t: 'القاموس', d: 'في «القاموس» كل الجمل الأساسية في مكان واحد، تقدر تسمع نطقها بالعادي أو بالبطيء.' },
