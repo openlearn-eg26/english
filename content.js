@@ -4784,6 +4784,57 @@ const lessons = [
             { en: 'Great. Can I get a receipt, please?', pr: 'جريت. كان آي جيت أ ريسيت بليز', ar: 'تمام. ممكن إيصال لو سمحت؟' },
         ],
     },
+    {
+        id: 'locksmith',
+        number: 94,
+        title: 'نسيت المفتاح',
+        subtitle: 'كلّم فني الأقفال لما تتقفل برا الشقة',
+        intro: 'نسيت مفتاحك جوه الشقة والباب اتقفل. هتتصل بفني الأقفال، وتشرح المشكلة، وتقوله عنوانك، وتسأل لو هيبوّظ الباب. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'نسيت مفتاح شقتك جوه وقفلت الباب، وبتتصل بفني أقفال:',
+                them: 'Hello, locksmith service. What is the problem?',
+                themAr: 'أهلا، خدمة الأقفال. إيه المشكلة؟',
+                choices: ["I left my key inside and the door is locked.", "I left inside my key and the door locked is.", "My key I inside left and locked the door is."],
+                correct: 0,
+                explain: '"I left my key inside" يعني "نسيت المفتاح جوه". بنقول I left my key inside وبعدها and the door is locked، وده الترتيب الصح.',
+                phrase: { en: 'I left my key inside and the door is locked.', pr: 'آي ليفت ماي كي إنسايد آند ذا دور إز لوكد', ar: 'نسيت المفتاح جوه والباب مقفول' },
+            },
+            {
+                scene: 'الفني بيسأل عن المكان:',
+                them: 'I understand. What is your address?',
+                themAr: 'فاهم. عنوانك إيه؟',
+                choices: ["It is building twelve, on the second floor.", "It is twelve building, on floor second the.", "Building it is twelve, the second on floor."],
+                correct: 0,
+                explain: '"On the second floor" يعني "في الدور التاني". بنقول It is building twelve وبعدها on the second floor، وده الترتيب الصح.',
+                phrase: { en: 'It is building twelve, on the second floor.', pr: 'إت إز بيلدينج توِلف أون ذا سيكند فلور', ar: 'العمارة اتناشر، في الدور التاني' },
+            },
+            {
+                scene: 'الفني بيحدد الميعاد:',
+                them: 'I can be there in thirty minutes.',
+                themAr: 'أقدر أكون عندك في تلاتين دقيقة.',
+                choices: ["That is fine. Will you damage the door?", "That is fine. You will damage the door?", "That fine is. The door damage will you?"],
+                correct: 0,
+                explain: '"Will you damage the door?" يعني "هتبوّظ الباب؟". بنقول That is fine وبعدها will you damage the door، وده الترتيب الصح.',
+                phrase: { en: 'That is fine. Will you damage the door?', pr: 'ذات إز فاين. ويل يو داميج ذا دور', ar: 'ماشي. هتبوظ الباب؟' },
+            },
+            {
+                scene: 'الفني بيطمنك:',
+                them: 'No, I have a special tool. It will not damage anything.',
+                themAr: 'لأ، معايا أداة مخصوصة. مش هتبوظ أي حاجة.',
+                choices: ["Good. Please come as soon as you can. Thank you.", "Good. Please as soon come as you can. Thank you.", "Good. Come please you can as soon as. You thank."],
+                correct: 0,
+                explain: '"As soon as you can" يعني "بأسرع وقت". بنقول Good وبعدها please come as soon as you can، وده الترتيب الصح.',
+                phrase: { en: 'Good. Please come as soon as you can. Thank you.', pr: 'جود. بليز كام أز سون أز يو كان. ثانك يو', ar: 'كويس. تعالى بأسرع وقت لو سمحت. شكرا' },
+            },
+        ],
+        phrases: [
+            { en: 'I left my key inside and the door is locked.', pr: 'آي ليفت ماي كي إنسايد آند ذا دور إز لوكد', ar: 'نسيت المفتاح جوه والباب مقفول' },
+            { en: 'It is building twelve, on the second floor.', pr: 'إت إز بيلدينج توِلف أون ذا سيكند فلور', ar: 'العمارة اتناشر، في الدور التاني' },
+            { en: 'That is fine. Will you damage the door?', pr: 'ذات إز فاين. ويل يو داميج ذا دور', ar: 'ماشي. هتبوظ الباب؟' },
+            { en: 'Good. Please come as soon as you can. Thank you.', pr: 'جود. بليز كام أز سون أز يو كان. ثانك يو', ar: 'كويس. تعالى بأسرع وقت لو سمحت. شكرا' },
+        ],
+    },
 ];
 
 const quiz = [
