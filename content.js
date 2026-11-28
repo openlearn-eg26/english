@@ -5294,6 +5294,57 @@ const lessons = [
             { en: 'Thank you very much. I will wait here.', pr: 'ثانك يو فيري ماتش. آي ويل ويت هير', ar: 'شكرا جدا. هستنى هنا' },
         ],
     },
+    {
+        id: 'bikerepair',
+        number: 104,
+        title: 'ورشة العجل',
+        subtitle: 'اطلب تصليح سلسلة العجلة',
+        intro: 'سلسلة عجلتك رخية وإنت في ورشة الصيانة. هتطلب التصليح، وتسأل عن السعر، وتتفق على وقت الاستلام. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'عجلتك عليها مشكلة وإنت داخل ورشة صيانة العجل:',
+                them: 'Welcome to the bike shop. What can I do for you?',
+                themAr: 'أهلا بيك في ورشة العجل. أقدر أعمل لك إيه؟',
+                choices: ["My bike chain is loose. Can you fix it?", "My bike chain loose is. Can you it fix?", "My chain bike is loose. Fix you can it?"],
+                correct: 0,
+                explain: '"Can you fix it?" يعني "تقدر تصلحه؟". بنقول My bike chain is loose وبعدها can you fix it، وده الترتيب الصح.',
+                phrase: { en: 'My bike chain is loose. Can you fix it?', pr: 'ماي بايك تشين إز لوس. كان يو فيكس إت', ar: 'سلسلة العجلة بتاعتي رخية. تقدر تصلحها؟' },
+            },
+            {
+                scene: 'الفني بيبص على العجلة:',
+                them: 'Yes, I can. It is a small problem.',
+                themAr: 'أيوه أقدر. دي مشكلة صغيرة.',
+                choices: ["Great. How much will it cost?", "Great. How much it will cost?", "Great. Cost will how much it?"],
+                correct: 0,
+                explain: '"How much will it cost?" يعني "هتكلف كام؟". بنقول Great وبعدها how much will it cost، وده الترتيب الصح.',
+                phrase: { en: 'How much will it cost?', pr: 'هاو ماتش ويل إت كوست', ar: 'هتكلف كام؟' },
+            },
+            {
+                scene: 'الفني بيحدد السعر:',
+                them: 'It will be fifty pounds. It takes half an hour.',
+                themAr: 'هتبقى خمسين جنيه. هتاخد نص ساعة.',
+                choices: ["That is fine. I will come back later.", "That is fine. I come back will later.", "That fine is. Later I will back come."],
+                correct: 0,
+                explain: '"I will come back later" يعني "هرجع بعدين". بنقول That is fine وبعدها I will come back later، وده الترتيب الصح.',
+                phrase: { en: 'That is fine. I will come back later.', pr: 'ذات إز فاين. آي ويل كام باك ليتر', ar: 'ده مناسب. هرجع بعدين' },
+            },
+            {
+                scene: 'الفني بيقولك:',
+                them: 'Good. Your bike will be ready at four.',
+                themAr: 'تمام. عجلتك هتبقى جاهزة الساعة أربعة.',
+                choices: ["Thank you. See you at four.", "Thank you. You see at four.", "Thank you. Four at see you."],
+                correct: 0,
+                explain: '"See you at four" يعني "أشوفك الساعة أربعة". بنقول Thank you وبعدها see you at four، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. See you at four.', pr: 'ثانك يو. سي يو آت فور', ar: 'شكرا. أشوفك الساعة أربعة' },
+            },
+        ],
+        phrases: [
+            { en: 'My bike chain is loose. Can you fix it?', pr: 'ماي بايك تشين إز لوس. كان يو فيكس إت', ar: 'سلسلة العجلة بتاعتي رخية. تقدر تصلحها؟' },
+            { en: 'How much will it cost?', pr: 'هاو ماتش ويل إت كوست', ar: 'هتكلف كام؟' },
+            { en: 'That is fine. I will come back later.', pr: 'ذات إز فاين. آي ويل كام باك ليتر', ar: 'ده مناسب. هرجع بعدين' },
+            { en: 'Thank you. See you at four.', pr: 'ثانك يو. سي يو آت فور', ar: 'شكرا. أشوفك الساعة أربعة' },
+        ],
+    },
 ];
 
 const quiz = [
