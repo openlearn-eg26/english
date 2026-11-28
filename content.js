@@ -6875,6 +6875,57 @@ const lessons = [
             { en: 'Have a nice day.', pr: 'هاف إيه نايس داي', ar: 'يوم سعيد.' },
         ],
     },
+    {
+        id: 'giftshop',
+        number: 135,
+        title: 'محل هدايا',
+        subtitle: 'اشتري هدية صغيرة لصاحبك',
+        intro: 'إنت في محل هدايا وعايز هدية لصاحبك. هتسأل عن السعر، وتطلب حاجة أرخص، وتقرر تشتري. الموقف ده مثال للتدريب. الأسعار أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في محل هدايا وعايز تشتري هدية لصاحبك. البايع بيسألك:',
+                them: 'Welcome. Are you looking for a gift?',
+                themAr: 'أهلا. بتدوّر على هدية؟',
+                choices: ["Yes. I need a small gift for my friend.", "Yes. I need a gift small for my friend.", "Yes. Need I a small gift my friend for."],
+                correct: 0,
+                explain: '"I need a small gift for my friend" يعني "محتاج هدية صغيرة لصاحبي". بنقول Yes وبعدها I need a small gift for my friend، وده الترتيب الصح.',
+                phrase: { en: 'I need a small gift for my friend.', pr: 'آي نيد إيه سمول جيفت فور ماي فريند', ar: 'محتاج هدية صغيرة لصاحبي.' },
+            },
+            {
+                scene: 'البايع بيقترح:',
+                them: 'How about this wooden box? It is very popular.',
+                themAr: 'إيه رأيك في العلبة الخشب دي؟ مشهورة جدا.',
+                choices: ["That is nice. How much is it?", "That nice is. How is much it?", "Nice that is. It how much is?"],
+                correct: 0,
+                explain: '"How much is it?" يعني "بكام؟". بنقول That is nice وبعدها how much is it، وده الترتيب الصح.',
+                phrase: { en: 'How much is it?', pr: 'هاو ماتش إز إت', ar: 'بكام؟' },
+            },
+            {
+                scene: 'البايع بيرد:',
+                them: 'It is sixty pounds.',
+                themAr: 'ستين جنيه.',
+                choices: ["That is a bit expensive. Do you have something cheaper?", "That a bit expensive is. You have something cheaper?", "That is expensive a bit. Have you cheaper something?"],
+                correct: 0,
+                explain: '"Do you have something cheaper?" يعني "عندك حاجة أرخص؟". بنقول That is a bit expensive وبعدها do you have something cheaper، وده الترتيب الصح.',
+                phrase: { en: 'Do you have something cheaper?', pr: 'دو يو هاف سامثينج تشيبر', ar: 'عندك حاجة أرخص؟' },
+            },
+            {
+                scene: 'البايع بيجيب علبة تانية:',
+                them: 'Yes. This one is thirty pounds. Do you want it wrapped?',
+                themAr: 'أيوه. دي بتلاتين جنيه. تحب أغلّفها؟',
+                choices: ["Yes, please. I will take it.", "Yes, please. I take will it.", "Yes, please. Take I will it."],
+                correct: 0,
+                explain: '"I will take it" يعني "هاخدها". بنقول Yes, please وبعدها I will take it، وده الترتيب الصح.',
+                phrase: { en: 'I will take it.', pr: 'آي ويل تيك إت', ar: 'هاخدها.' },
+            },
+        ],
+        phrases: [
+            { en: 'I need a small gift for my friend.', pr: 'آي نيد إيه سمول جيفت فور ماي فريند', ar: 'محتاج هدية صغيرة لصاحبي.' },
+            { en: 'How much is it?', pr: 'هاو ماتش إز إت', ar: 'بكام؟' },
+            { en: 'Do you have something cheaper?', pr: 'دو يو هاف سامثينج تشيبر', ar: 'عندك حاجة أرخص؟' },
+            { en: 'I will take it.', pr: 'آي ويل تيك إت', ar: 'هاخدها.' },
+        ],
+    },
 ];
 
 const quiz = [
