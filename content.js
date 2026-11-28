@@ -6059,6 +6059,57 @@ const lessons = [
             { en: 'Thank you for telling us.', pr: 'ثانك يو فور تيلينج أس', ar: 'شكرا إنك قلتلنا' },
         ],
     },
+    {
+        id: 'trashday',
+        number: 119,
+        title: 'الزبالة والتدوير',
+        subtitle: 'اسأل جارك عن ميعاد لمّ الزبالة',
+        intro: 'إنت لسه ساكن في عمارة جديدة، فسألت جارك عن ميعاد لمّ الزبالة ومكان التدوير. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت لسه ساكن في عمارة جديدة وبتقابل جارك على السلم:',
+                them: 'Hello. Are you the new neighbor?',
+                themAr: 'أهلا. إنت الجار الجديد؟',
+                choices: ["Yes, I moved in yesterday. When do they collect the trash?", "Yes, I moved in yesterday. When they collect do the trash?", "Yes, yesterday moved I in. Trash the collect they when?"],
+                correct: 0,
+                explain: '"Collect the trash" يعني "يلموا الزبالة". بنقول Yes, I moved in yesterday وبعدها when do they collect the trash، وده الترتيب الصح.',
+                phrase: { en: 'Yes, I moved in yesterday. When do they collect the trash?', pr: 'يس، آي موفد إن يستردي. وين دو ذي كوليكت ذا تراش', ar: 'أيوه، سكنت امبارح. بيلموا الزبالة إمتى؟' },
+            },
+            {
+                scene: 'الجار بيرد:',
+                them: 'They come every morning at eight. Leave the bag outside your door.',
+                themAr: 'بييجوا كل صباح الساعة تمانية. سيب الكيس قدام بابك.',
+                choices: ["I see. Is there a place for recycling too?", "I see. Is there place a for recycling too?", "I see. Recycling for a place there is too?"],
+                correct: 0,
+                explain: '"A place for recycling" يعني "مكان لإعادة التدوير". بنقول I see وبعدها is there a place for recycling too، وده الترتيب الصح.',
+                phrase: { en: 'Is there a place for recycling too?', pr: 'إز ذير أ بليس فور ريسايكلينج تو', ar: 'فيه مكان لإعادة التدوير كمان؟' },
+            },
+            {
+                scene: 'الجار بيشرح:',
+                them: 'Yes, there are blue bins behind the building.',
+                themAr: 'أيوه، فيه صناديق زرقا ورا العمارة.',
+                choices: ["Great. Which bin is for plastic bottles?", "Great. Which bin for plastic bottles is?", "Great. Is which bin plastic for bottles?"],
+                correct: 0,
+                explain: '"Which bin is for plastic bottles?" يعني "أنهي صندوق للزجاجات البلاستيك؟". بنقول Great وبعدها which bin is for plastic bottles، وده الترتيب الصح.',
+                phrase: { en: 'Which bin is for plastic bottles?', pr: 'ويتش بين إز فور بلاستيك بوتلز', ar: 'أنهي صندوق للزجاجات البلاستيك؟' },
+            },
+            {
+                scene: 'الجار بيوضح:',
+                them: 'The bin on the left. Welcome to the building.',
+                themAr: 'الصندوق اللي على الشمال. أهلا بيك في العمارة.',
+                choices: ["Thank you. It is nice to meet you.", "Thank you. It nice is to meet you.", "Thank you. Nice it is you to meet."],
+                correct: 0,
+                explain: '"Nice to meet you" يعني "تشرفت بيك". بنقول Thank you وبعدها it is nice to meet you، وده الترتيب الصح.',
+                phrase: { en: 'It is nice to meet you.', pr: 'إت إز نايس تو ميت يو', ar: 'تشرفت بيك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, I moved in yesterday. When do they collect the trash?', pr: 'يس، آي موفد إن يستردي. وين دو ذي كوليكت ذا تراش', ar: 'أيوه، سكنت امبارح. بيلموا الزبالة إمتى؟' },
+            { en: 'Is there a place for recycling too?', pr: 'إز ذير أ بليس فور ريسايكلينج تو', ar: 'فيه مكان لإعادة التدوير كمان؟' },
+            { en: 'Which bin is for plastic bottles?', pr: 'ويتش بين إز فور بلاستيك بوتلز', ar: 'أنهي صندوق للزجاجات البلاستيك؟' },
+            { en: 'It is nice to meet you.', pr: 'إت إز نايس تو ميت يو', ar: 'تشرفت بيك' },
+        ],
+    },
 ];
 
 const quiz = [
