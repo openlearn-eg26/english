@@ -5753,6 +5753,57 @@ const lessons = [
             { en: 'Here is the money. Thank you very much.', pr: 'هير إز ذا ماني. ثانك يو فيري ماتش', ar: 'اتفضل الفلوس. شكرا جدا' },
         ],
     },
+    {
+        id: 'keptcard',
+        number: 113,
+        title: 'الكارت في الماكينة',
+        subtitle: 'اسأل البنك عن كارت خدته ماكينة الصرف',
+        intro: 'ماكينة الصرف خدت كارتك، فرحت البنك. هتشرح المشكلة، وتقول أنهي ماكينة، وتطلب كارتك. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'ماكينة الصرف خدت كارتك ومرجعتوش، فدخلت البنك:',
+                them: 'Good morning. How can I help you?',
+                themAr: 'صباح الخير. أقدر أساعدك إزاي؟',
+                choices: ["The cash machine kept my card. Can you help me?", "The cash machine my card kept. Can you me help?", "Machine the cash kept card my. Help you can me?"],
+                correct: 0,
+                explain: '"Kept my card" يعني "خدت كارتي". بنقول The cash machine kept my card وبعدها can you help me، وده الترتيب الصح.',
+                phrase: { en: 'The cash machine kept my card.', pr: 'ذا كاش ماشين كيبت ماي كارد', ar: 'ماكينة الصرف خدت كارتي' },
+            },
+            {
+                scene: 'موظف البنك بيسأل:',
+                them: 'I am sorry to hear that. Which machine was it?',
+                themAr: 'أنا آسف. أنهي ماكينة كانت؟',
+                choices: ["It was the machine outside the bank.", "It was machine the outside the bank.", "Outside it was the machine bank the."],
+                correct: 0,
+                explain: '"Outside the bank" يعني "بره البنك". بنقول It was the machine وبعدها outside the bank، وده الترتيب الصح.',
+                phrase: { en: 'It was the machine outside the bank.', pr: 'إت واز ذا ماشين أوتسايد ذا بانك', ar: 'كانت الماكينة اللي بره البنك' },
+            },
+            {
+                scene: 'الموظف بيطلب إثبات شخصية:',
+                them: 'Do you have your identity card with you?',
+                themAr: 'معاك بطاقتك الشخصية؟',
+                choices: ["Yes, here it is. Can I get my card back?", "Yes, here it is. I can get back my card?", "Yes, it here is. Card my back get can I?"],
+                correct: 0,
+                explain: '"Get my card back" يعني "أسترجع كارتي". بنقول Yes, here it is وبعدها can I get my card back، وده الترتيب الصح.',
+                phrase: { en: 'Can I get my card back?', pr: 'كان آي جيت ماي كارد باك', ar: 'أقدر أسترجع كارتي؟' },
+            },
+            {
+                scene: 'الموظف بيرد:',
+                them: 'Yes. Please wait a moment. I will bring it.',
+                themAr: 'أيوه. استنى لحظة. هجيبه.',
+                choices: ["Thank you. I will wait here.", "Thank you. I wait will here.", "Thank you. Here wait I will."],
+                correct: 0,
+                explain: '"I will wait here" يعني "هستنى هنا". بنقول Thank you وبعدها I will wait here، وده الترتيب الصح.',
+                phrase: { en: 'I will wait here.', pr: 'آي ويل ويت هير', ar: 'هستنى هنا' },
+            },
+        ],
+        phrases: [
+            { en: 'The cash machine kept my card.', pr: 'ذا كاش ماشين كيبت ماي كارد', ar: 'ماكينة الصرف خدت كارتي' },
+            { en: 'It was the machine outside the bank.', pr: 'إت واز ذا ماشين أوتسايد ذا بانك', ar: 'كانت الماكينة اللي بره البنك' },
+            { en: 'Can I get my card back?', pr: 'كان آي جيت ماي كارد باك', ar: 'أقدر أسترجع كارتي؟' },
+            { en: 'I will wait here.', pr: 'آي ويل ويت هير', ar: 'هستنى هنا' },
+        ],
+    },
 ];
 
 const quiz = [
