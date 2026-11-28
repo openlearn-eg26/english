@@ -6161,6 +6161,57 @@ const lessons = [
             { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذا تشينج', ar: 'اتفضل. خلي الباقي' },
         ],
     },
+    {
+        id: 'askbill',
+        number: 121,
+        title: 'الحساب',
+        subtitle: 'اطلب الحساب في المطعم',
+        intro: 'خلصت أكلك في المطعم. هتطلب الحساب، وتسأل عن رسوم الخدمة، وتسأل تدفع بالكارت. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'خلصت أكل في مطعم وعايز تحاسب:',
+                them: 'Was everything fine with your meal?',
+                themAr: 'كل حاجة كانت تمام في الأكل؟',
+                choices: ["Yes, it was delicious. Can we have the bill, please?", "Yes, it was delicious. We can have bill the, please?", "Yes, delicious it was. Have we can the bill, please?"],
+                correct: 0,
+                explain: '"Can we have the bill?" يعني "ممكن الحساب؟". بنقول Yes, it was delicious وبعدها can we have the bill، وده الترتيب الصح.',
+                phrase: { en: 'Can we have the bill, please?', pr: 'كان وي هاف ذا بيل، بليز', ar: 'ممكن الحساب لو سمحت؟' },
+            },
+            {
+                scene: 'الجرسون بيرد:',
+                them: 'Of course. I will bring it now.',
+                themAr: 'طبعا. هجيبه حالا.',
+                choices: ["Is the service charge included?", "Is the service included charge?", "The service charge is included?"],
+                correct: 0,
+                explain: '"Service charge" يعني "رسوم الخدمة". بنقول Is the service charge included، وده الترتيب الصح للسؤال.',
+                phrase: { en: 'Is the service charge included?', pr: 'إز ذا سيرفس تشارج إنكلودد', ar: 'رسوم الخدمة مشمولة؟' },
+            },
+            {
+                scene: 'الجرسون بيوضح:',
+                them: 'Yes, it is included. The total is three hundred and fifty pounds.',
+                themAr: 'أيوه مشمولة. الإجمالي تلتمية وخمسين جنيه.',
+                choices: ["Can I pay by card?", "Can I by card pay?", "I can pay card by?"],
+                correct: 0,
+                explain: '"Pay by card" يعني "أدفع بالكارت". بنقول Can I pay by card، وده الترتيب الصح.',
+                phrase: { en: 'Can I pay by card?', pr: 'كان آي باي باي كارد', ar: 'أقدر أدفع بالكارت؟' },
+            },
+            {
+                scene: 'الجرسون بيرد:',
+                them: 'Yes, of course. I will bring the machine.',
+                themAr: 'أيوه طبعا. هجيب الماكينة.',
+                choices: ["Thank you. The food was very good.", "Thank you. The food very good was.", "Thank you. Good very was the food."],
+                correct: 0,
+                explain: '"The food was very good" يعني "الأكل كان حلو أوي". بنقول Thank you وبعدها the food was very good، وده الترتيب الصح.',
+                phrase: { en: 'The food was very good.', pr: 'ذا فود واز فيري جود', ar: 'الأكل كان حلو أوي' },
+            },
+        ],
+        phrases: [
+            { en: 'Can we have the bill, please?', pr: 'كان وي هاف ذا بيل، بليز', ar: 'ممكن الحساب لو سمحت؟' },
+            { en: 'Is the service charge included?', pr: 'إز ذا سيرفس تشارج إنكلودد', ar: 'رسوم الخدمة مشمولة؟' },
+            { en: 'Can I pay by card?', pr: 'كان آي باي باي كارد', ar: 'أقدر أدفع بالكارت؟' },
+            { en: 'The food was very good.', pr: 'ذا فود واز فيري جود', ar: 'الأكل كان حلو أوي' },
+        ],
+    },
 ];
 
 const quiz = [
