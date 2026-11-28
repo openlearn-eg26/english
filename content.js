@@ -6773,6 +6773,57 @@ const lessons = [
             { en: 'Thank you for your help.', pr: 'ثانك يو فور يور هيلب', ar: 'شكرا على مساعدتك.' },
         ],
     },
+    {
+        id: 'movemeeting',
+        number: 133,
+        title: 'تأجيل اجتماع',
+        subtitle: 'اتصل بزميلك وأجّل الاجتماع',
+        intro: 'عندك اجتماع النهارده بس عندك ظرف. هتتصل بزميلك، وتعتذر، وتطلب تأجيله لبكرة. الموقف ده مثال للتدريب. الأسماء والمواعيد أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'عندك اجتماع مع زميلك النهارده بس عندك ظرف. بتتصل بيه:',
+                them: 'Hello, this is Omar. How are you?',
+                themAr: 'أهلا، أنا عمر. عامل إيه؟',
+                choices: ["Hello, Omar. I am sorry, but I cannot come today.", "Hello, Omar. I sorry am, but I cannot today come.", "Hello, Omar. Sorry I am, but come cannot I today."],
+                correct: 0,
+                explain: '"I cannot come today" يعني "مقدرش آجي النهارده". بنقول Hello, Omar وبعدها I am sorry, but I cannot come today، وده الترتيب الصح.',
+                phrase: { en: 'I cannot come today.', pr: 'آي كانوت كام توداي', ar: 'مقدرش آجي النهارده.' },
+            },
+            {
+                scene: 'زميلك بيسأل:',
+                them: 'That is okay. What happened?',
+                themAr: 'مفيش مشكلة. إيه اللي حصل؟',
+                choices: ["I have a family matter. Can we move the meeting to tomorrow?", "I a family matter have. We can the meeting move to tomorrow?", "Family matter I have. Can move we meeting the tomorrow to?"],
+                correct: 0,
+                explain: '"Can we move the meeting to tomorrow?" يعني "ينفع نأجّل الاجتماع لبكرة؟". بنقول I have a family matter وبعدها can we move the meeting to tomorrow، وده الترتيب الصح.',
+                phrase: { en: 'Can we move the meeting to tomorrow?', pr: 'كان وي موف ذا ميتنج تو تومورو', ar: 'ينفع نأجّل الاجتماع لبكرة؟' },
+            },
+            {
+                scene: 'زميلك بيفتح الجدول:',
+                them: 'Let me check. Tomorrow at ten works for me.',
+                themAr: 'خليني أشوف. بكرة الساعة عشرة مناسب ليا.',
+                choices: ["Perfect. Ten o'clock is good for me too.", "Perfect. Ten o'clock good is for me too.", "Perfect. Is good ten o'clock me for too."],
+                correct: 0,
+                explain: '"Ten o\'clock is good for me too" يعني "الساعة عشرة مناسبة ليا كمان". بنقول Perfect وبعدها ten o\'clock is good for me too، وده الترتيب الصح.',
+                phrase: { en: 'Ten o\'clock is good for me too.', pr: 'تن أوكلوك إز جود فور مي تو', ar: 'الساعة عشرة مناسبة ليا كمان.' },
+            },
+            {
+                scene: 'زميلك بيقفل المكالمة:',
+                them: 'Great. See you tomorrow.',
+                themAr: 'تمام. أشوفك بكرة.',
+                choices: ["Thank you for understanding. See you tomorrow.", "Thank you for understanding. You see tomorrow.", "You thank for understanding. See tomorrow you."],
+                correct: 0,
+                explain: '"Thank you for understanding" يعني "شكرا إنك متفهّم". بنقول Thank you for understanding وبعدها see you tomorrow، وده الترتيب الصح.',
+                phrase: { en: 'Thank you for understanding.', pr: 'ثانك يو فور أندرستاندينج', ar: 'شكرا إنك متفهّم.' },
+            },
+        ],
+        phrases: [
+            { en: 'I cannot come today.', pr: 'آي كانوت كام توداي', ar: 'مقدرش آجي النهارده.' },
+            { en: 'Can we move the meeting to tomorrow?', pr: 'كان وي موف ذا ميتنج تو تومورو', ar: 'ينفع نأجّل الاجتماع لبكرة؟' },
+            { en: 'Ten o\'clock is good for me too.', pr: 'تن أوكلوك إز جود فور مي تو', ar: 'الساعة عشرة مناسبة ليا كمان.' },
+            { en: 'Thank you for understanding.', pr: 'ثانك يو فور أندرستاندينج', ar: 'شكرا إنك متفهّم.' },
+        ],
+    },
 ];
 
 const quiz = [
