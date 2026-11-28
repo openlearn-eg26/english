@@ -6110,6 +6110,57 @@ const lessons = [
             { en: 'It is nice to meet you.', pr: 'إت إز نايس تو ميت يو', ar: 'تشرفت بيك' },
         ],
     },
+    {
+        id: 'smallkiosk',
+        number: 120,
+        title: 'الكشك',
+        subtitle: 'اشتري مياه وسناك من كشك',
+        intro: 'الجو حر ووقفت قدام كشك. هتطلب مياه ساقعة وسناك، وتسأل عن الأنواع والحساب. الأسعار في الموقف ده أمثلة للتدريب.',
+        steps: [
+            {
+                scene: 'الجو حر وإنت واقف قدام كشك صغير في الشارع:',
+                them: 'Hello. What can I get for you?',
+                themAr: 'أهلا. أجيب لك إيه؟',
+                choices: ["A cold bottle of water, please.", "A bottle cold of water, please.", "Water of bottle a cold, please."],
+                correct: 0,
+                explain: '"A cold bottle of water" يعني "إزازة مياه ساقعة". بنقول A cold bottle of water وبعدها please، وده الترتيب الصح.',
+                phrase: { en: 'A cold bottle of water, please.', pr: 'أ كولد بوتل أوف ووتر، بليز', ar: 'إزازة مياه ساقعة لو سمحت' },
+            },
+            {
+                scene: 'البائع بيجيب المياه:',
+                them: 'Here you are. Would you like a snack too?',
+                themAr: 'اتفضل. تحب تاخد سناك كمان؟',
+                choices: ["Yes, what kinds of chips do you have?", "Yes, what kinds of chips you have?", "Yes, chips of kinds what do you have?"],
+                correct: 0,
+                explain: '"What kinds of chips?" يعني "إيه أنواع الشيبسي؟". بنقول Yes وبعدها what kinds of chips do you have، وده الترتيب الصح.',
+                phrase: { en: 'What kinds of chips do you have?', pr: 'وات كايندز أوف تشيبس دو يو هاف', ar: 'عندك أنهي أنواع شيبسي؟' },
+            },
+            {
+                scene: 'البائع بيعرض:',
+                them: 'We have cheese, salt and tomato.',
+                themAr: 'عندنا جبنة وملح وطماطم.',
+                choices: ["I will take the cheese one. How much is everything?", "I take will the cheese one. How much everything is?", "I will take one the cheese. Everything how much is?"],
+                correct: 0,
+                explain: '"How much is everything?" يعني "الحساب كله كام؟". بنقول I will take the cheese one وبعدها how much is everything، وده الترتيب الصح.',
+                phrase: { en: 'I will take the cheese one. How much is everything?', pr: 'آي ويل تيك ذا تشيز وان. هاو ماتش إز إفريثينج', ar: 'هاخد اللي بالجبنة. الحساب كله كام؟' },
+            },
+            {
+                scene: 'البائع بيحاسبك:',
+                them: 'The water is ten pounds and the chips are fifteen. Twenty-five pounds.',
+                themAr: 'المياه بعشرة والشيبسي بخمستاشر. خمسة وعشرين جنيه.',
+                choices: ["Here you are. Keep the change.", "Here you are. The change keep.", "Here are you. Change the keep."],
+                correct: 0,
+                explain: '"Keep the change" يعني "خلي الباقي". بنقول Here you are وبعدها keep the change، وده الترتيب الصح.',
+                phrase: { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذا تشينج', ar: 'اتفضل. خلي الباقي' },
+            },
+        ],
+        phrases: [
+            { en: 'A cold bottle of water, please.', pr: 'أ كولد بوتل أوف ووتر، بليز', ar: 'إزازة مياه ساقعة لو سمحت' },
+            { en: 'What kinds of chips do you have?', pr: 'وات كايندز أوف تشيبس دو يو هاف', ar: 'عندك أنهي أنواع شيبسي؟' },
+            { en: 'I will take the cheese one. How much is everything?', pr: 'آي ويل تيك ذا تشيز وان. هاو ماتش إز إفريثينج', ar: 'هاخد اللي بالجبنة. الحساب كله كام؟' },
+            { en: 'Here you are. Keep the change.', pr: 'هير يو آر. كيب ذا تشينج', ar: 'اتفضل. خلي الباقي' },
+        ],
+    },
 ];
 
 const quiz = [
