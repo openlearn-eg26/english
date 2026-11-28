@@ -4886,6 +4886,57 @@ const lessons = [
             { en: 'Wonderful. I will come to register tomorrow.', pr: 'وندرفول. آي ويل كام تو ريجستر تومورو', ar: 'رائع. هجي أسجل بكرة' },
         ],
     },
+    {
+        id: 'supermarket',
+        number: 96,
+        title: 'في السوبر ماركت',
+        subtitle: 'اسأل عن مكان الزيت وعن التخفيض',
+        intro: 'بتدور على زيت الطبخ في السوبر ماركت. هتسأل الموظف عن مكانه، وعن التخفيض، وعن الكاشير المفتوح. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'بتدور على زيت في السوبر ماركت وبتكلم موظف:',
+                them: 'Hi there. Are you looking for something?',
+                themAr: 'أهلا. بتدور على حاجة؟',
+                choices: ["Yes, where can I find the cooking oil?", "Yes, where I can find the cooking oil?", "Yes, find where can I oil the cooking?"],
+                correct: 0,
+                explain: '"Where can I find the cooking oil?" يعني "ألاقي زيت الطبخ فين؟". بنقول Yes وبعدها where can I find the cooking oil، وده الترتيب الصح.',
+                phrase: { en: 'Yes, where can I find the cooking oil?', pr: 'يس وير كان آي فايند ذا كوكينج أويل', ar: 'أيوه، ألاقي زيت الطبخ فين؟' },
+            },
+            {
+                scene: 'الموظف بيشاور:',
+                them: 'It is in aisle four, next to the rice.',
+                themAr: 'في الممر الرابع، جنب الرز.',
+                choices: ["Thank you. Is the large bottle on sale today?", "Thank you. Is the bottle large on sale today?", "Thank you. On sale is the large bottle today?"],
+                correct: 0,
+                explain: '"Is it on sale?" يعني "عليه تخفيض؟". بنقول Thank you وبعدها is the large bottle on sale today، وده الترتيب الصح.',
+                phrase: { en: 'Thank you. Is the large bottle on sale today?', pr: 'ثانك يو. إز ذا لارج بوتل أون سيل تودي', ar: 'شكرا. الإزازة الكبيرة عليها تخفيض النهارده؟' },
+            },
+            {
+                scene: 'الموظف بيرد:',
+                them: 'Yes, the large bottle is cheaper this week.',
+                themAr: 'أيوه، الإزازة الكبيرة أرخص الأسبوع ده.',
+                choices: ["Good. Which checkout is open, please?", "Good. Which is checkout open, please?", "Good. Open which checkout is, please?"],
+                correct: 0,
+                explain: '"Which checkout is open?" يعني "أنهي كاشير مفتوح؟". بنقول Good وبعدها which checkout is open، وده الترتيب الصح.',
+                phrase: { en: 'Good. Which checkout is open, please?', pr: 'جود. ويتش تشيكأوت إز أوبن بليز', ar: 'كويس. أنهي كاشير مفتوح لو سمحت؟' },
+            },
+            {
+                scene: 'الموظف بيدلك:',
+                them: 'Checkout two is open. There is no line there.',
+                themAr: 'الكاشير رقم اتنين مفتوح. مفيش طابور هناك.',
+                choices: ["Great. Thank you for your help.", "Great. Thank you for help your.", "Great. Your help for thank you."],
+                correct: 0,
+                explain: '"Thank you for your help" يعني "شكرا على مساعدتك". بنقول Great وبعدها thank you for your help، وده الترتيب الصح.',
+                phrase: { en: 'Great. Thank you for your help.', pr: 'جريت. ثانك يو فور يور هيلب', ar: 'تمام. شكرا على مساعدتك' },
+            },
+        ],
+        phrases: [
+            { en: 'Yes, where can I find the cooking oil?', pr: 'يس وير كان آي فايند ذا كوكينج أويل', ar: 'أيوه، ألاقي زيت الطبخ فين؟' },
+            { en: 'Thank you. Is the large bottle on sale today?', pr: 'ثانك يو. إز ذا لارج بوتل أون سيل تودي', ar: 'شكرا. الإزازة الكبيرة عليها تخفيض النهارده؟' },
+            { en: 'Good. Which checkout is open, please?', pr: 'جود. ويتش تشيكأوت إز أوبن بليز', ar: 'كويس. أنهي كاشير مفتوح لو سمحت؟' },
+            { en: 'Great. Thank you for your help.', pr: 'جريت. ثانك يو فور يور هيلب', ar: 'تمام. شكرا على مساعدتك' },
+        ],
+    },
 ];
 
 const quiz = [
