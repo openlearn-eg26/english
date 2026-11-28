@@ -5243,6 +5243,57 @@ const lessons = [
             { en: 'I understand now. Thank you for explaining.', pr: 'آي أندرستاند ناو. ثانك يو فور إكسبلينينج', ar: 'فهمت دلوقتي. شكرا إنك وضحت' },
         ],
     },
+    {
+        id: 'extrapillow',
+        number: 103,
+        title: 'وسادة زيادة',
+        subtitle: 'اطلب وسادة وبطانية من استقبال الفندق',
+        intro: 'محتاج وسادة وبطانية زيادة في أوضتك بالفندق. هتطلبهم من الاستقبال، وتقول رقم الأوضة، وتسأل هيوصلوا إمتى. الموقف ده مثال للتدريب.',
+        steps: [
+            {
+                scene: 'إنت في الفندق وبترن على الاستقبال من الأوضة:',
+                them: 'Reception. How can I help you?',
+                themAr: 'الاستقبال. أقدر أساعدك إزاي؟',
+                choices: ["Hello. Could I have an extra pillow, please?", "Hello. I could have pillow extra, please?", "Hello. Extra could pillow have I, please?"],
+                correct: 0,
+                explain: '"Could I have an extra pillow?" يعني "ممكن وسادة زيادة؟". بنقول Hello وبعدها could I have an extra pillow، وده الترتيب الصح.',
+                phrase: { en: 'Could I have an extra pillow, please?', pr: 'كوود آي هاف أن إكسترا بيلو، بليز', ar: 'ممكن وسادة زيادة لو سمحت؟' },
+            },
+            {
+                scene: 'موظف الاستقبال بيرد:',
+                them: 'Of course. Would you like anything else?',
+                themAr: 'طبعا. تحب أي حاجة تانية؟',
+                choices: ["Yes, a blanket too. The room is a little cold.", "Yes, a blanket too. The room a little is cold.", "Yes, too a blanket. Cold is the room little a."],
+                correct: 0,
+                explain: '"The room is a little cold" يعني "الأوضة باردة شوية". بنقول Yes, a blanket too وبعدها the room is a little cold، وده الترتيب الصح.',
+                phrase: { en: 'Yes, a blanket too. The room is a little cold.', pr: 'يس، أ بلانكت تو. ذا روم إز أ ليتل كولد', ar: 'أيوه وبطانية كمان. الأوضة باردة شوية' },
+            },
+            {
+                scene: 'موظف الاستقبال بيأكد:',
+                them: 'I will send them up. What is your room number?',
+                themAr: 'هبعتهم فوق. رقم أوضتك كام؟',
+                choices: ["It is room twelve. How long will it take?", "It is room twelve. How long it will take?", "It room is twelve. Long how will take it?"],
+                correct: 0,
+                explain: '"How long will it take?" يعني "هيأخد قد إيه؟". بنقول It is room twelve وبعدها how long will it take، وده الترتيب الصح.',
+                phrase: { en: 'How long will it take?', pr: 'هاو لونج ويل إت تيك', ar: 'هياخد قد إيه؟' },
+            },
+            {
+                scene: 'موظف الاستقبال بيحدد الوقت:',
+                them: 'About ten minutes. Someone will knock on your door.',
+                themAr: 'حوالي عشر دقايق. حد هيخبط على بابك.',
+                choices: ["Thank you very much. I will wait here.", "Thank you very much. I wait will here.", "Thank very you much. Here will I wait."],
+                correct: 0,
+                explain: '"I will wait here" يعني "هستنى هنا". بنقول Thank you very much وبعدها I will wait here، وده الترتيب الصح.',
+                phrase: { en: 'Thank you very much. I will wait here.', pr: 'ثانك يو فيري ماتش. آي ويل ويت هير', ar: 'شكرا جدا. هستنى هنا' },
+            },
+        ],
+        phrases: [
+            { en: 'Could I have an extra pillow, please?', pr: 'كوود آي هاف أن إكسترا بيلو، بليز', ar: 'ممكن وسادة زيادة لو سمحت؟' },
+            { en: 'Yes, a blanket too. The room is a little cold.', pr: 'يس، أ بلانكت تو. ذا روم إز أ ليتل كولد', ar: 'أيوه وبطانية كمان. الأوضة باردة شوية' },
+            { en: 'How long will it take?', pr: 'هاو لونج ويل إت تيك', ar: 'هياخد قد إيه؟' },
+            { en: 'Thank you very much. I will wait here.', pr: 'ثانك يو فيري ماتش. آي ويل ويت هير', ar: 'شكرا جدا. هستنى هنا' },
+        ],
+    },
 ];
 
 const quiz = [
